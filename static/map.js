@@ -1,10 +1,13 @@
-var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-		osmAttrib = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-		osm = L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
-
-	var map = L.map('map').setView([51.505, -0.159], 15).addLayer(osm);
-
-	L.marker([51.504, -0.159])
-		.addTo(map)
-		.bindPopup('A pretty CSS3 popup.<br />Easily customizable.')
-		.openPopup();
+document.addEventListener("DOMContentLoaded", () => {
+	let maps = document.querySelectorAll('.wmcz-map');
+	for (let i = 0; i < maps.length; i++) {
+		const el = maps[i];
+		const map = L.map(el.id);
+		L.tileLayer( 'https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png', {
+                    maxZoom: 18,
+                    id: 'wikipedia-map-01',
+                    attribution: 'Wikimedia maps beta | Map data &copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+		}).addTo( map );
+		map.setView( [50.03861, 15.77916], 13 );
+	}
+} );
