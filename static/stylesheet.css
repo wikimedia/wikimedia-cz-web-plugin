@@ -1,0 +1,23 @@
+.event-container {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: flex;
+    width: 100%;
+    max-width: 300%;
+}
+
+.event-container > p {
+    margin: 0px;
+    padding: 5px 0 5px 0;
+    width: 50%;
+}
+
+.event-place-datetime > p {
+    color: white;
+}
+.event-place {
+    background-color: blue;
+}
+.event-datetime {
+    background-color: green;
+}
