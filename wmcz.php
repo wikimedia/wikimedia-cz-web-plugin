@@ -99,7 +99,8 @@ function wmcz_block_caurosel_register() {
 add_action( 'init', 'wmcz_block_events_register' );
 add_action( 'init', 'wmcz_block_event_map_register' );
 add_action( 'init', 'wmcz_block_caurosel_register' );
-wp_enqueue_style('wmcz-plugin', plugins_url( 'static/stylesheet.css', __FILE__ ) );
-wp_enqueue_script('wmcz-plugin', plugins_url( 'static/map.js', __FILE__ ) );
+
 wp_enqueue_script('leaflet', plugins_url( 'static/leaflet/dist/leaflet.js', __FILE__ ) );
 wp_enqueue_style('leaflet', plugins_url( 'static/leaflet/dist/leaflet.css', __FILE__ ) );
+wp_enqueue_style('wmcz-plugin', plugins_url( 'static/stylesheet.css', __FILE__ ) );
+wp_enqueue_script('wmcz-plugin', plugins_url( 'static/map.js', __FILE__ ) );
