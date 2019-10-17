@@ -29,10 +29,18 @@
     height: 320px;
     border: 1px solid black;
 }
+.wmcz-caurosel-controls {
+    display: flex;
+    height: 40px;
+    border: 1px solid black;
+}
 .wmcz-caurosel-left {
     width: 50%;
 }
 .wmcz-caurosel-right {
+    width: 50%;
+}
+.wmcz-caurosel-right-colored {
     width: 50%;
     background-color: lightgrey;
     padding: 40px;

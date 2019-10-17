@@ -88,7 +88,7 @@ function wmcz_block_caurosel_register() {
 	wp_register_script(
 		'wmcz-caurosel',
 		plugin_dir_url(__FILE__) . 'blocks/caurosel.js',
-		array( 'wp-blocks', 'wp-element', 'wp-data' )
+		array( 'wp-blocks', 'wp-editor', 'wp-element', 'wp-data' )
 	);
 	register_block_type( 'wmcz/caurosel', [
 		'editor_script' => 'wmcz-caurosel',
