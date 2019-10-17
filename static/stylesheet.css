@@ -1,3 +1,4 @@
+/** WMCZ Event CSS */
 .event-container {
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -20,4 +21,43 @@
 }
 .event-datetime {
     background-color: green;
+}
+
+/** WMCZ Caurosel CSS */
+.wmcz-caurosel-container {
+    display: flex;
+    height: 320px;
+    border: 1px solid black;
+}
+.wmcz-caurosel-left {
+    width: 50%;
+}
+.wmcz-caurosel-right {
+    width: 50%;
+    background-color: lightgrey;
+    padding: 40px;
+}
+.wmcz-caurosel-left > img {
+    height: 320px;
+}
+.wmcz-caurosel-menu {
+    position: relative;
+    top: -55%; /* HACK */
+    left: 25px;
+}
+.wmcz-caurosel-menu > ul {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    margin: 0;
+    list-style: none;
+}
+.wmcz-caurosel-menu > ul > li {
+    padding-bottom: 10px;
+}
+.wmcz-caurosel-menu-dot {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: white;
 }
