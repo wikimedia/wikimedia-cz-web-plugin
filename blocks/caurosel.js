@@ -74,10 +74,9 @@ wp.blocks.registerBlockType('wmcz/caurosel', {
                 let screenControls = [];
                 for (let i = 0; i < props.attributes.headline.length; i++) {
                     screenControls.push(React.createElement(
-                        'a',
+                        'button',
                         {
                             class: "wmcz-caurosel-screen-control",
-                            href: "#",
                             onClick: () => {
                                 this.props.index = i;
                                 this.props.headline = props.attributes.headline[this.props.index];
