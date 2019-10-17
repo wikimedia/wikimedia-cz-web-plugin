@@ -79,8 +79,10 @@ wp.blocks.registerBlockType('wmcz/caurosel', {
                             class: "wmcz-caurosel-screen-control",
                             href: "#",
                             onClick: () => {
-                                console.log('not implemented');
                                 this.props.index = i;
+                                this.props.headline = props.attributes.headline[this.props.index];
+                                this.props.description = props.attributes.description[this.props.index];
+                                this.forceUpdate();
                             }
                         },
                         i + 1
