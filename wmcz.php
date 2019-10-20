@@ -109,8 +109,12 @@ function wmcz_block_caurosel_render_callback( $attributes ) {
 	$descriptionsJson = json_encode( wmcz_escape_array( $attributes['description'] ) );
 	$dataAttrs = "data-index='0' data-headlines='$headlinesJson' data-descriptions='$descriptionsJson'";
 	$menu = '<div data-caurosel-id="' . $id . '" class="wmcz-caurosel-menu"><ul>';
-	for ($i = 0; $i < count( $attributes['headline'] ); $i++) { 
-		$menu .= '<li><div data-caurosel-id="' . $id . '" data-index="' . $i . '" class="wmcz-caurosel-menu-dot"></div></li>';
+	for ($i = 0; $i < count( $attributes['headline'] ); $i++) {
+		$classes = "wmcz-caurosel-menu-dot";
+		if ( $i == 0 ) {
+			$classes .= " wmcz-caurosel-menu-dot-active";
+		}
+		$menu .= '<li><div data-caurosel-id="' . $id . '" data-index="' . $i . '" class="' . $classes . '"></div></li>';
 	}
 	$menu .= '</ul></div>';
 	$html = '
