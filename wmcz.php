@@ -92,8 +92,40 @@ function wmcz_block_event_map_register() {
 	) );
 }
 
+function wmcz_escape_array( $ar ) {
+	$res = [];
+	foreach ($ar as $value ) {
+		$res[] = esc_html( $value );
+	}
+	return $res;
+}
+
 function wmcz_block_caurosel_render_callback( $attributes ) {
-	return file_get_contents( plugin_dir_url(__FILE__) . 'static/caurosel.html');
+	$id = uniqid();
+	echo $id;
+	$headline = esc_html( $attributes['headline'][0] );
+	$description = esc_html( $attributes['description'][0] );
+	$headlinesJson = json_encode( wmcz_escape_array( $attributes['headline'] ) );
+	$descriptionsJson = json_encode( wmcz_escape_array( $attributes['description'] ) );
+	$dataAttrs = "data-index='0' data-headlines='$headlinesJson' data-descriptions='$descriptionsJson'";
+	$menu = '<div data-caurosel-id="' . $id . '" class="wmcz-caurosel-menu"><ul>';
+	for ($i = 0; $i < count( $attributes['headline'] ); $i++) { 
+		$menu .= '<li><div data-caurosel-id="' . $id . '" data-index="' . $i . '" class="wmcz-caurosel-menu-dot"></div></li>';
+	}
+	$menu .= '</ul></div>';
+	$html = '
+	<div data-caurosel-id="' . $id . '" class="wmcz-caurosel-container">
+		<div data-caurosel-id="' . $id . '" class="wmcz-caurosel-left">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg" alt="">
+		</div>
+		<div data-caurosel-id="' . $id . '" ' . $dataAttrs . ' class="wmcz-caurosel-right-colored">
+			<h2>' . $headline . '</h2>
+			<p>' . $description . '</p>
+
+			' . $menu . '
+		</div>
+	</div>';
+	return $html;
 }
 
 function wmcz_block_caurosel_register() {
@@ -117,3 +149,4 @@ wp_enqueue_style('leaflet', plugins_url( 'static/leaflet/dist/leaflet.css', __FI
 wp_enqueue_style('wmcz-plugin', plugins_url( 'static/stylesheet.css', __FILE__ ) );
 wp_enqueue_script('wmcz-plugin', plugins_url( 'static/map.js', __FILE__ ) );
 wp_enqueue_script('wmcz-plugin-events', plugins_url( 'static/events.js', __FILE__ ) );
+wp_enqueue_script('wmcz-plugin-caurosel', plugins_url( 'static/caurosel.js', __FILE__ ) );
