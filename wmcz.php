@@ -11,17 +11,11 @@
 require_once 'vendor/autoload.php';
 require_once 'includes/calendar.php';
 
-function wmcz_block_events_render_callback( $attributes ) {
-	$cols = (int)$attributes['cols'];
-	$rows = (int)$attributes['rows'];
-	$calendar = new WmczCalendar($cols*$rows, $attributes['ical']);
-
-	$now = $calendar->getEventsNow();
-	$html = '<h2>kalendář akcí</h2>
-	<div class="wp-block-columns has-' . $cols*2 . '-columns">';
+function wmcz_block_render_events( $cols, $rows, $events, $class ) {
+	$html = '<div id="wmcz-events-' . $class . '" class="wmcz-events-set wp-block-columns has-' . $cols*2 . '-columns">';
 	for ($i=0; $i < $cols; $i++) { 
 		$html .= '<div class="wp-block-column">';
-		$sliced = array_slice($now, $i*$rows, $rows);
+		$sliced = array_slice($events, $i*$rows, $rows);
 		foreach ($sliced as $event) {
 			$html .= sprintf(
 				'<div class="event-container event-place-datetime">
@@ -46,7 +40,25 @@ function wmcz_block_events_render_callback( $attributes ) {
 		$html .= '</div>';
 	}
 	$html .= '</div>';
-	return "<div class=\"block-wmcz-events\">$html</div>";
+	return $html;
+}
+
+function wmcz_block_events_render_callback( $attributes ) {
+	$cols = (int)$attributes['cols'];
+	$rows = (int)$attributes['rows'];
+	$calendar = new WmczCalendar($cols*$rows, $attributes['ical']);
+	$now = $calendar->getEventsNow();
+	$next = $calendar->getEventsNext();
+	$html = '';
+	$html .= wmcz_block_render_events( $cols, $rows, $now, "this-month" );
+	$html .= wmcz_block_render_events( $cols, $rows, $next, "next-month" );
+	return '<div class="block-wmcz-events">
+	<h2>kalendář akcí</h2>
+	<div class="wmcz-events-controls">
+		<button id="wmcz-events-control-this-month" class="wmcz-events-control">tento měsíc</button>
+		<button id="wmcz-events-control-next-month" class="wmcz-events-control">příští měsíc</button>
+	</div>
+	' . $html . '</div>';
 }
 
 function wmcz_block_events_register() {
@@ -104,3 +116,4 @@ wp_enqueue_script('leaflet', plugins_url( 'static/leaflet/dist/leaflet.js', __FI
 wp_enqueue_style('leaflet', plugins_url( 'static/leaflet/dist/leaflet.css', __FILE__ ) );
 wp_enqueue_style('wmcz-plugin', plugins_url( 'static/stylesheet.css', __FILE__ ) );
 wp_enqueue_script('wmcz-plugin', plugins_url( 'static/map.js', __FILE__ ) );
+wp_enqueue_script('wmcz-plugin-events', plugins_url( 'static/events.js', __FILE__ ) );

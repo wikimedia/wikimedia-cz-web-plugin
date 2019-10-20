@@ -23,6 +23,10 @@
     background-color: #339966;
 }
 
+.wmcz-events-controls {
+    display: flex;
+}
+
 /** WMCZ Caurosel CSS */
 .wmcz-caurosel-container {
     display: flex;
