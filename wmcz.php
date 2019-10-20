@@ -102,7 +102,6 @@ function wmcz_escape_array( $ar ) {
 
 function wmcz_block_caurosel_render_callback( $attributes ) {
 	$id = uniqid();
-	echo $id;
 	$headline = esc_html( $attributes['headline'][0] );
 	$description = esc_html( $attributes['description'][0] );
 	$headlinesJson = json_encode( wmcz_escape_array( $attributes['headline'] ) );
