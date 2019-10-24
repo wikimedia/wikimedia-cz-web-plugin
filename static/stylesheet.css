@@ -80,3 +80,6 @@
 .wmcz-map {
     height: 600px;
 }
+.wmcz-map-data {
+    display: none;
+}

@@ -76,7 +76,18 @@ function wmcz_block_events_register() {
 
 function wmcz_block_event_map_render_callback( $attributes ) {
 	$id = uniqid();
-	return '<div class="wmcz-map" id="map' . $id . '"></div>';
+	$calendar = new WmczCalendar( $attributes['ical'] );
+	$data = [
+		'points' => $calendar->getPlaces(),
+		'defaults' => [
+			'lat' => 50.03861,
+			'lon' => 15.77916,
+			'zoom' => 8
+		]
+	];
+	return '<div class="wmcz-map-container" data-id="' . $id . '">
+	<div class="wmcz-map-data" data-id="' . $id . '">' . esc_html( json_encode( $data ) ) . '</div>
+	<div class="wmcz-map" data-id="' . $id . '" id="map-' . $id . '"></div>';
 }
 
 function wmcz_block_event_map_register() {
