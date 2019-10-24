@@ -14,15 +14,24 @@ class WmczCalendar {
         $this->maxEvents = $maxEvents;
     }
 
+    protected function formatEvents( $events ) {
+        $res = [];
 
-    protected function formatEvent($event) {
-        $date = $this->ical->iCalDateToDateTime($event->dtstart_array[3]);
-        $place = explode( ', ', $event->location );
-        return [
-            'datetime' => $date->format('d. m. Y H:i'),
-            'place' => $place[0],
-            'title' => $event->summary
-        ];
+        for ($i=0; $i < $this->maxEvents ?? count( $events ); $i++) { 
+            if ( isset( $events[$i] ) ) {
+                $event = $events[$i];
+                $date = $this->ical->iCalDateToDateTime($event->dtstart_array[3]);
+                $place = explode( ', ', $event->location );
+                $res[] = [
+                    'datetime' => $date->format('d. m. Y H:i'),
+                    'place' => $place[0],
+                    'title' => $event->summary
+                ];
+            } else {
+                break;
+            }
+        }
+        return $res;
     }
 
     public function getPlaces() {
@@ -32,20 +41,17 @@ class WmczCalendar {
     }
 
     public function getEventsNow() {
-        $res = [];
         $events = $this->ical->eventsFromInterval('1 month');
-
-        for ($i=0; $i < $this->maxEvents ?? count( $events ); $i++) {
-            if ( isset( $events[$i] ) ) {
-                $res[] = $this->formatEvent($events[$i]);
-            } else {
-                break;
-            }
-        }
-        return $res;
+        return $this->formatEvents( $events );
     }
 
     public function getEventsNext() {
-        return [];
+        $nextMonth = new DateTime('+1 month');
+        $nextNextMonth = new DateTime('+2 months');
+        $events = $this->ical->eventsFromRange(
+            $nextMonth->format('Y-m-d'),
+            $nextNextMonth->format('Y-m-d')
+        );
+        return $this->formatEvents( $events );
     }
 }
