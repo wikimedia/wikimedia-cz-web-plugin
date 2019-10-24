@@ -75,3 +75,8 @@
 .wmcz-caurosel-menu-dot-active {
     background-color: aqua;
 }
+
+/** WMCZ map */
+.wmcz-map {
+    height: 600px;
+}
