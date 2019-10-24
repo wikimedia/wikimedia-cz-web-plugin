@@ -74,7 +74,7 @@ function wmcz_block_events_register() {
 	) );
 }
 
-function wmcz_block_event_map_render_callback( $attributes ) {
+function wmcz_block_map_render_callback( $attributes ) {
 	$id = uniqid();
 	$calendar = new WmczCalendar( $attributes['ical'] );
 	$data = [
@@ -90,16 +90,16 @@ function wmcz_block_event_map_render_callback( $attributes ) {
 	<div class="wmcz-map" data-id="' . $id . '" id="map-' . $id . '"></div>';
 }
 
-function wmcz_block_event_map_register() {
+function wmcz_block_map_register() {
 	wp_register_script(
-		'wmcz-event-map',
-		plugin_dir_url(__FILE__) . 'blocks/event-map.js',
+		'wmcz-map',
+		plugin_dir_url(__FILE__) . 'blocks/map.js',
 		array( 'wp-blocks', 'wp-element', 'wp-data' )
 	);
 
-	register_block_type( 'wmcz/event-map', array(
-		'editor_script' => 'wmcz-event-map',
-		'render_callback' => 'wmcz_block_event_map_render_callback'
+	register_block_type( 'wmcz/map', array(
+		'editor_script' => 'wmcz-map',
+		'render_callback' => 'wmcz_block_map_render_callback'
 	) );
 }
 
@@ -155,7 +155,7 @@ function wmcz_block_caurosel_register() {
 }
 
 add_action( 'init', 'wmcz_block_events_register' );
-add_action( 'init', 'wmcz_block_event_map_register' );
+add_action( 'init', 'wmcz_block_map_register' );
 add_action( 'init', 'wmcz_block_caurosel_register' );
 
 wp_enqueue_script('leaflet', plugins_url( 'static/leaflet/dist/leaflet.js', __FILE__ ) );

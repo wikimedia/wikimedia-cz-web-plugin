@@ -1,5 +1,5 @@
-wp.blocks.registerBlockType('wmcz/event-map', {
-  title: 'WMCZ Event map',
+wp.blocks.registerBlockType('wmcz/map', {
+  title: 'WMCZ Map',
   icon: 'megaphone',
   category: 'widgets',
   attributes: {
@@ -21,19 +21,19 @@ wp.blocks.registerBlockType('wmcz/event-map', {
       React.createElement(
         'h3',
         null,
-        'WMCZ Event Map'
+        'WMCZ Map'
       ),
       React.createElement(
         'label',
         {
-          for: 'wmcz-events-ical',
+          for: 'wmcz-map-ical',
         },
         'Calendar URL'
       ),
       React.createElement(
         'input',
         {
-          id: 'wmcz-events-ical',
+          id: 'wmcz-map-ical',
           type: 'text',
           value: props.attributes.ical,
           onChange: updateIcal
