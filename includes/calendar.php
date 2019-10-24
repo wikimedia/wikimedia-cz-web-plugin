@@ -41,16 +41,21 @@ class WmczCalendar {
     }
 
     public function getEventsNow() {
-        $events = $this->ical->eventsFromInterval('1 month');
+        $from = new DateTime();
+        $to = new DateTime('+1 months');
+        $events = $this->ical->eventsFromRange(
+            $from->format('Y-m-d'),
+            $to->format('Y-m-d')
+        );
         return $this->formatEvents( $events );
     }
 
     public function getEventsNext() {
-        $nextMonth = new DateTime('+1 month');
-        $nextNextMonth = new DateTime('+2 months');
+        $from = new DateTime('+1 month');
+        $to = new DateTime('+2 months');
         $events = $this->ical->eventsFromRange(
-            $nextMonth->format('Y-m-d'),
-            $nextNextMonth->format('Y-m-d')
+            $from->format('Y-m-d'),
+            $to->format('Y-m-d')
         );
         return $this->formatEvents( $events );
     }
