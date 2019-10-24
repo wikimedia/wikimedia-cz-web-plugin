@@ -133,10 +133,9 @@ function wmcz_block_caurosel_render_callback( $attributes ) {
 			<img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg" alt="">
 		</div>
 		<div data-caurosel-id="' . $id . '" ' . $dataAttrs . ' class="wmcz-caurosel-right-colored">
+			' . $menu . '
 			<h2>' . $headline . '</h2>
 			<p>' . $description . '</p>
-
-			' . $menu . '
 		</div>
 	</div>';
 	return $html;

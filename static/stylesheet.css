@@ -54,7 +54,6 @@
 }
 .wmcz-caurosel-menu {
     position: relative;
-    top: -55%; /* HACK */
     left: 25px;
 }
 .wmcz-caurosel-menu > ul {
