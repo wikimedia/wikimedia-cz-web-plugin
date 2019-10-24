@@ -46,7 +46,7 @@ function wmcz_block_render_events( $cols, $rows, $events, $class ) {
 function wmcz_block_events_render_callback( $attributes ) {
 	$cols = (int)$attributes['cols'];
 	$rows = (int)$attributes['rows'];
-	$calendar = new WmczCalendar($cols*$rows, $attributes['ical']);
+	$calendar = new WmczCalendar($attributes['ical'], $cols*$rows);
 	$now = $calendar->getEventsNow();
 	$next = $calendar->getEventsNext();
 	$html = '';
@@ -75,8 +75,8 @@ function wmcz_block_events_register() {
 }
 
 function wmcz_block_event_map_render_callback( $attributes ) {
-	$id = uniqid("map");
-	return '<div class="wmcz-map" data-ical="' . $attributes['ical'] . '" id="' . $id . '"></div>';
+	$id = uniqid();
+	return '<div class="wmcz-map" id="map' . $id . '"></div>';
 }
 
 function wmcz_block_event_map_register() {
