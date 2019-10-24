@@ -36,7 +36,11 @@ class WmczCalendar {
         $events = $this->ical->eventsFromInterval('1 month');
 
         for ($i=0; $i < $this->maxEvents; $i++) {
-            $res[] = $this->formatEvent($events[$i]);
+            if ( isset( $events[$i] ) ) {
+                $res[] = $this->formatEvent($events[$i]);
+            } else {
+                break;
+            }
         }
         return $res;
     }
