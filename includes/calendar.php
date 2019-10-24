@@ -8,7 +8,7 @@ class WmczCalendar {
     protected $ical;
     protected $maxEvents;
 
-    public function __construct($maxEvents, $url)
+   public function __construct($url, $maxEvents = null)
     {
         $this->ical = new ICal( $url );
         $this->maxEvents = $maxEvents;
@@ -35,7 +35,7 @@ class WmczCalendar {
         $res = [];
         $events = $this->ical->eventsFromInterval('1 month');
 
-        for ($i=0; $i < $this->maxEvents; $i++) {
+        for ($i=0; $i < $this->maxEvents ?? count( $events ); $i++) {
             if ( isset( $events[$i] ) ) {
                 $res[] = $this->formatEvent($events[$i]);
             } else {
