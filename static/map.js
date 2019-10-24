@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     id: 'wikipedia-map-01',
                     attribution: 'Wikimedia maps beta | Map data &copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
 		}).addTo( map );
+
 		map.setView( [ data.defaults.lat, data.defaults.lon ], data.defaults.zoom );
 		for (let j = 0; j < data.points.length; j++) {
 			const point = data.points[j];

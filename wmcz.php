@@ -80,9 +80,9 @@ function wmcz_block_map_render_callback( $attributes ) {
 	$data = [
 		'points' => $calendar->getPlaces(),
 		'defaults' => [
-			'lat' => 50.03861,
-			'lon' => 15.77916,
-			'zoom' => 8
+			'lat' => (float)$attributes['lat'],
+			'lon' => (float)$attributes['lon'],
+			'zoom' => (int)$attributes['zoom'],
 		]
 	];
 	return '<div class="wmcz-map-container" data-id="' . $id . '">
