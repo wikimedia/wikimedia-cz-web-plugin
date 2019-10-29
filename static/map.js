@@ -16,7 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		map.setView( [ data.defaults.lat, data.defaults.lon ], data.defaults.zoom );
 		for (let j = 0; j < data.points.length; j++) {
 			const point = data.points[j];
-			L.marker( [ point.lat, point.lon ] ).addTo( map );
+			if ( point.lat !== null && point.lon !== null ) {
+				L.marker( [ point.lat, point.lon ] ).addTo( map );
+			}
 		}
 	}
 } );
