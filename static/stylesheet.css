@@ -1,4 +1,7 @@
 /** WMCZ Event CSS */
+.wmcz-events-set {
+    text-align: center;
+}
 .event-container {
     white-space: nowrap;
     text-overflow: ellipsis;
