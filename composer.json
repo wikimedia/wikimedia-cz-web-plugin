@@ -1,6 +1,7 @@
 {
     "require": {
-        "johngrogg/ics-parser": "^2.1"
+        "johngrogg/ics-parser": "^2.1",
+        "maxh/php-nominatim": "^2.2"
     },
     "require-dev": {
         "jakub-onderka/php-parallel-lint": "^1.0"
