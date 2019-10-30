@@ -153,9 +153,23 @@ function wmcz_block_caurosel_register() {
 	] );
 }
 
+function wmcz_admin_register() {
+	add_menu_page('WMCZ', 'WMCZ', 'manage_options', 'wmcz', 'wmcz_admin_index');
+	add_submenu_page('wmcz', 'WMCZ events', 'WMCZ events', 'manage_options', 'wmcz_events', 'wmcz_admin_events');
+}
+
+function wmcz_admin_index() {
+	echo "<h1>Hello world</h1>";
+}
+
+function wmcz_admin_events() {
+	echo "<h1>Hello world</h1>";
+}
+
 add_action( 'init', 'wmcz_block_events_register' );
 add_action( 'init', 'wmcz_block_map_register' );
 add_action( 'init', 'wmcz_block_caurosel_register' );
+add_action( 'admin_menu', 'wmcz_admin_register' );
 
 wp_enqueue_script('leaflet', plugins_url( 'static/leaflet/dist/leaflet.js', __FILE__ ) );
 wp_enqueue_style('leaflet', plugins_url( 'static/leaflet/dist/leaflet.css', __FILE__ ) );
