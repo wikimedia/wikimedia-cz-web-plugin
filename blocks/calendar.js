@@ -1,5 +1,5 @@
-wp.blocks.registerBlockType('wmcz/events', {
-  title: 'WMCZ Events',
+wp.blocks.registerBlockType('wmcz/calendar', {
+  title: 'WMCZ Calendar',
   icon: 'megaphone',
   category: 'widgets',
   attributes: {
@@ -35,19 +35,19 @@ wp.blocks.registerBlockType('wmcz/events', {
       React.createElement(
         'h3',
         null,
-        'WMCZ Events'
+        'WMCZ Calendar'
       ),
       React.createElement(
         'label',
         {
-          for: 'wmcz-events-cols',
+          for: 'wmcz-calendar-cols',
         },
         'Number of columns'
       ),
       React.createElement(
         'input',
         {
-          id: 'wmcz-events-cols',
+          id: 'wmcz-calendar-cols',
           type: 'number',
           value: props.attributes.cols,
           onChange: updateCols
@@ -56,14 +56,14 @@ wp.blocks.registerBlockType('wmcz/events', {
       React.createElement(
         'label',
         {
-          for: 'wmcz-events-rows',
+          for: 'wmcz-calendar-rows',
         },
         'Number of rows'
       ),
       React.createElement(
         'input',
         {
-          id: 'wmcz-events-rows',
+          id: 'wmcz-calendar-rows',
           type: 'number',
           value: props.attributes.rows,
           onChange: updateRows
@@ -72,14 +72,14 @@ wp.blocks.registerBlockType('wmcz/events', {
       React.createElement(
         'label',
         {
-          for: 'wmcz-events-ical',
+          for: 'wmcz-calendar-ical',
         },
         'Calendar URL'
       ),
       React.createElement(
         'input',
         {
-          id: 'wmcz-events-ical',
+          id: 'wmcz-calendar-ical',
           type: 'text',
           value: props.attributes.ical,
           onChange: updateIcal

@@ -68,7 +68,7 @@ function wmcz_block_calendar_register() {
 		array( 'wp-blocks', 'wp-element', 'wp-data' )
 	);
 
-	register_block_type( 'wmcz/events', array(
+	register_block_type( 'wmcz/calendar', array(
 		'editor_script' => 'wmcz-calendar',
 		'render_callback' => 'wmcz_block_calendar_render_callback'
 	) );
