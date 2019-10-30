@@ -8,6 +8,7 @@
     display: flex;
     width: 100%;
     max-width: 300%;
+    padding-bottom: 10px;
 }
 
 .event-container > p {
@@ -28,6 +29,7 @@
 
 .wmcz-events-controls {
     display: flex;
+    padding-bottom: 10px;
 }
 
 /** WMCZ Caurosel CSS */
