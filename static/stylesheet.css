@@ -1,5 +1,5 @@
-/** WMCZ Event CSS */
-.wmcz-events-set {
+/** WMCZ Calendar CSS */
+.wmcz-calendar-set {
     text-align: center;
 }
 .event-container {
@@ -27,7 +27,7 @@
     background-color: #339966;
 }
 
-.wmcz-events-controls {
+.wmcz-calendar-controls {
     display: flex;
     padding-bottom: 10px;
 }

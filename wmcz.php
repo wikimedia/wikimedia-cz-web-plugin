@@ -11,8 +11,8 @@
 require_once 'vendor/autoload.php';
 require_once 'includes/calendar.php';
 
-function wmcz_block_render_events( $cols, $rows, $events, $class ) {
-	$html = '<div id="wmcz-events-' . $class . '" class="wmcz-events-set wp-block-columns has-' . $cols*2 . '-columns">';
+function wmcz_block_render_calendar( $cols, $rows, $events, $class ) {
+	$html = '<div id="wmcz-calendar-' . $class . '" class="wmcz-calendar-set wp-block-columns has-' . $cols*2 . '-columns">';
 	for ($i=0; $i < $cols; $i++) { 
 		$html .= '<div class="wp-block-column">';
 		$sliced = array_slice($events, $i*$rows, $rows);
@@ -43,34 +43,34 @@ function wmcz_block_render_events( $cols, $rows, $events, $class ) {
 	return $html;
 }
 
-function wmcz_block_events_render_callback( $attributes ) {
+function wmcz_block_calendar_render_callback( $attributes ) {
 	$cols = (int)$attributes['cols'];
 	$rows = (int)$attributes['rows'];
 	$calendar = new WmczCalendar($attributes['ical'], $cols*$rows);
 	$now = $calendar->getEventsNow();
 	$next = $calendar->getEventsNext();
 	$html = '';
-	$html .= wmcz_block_render_events( $cols, $rows, $now, "this-month" );
-	$html .= wmcz_block_render_events( $cols, $rows, $next, "next-month" );
-	return '<div class="block-wmcz-events">
+	$html .= wmcz_block_render_calendar( $cols, $rows, $now, "this-month" );
+	$html .= wmcz_block_render_calendar( $cols, $rows, $next, "next-month" );
+	return '<div class="block-wmcz-calendar">
 	<h2>kalendář akcí</h2>
-	<div class="wmcz-events-controls">
-		<button id="wmcz-events-control-this-month" class="wmcz-events-control">tento měsíc</button>
-		<button id="wmcz-events-control-next-month" class="wmcz-events-control">příští měsíc</button>
+	<div class="wmcz-calendar-controls">
+		<button id="wmcz-calendar-control-this-month" class="wmcz-calendar-control">tento měsíc</button>
+		<button id="wmcz-calendar-control-next-month" class="wmcz-calendar-control">příští měsíc</button>
 	</div>
 	' . $html . '</div>';
 }
 
-function wmcz_block_events_register() {
+function wmcz_block_calendar_register() {
 	wp_register_script(
-		'wmcz-events',
-		plugin_dir_url(__FILE__) . 'blocks/events.js',
+		'wmcz-calendar',
+		plugin_dir_url(__FILE__) . 'blocks/calendar.js',
 		array( 'wp-blocks', 'wp-element', 'wp-data' )
 	);
 
 	register_block_type( 'wmcz/events', array(
-		'editor_script' => 'wmcz-events',
-		'render_callback' => 'wmcz_block_events_render_callback'
+		'editor_script' => 'wmcz-calendar',
+		'render_callback' => 'wmcz_block_calendar_render_callback'
 	) );
 }
 
@@ -166,7 +166,7 @@ function wmcz_admin_events() {
 	echo "<h1>Hello world</h1>";
 }
 
-add_action( 'init', 'wmcz_block_events_register' );
+add_action( 'init', 'wmcz_block_calendar_register' );
 add_action( 'init', 'wmcz_block_map_register' );
 add_action( 'init', 'wmcz_block_caurosel_register' );
 add_action( 'admin_menu', 'wmcz_admin_register' );
@@ -175,5 +175,5 @@ wp_enqueue_script('leaflet', plugins_url( 'static/leaflet/dist/leaflet.js', __FI
 wp_enqueue_style('leaflet', plugins_url( 'static/leaflet/dist/leaflet.css', __FILE__ ) );
 wp_enqueue_style('wmcz-plugin', plugins_url( 'static/stylesheet.css', __FILE__ ) );
 wp_enqueue_script('wmcz-plugin', plugins_url( 'static/map.js', __FILE__ ) );
-wp_enqueue_script('wmcz-plugin-events', plugins_url( 'static/events.js', __FILE__ ) );
+wp_enqueue_script('wmcz-plugin-events', plugins_url( 'static/calendar.js', __FILE__ ) );
 wp_enqueue_script('wmcz-plugin-caurosel', plugins_url( 'static/caurosel.js', __FILE__ ) );
