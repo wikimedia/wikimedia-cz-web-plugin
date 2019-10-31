@@ -2,6 +2,7 @@
 
 function wmcz_admin_register() {
 	add_menu_page('WMCZ', 'WMCZ', 'manage_options', 'wmcz', 'wmcz_admin_index');
+	add_submenu_page('wmcz', 'WMCZ tags', 'WMCZ tags', 'manage_options', 'wmcz_tags', 'wmcz_admin_tags');
 	add_submenu_page('wmcz', 'WMCZ events', 'WMCZ events', 'manage_options', 'wmcz_events', 'wmcz_admin_events');
 	add_submenu_page('wmcz', 'WMCZ news', 'WMCZ news', 'manage_options', 'wmcz_news', 'wmcz_admin_news');
 }
@@ -26,6 +27,22 @@ function wmcz_admin_news_edited() {
 	?>
 	<div class="updated notice">
 	    <p>Změny v novinkách byly úspěšně uloženy.</p>
+	</div>
+	<?php
+}
+
+function wmcz_admin_tags_added() {
+	?>
+	<div class="updated notice">
+		<p>Štítek byl přidán.</p>
+	</div>
+	<?php
+}
+
+function wmcz_admin_tags_edited() {
+	?>
+	<div class="updated notice">
+		<p>Změny ve štítkách byly úspěšně uloženy.</p>
 	</div>
 	<?php
 }
@@ -108,6 +125,91 @@ function wmcz_admin_news() {
 		<label for="wmcz-news-new-description">Popisek</label>
 		<textarea name="description" id="wmcz-news-new-description"></textarea>
 		<input type="submit" value="Přidat" />
+	</form>
+	<?php
+}
+
+function wmcz_admin_tags() {
+	global $wpdb;
+
+	if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
+		if ( $_POST['type'] == "new" ) {
+			$wpdb->insert(
+				$wpdb->prefix . "wmcz_tags",
+				[
+					'name' => $_POST['name-new']
+				]
+			);
+			wmcz_admin_tags_added();
+		} elseif ( $_POST['type'] == "update" ) {
+			$updated = false;
+			$tags = $wpdb->get_results( "SELECT id, name FROM {$wpdb->prefix}wmcz_tags", OBJECT );
+
+			foreach ( $tags as $tag ) {
+				$data = [];
+				if ( $_POST["name-$tag->id"] != $tag->name ) {
+					$data['name'] = $_POST["name-$tag->id"];
+				}
+
+				if ( count($data) > 0 ) {
+					$wpdb->update(
+						"{$wpdb->prefix}wmcz_tags",
+						$data,
+						[
+							'id' => $tag->id
+						]
+					);
+					$updated = true;
+				}
+			}
+
+			if ( $updated ) {
+				wmcz_admin_tags_edited();
+			}
+		}
+	}
+
+	$tags = $wpdb->get_results( "SELECT id, name FROM {$wpdb->prefix}wmcz_tags", OBJECT );
+	?>
+	<h1>WMCZ Tags management</h1>
+	<h2>Stávající štítky</h2>
+	<form method="post">
+		<input type="hidden" name="type" value="update">
+		<table>
+			<thead>
+				<tr>
+					<th>jméno</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach( $tags as $tag ): ?>
+				<tr>
+					<td>
+						<input type="text" name="name-<?php echo $tag->id ?>" value="<?php echo $tag->name ?>">
+					</td>
+				</tr>
+				<?php endforeach; ?>
+			</tbody>
+		</table>
+		<input type="submit" value="Potvrdit změny">
+	</form>
+
+	<h2>Přidat novou položku</h2>
+	<form method="post">
+		<input type="hidden" name="type" value="new">
+		<table>
+			<thead>
+				<tr>
+					<th>jméno</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input type="text" name="name-new"></td>
+				</tr>
+			</tbody>
+		</table>
+		<input type="submit" value="Přidat položku">
 	</form>
 	<?php
 }
