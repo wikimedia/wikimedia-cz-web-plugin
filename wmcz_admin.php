@@ -62,7 +62,20 @@ function wmcz_admin_news() {
 	
 			wmcz_admin_news_added();
 		} elseif ( $_POST['type'] === "update" ) {
-            $updated = false;
+			$updated = false;
+			
+			if ( isset($_POST['delete']) ) {
+				foreach ( $_POST['delete'] as $toDelete ) {
+					$wpdb->delete(
+						"{$wpdb->prefix}wmcz_news",
+						[
+							'id' => (int)$toDelete
+						]
+					);
+					$updated = true;
+				}
+			}
+
 			$news =  $wpdb->get_results( "SELECT id, title, description, photo, published FROM {$wpdb->prefix}wmcz_news", OBJECT );
 			foreach ( $news as $new ) {
 				if ( $new->title != $_POST["title$new->id"] ) {
@@ -99,6 +112,7 @@ function wmcz_admin_news() {
 				<tr>
 					<th>Titulek</th>
 					<th>Popisek</th>
+					<th>Smazat?</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -109,6 +123,9 @@ function wmcz_admin_news() {
 					</td>
 					<td>
 						<textarea name="description-<?php echo $new->id ?>"><?php echo $new->description ?></textarea>
+					</td>
+					<td>
+						<input type="checkbox" name="delete[]" value="<?php echo $new->id ?>">
 					</td>
 				</tr>
 				<?php endforeach; ?>
