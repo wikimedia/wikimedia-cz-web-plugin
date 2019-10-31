@@ -199,7 +199,7 @@ function wmcz_block_news_list_register() {
 
 function wmcz_block_news_list_render_callback( $attributes ) {
 	global $wpdb;
-	$news =  $wpdb->get_results( "SELECT id, title, description, photo, added FROM {$wpdb->prefix}wmcz_news ORDER BY added DESC LIMIT 4", OBJECT );
+	$news =  $wpdb->get_results( "SELECT id, title, description, photo, added FROM {$wpdb->prefix}wmcz_news ORDER BY added DESC", OBJECT );
 	$html = '<div class="wmcz-news-list-container">';
 
 	foreach ( $news as $new ) {
