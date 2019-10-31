@@ -153,6 +153,36 @@ function wmcz_block_caurosel_register() {
 	] );
 }
 
+function wmcz_block_news_register() {
+	wp_register_script(
+		'wmcz-news',
+		plugin_dir_url(__FILE__) . 'blocks/news.js',
+		array( 'wp-blocks', 'wp-editor', 'wp-element', 'wp-data' )
+	);
+	register_block_type( 'wmcz/news', [
+		'editor_script' => 'wmcz-news',
+		'render_callback' => 'wmcz_block_news_render_callback'
+	] );
+}
+
+function wmcz_block_news_render_callback( $attributes ) {
+	global $wpdb;
+	$news =  $wpdb->get_results( "SELECT id, title, description, photo FROM {$wpdb->prefix}wmcz_news ORDER BY published DESC LIMIT 4", OBJECT );
+	$html = '<div class="wmcz-news">
+	<h2>Novinky</h2>
+	<div class="wp-block-columns has-4-columns wmcz-news-inner">';
+	foreach ( $news as $new ) {
+		$html .= '<div class="wp-block-column wmcz-new">';
+		$html .= '<h3>' . $new->title . '</h3>';
+		$html .= '<p>' . $new->description . '</p>';
+		$html .= '</div>';
+	}
+	$html .= '</div>
+	<div class="wp-block-button"><a class="wp-block-button__link has-background no-border-radius" href="' . $attributes['more'] . '" style="background-color:#339966">Další novinky</a></div>
+	</div>';
+	return $html;
+}
+
 global $wmcz_db_version;
 $wmcz_db_version = 1;
 
@@ -178,6 +208,7 @@ require_once 'wmcz_admin.php';
 add_action( 'init', 'wmcz_block_calendar_register' );
 add_action( 'init', 'wmcz_block_map_register' );
 add_action( 'init', 'wmcz_block_caurosel_register' );
+add_action( 'init', 'wmcz_block_news_register' );
 register_activation_hook( __FILE__, 'wmcz_install' );
 
 wp_enqueue_script('leaflet', plugins_url( 'static/leaflet/dist/leaflet.js', __FILE__ ) );
