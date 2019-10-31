@@ -45,6 +45,7 @@ function wmcz_admin_news() {
 	
 			wmcz_admin_news_added();
 		} elseif ( $_POST['type'] === "update" ) {
+            $updated = false;
 			$news =  $wpdb->get_results( "SELECT id, title, description, photo, published FROM {$wpdb->prefix}wmcz_news", OBJECT );
 			foreach ( $news as $new ) {
 				if ( $new->title != $_POST["title$new->id"] ) {
@@ -60,10 +61,13 @@ function wmcz_admin_news() {
 						[
 							'id' => $new->id
 						]
-					);
-					wmcz_admin_news_edited();
+                    );
+                    $updated = true;
 				}
-			}
+            }
+            if ( $updated ) {
+                wmcz_admin_news_edited();
+            }
 		}
 	}
 
