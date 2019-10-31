@@ -145,6 +145,18 @@ function wmcz_admin_tags() {
 			$updated = false;
 			$tags = $wpdb->get_results( "SELECT id, name FROM {$wpdb->prefix}wmcz_tags", OBJECT );
 
+			if ( isset($_POST['delete']) ) {
+				foreach ( $_POST['delete'] as $toDelete ) {
+					$wpdb->delete(
+						"{$wpdb->prefix}wmcz_tags",
+						[
+							'id' => (int)$toDelete
+						]
+					);
+					$updated = true;
+				}
+			}
+
 			foreach ( $tags as $tag ) {
 				$data = [];
 				if ( $_POST["name-$tag->id"] != $tag->name ) {
@@ -179,6 +191,7 @@ function wmcz_admin_tags() {
 			<thead>
 				<tr>
 					<th>jméno</th>
+					<th>smazat?</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -186,6 +199,9 @@ function wmcz_admin_tags() {
 				<tr>
 					<td>
 						<input type="text" name="name-<?php echo $tag->id ?>" value="<?php echo $tag->name ?>">
+					</td>
+					<td>
+						<input type="checkbox" name="delete[]" value="<?php echo $tag->id ?>">
 					</td>
 				</tr>
 				<?php endforeach; ?>
