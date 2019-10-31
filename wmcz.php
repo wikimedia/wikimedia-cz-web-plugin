@@ -211,9 +211,12 @@ add_action( 'init', 'wmcz_block_caurosel_register' );
 add_action( 'init', 'wmcz_block_news_register' );
 register_activation_hook( __FILE__, 'wmcz_install' );
 
-wp_enqueue_script('leaflet', plugins_url( 'static/leaflet/dist/leaflet.js', __FILE__ ) );
-wp_enqueue_style('leaflet', plugins_url( 'static/leaflet/dist/leaflet.css', __FILE__ ) );
-wp_enqueue_style('wmcz-plugin', plugins_url( 'static/stylesheet.css', __FILE__ ) );
-wp_enqueue_script('wmcz-plugin', plugins_url( 'static/map.js', __FILE__ ) );
-wp_enqueue_script('wmcz-plugin-events', plugins_url( 'static/calendar.js', __FILE__ ) );
-wp_enqueue_script('wmcz-plugin-caurosel', plugins_url( 'static/caurosel.js', __FILE__ ) );
+
+if (!is_admin()) {
+	wp_enqueue_script('leaflet', plugins_url( 'static/leaflet/dist/leaflet.js', __FILE__ ) );
+	wp_enqueue_style('leaflet', plugins_url( 'static/leaflet/dist/leaflet.css', __FILE__ ) );
+	wp_enqueue_style('wmcz-plugin', plugins_url( 'static/stylesheet.css', __FILE__ ) );
+	wp_enqueue_script('wmcz-plugin', plugins_url( 'static/map.js', __FILE__ ) );
+	wp_enqueue_script('wmcz-plugin-events', plugins_url( 'static/calendar.js', __FILE__ ) );
+	wp_enqueue_script('wmcz-plugin-caurosel', plugins_url( 'static/caurosel.js', __FILE__ ) );
+}
