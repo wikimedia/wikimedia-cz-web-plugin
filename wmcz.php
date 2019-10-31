@@ -185,6 +185,34 @@ function wmcz_block_news_render_callback( $attributes ) {
 	return $html;
 }
 
+function wmcz_block_news_list_register() {
+	wp_register_script(
+		'wmcz-news-list',
+		plugin_dir_url(__FILE__) . 'blocks/news-list.js',
+		array( 'wp-blocks', 'wp-editor', 'wp-element', 'wp-data' )
+	);
+	register_block_type( 'wmcz/news-list', [
+		'editor_script' => 'wmcz-news-list',
+		'render_callback' => 'wmcz_block_news_list_render_callback'
+	] );
+}
+
+function wmcz_block_news_list_render_callback( $attributes ) {
+	global $wpdb;
+	$news =  $wpdb->get_results( "SELECT id, title, description, photo, added FROM {$wpdb->prefix}wmcz_news ORDER BY added DESC LIMIT 4", OBJECT );
+	$html = '<div class="wmcz-news-list-container">';
+
+	foreach ( $news as $new ) {
+		$html .= '<div class="wmcz-news-list-item">';
+		$html .= '<h3>' . $new->title . '</h3>';
+		$html .= '<p>Published: ' . $new->added . '</p>';
+		$html .= '<p>' . $new->description . '</p>';
+		$html .= '</div>';
+	}
+	$html .= '</div>';
+	return $html;
+}
+
 global $wmcz_db_version;
 $wmcz_db_version = 1;
 
@@ -211,6 +239,7 @@ add_action( 'init', 'wmcz_block_calendar_register' );
 add_action( 'init', 'wmcz_block_map_register' );
 add_action( 'init', 'wmcz_block_caurosel_register' );
 add_action( 'init', 'wmcz_block_news_register' );
+add_action( 'init', 'wmcz_block_news_list_register' );
 register_activation_hook( __FILE__, 'wmcz_install' );
 
 
