@@ -241,6 +241,25 @@ function wmcz_install() {
 		PRIMARY KEY  (id)
 	  ) $charset_collate;";
 	dbDelta( $sql );
+
+	$table_name = $wpdb->prefix . "wmcz_tags";
+	$sql = "CREATE TABLE $table_name (
+		id mediumint(9) NOT NULL AUTO_INCREMENT,
+		name tinytext NOT NULL,
+		PRIMARY KEY (id)
+	  ) $charset_collate;";
+	dbDelta( $sql );
+
+	$table_name = $wpdb->prefix . "wmcz_tags_news";
+	$sql = "CREATE TABLE $table_name (
+		id mediumint(9) NOT NULL AUTO_INCREMENT,
+		tag_id mediumint(9) NOT NULL,
+		new_id mediumint(9) NOT NULL,
+		PRIMARY KEY (id),
+		FOREIGN KEY (tag_id) REFERENCES {$wpdb->prefix}wmcz_tags(id),
+		FOREIGN KEY (new_id) REFERENCES {$wpdb->prefix}wmcz_news(id)
+	  ) $charset_collate;";
+	dbDelta( $sql );
 }
 
 require_once 'wmcz_admin.php';
