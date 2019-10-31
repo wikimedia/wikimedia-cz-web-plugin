@@ -167,14 +167,16 @@ function wmcz_block_news_register() {
 
 function wmcz_block_news_render_callback( $attributes ) {
 	global $wpdb;
-	$news =  $wpdb->get_results( "SELECT id, title, description, photo FROM {$wpdb->prefix}wmcz_news ORDER BY published DESC LIMIT 4", OBJECT );
+	$news =  $wpdb->get_results( "SELECT id, title, description, photo, added FROM {$wpdb->prefix}wmcz_news ORDER BY added DESC LIMIT 4", OBJECT );
 	$html = '<div class="wmcz-news">
 	<h2>Novinky</h2>
 	<div class="wp-block-columns has-4-columns wmcz-news-inner">';
 	foreach ( $news as $new ) {
 		$html .= '<div class="wp-block-column wmcz-new">';
 		$html .= '<h3>' . $new->title . '</h3>';
+		$html .= '<p>Published: ' . $new->added . '</p>';
 		$html .= '<p>' . $new->description . '</p>';
+		$html .= '<a class="wmcz-new-read-more" href="' . $attributes['more'] . '?wmcz-new-id=' . $new->id . '">Více</a>';
 		$html .= '</div>';
 	}
 	$html .= '</div>
