@@ -240,7 +240,7 @@ function wmcz_install() {
 		published boolean DEFAULT 0 NOT NULL,
 		PRIMARY KEY  (id)
 	  ) $charset_collate;";
-	  dbDelta( $sql );
+	dbDelta( $sql );
 }
 
 require_once 'wmcz_admin.php';
