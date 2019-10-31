@@ -242,7 +242,6 @@ add_action( 'init', 'wmcz_block_news_register' );
 add_action( 'init', 'wmcz_block_news_list_register' );
 register_activation_hook( __FILE__, 'wmcz_install' );
 
-
 if (!is_admin()) {
 	wp_enqueue_script('leaflet', plugins_url( 'static/leaflet/dist/leaflet.js', __FILE__ ) );
 	wp_enqueue_style('leaflet', plugins_url( 'static/leaflet/dist/leaflet.css', __FILE__ ) );
