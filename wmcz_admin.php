@@ -241,16 +241,10 @@ function wmcz_admin_tags() {
 	<form method="post">
 		<input type="hidden" name="type" value="new">
 		<table>
-			<thead>
-				<tr>
-					<th>jméno</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td><input type="text" name="name-new"></td>
-				</tr>
-			</tbody>
+			<tr>
+				<th>jméno</th>
+				<td><input type="text" name="name-new"></td>
+			</tr>
 		</table>
 		<input type="submit" value="Přidat položku">
 	</form>
