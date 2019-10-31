@@ -165,6 +165,18 @@ function wmcz_block_news_register() {
 	] );
 }
 
+function wmcz_format_new( $new, $extraClass="", $readMore=null ) {
+	$html = '<div class="wmcz-new ' . $extraClass . '">';
+	$html .= '<h3>' . $new->title . '</h3>';
+	$html .= '<p>Published: ' . $new->added . '</p>';
+	$html .= '<p>' . $new->description . '</p>';
+	if ( $readMore ) {
+		$html .= '<a class="wmcz-new-read-more" href="' . $readMore . '?wmcz-new-id=' . $new->id . '">Více</a>';
+	}
+	$html .= '</div>';
+	return $html;
+}
+
 function wmcz_block_news_render_callback( $attributes ) {
 	global $wpdb;
 	$news =  $wpdb->get_results( "SELECT id, title, description, photo, added FROM {$wpdb->prefix}wmcz_news ORDER BY added DESC LIMIT 4", OBJECT );
@@ -172,12 +184,7 @@ function wmcz_block_news_render_callback( $attributes ) {
 	<h2>Novinky</h2>
 	<div class="wp-block-columns has-4-columns wmcz-news-inner">';
 	foreach ( $news as $new ) {
-		$html .= '<div class="wp-block-column wmcz-new">';
-		$html .= '<h3>' . $new->title . '</h3>';
-		$html .= '<p>Published: ' . $new->added . '</p>';
-		$html .= '<p>' . $new->description . '</p>';
-		$html .= '<a class="wmcz-new-read-more" href="' . $attributes['more'] . '?wmcz-new-id=' . $new->id . '">Více</a>';
-		$html .= '</div>';
+		$html .= wmcz_format_new( $new, "wp-block-column", $attributes['more'] );
 	}
 	$html .= '</div>
 	<div class="wp-block-button"><a class="wp-block-button__link has-background no-border-radius" href="' . $attributes['more'] . '" style="background-color:#339966">Další novinky</a></div>
@@ -199,18 +206,21 @@ function wmcz_block_news_list_register() {
 
 function wmcz_block_news_list_render_callback( $attributes ) {
 	global $wpdb;
-	$news =  $wpdb->get_results( "SELECT id, title, description, photo, added FROM {$wpdb->prefix}wmcz_news ORDER BY added DESC", OBJECT );
-	$html = '<div class="wmcz-news-list-container">';
 
-	foreach ( $news as $new ) {
-		$html .= '<div class="wmcz-news-list-item">';
-		$html .= '<h3>' . $new->title . '</h3>';
-		$html .= '<p>Published: ' . $new->added . '</p>';
-		$html .= '<p>' . $new->description . '</p>';
+	if ( isset( $_GET['wmcz-new-id'] ) ) {
+		$query = $wpdb->prepare( "SELECT id, title, description, photo, added FROM {$wpdb->prefix}wmcz_news WHERE id=%d", (int)$_GET['wmcz-new-id'] );
+		$new = $wpdb->get_row( $query, OBJECT );
+		return wmcz_format_new( $new );
+	} else {
+		$news =  $wpdb->get_results( "SELECT id, title, description, photo, added FROM {$wpdb->prefix}wmcz_news ORDER BY added DESC", OBJECT );
+		$html = '<div class="wmcz-news-list-container">';
+
+		foreach ( $news as $new ) {
+			$html .= wmcz_format_new( $new );
+		}
 		$html .= '</div>';
+		return $html;
 	}
-	$html .= '</div>';
-	return $html;
 }
 
 global $wmcz_db_version;
