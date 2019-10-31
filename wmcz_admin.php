@@ -59,6 +59,16 @@ function wmcz_admin_news() {
 					'description' => $_POST['description']
 				]
 			);
+			$newId = $wpdb->insert_id;
+			foreach ( $_POST['tags'] as $tag ) {
+				$wpdb->insert(
+					$wpdb->prefix . "wmcz_tags_news",
+					[
+						'new_id' => $newId,
+						'tag_id' => $tag
+					]
+				);
+			}
 	
 			wmcz_admin_news_added();
 		} elseif ( $_POST['type'] === "update" ) {
@@ -102,6 +112,7 @@ function wmcz_admin_news() {
 	}
 
 	$news =  $wpdb->get_results( "SELECT id, title, description, photo, published FROM {$wpdb->prefix}wmcz_news", OBJECT );
+	$tags = $wpdb->get_results( "SELECT id, name FROM {$wpdb->prefix}wmcz_tags", OBJECT );
 	?>
 	<h1>WMCZ news management</h1>
 	<h2>Stávající novinky</h2>
@@ -112,6 +123,7 @@ function wmcz_admin_news() {
 				<tr>
 					<th>Titulek</th>
 					<th>Popisek</th>
+					<th>Štítky</th>
 					<th>Smazat?</th>
 				</tr>
 			</thead>
@@ -123,6 +135,13 @@ function wmcz_admin_news() {
 					</td>
 					<td>
 						<textarea name="description-<?php echo $new->id ?>"><?php echo $new->description ?></textarea>
+					</td>
+					<td>
+						<select multiple name="tags-<?php echo $new->id ?>[]">
+							<?php foreach( $tags as $tag ): ?>
+							<option value="<?php echo $tag->id ?>"><?php echo $tag->name ?></option>
+							<?php endforeach; ?>
+						</select>
 					</td>
 					<td>
 						<input type="checkbox" name="delete[]" value="<?php echo $new->id ?>">
@@ -148,6 +167,16 @@ function wmcz_admin_news() {
 				<th>popisek</th>
 				<td>
 					<input type="text" name="description">
+				</td>
+			</tr>
+			<tr>
+				<th>štítky</th>
+				<td>
+					<select multiple name="tags[]">
+						<?php foreach( $tags as $tag ): ?>
+						<option value="<?php echo $tag->id ?>"><?php echo $tag->name ?></option>
+						<?php endforeach; ?>
+					</select>
 				</td>
 			</tr>
 		</table>
