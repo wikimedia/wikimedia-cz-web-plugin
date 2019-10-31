@@ -137,10 +137,20 @@ function wmcz_admin_news() {
 	<h2>Přidat novou novinku</h2>
 	<form method="POST">
 		<input type="hidden" name="type" value="new">
-		<label for="wmcz-news-new-title">Titulek</label>
-		<input type="text" name="title" id="wmcz-news-new-title" />
-		<label for="wmcz-news-new-description">Popisek</label>
-		<textarea name="description" id="wmcz-news-new-description"></textarea>
+		<table>
+			<tr>
+				<th>titulek</th>
+				<td>
+					<input type="text" name="title">
+				</td>
+			</tr>
+			<tr>
+				<th>popisek</th>
+				<td>
+					<input type="text" name="description">
+				</td>
+			</tr>
+		</table>
 		<input type="submit" value="Přidat" />
 	</form>
 	<?php
