@@ -256,11 +256,12 @@ function render_block_wmcz_latest_posts( $attributes ) {
 		
 		$list_items_markup .= sprintf(
 			'<li>
-			<a href="%2$s">%1$s%3$s</a><p>%4$s</p>',
+			<a href="%2$s">%1$s%3$s</a><p>%4$s <a href="%5$s">Více</a></p>',
 			get_the_post_thumbnail( $post_id, 'thumbnail' ),
 			esc_url( get_permalink( $post_id ) ),
 			esc_html( $title ), 
-			get_the_excerpt( $post_id )
+			get_the_excerpt( $post_id ),
+			esc_url( get_permalink( $post_id ) )
 		);
 				
 		if ( isset( $attributes['displayPostDate'] ) && $attributes['displayPostDate'] ) {
