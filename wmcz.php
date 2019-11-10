@@ -351,6 +351,10 @@ function register_block_wmcz_latest_posts() {
 	);
 }
 
+function wmcz_excerpt_more() {
+	return '';
+}
+
 global $wmcz_db_version;
 $wmcz_db_version = 1;
 
@@ -398,6 +402,7 @@ add_action( 'init', 'wmcz_block_caurosel_register' );
 add_action( 'init', 'wmcz_block_news_register' );
 add_action( 'init', 'wmcz_block_news_list_register' );
 add_action( 'init', 'register_block_wmcz_latest_posts' );
+add_filter('excerpt_more', 'wmcz_excerpt_more');
 register_activation_hook( __FILE__, 'wmcz_install' );
 
 if (!is_admin()) {
