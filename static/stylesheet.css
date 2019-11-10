@@ -88,3 +88,9 @@
 .wmcz-map-data {
     display: none;
 }
+
+/** WMCZ latest posts **/
+.wmcz-latest-posts > li img {
+    display: block;
+    padding-bottom: 10px;
+}

@@ -295,7 +295,7 @@ function render_block_wmcz_latest_posts( $attributes ) {
 	}
 
 	$block_content = sprintf(
-		'<ul class="%1$s">%2$s</ul>',
+		'<ul class="wp-block-latest-posts wp-block-latest-posts__list wmcz-latest-posts %1$s">%2$s</ul>',
 		esc_attr( $class ),
 		$list_items_markup
 	);
