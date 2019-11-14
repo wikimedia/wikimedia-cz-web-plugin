@@ -103,23 +103,25 @@ function wmcz_block_map_register() {
 	) );
 }
 
-function wmcz_escape_array( $ar ) {
-	$res = [];
-	foreach ($ar as $value ) {
-		$res[] = esc_html( $value );
-	}
-	return $res;
-}
+function wmcz_block_events_caurosel_render_callback( $attributes ) {
+	global $wpdb;
 
-function wmcz_block_caurosel_render_callback( $attributes ) {
 	$id = uniqid();
-	$headline = esc_html( $attributes['headline'][0] );
-	$description = esc_html( $attributes['description'][0] );
-	$headlinesJson = json_encode( wmcz_escape_array( $attributes['headline'] ) );
-	$descriptionsJson = json_encode( wmcz_escape_array( $attributes['description'] ) );
+	$events = $wpdb->get_results( "SELECT id, name, description, photo_id FROM {$wpdb->prefix}wmcz_events WHERE published=1 ORDER BY added DESC", OBJECT );
+	$numOfEvents = $wpdb->num_rows;
+	$headline = esc_html( $events[0]->name );
+	$description = esc_html( $events[0]->description );
+	$headlines = [];
+	$descriptions = [];
+	foreach ( $events as $event ) {
+		$headlines[] = esc_html( $event->name );
+		$descriptions[] = esc_html( $event->description );
+	}
+	$headlinesJson = json_encode( $headlines );
+	$descriptionsJson = json_encode( $description );
 	$dataAttrs = "data-index='0' data-headlines='$headlinesJson' data-descriptions='$descriptionsJson'";
 	$menu = '<div data-caurosel-id="' . $id . '" class="wmcz-caurosel-menu"><ul>';
-	for ($i = 0; $i < count( $attributes['headline'] ); $i++) {
+	for ($i = 0; $i < $numOfEvents; $i++) {
 		$classes = "wmcz-caurosel-menu-dot";
 		if ( $i == 0 ) {
 			$classes .= " wmcz-caurosel-menu-dot-active";
@@ -141,15 +143,15 @@ function wmcz_block_caurosel_render_callback( $attributes ) {
 	return $html;
 }
 
-function wmcz_block_caurosel_register() {
+function wmcz_block_events_caurosel_register() {
 	wp_register_script(
-		'wmcz-caurosel',
-		plugin_dir_url(__FILE__) . 'blocks/caurosel.js',
+		'wmcz-events-caurosel',
+		plugin_dir_url(__FILE__) . 'blocks/events-caurosel.js',
 		array( 'wp-blocks', 'wp-editor', 'wp-element', 'wp-data' )
 	);
-	register_block_type( 'wmcz/caurosel', [
-		'editor_script' => 'wmcz-caurosel',
-		'render_callback' => 'wmcz_block_caurosel_render_callback'
+	register_block_type( 'wmcz/events-caurosel', [
+		'editor_script' => 'wmcz-events-caurosel',
+		'render_callback' => 'wmcz_block_events_caurosel_render_callback'
 	] );
 }
 
@@ -381,7 +383,7 @@ if ( is_admin() ) {
 
 add_action( 'init', 'wmcz_block_calendar_register' );
 add_action( 'init', 'wmcz_block_map_register' );
-add_action( 'init', 'wmcz_block_caurosel_register' );
+add_action( 'init', 'wmcz_block_events_caurosel_register' );
 add_action( 'init', 'wmcz_block_news_register' );
 add_action( 'init', 'wmcz_block_news_list_register' );
 add_action( 'init', 'register_block_wmcz_latest_posts' );
