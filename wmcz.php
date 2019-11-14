@@ -228,6 +228,40 @@ function wmcz_block_news_list_render_callback( $attributes ) {
 	}
 }
 
+function wmcz_block_events_list_register() {
+	wp_register_script(
+		'wmcz-events-list',
+		plugin_dir_url(__FILE__) . 'blocks/events-list.js',
+		array( 'wp-blocks', 'wp-editor', 'wp-element', 'wp-data' )
+	);
+	register_block_type( 'wmcz/events-list', [
+		'editor_script' => 'wmcz-events-list',
+		'render_callback' => 'wmcz_block_events_list_render_callback'
+	] );
+}
+
+function wmcz_block_events_list_render_callback() {
+	global $wpdb;
+	$events = $wpdb->get_results( "SELECT id, name, description, photo_id FROM {$wpdb->prefix}wmcz_events WHERE published=1 ORDER BY added DESC", OBJECT );
+	?>
+
+	<div class="wmcz-events-container">
+		<?php foreach( $events as $event ): ?>
+		<div class="wmcz-event">
+			<div class="wmcz-event-left">
+				<?php echo wp_get_attachment_image( $event->photo_id ) ?>
+			</div>
+			<div class="wmcz-event-right">
+				<h3><?php echo esc_html( $event->name ) ?> </h3>
+				<p><?php echo esc_html( $event->description ) ?></p>
+			</div>
+		</div>
+		<?php endforeach; ?>
+	</div>
+
+	<?php
+}
+
 /**
  * Renders the <code>core/latest-posts</code> block on server.
  *
@@ -390,6 +424,7 @@ add_action( 'init', 'wmcz_block_events_caurosel_register' );
 add_action( 'init', 'wmcz_block_news_register' );
 add_action( 'init', 'wmcz_block_news_list_register' );
 add_action( 'init', 'register_block_wmcz_latest_posts' );
+add_action( 'init', 'wmcz_block_events_list_register' );
 add_filter('excerpt_more', 'wmcz_excerpt_more');
 register_activation_hook( __FILE__, 'wmcz_install' );
 

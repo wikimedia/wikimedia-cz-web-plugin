@@ -94,3 +94,11 @@
     display: block;
     padding-bottom: 10px;
 }
+
+/** WMCZ list of events **/
+.wmcz-event {
+    display: flex;
+}
+.wmcz-event > div {
+    padding-right: 10px;
+}
