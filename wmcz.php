@@ -362,34 +362,15 @@ function wmcz_install() {
 	global $wpdb;
 	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 	$charset_collate = $wpdb->get_charset_collate();
-	$table_name = $wpdb->prefix . "wmcz_news";
+	$table_name = $wpdb->prefix . "wmcz_events";
 	$sql = "CREATE TABLE $table_name (
 		id mediumint(9) NOT NULL AUTO_INCREMENT,
 		added datetime DEFAULT current_timestamp NOT NULL,
 		title tinytext NOT NULL,
 		description text NOT NULL,
-		photo text NOT NULL,
+		photo_id mediumint(9) NOT NULL,
 		published boolean DEFAULT 0 NOT NULL,
 		PRIMARY KEY  (id)
-	  ) $charset_collate;";
-	dbDelta( $sql );
-
-	$table_name = $wpdb->prefix . "wmcz_tags";
-	$sql = "CREATE TABLE $table_name (
-		id mediumint(9) NOT NULL AUTO_INCREMENT,
-		name tinytext NOT NULL,
-		PRIMARY KEY (id)
-	  ) $charset_collate;";
-	dbDelta( $sql );
-
-	$table_name = $wpdb->prefix . "wmcz_tags_news";
-	$sql = "CREATE TABLE $table_name (
-		id mediumint(9) NOT NULL AUTO_INCREMENT,
-		tag_id mediumint(9) NOT NULL,
-		new_id mediumint(9) NOT NULL,
-		PRIMARY KEY (id),
-		FOREIGN KEY (tag_id) REFERENCES {$wpdb->prefix}wmcz_tags(id),
-		FOREIGN KEY (new_id) REFERENCES {$wpdb->prefix}wmcz_news(id)
 	  ) $charset_collate;";
 	dbDelta( $sql );
 }
