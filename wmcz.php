@@ -241,6 +241,9 @@ function wmcz_block_events_list_register() {
 }
 
 function wmcz_block_events_list_render_callback() {
+	if ( is_admin() ) {
+		return;
+	}
 	global $wpdb;
 	$events = $wpdb->get_results( "SELECT id, name, description, photo_id FROM {$wpdb->prefix}wmcz_events WHERE published=1 ORDER BY added DESC", OBJECT );
 	?>
