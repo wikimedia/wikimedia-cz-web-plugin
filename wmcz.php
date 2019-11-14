@@ -113,13 +113,16 @@ function wmcz_block_events_caurosel_render_callback( $attributes ) {
 	$description = esc_html( $events[0]->description );
 	$headlines = [];
 	$descriptions = [];
+	$images = [];
 	foreach ( $events as $event ) {
 		$headlines[] = esc_html( $event->name );
 		$descriptions[] = esc_html( $event->description );
+		$images[] =  wp_get_attachment_url( $event->photo_id );
 	}
 	$headlinesJson = json_encode( $headlines );
-	$descriptionsJson = json_encode( $description );
-	$dataAttrs = "data-index='0' data-headlines='$headlinesJson' data-descriptions='$descriptionsJson'";
+	$descriptionsJson = json_encode( $descriptions );
+	$imagesJson = json_encode( $images );
+	$dataAttrs = "data-index='0' data-headlines='$headlinesJson' data-descriptions='$descriptionsJson' data-images='$imagesJson'";
 	$menu = '<div data-caurosel-id="' . $id . '" class="wmcz-caurosel-menu"><ul>';
 	for ($i = 0; $i < $numOfEvents; $i++) {
 		$classes = "wmcz-caurosel-menu-dot";
@@ -132,7 +135,7 @@ function wmcz_block_events_caurosel_render_callback( $attributes ) {
 	$html = '
 	<div data-caurosel-id="' . $id . '" class="wmcz-caurosel-container">
 		<div data-caurosel-id="' . $id . '" class="wmcz-caurosel-left">
-			<img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg" alt="">
+			<img src="' .  wp_get_attachment_url( $events[0]->photo_id ) . '" alt="">
 		</div>
 		<div data-caurosel-id="' . $id . '" ' . $dataAttrs . ' class="wmcz-caurosel-right-colored">
 			' . $menu . '
