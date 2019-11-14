@@ -37,7 +37,7 @@ function wmcz_admin_events() {
 				[
 					'name' => $_POST['name'],
 					'description' => $_POST['description'],
-					'published' => $_POST['published'] ?: false,
+					'published' => isset( $_POST['published'] ),
 					'photo_id' => (int)$_POST['image']
 				]
 			);
@@ -60,12 +60,16 @@ function wmcz_admin_events() {
 
 			foreach ( $events as $event ) {
 				$data = [];
+				$published = isset( $_POST["published-{$event->id}"] );
 
 				if ( $_POST["name-{$event->id}"] !== $event->name ) {
 					$data['name'] = $_POST["name-{$event->id}"];
 				}
 				if ( $_POST["description-{$event->id}"] !== $event->description ) {
 					$data['description'] = $_POST["description-{$event->id}"];
+				}
+				if ( $published !== $event->published ) {
+					$data['published'] = $published;
 				}
 
 				if ( count( $data ) > 0 ) {
