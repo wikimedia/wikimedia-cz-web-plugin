@@ -375,7 +375,9 @@ function wmcz_install() {
 	dbDelta( $sql );
 }
 
-require_once 'wmcz_admin.php';
+if ( is_admin() ) {
+	require_once 'wmcz_admin.php';
+}
 
 add_action( 'init', 'wmcz_block_calendar_register' );
 add_action( 'init', 'wmcz_block_map_register' );
