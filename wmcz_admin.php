@@ -27,6 +27,8 @@ function wmcz_admin_event_edited() {
 
 function wmcz_admin_events() {
 	global $wpdb;
+	wp_enqueue_media();
+	wp_enqueue_script('wmcz-plugin-events', plugins_url( 'static/admin/events.js', __FILE__ ) );
 
 	if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 		if ( $_POST['type'] === 'new' ) {
@@ -35,7 +37,8 @@ function wmcz_admin_events() {
 				[
 					'name' => $_POST['name'],
 					'description' => $_POST['description'],
-					'published' => $_POST['published'] ?: false
+					'published' => $_POST['published'] ?: false,
+					'photo_id' => (int)$_POST['image']
 				]
 			);
 			wmcz_admin_event_added();
@@ -115,6 +118,9 @@ function wmcz_admin_events() {
 						<input type="checkbox" name="published-<?php echo $event->id ?>" <?php if( $event->published ): ?>checked<?php endif; ?>>
 					</td>
 					<td>
+						<?php echo $event->photo_id ?>
+					</td>
+					<td>
 						<input type="checkbox" name="delete[]" value="<?php echo $event->id ?>">
 					</td>
 				</tr>
@@ -123,6 +129,7 @@ function wmcz_admin_events() {
 		</table>
 		<input type="submit" value="Odeslat">
 	</form>
+	<h2>Přidat novou akci</h2>
 	<form method="post">
 		<input type="hidden" name="type" value="new">
 		<table>
@@ -134,6 +141,13 @@ function wmcz_admin_events() {
 				<th>popisek</th>
 				<td>
 					<textarea name="description" cols="10" rows="1"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<th>obrázek</th>
+				<td>
+					<button type="button" data-input-name="image" class="button wmcz-events-image-selector">Vybrat obrázek</button>
+					<input type="hidden" name="image">
 				</td>
 			</tr>
 			<tr>
