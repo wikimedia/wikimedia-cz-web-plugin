@@ -393,6 +393,6 @@ if (!is_admin()) {
 	wp_enqueue_style('leaflet', plugins_url( 'static/leaflet/dist/leaflet.css', __FILE__ ) );
 	wp_enqueue_style('wmcz-plugin', plugins_url( 'static/stylesheet.css', __FILE__ ) );
 	wp_enqueue_script('wmcz-plugin', plugins_url( 'static/map.js', __FILE__ ) );
-	wp_enqueue_script('wmcz-plugin-events', plugins_url( 'static/calendar.js', __FILE__ ) );
+	wp_enqueue_script('wmcz-plugin-calendar', plugins_url( 'static/calendar.js', __FILE__ ) );
 	wp_enqueue_script('wmcz-plugin-caurosel', plugins_url( 'static/caurosel.js', __FILE__ ) );
 }
