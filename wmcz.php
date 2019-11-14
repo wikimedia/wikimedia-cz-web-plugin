@@ -366,7 +366,7 @@ function wmcz_install() {
 	$sql = "CREATE TABLE $table_name (
 		id mediumint(9) NOT NULL AUTO_INCREMENT,
 		added datetime DEFAULT current_timestamp NOT NULL,
-		title tinytext NOT NULL,
+		name tinytext NOT NULL,
 		description text NOT NULL,
 		photo_id mediumint(9) NOT NULL,
 		published boolean DEFAULT 0 NOT NULL,
