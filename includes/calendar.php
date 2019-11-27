@@ -8,12 +8,21 @@ require_once 'place.php';
 class WmczCalendar {
     protected $ical;
     protected $url;
+    protected $filename;
     protected $maxEvents;
 
    public function __construct($url, $maxEvents = null)
     {
         $this->url = $url;
-        $this->ical = new ICal( $url );
+        $this->filename = dirname( __FILE__ ) . '/../data/calendar-' . hash( "md5", $this->url ) . '.ical';
+
+        if ( !file_exists( $this->filename ) || (time()-filemtime( $this->filename  )) > 24 * 3600 ) {
+            file_put_contents(
+                $this->filename,
+                fopen( $this->url, 'r' )
+            );
+        }
+        $this->ical = new ICal( $this->filename );
         $this->maxEvents = $maxEvents;
     }
 
