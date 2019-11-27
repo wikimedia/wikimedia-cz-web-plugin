@@ -83,7 +83,7 @@ class WmczCalendar {
 
     public function getPlaces() {
         $file = dirname( __FILE__ ) .  '/../data/calendar-places-' . hash( "md5", $this->url ) . '.json';
-        if ( !file_exists( $file ) || (time()-filemtime( $file )) > 24 * 3600 ) {
+        if ( !file_exists( $file ) || (time()-filemtime( $file )) > 7 * 24 * 3600 ) {
             $places = $this->getPlacesFetch();
             file_put_contents( $file, json_encode( $places ) );
             return $places;
