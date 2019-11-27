@@ -52,7 +52,7 @@ class WmczCalendar {
         $nominatim = new Nominatim( "https://nominatim.openstreetmap.org" );
         $search = $nominatim->newSearch();
         $matches = null;
-        preg_match( '/[0-9 ]+ ([^0-9,-]+)/',  $address, $matches);
+        preg_match( '/, [0-9 ]+ ([^0-9,-]+)/',  $address, $matches);
         $city = $matches[1];
         if ( !$city ) {
             return null;
@@ -83,7 +83,7 @@ class WmczCalendar {
 
     public function getPlaces() {
         $file = dirname( __FILE__ ) .  '/../data/calendar-places-' . hash( "md5", $this->url ) . '.json';
-        if ( !file_exists( $file ) || (time()-filemtime( $file )) > 7 * 24 * 3600 ) {
+        if ( true ||  !file_exists( $file ) || (time()-filemtime( $file )) > 7 * 24 * 3600 ) {
             $places = $this->getPlacesFetch();
             file_put_contents( $file, json_encode( $places ) );
             return $places;
