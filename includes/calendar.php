@@ -64,8 +64,8 @@ class WmczCalendar {
 
     public function getPlacesFetch() {
         $places = [];
-        $from = new DateTime('-6 months');
-        $to = new DateTime('+6 months');
+        $from = new DateTime('-1 month');
+        $to = new DateTime('+11 months');
         $events = $this->ical->eventsFromRange(
             $from->format('Y-m-d'),
             $to->format('Y-m-d')
