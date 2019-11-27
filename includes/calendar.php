@@ -51,23 +51,31 @@ class WmczCalendar {
     protected function addressToPlace( $address ) {
         $nominatim = new Nominatim( "https://nominatim.openstreetmap.org" );
         $search = $nominatim->newSearch();
-        $addressExploded = explode( ', ', $address );
-        $search->query( implode( ', ', array_slice( $addressExploded, 0, 2 ) ) ); // HACK
+        $matches = null;
+        preg_match( '/[0-9 ]+ ([^0-9,-]+)/',  $address, $matches);
+        $city = $matches[1];
+        if ( !$city ) {
+            return null;
+        }
+        $search->query( $city );
         $result = $nominatim->find($search);
         return new Place( $result[0]["lat"], $result[0]["lon"] );
     }
 
     public function getPlacesFetch() {
         $places = [];
-        $from = new DateTime();
-        $to = new DateTime('+1 months');
+        $from = new DateTime('-6 months');
+        $to = new DateTime('+6 months');
         $events = $this->ical->eventsFromRange(
             $from->format('Y-m-d'),
             $to->format('Y-m-d')
         );
         foreach ( $events as $event ) {
-            if ( $event->location ) {
-                $places[] = $this->addressToPlace( $event->location );
+            if ( !is_null( $event->location ) ) {
+                $place = $this->addressToPlace( $event->location );
+                if ( $place ) {
+                    $places[] = $place;
+                }
             }
         }
         return $places;
@@ -75,7 +83,7 @@ class WmczCalendar {
 
     public function getPlaces() {
         $file = dirname( __FILE__ ) .  '/../data/calendar-places-' . hash( "md5", $this->url ) . '.json';
-        if ( !file_exists( $file ) ) {
+        if ( !file_exists( $file ) || (time()-filemtime( $file )) > 24 * 3600 ) {
             $places = $this->getPlacesFetch();
             file_put_contents( $file, json_encode( $places ) );
             return $places;
