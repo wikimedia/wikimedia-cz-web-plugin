@@ -24,10 +24,12 @@ class WmczCalendar {
             if ( isset( $events[$i] ) ) {
                 $event = $events[$i];
                 $date = $this->ical->iCalDateToDateTime($event->dtstart_array[3]);
-                $place = explode( ', ', $event->location );
+                $matches = null;
+                preg_match( '/[0-9 ]+ ([^0-9,-]+)/',  $event->location, $matches);
+                $city = $matches[1];
                 $res[] = [
                     'datetime' => $date->format('d. m. Y H:i'),
-                    'place' => $place[0],
+                    'place' => $city,
                     'title' => $event->summary
                 ];
             } else {
