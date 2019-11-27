@@ -37,7 +37,7 @@ class WmczCalendar {
                 preg_match( '/[0-9 ]+ ([^0-9,-]+)/',  $event->location, $matches);
                 $city = $matches[1];
                 $res[] = [
-                    'datetime' => $date->format('d. m. Y H:i'),
+                    'datetime' => $date->format('d. m. Y'),
                     'place' => $city,
                     'title' => $event->summary
                 ];
