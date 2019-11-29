@@ -32,12 +32,12 @@ class WmczCalendar {
         for ($i=0; $i < $this->maxEvents ?? count( $events ); $i++) { 
             if ( isset( $events[$i] ) ) {
                 $event = $events[$i];
-                $date = $this->ical->iCalDateToDateTime($event->dtstart_array[3]);
+                $startDate = $this->ical->iCalDateToDateTime($event->dtstart_array[3]);
                 $matches = null;
                 preg_match( '/[0-9 ]+ ([^0-9,-]+)/',  $event->location, $matches);
                 $city = $matches[1];
                 $res[] = [
-                    'displayDatetime' => $date->format('d. m. Y'),
+                    'displayDatetime' => $startDate->format('d. m. Y'),
                     'place' => $city,
                     'title' => $event->summary
                 ];
