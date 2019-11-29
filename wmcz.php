@@ -35,7 +35,7 @@ function wmcz_block_render_calendar( $cols, $rows, $events, $class ) {
 		$html .= '<div class="wp-block-column">';
 		foreach ($sliced as $event) {
 			$html .= sprintf(
-				'<div data-event-id="%s" class="event-container">
+				'<div data-event-id="%s" class="event-container event-description">
 					<p class="event-title" data-description="%s">%s</p>
 				</div>',
 				esc_html( $event['id'] ),
