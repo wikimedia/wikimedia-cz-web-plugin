@@ -17,10 +17,10 @@
     width: 50%;
 }
 
-.event-place-datetime > p {
+.event-location-datetime > p {
     color: white;
 }
-.event-place {
+.event-location {
     background-color: #006699;
 }
 .event-datetime {

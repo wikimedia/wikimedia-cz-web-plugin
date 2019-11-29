@@ -18,9 +18,9 @@ function wmcz_block_render_calendar( $cols, $rows, $events, $class ) {
 		$sliced = array_slice($events, $i*$rows, $rows);
 		foreach ($sliced as $event) {
 			$html .= sprintf(
-				'<div data-event-id="%s" class="event-container event-place-datetime">
+				'<div data-event-id="%s" class="event-container event-location-datetime">
 					<p class="event-datetime" data-start-datetime="%s" data-end-datetime="%s">%s</p>
-					<p class="event-place" data-location="%s">%s</p>
+					<p class="event-location" data-location="%s">%s</p>
 				</div>',
 				esc_html( $event['id'] ),
 				esc_html( $event['startDatetime'] ),
