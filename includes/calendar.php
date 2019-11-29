@@ -33,13 +33,18 @@ class WmczCalendar {
             if ( isset( $events[$i] ) ) {
                 $event = $events[$i];
                 $startDate = $this->ical->iCalDateToDateTime($event->dtstart_array[3]);
+                $endDate = $this->ical->iCalDateToDateTime($event->dtend_array[3]);
                 $matches = null;
                 preg_match( '/[0-9 ]+ ([^0-9,-]+)/',  $event->location, $matches);
                 $city = $matches[1];
                 $res[] = [
                     'displayDatetime' => $startDate->format('d. m. Y'),
-                    'place' => $city,
-                    'title' => $event->summary
+                    'startDatetime' => $startDate->format('d. m. Y h:m'),
+                    'endDatetime' => $endDate->format('d. m. Y h:m'),
+                    'location' => $event->location,
+                    'city' => $city,
+                    'title' => $event->summary,
+                    'description' => $event->description
                 ];
             } else {
                 break;
