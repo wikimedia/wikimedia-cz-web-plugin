@@ -44,7 +44,8 @@ class WmczCalendar {
                     'location' => $event->location,
                     'city' => $city,
                     'title' => $event->summary,
-                    'description' => $event->description
+                    'description' => $event->description,
+                    'id' => hash('md5', $event->title . $event->dtstart . $event->dtend)
                 ];
             } else {
                 break;
