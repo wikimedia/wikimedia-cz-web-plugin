@@ -22,7 +22,7 @@ function wmcz_block_render_calendar( $cols, $rows, $events, $class ) {
 					<p class="event-datetime">%s</p>
 					<p class="event-place">%s</p>
 				</div>',
-				esc_html( $event['datetime'] ),
+				esc_html( $event['displayDatetime'] ),
 				esc_html( $event['place'] )
 			);
 		}
