@@ -292,6 +292,58 @@ function register_block_wmcz_latest_posts() {
 	);
 }
 
+function wmcz_block_calendar_list_render_callback( $attributes ) {
+	$calendar = new WmczCalendar($attributes['ical']);
+	$from = filter_input( INPUT_GET, 'from', FILTER_SANITIZE_SPECIAL_CHARS );
+	$to = filter_input( INPUT_GET, 'to', FILTER_SANITIZE_SPECIAL_CHARS );
+
+	$events = $calendar->getEvents( new DateTime($from), new DateTime($to) );
+	$eventsHtml = '<div class="wmcz-events-list-events">';
+	foreach ( $events as $event ) {
+		$tagClasses = [];
+		foreach ( $event['tags'] as $tag ) {
+			$tagClasses[] = "wmcz-events-tag-$tag";
+		}
+		$eventsHtml .= sprintf(
+			'<div class="wmcz-events-list-event ' . implode( ' ', $tagClasses ) . '">
+				<div class="wmcz-events-list-event-name">%s</div>
+				<div class="wmcz-events-list-event-time">%s, %s</div>
+				<div class="wmcz-events-list-event-description">%s</div>
+			</div>',
+			esc_html( $event['title'] ),
+			esc_html($event['startDatetime']),
+			esc_html($event['city']),
+			esc_html($event['description'])
+		);
+	}
+	$eventsHtml .= '</div>';
+
+	return '<div class="wmcz-events-list">
+		<div class="wmcz-events-list-controls">
+			<form>
+				<label for="from">From</label>
+				<input type="date" name="from" id="from" value="' . $from . '">
+				<label for="to">To</label>
+				<input type="date" name="to" id="to" value="' . $to . '">
+				<input type="submit" value="Odeslat" />
+			</form>
+		</div>
+		' . $eventsHtml . '
+	</div>';
+}
+
+function wmcz_block_calendar_list_register() {
+	wp_register_script(
+		'wmcz-calendar-list',
+		plugin_dir_url(__FILE__) . 'blocks/calendar-list.js',
+		array( 'wp-blocks', 'wp-editor', 'wp-element', 'wp-data' )
+	);
+	register_block_type( 'wmcz/calendar-list', [
+		'editor_script' => 'wmcz-calendar-list',
+		'render_callback' => 'wmcz_block_calendar_list_render_callback'
+	] );
+}
+
 function wmcz_excerpt_more() {
 	return '';
 }
@@ -324,6 +376,7 @@ add_action( 'init', 'wmcz_block_calendar_register' );
 add_action( 'init', 'wmcz_block_map_register' );
 add_action( 'init', 'wmcz_block_events_caurosel_register' );
 add_action( 'init', 'register_block_wmcz_latest_posts' );
+add_action( 'init', 'wmcz_block_calendar_list_register' );
 add_filter('excerpt_more', 'wmcz_excerpt_more');
 register_activation_hook( __FILE__, 'wmcz_install' );
 
