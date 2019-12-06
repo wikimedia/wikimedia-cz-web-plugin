@@ -37,15 +37,19 @@ class WmczCalendar {
                 $matches = null;
                 preg_match( '/, [0-9 ]+ ([^0-9,-]+)/',  $event->location, $matches);
                 $city = $matches[1];
+                preg_match('/^(\[([^]]+)\])?\s*(.*)$/', $event->summary, $matches);
+                $tags = explode( ', ', $matches[2] );
+                $clearSummary = $matches[3];
                 $res[] = [
                     'displayDatetime' => $startDate->format('d. m. Y'),
                     'startDatetime' => $startDate->format('d. m. Y h:m'),
                     'endDatetime' => $endDate->format('d. m. Y h:m'),
                     'location' => $event->location,
                     'city' => $city,
-                    'title' => $event->summary,
+                    'title' => $clearSummary,
                     'description' => $event->description,
-                    'id' => hash('md5', $event->title . $event->dtstart . $event->dtend)
+                    'id' => hash('md5', $event->title . $event->dtstart . $event->dtend),
+                    'tags' => $tags
                 ];
             } else {
                 break;
