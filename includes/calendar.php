@@ -101,9 +101,7 @@ class WmczCalendar {
         return json_decode( file_get_contents( $file ) );
     }
 
-    public function getEventsNow() {
-        $from = new DateTime();
-        $to = new DateTime('+1 months');
+    public function getEvents(DateTime $from, DateTime $to) {
         $events = $this->ical->eventsFromRange(
             $from->format('Y-m-d'),
             $to->format('Y-m-d')
@@ -111,13 +109,11 @@ class WmczCalendar {
         return $this->formatEvents( $events );
     }
 
+    public function getEventsNow() {
+        return $this->getEvents(new DateTime(), new DateTime( '+1 months' ));
+    }
+
     public function getEventsNext() {
-        $from = new DateTime('+1 month');
-        $to = new DateTime('+2 months');
-        $events = $this->ical->eventsFromRange(
-            $from->format('Y-m-d'),
-            $to->format('Y-m-d')
-        );
-        return $this->formatEvents( $events );
+        return $this->getEvents(new DateTime('+1 month'), new DateTime( '+2 months' ));
     }
 }
