@@ -29,7 +29,8 @@ class WmczCalendar {
     protected function formatEvents( $events ) {
         $res = [];
 
-        for ($i=0; $i < $this->maxEvents ?? count( $events ); $i++) { 
+        $limit = $this->maxEvents ?? count( $events );
+        for ($i=0; $i < $limit; $i++) {
             if ( isset( $events[$i] ) ) {
                 $event = $events[$i];
                 $startDate = $this->ical->iCalDateToDateTime($event->dtstart_array[3]);
