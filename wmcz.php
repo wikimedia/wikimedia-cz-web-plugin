@@ -305,11 +305,10 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
 			$tagClasses[] = "wmcz-events-tag-$tag";
 		}
 		$eventsHtml .= sprintf(
-			'<div class="wmcz-events-list-event ' . implode( ' ', $tagClasses ) . '">
-				<div class="wmcz-events-list-event-name">%s</div>
-				<div class="wmcz-events-list-event-time">%s, %s</div>
-				<div class="wmcz-events-list-event-description">%s</div>
-			</div>',
+			'<div class="wmcz-events-list-event-name %s">%s</div>
+			<div class="wmcz-events-list-event-time">%s, %s</div>
+			<div class="wmcz-events-list-event-description">%s</div>',
+			esc_attr( implode( ' ', $tagClasses ) ),
 			esc_html( $event['title'] ),
 			esc_html($event['startDatetime']),
 			esc_html($event['city']),

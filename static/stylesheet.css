@@ -139,10 +139,13 @@
 }
 
 /** WMCZ Events List **/
-.wmcz-events-list-event {
-    display: flex;
-    padding: 20px 0;
+.wmcz-events-list-events {
+    grid-template-columns: 2fr 1fr 10fr;
+    display: grid;
+    grid-column-gap: 1rem;
+    padding: 20px 30px 0px 30px;
 }
-.wmcz-events-list-event > div {
-    padding-right: 20px;
+.wmcz-events-list-events > div {
+    display: flex;
+    align-items: center;
 }
