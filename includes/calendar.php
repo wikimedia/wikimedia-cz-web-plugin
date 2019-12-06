@@ -39,7 +39,11 @@ class WmczCalendar {
                 preg_match( '/, [0-9 ]+ ([^0-9,-]+)/',  $event->location, $matches);
                 $city = $matches[1];
                 preg_match('/^(\[([^]]+)\])?\s*(.*)$/', $event->summary, $matches);
-                $tags = explode( ', ', $matches[2] );
+                if ( $matches[2] === "" ) {
+                    $tags = [];
+                } else {
+                    $tags = explode( ', ', $matches[2] );
+                }
                 $clearSummary = $matches[3];
                 $res[] = [
                     'displayDatetime' => $startDate->format('d. m. Y'),
