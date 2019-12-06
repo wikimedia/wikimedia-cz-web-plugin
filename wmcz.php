@@ -164,18 +164,6 @@ function wmcz_block_events_caurosel_register() {
 	] );
 }
 
-function wmcz_block_news_register() {
-	wp_register_script(
-		'wmcz-news',
-		plugin_dir_url(__FILE__) . 'blocks/news.js',
-		array( 'wp-blocks', 'wp-editor', 'wp-element', 'wp-data' )
-	);
-	register_block_type( 'wmcz/news', [
-		'editor_script' => 'wmcz-news',
-		'render_callback' => 'wmcz_block_news_render_callback'
-	] );
-}
-
 /**
  * Renders the <code>core/latest-posts</code> block on server.
  *
@@ -335,7 +323,6 @@ if ( is_admin() ) {
 add_action( 'init', 'wmcz_block_calendar_register' );
 add_action( 'init', 'wmcz_block_map_register' );
 add_action( 'init', 'wmcz_block_events_caurosel_register' );
-add_action( 'init', 'wmcz_block_news_register' );
 add_action( 'init', 'register_block_wmcz_latest_posts' );
 add_filter('excerpt_more', 'wmcz_excerpt_more');
 register_activation_hook( __FILE__, 'wmcz_install' );
