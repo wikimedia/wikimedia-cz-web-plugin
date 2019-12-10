@@ -296,6 +296,14 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
 	$calendar = new WmczCalendar($attributes['ical']);
 	$from = filter_input( INPUT_GET, 'from', FILTER_SANITIZE_SPECIAL_CHARS );
 	$to = filter_input( INPUT_GET, 'to', FILTER_SANITIZE_SPECIAL_CHARS );
+	if ($from == null) {
+		$tmp = new DateTime();
+		$from = $tmp->format('Y-m-d');
+	}
+	if ($to == null) {
+		$tmp = new DateTime('+1 month');
+		$to = $tmp->format('Y-m-d');
+	}
 
 	$events = $calendar->getEvents( new DateTime($from), new DateTime($to) );
 	$eventsHtml = '<div class="wmcz-events-list-events">';
