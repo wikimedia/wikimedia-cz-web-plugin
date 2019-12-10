@@ -10,6 +10,7 @@
     },
     "scripts": {
         "lint": "parallel-lint --exclude vendor --ignore-fails .",
+	"phpcs": "phpcs -s",
         "test": [
             "composer lint"
         ]
