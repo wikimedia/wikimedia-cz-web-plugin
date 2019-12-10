@@ -9,8 +9,8 @@
     },
     "scripts": {
         "lint": "parallel-lint --exclude vendor --ignore-fails .",
-            "test": [
-                "composer lint"
-             ]
+        "test": [
+            "composer lint"
+        ]
     }
 }
