@@ -16,7 +16,10 @@ class WmczCalendar {
         $this->url = $url;
         $this->filename = dirname( __FILE__ ) . '/../data/calendar-' . hash( "md5", $this->url ) . '.ical';
 
-        if ( !file_exists( $this->filename ) || (time()-filemtime( $this->filename  )) > 24 * 3600 ) {
+        if (
+            !file_exists( $this->filename ) ||
+            (time()-filemtime( $this->filename  )) > 24 * 3600
+        ) {
             file_put_contents(
                 $this->filename,
                 fopen( $this->url, 'r' )
