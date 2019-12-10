@@ -18,7 +18,8 @@ class WmczCalendar {
 
         if (
             !file_exists( $this->filename ) ||
-            (time()-filemtime( $this->filename  )) > 24 * 3600
+            (time()-filemtime( $this->filename  )) > 24 * 3600 ||
+            filesize( $this->filename ) < 10
         ) {
             file_put_contents(
                 $this->filename,
