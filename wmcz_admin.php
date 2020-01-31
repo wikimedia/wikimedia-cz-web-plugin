@@ -12,7 +12,7 @@ function wmcz_admin_index() {
 function wmcz_admin_caurosel_added() {
 	?>
 	<div class="updated notice">
-		<p>Akce byla přidána.</p>
+		<p>Položka do cauroselu byla přidána.</p>
 	</div>
 	<?php
 }
@@ -20,7 +20,7 @@ function wmcz_admin_caurosel_added() {
 function wmcz_admin_caurosel_edited() {
 	?>
 	<div class="updated notice">
-		<p>Akce byla upravena.</p>
+		<p>Položka do cauroselu byla upravena.</p>
 	</div>
 	<?php
 }
