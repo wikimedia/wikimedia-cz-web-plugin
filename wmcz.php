@@ -113,7 +113,7 @@ function wmcz_block_events_caurosel_render_callback( $attributes ) {
 	global $wpdb;
 
 	$id = uniqid();
-	$events = $wpdb->get_results( "SELECT id, name, description, photo_id FROM {$wpdb->prefix}wmcz_events WHERE published=1 ORDER BY added DESC", OBJECT );
+	$events = $wpdb->get_results( "SELECT id, name, description, photo_id FROM {$wpdb->prefix}wmcz_caurosel WHERE published=1 ORDER BY added DESC", OBJECT );
 	$numOfEvents = $wpdb->num_rows;
 	$headline = esc_html( $events[0]->name );
 	$description = esc_html( $events[0]->description );
@@ -362,7 +362,7 @@ function wmcz_install() {
 	global $wpdb;
 	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 	$charset_collate = $wpdb->get_charset_collate();
-	$table_name = $wpdb->prefix . "wmcz_events";
+	$table_name = $wpdb->prefix . "wmcz_caurosel";
 	$sql = "CREATE TABLE $table_name (
 		id mediumint(9) NOT NULL AUTO_INCREMENT,
 		added datetime DEFAULT current_timestamp NOT NULL,

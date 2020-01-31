@@ -2,14 +2,14 @@
 
 function wmcz_admin_register() {
 	add_menu_page('WMCZ', 'WMCZ', 'manage_options', 'wmcz', 'wmcz_admin_index');
-	add_submenu_page('wmcz', 'WMCZ events', 'WMCZ events', 'manage_options', 'wmcz_events', 'wmcz_admin_events');
+	add_submenu_page('wmcz', 'WMCZ caurosel', 'WMCZ caurosel', 'manage_options', 'wmcz_caurosel', 'wmcz_admin_caurosel');
 }
 
 function wmcz_admin_index() {
 	echo "<h1>Hello world</h1>";
 }
 
-function wmcz_admin_event_added() {
+function wmcz_admin_caurosel_added() {
 	?>
 	<div class="updated notice">
 		<p>Akce byla přidána.</p>
@@ -17,7 +17,7 @@ function wmcz_admin_event_added() {
 	<?php
 }
 
-function wmcz_admin_event_edited() {
+function wmcz_admin_caurosel_edited() {
 	?>
 	<div class="updated notice">
 		<p>Akce byla upravena.</p>
@@ -25,7 +25,7 @@ function wmcz_admin_event_edited() {
 	<?php
 }
 
-function wmcz_admin_events() {
+function wmcz_admin_caurosel() {
 	global $wpdb;
 	wp_enqueue_media();
 	wp_enqueue_script('wmcz-plugin-events', plugins_url( 'static/admin/events.js', __FILE__ ) );
@@ -33,7 +33,7 @@ function wmcz_admin_events() {
 	if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 		if ( $_POST['type'] === 'new' ) {
 			$wpdb->insert(
-				$wpdb->prefix . "wmcz_events",
+				$wpdb->prefix . "wmcz_caurosel",
 				[
 					'name' => $_POST['name'],
 					'description' => $_POST['description'],
@@ -41,15 +41,15 @@ function wmcz_admin_events() {
 					'photo_id' => (int)$_POST['image']
 				]
 			);
-			wmcz_admin_event_added();
+			wmcz_admin_caurosel_added();
 		} elseif ( $_POST['type'] === 'update' ) {
 			$updated = false;
-			$events = $wpdb->get_results( "SELECT id, name, description, published, photo_id FROM {$wpdb->prefix}wmcz_events", OBJECT );
+			$events = $wpdb->get_results( "SELECT id, name, description, published, photo_id FROM {$wpdb->prefix}wmcz_caurosel", OBJECT );
 
 			if ( isset($_POST['delete']) ) {
 				foreach ( $_POST['delete'] as $toDelete ) {
 					$wpdb->delete(
-						"{$wpdb->prefix}wmcz_events",
+						"{$wpdb->prefix}wmcz_caurosel",
 						[
 							'id' => (int)$toDelete
 						]
@@ -74,7 +74,7 @@ function wmcz_admin_events() {
 
 				if ( count( $data ) > 0 ) {
 					$wpdb->update(
-						"{$wpdb->prefix}wmcz_events",
+						"{$wpdb->prefix}wmcz_caurosel",
 						$data,
 						[
 							'id' => $event->id
@@ -85,12 +85,12 @@ function wmcz_admin_events() {
 			}
 
 			if ( $updated ) {
-				wmcz_admin_event_edited();
+				wmcz_admin_caurosel_edited();
 			}
 		}
 	}
 
-	$events = $wpdb->get_results( "SELECT id, added, name, description, published, photo_id FROM {$wpdb->prefix}wmcz_events ORDER BY added DESC", OBJECT );
+	$events = $wpdb->get_results( "SELECT id, added, name, description, published, photo_id FROM {$wpdb->prefix}wmcz_caurosel ORDER BY added DESC", OBJECT );
 	?>
 	<h1>WMCZ Events management</h1>
 	<form method="post">
