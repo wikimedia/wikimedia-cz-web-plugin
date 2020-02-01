@@ -15,6 +15,7 @@ class WmczCalendar {
     {
         $this->url = $url;
         $this->filename = dirname( __FILE__ ) . '/../data/calendar-ical-serialized-' . hash( "md5", $this->url ) . '.txt';
+        $this->maxEvents = $maxEvents;
 
         if (
             !file_exists( $this->filename ) ||
@@ -26,7 +27,6 @@ class WmczCalendar {
         } else {
             $this->ical = unserialize(file_get_contents( $this->filename ));
         }
-        $this->maxEvents = $maxEvents;
     }
 
     protected function formatEvents( $events ) {
