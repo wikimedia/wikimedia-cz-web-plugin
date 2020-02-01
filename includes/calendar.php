@@ -110,7 +110,7 @@ class WmczCalendar {
         return $place;
     }
 
-    public function getPlacesFetch() {
+    public function getPlaces() {
         $places = [];
         $from = new DateTime('-1 month');
         $to = new DateTime('+11 months');
@@ -127,16 +127,6 @@ class WmczCalendar {
             }
         }
         return $places;
-    }
-
-    public function getPlaces() {
-        $file = dirname( __FILE__ ) .  '/../data/calendar-places-' . hash( "md5", $this->url ) . '.json';
-        if ( !file_exists( $file ) || (time()-filemtime( $file )) > 7 * 24 * 3600 ) {
-            $places = $this->getPlacesFetch();
-            file_put_contents( $file, json_encode( $places ) );
-            return $places;
-        }
-        return json_decode( file_get_contents( $file ) );
     }
 
     public function getEvents(DateTime $from, DateTime $to) {
