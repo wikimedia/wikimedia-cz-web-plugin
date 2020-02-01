@@ -14,19 +14,18 @@ class WmczCalendar {
    public function __construct($url, $maxEvents = null)
     {
         $this->url = $url;
-        $this->filename = dirname( __FILE__ ) . '/../data/calendar-' . hash( "md5", $this->url ) . '.ical';
+        $this->filename = dirname( __FILE__ ) . '/../data/calendar-ical-serialized-' . hash( "md5", $this->url ) . '.txt';
 
         if (
             !file_exists( $this->filename ) ||
             (time()-filemtime( $this->filename  )) > 24 * 3600 ||
             filesize( $this->filename ) < 10
         ) {
-            file_put_contents(
-                $this->filename,
-                fopen( $this->url, 'r' )
-            );
+            $this->ical = new ICal( $this->url );
+            file_put_contents( $this->filename, serialize( $this->ical ) );
+        } else {
+            $this->ical = unserialize(file_get_contents( $this->filename ));
         }
-        $this->ical = new ICal( $this->filename );
         $this->maxEvents = $maxEvents;
     }
 
