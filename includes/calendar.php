@@ -30,6 +30,11 @@ class WmczCalendar {
         }
     }
 
+    /**
+     * Formats passed events to a shorer array used by callers
+     * 
+     * @return array
+     */
     protected function formatEvents( $events ) {
         $res = [];
 
@@ -67,10 +72,24 @@ class WmczCalendar {
         return $res;
     }
 
+    /**
+     * Helper function for caching known addresses
+     *
+     * @return string
+     */
     private function getKnownAddressesFile() {
         return dirname( __FILE__ ) .  '/../data/known-addresses.json';
     }
 
+    /**
+     * Helper function for caching known addresses
+     *
+     * Returns directory of already known addresses,
+     * so we don't contact Nominatim uselessly, when we already
+     * have that information.
+     *
+     * @return array
+     */
     private function getKnownAddresses() {
         if ( $this->knownAddresses ) {
             return $this->knownAddresses;
@@ -83,6 +102,11 @@ class WmczCalendar {
         return json_decode( file_get_contents( $file ), true );
     }
 
+    /**
+     * Helper function for caching known addresses
+     *
+     * Adds known address to the cache
+     */
     private function setKnownAddress( $address, $point ) {
         $knownAddresses = $this->getKnownAddresses();
         $knownAddresses[$address] = $point;
@@ -90,6 +114,11 @@ class WmczCalendar {
         file_put_contents( $this->getKnownAddressesFile(), json_encode( $knownAddresses ) );
     }
 
+    /**
+     * Converts given address to a place
+     *
+     * @return Place
+     */
     protected function addressToPlace( $address ) {
         $matches = null;
         preg_match( '/, [0-9 ]+ ([^0-9,-]+)/',  $address, $matches);
@@ -110,6 +139,11 @@ class WmczCalendar {
         return $place;
     }
 
+    /**
+     * Gets all places used in events in this calendar
+     *
+     * @return array
+     */
     public function getPlaces() {
         $places = [];
         $from = new DateTime('-1 month');
@@ -129,6 +163,13 @@ class WmczCalendar {
         return $places;
     }
 
+    /**
+     * Returns events happening in certain time period
+     *
+     * @param DateTime $from
+     * @param DateTime $to
+     * @return array
+     */
     public function getEvents(DateTime $from, DateTime $to) {
         $events = $this->ical->eventsFromRange(
             $from->format('Y-m-d'),
@@ -137,10 +178,20 @@ class WmczCalendar {
         return $this->formatEvents( $events );
     }
 
+    /**
+     * Returns events happening in upcoming month
+     *
+     * @return array
+     */
     public function getEventsNow() {
         return $this->getEvents(new DateTime(), new DateTime( '+1 months' ));
     }
 
+    /**
+     * Returns events happening in next month
+     *
+     * @return array
+     */
     public function getEventsNext() {
         return $this->getEvents(new DateTime('+1 month'), new DateTime( '+2 months' ));
     }
