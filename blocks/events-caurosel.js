@@ -14,7 +14,7 @@ wp.blocks.registerBlockType('wmcz/events-caurosel', {
             React.createElement(
                 'h3',
                 null,
-                'WMCZ Events caurosel'
+                'WMCZ caurosel'
             )
         );
     }
