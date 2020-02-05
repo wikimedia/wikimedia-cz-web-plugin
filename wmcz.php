@@ -351,6 +351,32 @@ function wmcz_block_calendar_list_register() {
 	] );
 }
 
+function wmcz_block_donate_render_callback() {
+	return '<div class="wmcz-donate" data-darujme-widget-token="whwzii6mzx8ks66t">&nbsp;</div>
+	<script type="text/javascript">
+	+function(w, d, s, u, a, b) {
+	w["DarujmeObject"] = u;
+	w[u] = w[u] || function () { (w[u].q = w[u].q || []).push(arguments) };
+	a = d.createElement(s); b = d.getElementsByTagName(s)[0];
+	a.async = 1; a.src = "https:\/\/www.darujme.cz\/assets\/scripts\/widget.js";
+	b.parentNode.insertBefore(a, b);
+	}(window, document, "script", "Darujme");
+	Darujme(1, "whwzii6mzx8ks66t", "render", "https:\/\/www.darujme.cz\/widget?token=whwzii6mzx8ks66t", "270px");
+	</script>';
+}
+
+function wmcz_block_donate_register() {
+	wp_register_script(
+		'wmcz-donate',
+		plugin_dir_url( __FILE__ ) . 'blocks/donate.js',
+		[ 'wp-blocks', 'wp-editor', 'wp-element', 'wp-data' ]
+	);
+	register_block_type( 'wmcz/donate', [
+		'editor_script' => 'wmcz-donate',
+		'render_callback' => 'wmcz_block_donate_render_callback'
+	] );
+}
+
 function wmcz_excerpt_more() {
 	return '';
 }
@@ -384,6 +410,7 @@ add_action( 'init', 'wmcz_block_map_register' );
 add_action( 'init', 'wmcz_block_events_caurosel_register' );
 add_action( 'init', 'register_block_wmcz_latest_posts' );
 add_action( 'init', 'wmcz_block_calendar_list_register' );
+add_action( 'init', 'wmcz_block_donate_register' );
 add_filter('excerpt_more', 'wmcz_excerpt_more');
 register_activation_hook( __FILE__, 'wmcz_install' );
 
