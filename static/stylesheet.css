@@ -17,14 +17,13 @@
     width: 50%;
 }
 
-.event-location-datetime > p {
-    color: white;
-}
 .event-location {
     background-color: #006699;
+    color: white;
 }
 .event-datetime {
     background-color: #339966;
+    color: white;
 }
 
 .wmcz-calendar-controls {

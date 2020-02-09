@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.event-container').forEach(( el ) => {
         el.addEventListener('click', ( e ) => {
             let eventId = e.srcElement.parentElement.getAttribute('data-event-id');
-            let datetimeEl = document.querySelector(`.event-container.event-location-datetime[data-event-id="${eventId}"] > .event-datetime`);
-            let locationEl = document.querySelector(`.event-container.event-location-datetime[data-event-id="${eventId}"] > .event-location`);
-            let descriptionEl  = document.querySelector(`.event-container.event-description[data-event-id="${eventId}"] > .event-title`);
+            let datetimeEl = document.querySelector(`.event-container[data-event-id="${eventId}"] > .event-datetime`);
+            let locationEl = document.querySelector(`.event-container[data-event-id="${eventId}"] > .event-location`);
+            let descriptionEl  = document.querySelector(`.event-container[data-event-id="${eventId}"] > .event-title`);
             let title = descriptionEl.innerText;
             let datetimeStart = datetimeEl.getAttribute('data-start-datetime');
             let datetimeEnd = datetimeEl.getAttribute('data-end-datetime');
