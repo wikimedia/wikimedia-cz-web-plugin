@@ -301,9 +301,19 @@ function register_block_wmcz_latest_posts() {
 }
 
 function wmcz_block_calendar_list_render_callback( $attributes ) {
-	$calendar = new WmczCalendar($attributes['ical']);
+	// Parse GET params
 	$from = filter_input( INPUT_GET, 'from', FILTER_SANITIZE_SPECIAL_CHARS );
 	$to = filter_input( INPUT_GET, 'to', FILTER_SANITIZE_SPECIAL_CHARS );
+	// TODO: Rewrite to something...more PHPy?
+	$tags = [];
+	if ( isset( $_GET['tags'] ) ) {
+		foreach ( $_GET['tags'] as $tag ) {
+			$filtered = filter_var( $tag, FILTER_VALIDATE_INT );
+			if ( $filtered !== false ) {
+				$tags[] = $filtered;
+			}
+		}
+	}
 	if ($from == null) {
 		$tmp = new DateTime();
 		$from = $tmp->format('Y-m-d');
@@ -312,6 +322,23 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
 		$tmp = new DateTime('+1 month');
 		$to = $tmp->format('Y-m-d');
 	}
+
+	// Parse Gutenberg attributes
+	$icals = json_decode( $attributes['icals'] );
+
+	// Construct tags
+	$tagsHtml = '<select multiple name="tags[]" class="wmcz-events-tags">';
+	for ($i=0; $i < count($icals->names); $i++) {
+		$selected = '';
+		if ( in_array( $i, $tags ) ) {
+			$selected = 'selected';
+		}
+		$tagsHtml .= '<option ' . $selected . ' value="' . $i . '">' . $icals->names[$i] . '</option>';
+	}
+	$tagsHtml .= '</select>';
+
+	$calendars = new WmczCalendars( $icals->urls );
+	$calendar = $calendars->getCalendar( $tags );
 
 	$events = $calendar->getEvents( new DateTime($from), new DateTime($to) );
 	$eventsHtml = '<div class="wmcz-events-list-events">';
@@ -340,6 +367,7 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
 				<input type="date" name="from" id="from" value="' . $from . '">
 				<label for="to">To</label>
 				<input type="date" name="to" id="to" value="' . $to . '">
+				' . $tagsHtml . '
 				<input type="submit" value="Odeslat" />
 			</form>
 		</div>
