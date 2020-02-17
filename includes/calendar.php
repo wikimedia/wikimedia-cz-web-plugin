@@ -4,30 +4,21 @@ use ICal\ICal;
 use maxh\Nominatim\Nominatim;
 
 require_once 'place.php';
+require_once 'calendar-cache.php';
 
 class WmczCalendar {
     protected $ical;
     protected $url;
-    protected $filename;
     protected $maxEvents;
     protected $knownAddresses;
+    private $calendarCache;
 
    public function __construct($url, $maxEvents = null)
     {
         $this->url = $url;
-        $this->filename = dirname( __FILE__ ) . '/../data/calendar-ical-serialized-' . hash( "md5", $this->url ) . '.txt';
         $this->maxEvents = $maxEvents;
-
-        if (
-            !file_exists( $this->filename ) ||
-            (time()-filemtime( $this->filename  )) > 24 * 3600 ||
-            filesize( $this->filename ) < 10
-        ) {
-            $this->ical = new ICal( $this->url );
-            file_put_contents( $this->filename, serialize( $this->ical ) );
-        } else {
-            $this->ical = unserialize(file_get_contents( $this->filename ));
-        }
+        $this->calendarCache = new WmczCalendarCache( $this->url );
+        $this->ical = $this->calendarCache->getIcalObj();
     }
 
     /**
