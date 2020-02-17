@@ -3,9 +3,6 @@
 use ICal\ICal;
 use maxh\Nominatim\Nominatim;
 
-require_once 'place.php';
-require_once 'calendar-cache.php';
-
 class WmczCalendar {
     protected $ical;
     protected $url;
