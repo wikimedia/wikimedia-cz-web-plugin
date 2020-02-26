@@ -325,6 +325,9 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
 
 	// Parse Gutenberg attributes
 	$icals = json_decode( $attributes['icals'] );
+	if( $icals === null ) {
+		return;
+	}
 
 	// Construct tags
 	$tagsHtml = '<select multiple name="tags[]" class="wmcz-events-tags">';
