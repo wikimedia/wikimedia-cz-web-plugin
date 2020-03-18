@@ -370,7 +370,7 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
     $events = $calendar->getEvents( new DateTime($from), new DateTime($to) );
     $eventsHtml = '<div class="wmcz-events-list-events">';
     foreach ( $events as $event ) {
-        if ( !in_array( $event['city'], $selectedCities ) ) {
+        if ( count( $selectedCities ) > 0 && !in_array( $event['city'], $selectedCities ) ) {
             continue;
         }
         $tagClasses = [];
