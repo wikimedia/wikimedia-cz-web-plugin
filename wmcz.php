@@ -417,7 +417,7 @@ function wmcz_block_donate_register() {
 }
 
 function wmcz_excerpt_more() {
-    return '';
+    return '…';
 }
 
 global $wmcz_db_version;
