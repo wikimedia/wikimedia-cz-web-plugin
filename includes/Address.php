@@ -17,7 +17,7 @@ class Address {
 
         $matches = null;
         preg_match( '/, [0-9 ]+ ([^0-9,-]+)/',  $this->address, $matches);
-        $this->city = $matches[1];
+        $this->city = trim( $matches[1] );
         return $this->city;
     }
 
