@@ -47,7 +47,7 @@ class WmczCalendar {
                     'startDatetime' => $startDate->format('d. m. Y h:m'),
                     'endDatetime' => $endDate->format('d. m. Y h:m'),
                     'location' => $event->location,
-                    'city' => $city,
+                    'city' => trim( $city ),
                     'title' => $clearSummary,
                     'description' => $event->description,
                     'id' => hash('md5', $event->title . $event->dtstart . $event->dtend),
@@ -65,7 +65,7 @@ class WmczCalendar {
      *
      * @return array
      */
-    public function getPlaces() {
+    public function getAddresses() {
         $places = [];
         $from = new DateTime('-1 month');
         $to = new DateTime('+11 months');
