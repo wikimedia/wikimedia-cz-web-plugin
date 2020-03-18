@@ -61,7 +61,7 @@ class WmczCalendar {
     }
 
     /**
-     * Gets all places used in events in this calendar
+     * Gets all addresses used in events in this calendar
      *
      * @return array
      */
@@ -78,6 +78,28 @@ class WmczCalendar {
                 $address = new Address( $event->location );
                 if ( $address->getPlace() ) {
                     $places[] = $address;
+                }
+            }
+        }
+        return $places;
+    }
+
+    /**
+     * Gets all places used in events in this calendar
+     */
+    public function getPlaces() {
+        $places = [];
+        $from = new DateTime('-1 month');
+        $to = new DateTime('+11 months');
+        $events = $this->ical->eventsFromRange(
+            $from->format('Y-m-d'),
+            $to->format('Y-m-d')
+        );
+        foreach ( $events as $event ) {
+            if ( !is_null( $event->location ) ) {
+                $address = new Address( $event->location );
+                if ( $address->getPlace() ) {
+                    $places[] = $address->getPlace();
                 }
             }
         }
