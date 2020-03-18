@@ -444,6 +444,10 @@ if ( is_admin() ) {
     require_once 'wmcz_admin.php';
 }
 
+function wmcz_custom_excerpt_length() {
+    return 10;
+}
+
 add_action( 'init', 'wmcz_block_calendar_register' );
 add_action( 'init', 'wmcz_block_map_register' );
 add_action( 'init', 'wmcz_block_events_caurosel_register' );
@@ -451,6 +455,7 @@ add_action( 'init', 'register_block_wmcz_latest_posts' );
 add_action( 'init', 'wmcz_block_calendar_list_register' );
 add_action( 'init', 'wmcz_block_donate_register' );
 add_filter('excerpt_more', 'wmcz_excerpt_more');
+add_filter('excerpt_length', 'wmcz_custom_excerpt_length');
 register_activation_hook( __FILE__, 'wmcz_install' );
 
 if (!is_admin()) {
