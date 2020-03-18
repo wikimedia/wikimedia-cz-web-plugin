@@ -314,6 +314,12 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
             }
         }
     }
+    $selectedCities = [];
+    if ( isset( $_GET['cities'] ) ) {
+        foreach ($_GET['cities'] as $place ) {
+            $selectedCities[] = $place;
+        }
+    }
     if ($from == null) {
         $tmp = new DateTime();
         $from = $tmp->format('Y-m-d');
@@ -329,6 +335,10 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
         return;
     }
 
+    // Construct calendar
+    $calendars = new WmczCalendars( $icals->urls );
+    $calendar = $calendars->getCalendar( $tags );
+
     // Construct tags
     $tagsHtml = '<select multiple name="tags[]" class="wmcz-events-tags">';
     for ($i=0; $i < count($icals->names); $i++) {
@@ -340,12 +350,29 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
     }
     $tagsHtml .= '</select>';
 
-    $calendars = new WmczCalendars( $icals->urls );
-    $calendar = $calendars->getCalendar( $tags );
+    // Construct cities
+    $placesHtml = '<select multiple name="cities[]" class="wmcz-events-cities">';
+    $cities = [];
+    foreach ($calendar->getAddresses() as $address) {
+        if ( !in_array( $address->getCity(), $cities ) ) {
+            $city = $address->getCity();
+            $cities[] = $city;
+            $selected = '';
+            if ( in_array( $city, $selectedCities ) ) {
+                $selected = 'selected';
+            }
+            $placesHtml .= '<option ' . $selected . '>' . $city . '</option>';
+        }
+    }
+    $placesHtml .= '</select>';
+
 
     $events = $calendar->getEvents( new DateTime($from), new DateTime($to) );
     $eventsHtml = '<div class="wmcz-events-list-events">';
     foreach ( $events as $event ) {
+        if ( !in_array( $event['city'], $selectedCities ) ) {
+            continue;
+        }
         $tagClasses = [];
         foreach ( $event['tags'] as $tag ) {
             $tagClasses[] = "wmcz-events-tag-$tag";
@@ -371,6 +398,7 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
                 <label for="to">To</label>
                 <input type="date" name="to" id="to" value="' . $to . '">
                 ' . $tagsHtml . '
+                ' . $placesHtml . '
                 <input type="submit" value="Odeslat" />
             </form>
         </div>
