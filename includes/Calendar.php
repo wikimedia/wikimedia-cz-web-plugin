@@ -61,73 +61,6 @@ class WmczCalendar {
     }
 
     /**
-     * Helper function for caching known addresses
-     *
-     * @return string
-     */
-    private function getKnownAddressesFile() {
-        return dirname( __FILE__ ) .  '/../data/known-addresses.json';
-    }
-
-    /**
-     * Helper function for caching known addresses
-     *
-     * Returns directory of already known addresses,
-     * so we don't contact Nominatim uselessly, when we already
-     * have that information.
-     *
-     * @return array
-     */
-    private function getKnownAddresses() {
-        if ( $this->knownAddresses ) {
-            return $this->knownAddresses;
-        }
-        $file = $this->getKnownAddressesFile();
-        if ( !file_exists( $file ) ) {
-            file_put_contents( $file, '[]' );
-            return [];
-        }
-        return json_decode( file_get_contents( $file ), true );
-    }
-
-    /**
-     * Helper function for caching known addresses
-     *
-     * Adds known address to the cache
-     */
-    private function setKnownAddress( $address, $point ) {
-        $knownAddresses = $this->getKnownAddresses();
-        $knownAddresses[$address] = $point;
-        $this->knownAddresses = $knownAddresses;
-        file_put_contents( $this->getKnownAddressesFile(), json_encode( $knownAddresses ) );
-    }
-
-    /**
-     * Converts given address to a place
-     *
-     * @return Place
-     */
-    protected function addressToPlace( $address ) {
-        $matches = null;
-        preg_match( '/, [0-9 ]+ ([^0-9,-]+)/',  $address, $matches);
-        $city = $matches[1];
-        if ( !$city ) {
-            return null;
-        }
-        $knownAddresses = $this->getKnownAddresses();
-        if ( array_key_exists( $city, $knownAddresses ) ) {
-            return $knownAddresses[$city];
-        }
-        $nominatim = new Nominatim( "https://nominatim.openstreetmap.org" );
-        $search = $nominatim->newSearch();
-        $search->query( $city );
-        $result = $nominatim->find($search);
-        $place = new Place( $result[0]["lat"], $result[0]["lon"] );
-        $this->setKnownAddress( $city, $place );
-        return $place;
-    }
-
-    /**
      * Gets all places used in events in this calendar
      *
      * @return array
@@ -142,9 +75,9 @@ class WmczCalendar {
         );
         foreach ( $events as $event ) {
             if ( !is_null( $event->location ) ) {
-                $place = $this->addressToPlace( $event->location );
-                if ( $place ) {
-                    $places[] = $place;
+                $address = new Address( $event->location );
+                if ( $address->getPlace() ) {
+                    $places[] = $address;
                 }
             }
         }
