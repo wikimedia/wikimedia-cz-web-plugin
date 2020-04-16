@@ -30,31 +30,31 @@ spl_autoload_register(function ($class) {
 require_once 'vendor/autoload.php';
 
 function wmcz_block_render_calendar( $cols, $rows, $events, $class ) {
-    $html = '<div id="wmcz-calendar-' . $class . '" class="wmcz-calendar-set wp-block-columns has-' . $cols . '-columns">';
-    for ($i=0; $i < $cols; $i++) { 
-        $html .= '<div class="wp-block-column">';
-        $sliced = array_slice($events, $i*$rows, $rows);
-        foreach ($sliced as $event) {
-            $html .= sprintf(
-                '<div data-event-id="%s" class="event-container">
-                    <p class="event-datetime" data-start-datetime="%s" data-end-datetime="%s">%s</p>
-                    <p class="event-location" data-location="%s">%s</p>
-                    <p class="event-title" data-description="%s">%s</p>
-                </div>',
-                esc_html( $event['id'] ),
-                esc_html( $event['startDatetime'] ),
-                esc_html( $event['endDatetime'] ),
-                esc_html( $event['displayDatetime'] ),
-                esc_html( $event['location'] ),
-                esc_html( $event['city'] ),
-                esc_html( $event['description'] ),
-                esc_html( $event['title'] )
-            );
-        }
-        $html .= '</div>';
-    }
-    $html .= '</div>';
-    return $html;
+	$html = '<div id="wmcz-calendar-' . $class . '" class="wmcz-calendar-set">';
+	for ($i=0; $i < $cols; $i++) { 
+		$html .= '<div class="wmcz-calendar-column">';
+		$sliced = array_slice($events, $i*$rows, $rows);
+		foreach ($sliced as $event) {
+			$html .= sprintf(
+				'<div data-event-id="%s" class="event-container">
+					<div class="event-datetime" data-start-datetime="%s" data-end-datetime="%s">%s</div>
+					<div class="event-location" data-location="%s">%s</div>
+					<div class="event-title" data-description="%s">%s</div>
+				</div>',
+				esc_html( $event['id'] ),
+				esc_html( $event['startDatetime'] ),
+				esc_html( $event['endDatetime'] ),
+				esc_html( $event['displayDatetime'] ),
+				esc_html( $event['location'] ),
+				esc_html( $event['city'] ),
+				esc_html( $event['description'] ),
+				esc_html( $event['title'] )
+			);
+		}
+		$html .= '</div>';
+	}
+	$html .= '</div>';
+	return $html;
 }
 
 function wmcz_block_calendar_render_callback( $attributes ) {

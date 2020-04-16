@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
             modalContentEl.innerHTML = `<h3>${title}</h3>
             <p>Místo: ${location}</p>
             <p>Datum: ${datetimeStart} - ${datetimeEnd}</p>
-            <h4>Popisek</h4>
             <p>${description}</p>
             `;
             modalContentEl.prepend(closeBtn);
