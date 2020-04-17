@@ -340,15 +340,17 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
     $calendar = $calendars->getCalendar( $tags );
 
     // Construct tags
-    $tagsHtml = '<select multiple name="tags[]" class="wmcz-events-tags">';
-    for ($i=0; $i < count($icals->names); $i++) {
-        $selected = '';
-        if ( in_array( $i, $tags ) ) {
-            $selected = 'selected';
+    if ( count( $icals->names ) > 1 ) {
+        $tagsHtml = '<select multiple name="tags[]" class="wmcz-events-tags">';
+        for ($i=0; $i < count($icals->names); $i++) {
+            $selected = '';
+            if ( in_array( $i, $tags ) ) {
+                $selected = 'selected';
+            }
+            $tagsHtml .= '<option ' . $selected . ' value="' . $i . '">' . $icals->names[$i] . '</option>';
         }
-        $tagsHtml .= '<option ' . $selected . ' value="' . $i . '">' . $icals->names[$i] . '</option>';
+        $tagsHtml .= '</select>';
     }
-    $tagsHtml .= '</select>';
 
     // Construct cities
     $placesHtml = '<select multiple name="cities[]" class="wmcz-events-cities">';
