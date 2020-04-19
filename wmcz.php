@@ -341,7 +341,7 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
 
     // Construct tags
     if ( count( $icals->names ) > 1 ) {
-        $tagsHtml = '';
+        $tagsHtml = '<span class="wmcz-events-select-tags">Vyberte tagy</span>';
         for ($i=0; $i < count($icals->names); $i++) {
             $class = strtolower( $icals->names[$i] );
             $selected = '';
@@ -360,7 +360,7 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
         if ( !in_array( $address->getCity(), $cities ) ) {
             $city = $address->getCity();
             $cities[] = $city;
-            $selected = '';
+            $selected = '<span class="wmcz-events-select-cities">Vyberte města</span>';
             if ( in_array( $city, $selectedCities ) ) {
                 $selected = 'checked';
             }
