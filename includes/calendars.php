@@ -69,7 +69,7 @@ class WmczCalendars {
      * @param array|null $names Indexes of calendars you want to get
      */
     public function getCalendar($indexes = null) {
-        if ( $index === null ) {
+        if ( $indexes === null ) {
             $urls = $this->urls;
         } else {
             $urls = [];
