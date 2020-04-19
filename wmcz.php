@@ -354,7 +354,6 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
     }
 
     // Construct cities
-    //$placesHtml = '<select multiple name="cities[]" class="wmcz-events-cities">';
     $placesHtml = '';
     $cities = [];
     foreach ($calendar->getAddresses() as $address) {
