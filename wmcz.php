@@ -341,19 +341,21 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
 
     // Construct tags
     if ( count( $icals->names ) > 1 ) {
-        $tagsHtml = '<select multiple name="tags[]" class="wmcz-events-tags">';
+        $tagsHtml = '';
         for ($i=0; $i < count($icals->names); $i++) {
+            $class = strtolower( $icals->names[$i] );
             $selected = '';
             if ( in_array( $i, $tags ) ) {
-                $selected = 'selected';
+                $selected = 'checked';
             }
-            $tagsHtml .= '<option ' . $selected . ' value="' . $i . '">' . $icals->names[$i] . '</option>';
+            $tagsHtml .= '<input class="' . $class . '" type="checkbox" ' . $selected . ' name="tags[]" value="' . $i . '" id="wmcz-events-tag-' . $i . '">';
+            $tagsHtml .= '<label for="wmcz-events-tag-' . $i . '">' . $icals->names[$i] . '</label>';
         }
-        $tagsHtml .= '</select>';
     }
 
     // Construct cities
-    $placesHtml = '<select multiple name="cities[]" class="wmcz-events-cities">';
+    //$placesHtml = '<select multiple name="cities[]" class="wmcz-events-cities">';
+    $placesHtml = '';
     $cities = [];
     foreach ($calendar->getAddresses() as $address) {
         if ( !in_array( $address->getCity(), $cities ) ) {
@@ -361,12 +363,12 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
             $cities[] = $city;
             $selected = '';
             if ( in_array( $city, $selectedCities ) ) {
-                $selected = 'selected';
+                $selected = 'checked';
             }
-            $placesHtml .= '<option ' . $selected . '>' . $city . '</option>';
+            $placesHtml .= '<input type="checkbox" name="cities[]" id="wmcz-city-' . $city . '" value="' . $city . '" ' . $selected . '>';
+            $placesHtml .= '<label for="wmcz-city-' . $city . '">' . $city . '</label>';
         }
     }
-    $placesHtml .= '</select>';
 
 
     $events = $calendar->getEvents( new DateTime($from), new DateTime($to) );
