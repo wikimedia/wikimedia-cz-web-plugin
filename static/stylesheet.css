@@ -1,82 +1,72 @@
+:root {
+	--wiki-red: #990000;
+	--wiki-green: #339966;
+	--wiki-blue: #006699;
+}
+
 /** WMCZ Calendar CSS */
-/* .wmcz-calendar-set {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 30pt;
-}
 
-.wmcz-calendar-column {
-    display: grid;
-    grid-column: span 3;
-    grid-template: subgrid;
-}
-
-@media (min-width: 760px) {
-    .wmcz-calendar-set {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        column-gap: 30pt;
-    }
-}
-
-.wmcz-calendar-column {
-    display: grid;
-    grid-template-columns: 1fr 2fr 4fr;
-    grid-gap: 5pt;
-}
-
-.event-container {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    display: contents;
-    width: 100%;
-    max-width: 300%;
-    padding-bottom: 10px;
-}
-
-.event-container > div {
-    padding: 5pt 10pt;
-}
-
-.event-location {
-    background-color: #006699;
-    color: white;
-}
-.event-datetime {
-    background-color: #339966;
-    color: white;
+.block-wmcz-calendar h2 {
+    display: inline;
+    margin-right: 20pt;
 }
 
 .wmcz-calendar-controls {
-    display: flex;
+    display: inline-flex;
     padding-bottom: 10px;
-} */
+    margin: 0;
+}
 
 .wmcz-calendar-set {
     margin-top: 20pt;
 }
 
+.wmcz-calendar-set.wp-block-columns .wp-block-column {
+    margin-left: 0pt;
+}
+
 .event-container {
-    margin-bottom: 8px;
-    background-color: #fefefe;
-    padding: 6px;
+    background-color: #fcfcfc;
+    display: flex;
+    margin: 0pt 10pt 10pt 0;
+    transition: 100ms ease-in;
+}
+
+.event-container:hover {
+    background-color: #F3F3F3;
+    cursor: pointer;
 }
 
 .event-datetime, .event-location, .event-title {
     display: inline-block;
+    padding: 5pt;
+    margin: 0;
 }
 
 .event-datetime {
-    width: 120px;
+    background-color: var(--wiki-blue);
+    color: white;
+    text-align: center;
+    min-width: 90pt;
+    height: 30pt;
 }
 .event-location {
-    width: 100px;
+    margin-left: 10pt;
+    min-width: 65pt;
+    font-weight: bold;
 }
+
 
 /** WMCZ Caurosel CSS */
 .wmcz-caurosel-container {
     display: flex;
     height: 400px;
+}
+
+@media (min-width: 760px) {
+    .wmcz-caurosel-container {
+        padding: 0 30pt;
+    }
 }
 
 .wmcz-caurosel-controls {
@@ -163,7 +153,7 @@
     height: 100%;
     overflow: auto;
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.1); /* Black w/ opacity */
 }
 .wmcz-modal-active {
     display: flex;
@@ -172,10 +162,11 @@
     background-color: #fefefe;
     margin: 10% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
     overflow: auto;
-  }
+    box-shadow: 0pt 0pt 20pt rgba(0,0,0,0.2);
+}
+
 .wmcz-modal-close {
     color: #aaa;
     float: right;
@@ -189,13 +180,36 @@
 }
 
 /** WMCZ Events List **/
-.wmcz-events-list-events {
-    grid-template-columns: 2fr 1fr 10fr;
-    display: grid;
-    grid-column-gap: 1rem;
-    padding: 20px 30px 0px 30px;
-}
-.wmcz-events-list-events > div {
+.wmcz-events-list-controls > form {
     display: flex;
     align-items: center;
 }
+
+.wmcz-events-list-controls > form label,
+.wmcz-events-list-controls > form input {
+    margin: 5pt;
+}
+
+.wmcz-events-list-events {
+    grid-template-columns: 3fr 2fr 5fr;
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.wmcz-events-list-events > div {
+    display: flex;
+    align-items: center;
+    padding: 5pt 10pt;
+}
+
+.wmcz-events-list-event-name {
+    background-color: var(--wiki-green);
+    color: white;
+    font-weight: bold;
+}
+
+.wmcz-events-list-event-time {
+    font-weight: bold;
+    background-color: white;
+}
+
