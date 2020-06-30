@@ -337,9 +337,10 @@ function wmcz_block_latest_news_register() {
 }
 
 function wmcz_block_latest_news_render_callback( $attributes ) {
-    if ( is_admin() ) {
-        return;
+    if ( is_admin() || strpos($_SERVER['REQUEST_URI'], 'wp-json') !== false ) {
+        return '';
     }
+
     $q = new WP_Query( [
         'tag' => 'edu',
     ] );
