@@ -173,7 +173,6 @@ function wmcz_block_events_caurosel_register() {
 }
 
 
-
 function wmcz_block_calendar_list_render_callback( $attributes ) {
     // Parse GET params
     $from = filter_input( INPUT_GET, 'from', FILTER_SANITIZE_SPECIAL_CHARS );
@@ -325,6 +324,38 @@ function wmcz_excerpt_more() {
     return '…';
 }
 
+function wmcz_block_latest_news_register() {
+    wp_register_script(
+        'wmcz-latest-news',
+        plugin_dir_url( __FILE__ ) . 'blocks/latest-news.js',
+        [ 'wp-blocks', 'wp-editor', 'wp-element', 'wp-data' ]
+    );
+    register_block_type( 'wmcz/latest-news', [
+        'editor_script' => 'wmcz-latest-news',
+        'render_callback' => 'wmcz_block_latest_news_render_callback'
+    ] );
+}
+
+function wmcz_block_latest_news_render_callback( $attributes ) {
+    if ( is_admin() ) {
+        return;
+    }
+    $q = new WP_Query( [
+        'tag' => 'edu',
+    ] );
+    echo '<div class="wmcz-posts-container">
+        <div class="wmcz-posts-head">';
+    get_search_form();
+    echo '</div><div class="wmcz-posts">';
+    while ( $q->have_posts() ) {
+        $q->the_post();
+        get_template_part( 'template-parts/content-snip', get_post_type() );
+    }
+    the_posts_navigation();
+    echo '</div></div>';
+    return '';
+}
+
 global $wmcz_db_version;
 $wmcz_db_version = 1;
 
@@ -359,6 +390,7 @@ add_action( 'init', 'wmcz_block_events_caurosel_register' );
 add_action( 'init', 'register_block_wmcz_latest_posts' );
 add_action( 'init', 'wmcz_block_calendar_list_register' );
 add_action( 'init', 'wmcz_block_donate_register' );
+add_action( 'init', 'wmcz_block_latest_news_register' );
 add_filter('excerpt_more', 'wmcz_excerpt_more');
 add_filter('excerpt_length', 'wmcz_custom_excerpt_length');
 register_activation_hook( __FILE__, 'wmcz_install' );
