@@ -387,7 +387,6 @@ function wmcz_custom_excerpt_length() {
 add_action( 'init', 'wmcz_block_calendar_register' );
 add_action( 'init', 'wmcz_block_map_register' );
 add_action( 'init', 'wmcz_block_events_caurosel_register' );
-add_action( 'init', 'register_block_wmcz_latest_posts' );
 add_action( 'init', 'wmcz_block_calendar_list_register' );
 add_action( 'init', 'wmcz_block_donate_register' );
 add_action( 'init', 'wmcz_block_latest_news_register' );
