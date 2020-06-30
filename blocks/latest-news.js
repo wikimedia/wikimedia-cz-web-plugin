@@ -3,6 +3,10 @@ wp.blocks.registerBlockType('wmcz/latest-news', {
     icon: 'megaphone',
     category: 'widgets',
     attributes: {
+        tag: {
+            type: "string",
+            default: ""
+        }
     },
     save: function () {
         return null
@@ -15,6 +19,25 @@ wp.blocks.registerBlockType('wmcz/latest-news', {
                 'h3',
                 null,
                 'WMCZ Latest News'
+            ),
+            React.createElement(
+                'label',
+                {
+                    for: 'wmcz-latest-news-tag'
+                },
+                'Tag'
+            ),
+            React.createElement(
+                'input',
+                {
+                    type: 'text',
+                    value: props.attributes.tag,
+                    onChange: ( e ) => {
+                        props.setAttributes({
+                            tag: e.target.value
+                        });
+                    }
+                }
             )
         );
     }
