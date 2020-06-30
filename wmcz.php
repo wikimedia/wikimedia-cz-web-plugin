@@ -341,9 +341,11 @@ function wmcz_block_latest_news_render_callback( $attributes ) {
         return '';
     }
 
-    $q = new WP_Query( [
-        'tag' => 'edu',
-    ] );
+    $args = [];
+    if ( $attributes['tag'] != '' ) {
+        $args['tag'] = $attributes['tag'];
+    }
+    $q = new WP_Query( $args );
     echo '<div class="wmcz-posts-container">
         <div class="wmcz-posts-head">';
     get_search_form();
