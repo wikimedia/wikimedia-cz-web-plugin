@@ -177,8 +177,9 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
     $from = filter_input( INPUT_GET, 'from', FILTER_SANITIZE_SPECIAL_CHARS );
     $to = filter_input( INPUT_GET, 'to', FILTER_SANITIZE_SPECIAL_CHARS );
     // TODO: Rewrite to something...more PHPy?
-    $tags = [];
+    $tags = null;
     if ( isset( $_GET['tags'] ) ) {
+        $tags = [];
         foreach ( $_GET['tags'] as $tag ) {
             $filtered = filter_var( $tag, FILTER_VALIDATE_INT );
             if ( $filtered !== false ) {
@@ -217,7 +218,7 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
         for ($i=0; $i < count($icals->names); $i++) {
             $class = strtolower( $icals->names[$i] );
             $selected = '';
-            if ( in_array( $i, $tags ) ) {
+            if ( is_array( $tags ) && in_array( $i, $tags ) ) {
                 $selected = 'checked';
             }
             $tagsHtml .= '<input class="' . $class . '" type="checkbox" ' . $selected . ' name="tags[]" value="' . $i . '" id="wmcz-events-tag-' . $i . '">';
