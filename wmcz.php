@@ -356,7 +356,7 @@ function wmcz_block_latest_news_render_callback( $attributes ) {
     '</div><div class="wmcz-posts">';
     while ( $q->have_posts() ) {
         $q->the_post();
-        $result .= return_template_part( 'template-parts/content-snip', get_post_type() );
+        $result .= load_template_part( 'template-parts/content-snip', get_post_type() );
     }
     $result .= get_the_posts_navigation();
     $result .= '</div></div>';
@@ -391,15 +391,12 @@ function wmcz_custom_excerpt_length() {
     return 10;
 }
 
-function return_template_part( $slug, $name = null ) {
-    $templates = array();
-    $name      = (string) $name;
-    if ( '' !== $name ) {
-        $templates[] = "{$slug}-{$name}.php";
-    }
- 
-    $templates[] = "{$slug}.php";
-    return file_get_contents(locate_template( $templates, true, false ));
+function load_template_part($template_name, $part_name=null) {
+    ob_start();
+    get_template_part($template_name, $part_name);
+    $var = ob_get_contents();
+    ob_end_clean();
+    return $var;
 }
 
 function wp_custom_archive($args = '', $echo = true) {
