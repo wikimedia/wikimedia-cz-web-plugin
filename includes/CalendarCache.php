@@ -10,7 +10,7 @@ class WmczCalendarCache {
 
     public function __construct( $url, $cacheExpiry = 24 * 3600 ) {
         $this->url = $url;
-        $this->filename = dirname( __FILE__ ) . '/../data/calendar-ical-serialized-' . hash( "md5", $this->url ) . '.txt';;
+        $this->filename = dirname( __FILE__ ) . '/../data/calendar-ical-serialized-' . hash( "md5", $this->url ) . '.txt';
         $this->cacheExpiry = $cacheExpiry;
     }
 
