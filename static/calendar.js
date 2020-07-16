@@ -16,7 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelectorAll('.event-container').forEach(( el ) => {
         el.addEventListener('click', ( e ) => {
-            let eventId = e.srcElement.parentElement.getAttribute('data-event-id');
+            let srcEl = e.srcElement;
+            if ( !srcEl.classList.contains('event-container') ) {
+                srcEl = srcEl.parentElement;
+            }
+
+            let eventId = srcEl.getAttribute('data-event-id');
             let datetimeEl = document.querySelector(`.event-container[data-event-id="${eventId}"] > .event-datetime`);
             let locationEl = document.querySelector(`.event-container[data-event-id="${eventId}"] > .event-location`);
             let descriptionEl  = document.querySelector(`.event-container[data-event-id="${eventId}"] > .event-title`);
