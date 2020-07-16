@@ -8,7 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelectorAll( '.wmcz-calendar-set' ).forEach( ( element ) => {
                 element.hidden = element.id != targetId;
             } );
-        } );
+            document.querySelectorAll('.wmcz-calendar-control').forEach((element) => {
+                (el == element) ? element.classList.add('active') : element.classList.remove('active'); 
+            });
+        });
     });
 
     document.querySelectorAll('.event-container').forEach(( el ) => {
@@ -32,8 +35,13 @@ document.addEventListener("DOMContentLoaded", () => {
             closeBtn.classList.add('wmcz-modal-close');
             closeBtn.innerHTML = '&times;';
             closeBtn.addEventListener('click', ( e ) => {
-                e.srcElement.parentElement.parentElement.classList.remove('wmcz-modal-active');
+                modalEl.classList.remove('wmcz-modal-active');
             });
+            window.addEventListener('click', (e) => {
+                if (e.target == modalEl) {
+                    modalEl.classList.remove('wmcz-modal-active');
+                }
+            })
             modalContentEl.innerHTML = `<h3>${title}</h3>
             <p>Místo: ${location}</p>
             <p>Datum: ${datetimeStart} - ${datetimeEnd}</p>
