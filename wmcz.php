@@ -343,25 +343,24 @@ function wmcz_block_latest_news_render_callback( $attributes ) {
     }
 
     $args = [];
-    if ( $attributes['tag'] != '' ) {
+    if ( $attributes['tag'] != '' && $attributes['tag'] != null ) {
         $args['tag'] = $attributes['tag'];
     }
     $q = new WP_Query( $args );
-    echo '<div class="wmcz-posts-container">
-        <div class="wmcz-posts-head">';
-    get_search_form();
-    echo '<div class="wmcz-archive">
-    <h3>Archive</h3>';
-    wp_custom_archive();
-    echo '</div>';
-    echo '</div><div class="wmcz-posts">';
+    $result = '<div class="wmcz-posts-container">
+        <div class="wmcz-posts-head">' . get_search_form( false ) .
+    '<div class="wmcz-archive">
+    <h3>Archive</h3>' .
+    wp_custom_archive( '', false ) .
+    '</div>' .
+    '</div><div class="wmcz-posts">';
     while ( $q->have_posts() ) {
         $q->the_post();
-        get_template_part( 'template-parts/content-snip', get_post_type() );
+        $result .= return_template_part( 'template-parts/content-snip', get_post_type() );
     }
-    the_posts_navigation();
-    echo '</div></div>';
-    return '';
+    $result .= get_the_posts_navigation();
+    $result .= '</div></div>';
+    return $result;
 }
 
 global $wmcz_db_version;
@@ -392,7 +391,18 @@ function wmcz_custom_excerpt_length() {
     return 10;
 }
 
-function wp_custom_archive($args = '') {
+function return_template_part( $slug, $name = null ) {
+    $templates = array();
+    $name      = (string) $name;
+    if ( '' !== $name ) {
+        $templates[] = "{$slug}-{$name}.php";
+    }
+ 
+    $templates[] = "{$slug}.php";
+    return file_get_contents(locate_template( $templates, true, false ));
+}
+
+function wp_custom_archive($args = '', $echo = true) {
     global $wpdb, $wp_locale;
  
     $defaults = array(
