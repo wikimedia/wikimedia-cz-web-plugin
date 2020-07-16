@@ -113,11 +113,24 @@ class WmczCalendar {
      * @param DateTime $to
      * @return array
      */
-    public function getEvents(DateTime $from, DateTime $to) {
-        $events = $this->ical->eventsFromRange(
+    public function getEvents(DateTime $from, DateTime $to, $tags = null) {
+        $eventsOriginal = $this->ical->eventsFromRange(
             $from->format('Y-m-d'),
             $to->format('Y-m-d')
         );
+        if ( is_array( $tags ) && count( $tags ) > 0 ) {
+            $events = [];
+            foreach ($eventsOriginal as $event) {
+                $matches = null;
+                preg_match( '/^(\[([^]]+)\])?\s*(.*)$/', $event->summary, $matches );
+                $tag = $matches[2];
+                if ( in_array( $tag, $tags ) ) {
+                    $events[] = $event;
+                }
+            }
+        } else {
+            $events = $eventsOriginal;
+        }
         return $this->formatEvents( $events );
     }
 

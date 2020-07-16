@@ -177,14 +177,11 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
     $from = filter_input( INPUT_GET, 'from', FILTER_SANITIZE_SPECIAL_CHARS );
     $to = filter_input( INPUT_GET, 'to', FILTER_SANITIZE_SPECIAL_CHARS );
     // TODO: Rewrite to something...more PHPy?
-    $tags = null;
+    $selectedTags = null;
     if ( isset( $_GET['tags'] ) ) {
-        $tags = [];
+        $selectedTags = [];
         foreach ( $_GET['tags'] as $tag ) {
-            $filtered = filter_var( $tag, FILTER_VALIDATE_INT );
-            if ( $filtered !== false ) {
-                $tags[] = $filtered;
-            }
+            $selectedTags[] = $tag;
         }
     }
     $selectedCities = [];
@@ -203,26 +200,23 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
     }
 
     // Parse Gutenberg attributes
-    $icals = json_decode( $attributes['icals'] );
-    if( $icals === null ) {
-        return;
-    }
+    $ical = $attributes['ical'];
 
     // Construct calendar
-    $calendars = new WmczCalendars( $icals->urls );
-    $calendar = $calendars->getCalendar( $tags );
+    $calendar = new WmczCalendar( $ical );
+    $tags = ['edu', 'glam']; // TODO unhardcode this
 
     // Construct tags
-    if ( count( $icals->names ) > 1 ) {
+    if ( count( $tags ) > 0 ) {
         $tagsHtml = '<span class="wmcz-events-select-tags">Vyberte tagy</span>';
-        for ($i=0; $i < count($icals->names); $i++) {
-            $class = strtolower( $icals->names[$i] );
+        for ($i=0; $i < count($tags); $i++) {
+            $class = strtolower( $tags[$i] );
             $selected = '';
-            if ( is_array( $tags ) && in_array( $i, $tags ) ) {
+            if ( is_array( $selectedTags ) && in_array( $i, $selectedTags ) ) {
                 $selected = 'checked';
             }
-            $tagsHtml .= '<input class="' . $class . '" type="checkbox" ' . $selected . ' name="tags[]" value="' . $i . '" id="wmcz-events-tag-' . $i . '">';
-            $tagsHtml .= '<label for="wmcz-events-tag-' . $i . '">' . $icals->names[$i] . '</label>';
+            $tagsHtml .= '<input class="' . $class . '" type="checkbox" ' . $selected . ' name="tags[]" value="' . $tags[$i] . '" id="wmcz-events-tag-' . $i . '">';
+            $tagsHtml .= '<label for="wmcz-events-tag-' . $i . '">' .$tags[$i] . '</label>';
         }
     }
 
@@ -243,7 +237,7 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
     }
 
 
-    $events = $calendar->getEvents( new DateTime($from), new DateTime($to) );
+    $events = $calendar->getEvents( new DateTime($from), new DateTime($to), $selectedTags );
     $eventsHtml = '<div class="wmcz-events-list-events">';
     foreach ( $events as $event ) {
         if ( count( $selectedCities ) > 0 && !in_array( $event['city'], $selectedCities ) ) {
