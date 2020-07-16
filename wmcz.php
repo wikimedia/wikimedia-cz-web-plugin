@@ -227,7 +227,7 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
         if ( !in_array( $address->getCity(), $cities ) ) {
             $city = $address->getCity();
             $cities[] = $city;
-            $selected = '<span class="wmcz-events-select-cities">Vyberte města</span>';
+            $selected = '';
             if ( in_array( $city, $selectedCities ) ) {
                 $selected = 'checked';
             }
