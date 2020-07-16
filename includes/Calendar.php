@@ -139,8 +139,8 @@ class WmczCalendar {
      *
      * @return array
      */
-    public function getEventsNow() {
-        return $this->getEvents(new DateTime(), new DateTime( '+1 months' ));
+    public function getEventsNow( $tags = null ) {
+        return $this->getEvents(new DateTime(), new DateTime( '+1 months' ), $tags);
     }
 
     /**
@@ -148,7 +148,7 @@ class WmczCalendar {
      *
      * @return array
      */
-    public function getEventsNext() {
-        return $this->getEvents(new DateTime('+1 month'), new DateTime( '+2 months' ));
+    public function getEventsNext( $tags = null ) {
+        return $this->getEvents(new DateTime('+1 month'), new DateTime( '+2 months' ), $tags);
     }
 }

@@ -60,8 +60,12 @@ function wmcz_block_calendar_render_callback( $attributes ) {
     $cols = (int)$attributes['cols'];
     $rows = (int)$attributes['rows'];
     $calendar = new WmczCalendar($attributes['ical'], $cols*$rows);
-    $now = $calendar->getEventsNow();
-    $next = $calendar->getEventsNext();
+    $tags = null;
+    if ( $attributes['tag'] != null ) {
+        $tags = [ $attributes['tag'] ];
+    }
+    $now = $calendar->getEventsNow( $tags );
+    $next = $calendar->getEventsNext( $tags );
     $html = '';
     $html .= wmcz_block_render_calendar( $cols, $rows, $now, "this-month" );
     $html .= wmcz_block_render_calendar( $cols, $rows, $next, "next-month" );

@@ -6,6 +6,7 @@ wp.blocks.registerBlockType('wmcz/calendar', {
     cols: { type: 'string' },
     rows: { type: 'string' },
     ical: { type: 'string' },
+    tag: { type: 'string' },
   },
   save: function () {
     return null
@@ -26,6 +27,12 @@ wp.blocks.registerBlockType('wmcz/calendar', {
     function updateIcal( event ) {
       props.setAttributes({
         ical: event.target.value
+      });
+    }
+
+    function updateTag( event ) {
+      props.setAttributes({
+        tag: event.target.value
       });
     }
 
@@ -83,6 +90,19 @@ wp.blocks.registerBlockType('wmcz/calendar', {
           type: 'text',
           value: props.attributes.ical,
           onChange: updateIcal
+        }
+      ),
+      React.createElement(
+        'label',
+        null,
+        'Tag filter (enter tag name to apply, leave empty to display all events)'
+      ),
+      React.createElement(
+        'input',
+        {
+          type: 'text',
+          value: props.attributes.tag,
+          onChange: updateTag
         }
       )
     );
