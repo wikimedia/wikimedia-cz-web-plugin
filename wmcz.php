@@ -212,15 +212,15 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
 
     // Construct tags
     if ( count( $tags ) > 0 ) {
-        $tagsHtml = '<span class="wmcz-events-select-tags">Vyberte tagy</span>';
+        // $tagsHtml = '<span class="wmcz-events-select-tags">Vyberte tagy</span>';
         for ($i=0; $i < count($tags); $i++) {
             $class = strtolower( $tags[$i] );
             $selected = '';
             if ( is_array( $selectedTags ) && in_array( $i, $selectedTags ) ) {
                 $selected = 'checked';
             }
-            $tagsHtml .= '<input class="' . $class . '" type="checkbox" ' . $selected . ' name="tags[]" value="' . $tags[$i] . '" id="wmcz-events-tag-' . $i . '">';
-            $tagsHtml .= '<label for="wmcz-events-tag-' . $i . '">' .$tags[$i] . '</label>';
+            $tagsHtml .= '<span><input class="' . $class . '" type="checkbox" ' . $selected . ' name="tags[]" value="' . $tags[$i] . '" id="wmcz-events-tag-' . $i . '">';
+            $tagsHtml .= '<label for="wmcz-events-tag-' . $i . '">' .$tags[$i] . '</label></span>';
         }
     }
 
@@ -235,8 +235,8 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
             if ( in_array( $city, $selectedCities ) ) {
                 $selected = 'checked';
             }
-            $placesHtml .= '<input type="checkbox" name="cities[]" id="wmcz-city-' . $city . '" value="' . $city . '" ' . $selected . '>';
-            $placesHtml .= '<label for="wmcz-city-' . $city . '">' . $city . '</label>';
+            $placesHtml .= '<span><input type="checkbox" name="cities[]" id="wmcz-city-' . $city . '" value="' . $city . '" ' . $selected . '>';
+            $placesHtml .= '<label for="wmcz-city-' . $city . '">' . $city . '</label></span>';
         }
     }
 
@@ -252,9 +252,11 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
             $tagClasses[] = "wmcz-events-tag-$tag";
         }
         $eventsHtml .= sprintf(
-            '<div class="wmcz-events-list-event-name %s">%s</div>
-            <div class="wmcz-events-list-event-time">%s, %s</div>
-            <div class="wmcz-events-list-event-description">%s</div>',
+            '<div class="wmcz-events-list-event">
+                <div class="wmcz-events-list-event-name %s">%s</div>
+                <div class="wmcz-events-list-event-time">%s, %s</div>
+                <div class="wmcz-events-list-event-description">%s</div>
+            </div>',
             esc_attr( implode( ' ', $tagClasses ) ),
             esc_html( $event['title'] ),
             esc_html($event['startDatetime']),
@@ -272,10 +274,10 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
                 <input type="date" name="from" id="from" value="' . $from . '">
                 <label for="to">do</label>
                 <input type="date" name="to" id="to" value="' . $to . '">
-                <label for="cities">dle programů</label>' . $tagsHtml . '
-                <label for="cities">dle místa</label>' . $placesHtml . '
-                <p>
-                <input type="submit" value="Filtrovat" /></p>
+                <div><label for="cities">dle programů</label>' . $tagsHtml . '
+                </div><div><label for="cities">dle místa</label>' . $placesHtml . '
+                </div><div>
+                <input type="submit" value="Filtrovat" /></div>
             </form>
         </div>
         ' . $eventsHtml . '

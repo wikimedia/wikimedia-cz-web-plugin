@@ -180,8 +180,13 @@
 }
 
 /** WMCZ Events List **/
+.wmcz-events-list-controls {
+    display: flex;
+}
+
 .wmcz-events-list-controls > form {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -190,26 +195,42 @@
     margin: 5pt;
 }
 
-.wmcz-events-list-events {
-    grid-template-columns: 3fr 2fr 5fr;
-    display: grid;
-    grid-gap: 1rem;
+label[for=cities] {
+    font-weight: bold;
 }
 
-.wmcz-events-list-events > div {
-    display: flex;
+/* .wmcz-events-list-events {
+    display: grid;
+    grid-template-columns: 3fr 2fr 5fr;
+    grid-gap: 1rem;
+} */
+
+.wmcz-events-list-events > div > div {
+    /* display: flex; */
     align-items: center;
     padding: 5pt 10pt;
+}
+
+.wmcz-events-list-event {
+    border-bottom: 1px solid #ccc;
+    /* margin-bottom: 20pt; */
+    padding: 20pt 0;
 }
 
 .wmcz-events-list-event-name {
     background-color: var(--wiki-green);
     color: white;
     font-weight: bold;
+    display: inline-block;
 }
 
 .wmcz-events-list-event-time {
+    display: inline-block;
     font-weight: bold;
     background-color: white;
+}
+
+.wmcz-events-list-events > div.wmcz-events-list-event-description {
+    padding: 20px 0 40px 0;
 }
 
