@@ -346,14 +346,20 @@ function wmcz_block_latest_news_render_callback( $attributes ) {
     if ( $attributes['tag'] != '' && $attributes['tag'] != null ) {
         $args['tag'] = $attributes['tag'];
     }
+    $maxNews = (int)$attributes['maxNews'];
+    if ( $maxNews > 0 ) {
+        $args['posts_per_page'] = $maxNews;
+    }
     $q = new WP_Query( $args );
-    $result = '<div class="wmcz-posts-container">
-        <div class="wmcz-posts-head">' . get_search_form( false ) .
-    '<div class="wmcz-archive">
-    <h3>Archive</h3>' .
-    wp_custom_archive( '', false ) .
-    '</div>' .
-    '</div><div class="wmcz-posts">';
+    $result = '<div class="wmcz-posts-container">';
+    if ( $maxNews == 0 ) {
+        $result .= '<div class="wmcz-posts-head">' . get_search_form( false ) .
+        '<div class="wmcz-archive">
+        <h3>Archive</h3>' .
+        wp_custom_archive( '', false ) .
+        '</div></div>';
+    }
+    $result .= '<div class="wmcz-posts">';
     while ( $q->have_posts() ) {
         $q->the_post();
         $result .= load_template_part( 'template-parts/content-snip', get_post_type() );

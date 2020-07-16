@@ -6,6 +6,10 @@ wp.blocks.registerBlockType('wmcz/latest-news', {
         tag: {
             type: "string",
             default: ""
+        },
+        maxNews: {
+            type: "string",
+            default: "0"
         }
     },
     save: function () {
@@ -35,6 +39,23 @@ wp.blocks.registerBlockType('wmcz/latest-news', {
                     onChange: ( e ) => {
                         props.setAttributes({
                             tag: e.target.value
+                        });
+                    }
+                }
+            ),
+            React.createElement(
+                'label',
+                null,
+                'Display only latest x posts (enter 0 to disable)'
+            ),
+            React.createElement(
+                'input',
+                {
+                    type: 'number',
+                    value: props.attributes.maxNews,
+                    onChange: ( e ) => {
+                        props.setAttributes({
+                            maxNews: e.target.value
                         });
                     }
                 }
