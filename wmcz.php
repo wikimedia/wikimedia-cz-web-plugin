@@ -212,7 +212,7 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
 
     // Construct tags
     if ( count( $tags ) > 0 ) {
-        // $tagsHtml = '<span class="wmcz-events-select-tags">Vyberte tagy</span>';
+        $tagsHtml = '';
         for ($i=0; $i < count($tags); $i++) {
             $class = strtolower( $tags[$i] );
             $selected = '';
