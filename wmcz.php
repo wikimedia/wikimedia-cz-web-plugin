@@ -41,14 +41,14 @@ function wmcz_block_render_calendar( $cols, $rows, $events, $class ) {
                     <p class="event-location" data-location="%s">%s</p>
                     <p class="event-title" data-description="%s">%s</p>
                 </div>',
-                esc_html( $event['id'] ),
-                esc_html( $event['startDatetime'] ),
-                esc_html( $event['endDatetime'] ),
-                esc_html( $event['displayDatetime'] ),
-                esc_html( $event['location'] ),
-                esc_html( $event['city'] ),
-                esc_html( $event['description'] ),
-                esc_html( $event['title'] )
+                esc_html( $event->getId() ),
+                esc_html( $event->getStartDatetime() ),
+                esc_html( $event->getEndDatetime() ),
+                esc_html( $event->getDisplayDatetime() ),
+                esc_html( $event->getLocation() ),
+                esc_html( $event->getCity() ),
+                esc_html( $event->getDescription() ),
+                esc_html( $event->getTitle() )
             );
         }
         $html .= '</div>';
@@ -244,11 +244,11 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
     $events = $calendar->getEvents( new DateTime($from), new DateTime($to), $selectedTags );
     $eventsHtml = '<div class="wmcz-events-list-events">';
     foreach ( $events as $event ) {
-        if ( count( $selectedCities ) > 0 && !in_array( $event['city'], $selectedCities ) ) {
+        if ( count( $selectedCities ) > 0 && !in_array( $event->getCity(), $selectedCities ) ) {
             continue;
         }
         $tagClasses = [];
-        foreach ( $event['tags'] as $tag ) {
+        foreach ( $event->getTags() as $tag ) {
             $tagClasses[] = "wmcz-events-tag-$tag";
         }
         $eventsHtml .= sprintf(
@@ -258,10 +258,10 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
                 <div class="wmcz-events-list-event-description">%s</div>
             </div>',
             esc_attr( implode( ' ', $tagClasses ) ),
-            esc_html( $event['title'] ),
-            esc_html($event['startDatetime']),
-            esc_html($event['city']),
-            esc_html($event['description'])
+            esc_html( $event->getTitle() ),
+            esc_html($event->getStartDatetime()),
+            esc_html($event->getCity()),
+            esc_html($event->getDescription())
         );
     }
     $eventsHtml .= '</div>';
