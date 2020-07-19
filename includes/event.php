@@ -45,7 +45,7 @@ class Event {
         return $this->startDatetime;
     }
 
-    public function endDatetime() {
+    public function getEndDatetime() {
         return $this->endDatetime;
     }
 
