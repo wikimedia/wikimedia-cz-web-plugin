@@ -96,7 +96,8 @@ class WmczCalendar {
                 $from->format('Y-m-d'),
                 $to->format('Y-m-d')
             ),
-            $this->ical
+            $this->ical,
+            $this->maxEvents
         );
         return $events->getEvents( $tags );
     }
