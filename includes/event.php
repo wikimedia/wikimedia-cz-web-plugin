@@ -62,7 +62,13 @@ class Event {
     }
 
     public function getDescription() {
-        return $this->description;
+        $matches = null;
+        preg_match_all( '/(^|\s+)(https?:\/\/[a-zA-Z.0-9\/%:_?&#=-]+)/', $this->description, $matches );
+        $description = $this->description;
+        foreach ( $matches[0] as $match ) {
+            $description = str_replace( $match, "<a href=\"$match\">$match</a>", $description );
+        }
+        return $description;
     }
 
     public function getId() {
