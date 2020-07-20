@@ -22,6 +22,11 @@ class WmczCalendar {
      * Used in global functions like getAddresses or getTags
      */
     private function getAllEvents() {
+        $events = new Events( $this->getAllEventsInternal(), $this->ical );
+        return $events->getEvents();
+    }
+
+    private function getAllEventsInternal() {
         $from = new DateTime('-1 month');
         $to = new DateTime('+11 months');
         return $this->ical->eventsFromRange(
@@ -31,13 +36,25 @@ class WmczCalendar {
     }
 
     /**
+     * Get all tags used in events in this calendar
+     */
+    public function getTags() {
+        $events = $this->getAllEvents();
+        $tags = [];
+        foreach ( $events as $event ) {
+            $tags = array_merge( $tags, $event->getTags() );
+        }
+        return $tags;
+    }
+
+    /**
      * Gets all addresses used in events in this calendar
      *
      * @return array
      */
     public function getAddresses() {
         $places = [];
-        $events = $this->getAllEvents();
+        $events = $this->getAllEventsInternal();
         foreach ( $events as $event ) {
             if ( !is_null( $event->location ) ) {
                 $address = new Address( $event->location );
@@ -54,7 +71,7 @@ class WmczCalendar {
      */
     public function getPlaces() {
         $places = [];
-        $events = $this->getAllEvents();
+        $events = $this->getAllEventsInternal();
         foreach ( $events as $event ) {
             if ( !is_null( $event->location ) ) {
                 $address = new Address( $event->location );

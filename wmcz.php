@@ -208,7 +208,7 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
 
     // Construct calendar
     $calendar = new WmczCalendar( $ical );
-    $tags = ['edu', 'glam']; // TODO unhardcode this
+    $tags = $calendar->getTags();
 
     // Construct tags
     if ( count( $tags ) > 0 ) {
