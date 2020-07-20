@@ -14,10 +14,6 @@ class Event {
     public function __construct( $event, $ical ) {
         $startDate = $ical->iCalDateToDateTime($event->dtstart_array[3]);
         $endDate = $ical->iCalDateToDateTime($event->dtend_array[3]);
-        
-        $matches = null;
-        preg_match( '/, [0-9 ]+ ([^0-9,-]+)/',  $event->location, $matches);
-        $this->city = $matches[1];
 
         $matches = null;
         preg_match('/^(\[([^]]+)\])?\s*(.*)$/', $event->summary, $matches);
@@ -32,7 +28,6 @@ class Event {
         $this->startDatetime = $startDate->format('d. m. Y h:m');
         $this->endDatetime = $endDate->format('d. m. Y h:m');
         $this->location = $event->location;
-        $this->city = trim( $city );
         $this->description = $event->description;
         $this->id = hash('md5', $event->title . $event->dtstart . $event->dtend);
     }
@@ -54,6 +49,16 @@ class Event {
     }
 
     public function getCity() {
+        if ( $this->city !== null ) {
+            return $this->city;
+        }
+        $matches = null;
+        preg_match_all( '/[0-9 ]+ ([a-zA-ZáčďéěíňóřšťůúýžÁČĎÉĚÍŇÓŘŠŤŮÚÝŽ ]+)/',  $this->getLocation(), $matches);
+        $this->city = trim( end( end( $matches ) ) );
+        if ( $this->city == "" ) {
+            preg_match_all( '/[0-9 \/]+, ([0-9 ]* ?([a-zA-ZáčďéěíňóřšťůúýžÁČĎÉĚÍŇÓŘŠŤŮÚÝŽ ]+))/', $this->getLocation(), $matches );
+            $this->city = trim( end( end( $matches ) ) );
+        }
         return $this->city;
     }
 
