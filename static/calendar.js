@@ -46,7 +46,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (e.target == modalEl) {
                     modalEl.classList.remove('wmcz-modal-active');
                 }
-            })
+            });
+            document.addEventListener("keydown", function(event) {
+                const key = event.key;
+                if (key === "Escape") {
+                    modalEl.classList.remove('wmcz-modal-active');
+                }
+            });
             modalContentEl.innerHTML = `<h3>${title}</h3>
             <p>Místo: ${location}</p>
             <p>Datum: ${datetimeStart} - ${datetimeEnd}</p>
