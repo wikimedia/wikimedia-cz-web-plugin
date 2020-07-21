@@ -323,7 +323,8 @@ function wmcz_block_donate_register() {
 }
 
 function wmcz_excerpt_more() {
-    return '…';
+    global $post;
+    return '… <a href="'. get_permalink($post->ID) . '">' . 'Číst více &raquo;' . '</a>';
 }
 
 function wmcz_block_latest_news_register() {
