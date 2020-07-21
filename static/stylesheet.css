@@ -60,12 +60,12 @@
 /** WMCZ Caurosel CSS */
 .wmcz-caurosel-container {
     display: flex;
-    height: 400px;
+    height: 350pt;
 }
 
 @media (min-width: 760px) {
     .wmcz-caurosel-container {
-        padding: 0 30pt;
+        margin: 0 30pt;
     }
 }
 
