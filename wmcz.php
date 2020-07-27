@@ -255,13 +255,27 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
             '<div class="wmcz-events-list-event">
                 <div class="wmcz-events-list-event-name %s">%s</div>
                 <div class="wmcz-events-list-event-time">%s, %s</div>
-                <div class="wmcz-events-list-event-description">%s</div>
+                <div class="wmcz-events-list-event-description">
+                    <div class="wmcz-events-list-event-summary">
+                        <ul>
+                            <li>Začátek: %s</li>
+                            <li>Konec: %s</li>
+                            <li>Místo konání: %s</li>
+                        </ul>
+                    </div>
+                    <div class="wmcz-events-event-description-raw">
+                        %s
+                    </div>
+                </div>
             </div>',
             esc_attr( implode( ' ', $tagClasses ) ),
             esc_html( $event->getTitle() ),
             esc_html($event->getStartDatetime()),
             esc_html($event->getCity()),
-            esc_html($event->getDescription())
+            esc_html( $event->getStartDatetime() ),
+            esc_html( $event->getEndDatetime() ),
+            esc_html( $event->getLocation() ),
+            $event->getDescription()
         );
     }
     $eventsHtml .= '</div>';
