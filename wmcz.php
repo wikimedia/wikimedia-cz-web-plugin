@@ -249,7 +249,7 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
         }
         $tagClasses = [];
         foreach ( $event->getTags() as $tag ) {
-            $tagClasses[] = "wmcz-events-tag-$tag";
+            $tagClasses[] = "wmcz-tag-$tag";
         }
         $eventsHtml .= sprintf(
             '<div class="wmcz-events-list-event">
