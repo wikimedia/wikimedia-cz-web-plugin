@@ -35,13 +35,19 @@ function wmcz_block_render_calendar( $cols, $rows, $events, $class ) {
         $html .= '<div class="wp-block-column">';
         $sliced = array_slice($events, $i*$rows, $rows);
         foreach ($sliced as $event) {
+            $tagClassesArray = [];
+            foreach ( $event->getTags() as $tag ) {
+                $tagClassesArray[] = "wmcz-tag-$tag";
+            }
+            $tagClasses = implode(' ', $tagClassesArray);
             $html .= sprintf(
                 '<div data-event-id="%s" class="event-container">
-                    <p class="event-datetime" data-start-datetime="%s" data-end-datetime="%s">%s</p>
+                    <p class="event-datetime %s" data-start-datetime="%s" data-end-datetime="%s">%s</p>
                     <p class="event-location" data-location="%s">%s</p>
                     <p class="event-title" data-description="%s">%s</p>
                 </div>',
                 esc_html( $event->getId() ),
+                esc_html( $tagClasses ),
                 esc_html( $event->getStartDatetime() ),
                 esc_html( $event->getEndDatetime() ),
                 esc_html( $event->getDisplayDatetime() ),
