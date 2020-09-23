@@ -44,7 +44,7 @@ class WmczCalendar {
         foreach ( $events as $event ) {
             $tags = array_merge( $tags, $event->getTags() );
         }
-        return array_unique( $tags );
+        return array_values( array_unique( $tags ) );
     }
 
     /**
