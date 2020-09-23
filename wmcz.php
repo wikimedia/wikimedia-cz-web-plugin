@@ -222,7 +222,7 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
         for ($i=0; $i < count($tags); $i++) {
             $class = strtolower( $tags[$i] );
             $selected = '';
-            if ( is_array( $selectedTags ) && in_array( $i, $selectedTags ) ) {
+            if ( is_array( $selectedTags ) && in_array( $tags[$i], $selectedTags, true ) ) {
                 $selected = 'checked';
             }
             $tagsHtml .= '<span><input class="' . $class . '" type="checkbox" ' . $selected . ' name="tags[]" value="' . $tags[$i] . '" id="wmcz-events-tag-' . $i . '">';
