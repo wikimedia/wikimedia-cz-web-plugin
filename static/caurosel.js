@@ -10,8 +10,21 @@ function setCauroselText( cauroselId, index ) {
     let headlineEl = document.querySelector(`.wmcz-caurosel-right-colored[data-caurosel-id="${cauroselId}"] h2`);
     let descriptionEl = document.querySelector(`.wmcz-caurosel-right-colored[data-caurosel-id="${cauroselId}"] p`);
     let imageEl = document.querySelector(`.wmcz-caurosel-left[data-caurosel-id="${cauroselId}"] img`);
-    headlineEl.innerText = JSON.parse(cauroselEl.getAttribute('data-headlines'))[index];
+    let imageLinkEl = document.querySelector(`.wmcz-caurosel-left[data-caurosel-id="${cauroselId}"] a`);
+    let headlineRawText = JSON.parse(cauroselEl.getAttribute('data-headlines'))[index];
+    let headlineInnerHtml = headlineRawText;
+    let link = JSON.parse(cauroselEl.getAttribute('data-links'))[index];
+    if ( link != "" ) {
+        headlineInnerHtml = `<a href="${link}">${headlineRawText}</a>`;
+    }
+    headlineEl.innerHTML = headlineInnerHtml;
     descriptionEl.innerText = JSON.parse(cauroselEl.getAttribute('data-descriptions'))[index];
+    if (link != "") {
+        imageLinkEl.setAttribute( 'href', link );
+    } else {
+        imageLinkEl.setAttribute( 'href', '#' );
+    }
+
     let image = JSON.parse(cauroselEl.getAttribute('data-images'))[index];
     if (image) {
         imageEl.setAttribute('src', image);

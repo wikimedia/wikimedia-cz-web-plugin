@@ -130,22 +130,27 @@ function wmcz_block_events_caurosel_render_callback( $attributes ) {
     global $wpdb;
 
     $id = uniqid();
-    $events = $wpdb->get_results( "SELECT id, name, description, photo_id FROM {$wpdb->prefix}wmcz_caurosel WHERE published=1 ORDER BY added DESC", OBJECT );
+    $events = $wpdb->get_results( "SELECT id, name, description, photo_id, link FROM {$wpdb->prefix}wmcz_caurosel WHERE published=1 ORDER BY added DESC", OBJECT );
     $numOfEvents = $wpdb->num_rows;
     $headline = esc_html( $events[0]->name );
     $description = esc_html( $events[0]->description );
+    $link = $events[0]->link;
+    $hasLink = $link != '';
     $headlines = [];
     $descriptions = [];
     $images = [];
+    $links = [];
     foreach ( $events as $event ) {
         $headlines[] = esc_html( $event->name );
         $descriptions[] = esc_html( $event->description );
         $images[] =  wp_get_attachment_url( $event->photo_id );
+        $links[] = esc_html( $event->link );
     }
     $headlinesJson = json_encode( $headlines );
     $descriptionsJson = json_encode( $descriptions );
     $imagesJson = json_encode( $images );
-    $dataAttrs = "data-index='0' data-headlines='$headlinesJson' data-descriptions='$descriptionsJson' data-images='$imagesJson'";
+    $linksJson = json_encode( $links );
+    $dataAttrs = "data-index='0' data-headlines='$headlinesJson' data-descriptions='$descriptionsJson' data-images='$imagesJson' data-links='$linksJson'";
     $menu = '<div data-caurosel-id="' . $id . '" class="wmcz-caurosel-menu"><ul>';
     for ($i = 0; $i < $numOfEvents; $i++) {
         $classes = "wmcz-caurosel-menu-dot";
@@ -155,14 +160,23 @@ function wmcz_block_events_caurosel_render_callback( $attributes ) {
         $menu .= '<li><div data-caurosel-id="' . $id . '" data-index="' . $i . '" class="' . $classes . '"></div></li>';
     }
     $menu .= '</ul></div>';
+    if (!$hasLink) {
+        $link = "#"; // Empty href should be a noop-link
+    }
+    $headlineInnerHtml = $headline;
+    if ( $hasLink ) {
+        $headlineInnerHtml = '<a href="' . $link . '">' . $headline . '</a>';
+    }
     $html = '
     <div data-caurosel-id="' . $id . '" class="wmcz-caurosel-container">
         <div data-caurosel-id="' . $id . '" class="wmcz-caurosel-left">
-            <img src="' .  wp_get_attachment_url( $events[0]->photo_id ) . '" alt="">
+            <a data-caurosel-id="' . $id . '" href="' . $link . '">
+                <img src="' .  wp_get_attachment_url( $events[0]->photo_id ) . '" alt="">
+            </a>
         </div>
         <div data-caurosel-id="' . $id . '" ' . $dataAttrs . ' class="wmcz-caurosel-right-colored">
             ' . $menu . '
-            <h2>' . $headline . '</h2>
+            <h2>' . $headlineInnerHtml . '</h2>
             <p>' . $description . '</p>
         </div>
     </div>';
@@ -410,6 +424,7 @@ function wmcz_install() {
         name tinytext NOT NULL,
         description text NOT NULL,
         photo_id mediumint(9) NOT NULL,
+        link tinytext NOT NULL DEFAULT '',
         published boolean DEFAULT 0 NOT NULL,
         PRIMARY KEY  (id)
       ) $charset_collate;";

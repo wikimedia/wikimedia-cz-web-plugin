@@ -38,7 +38,8 @@ function wmcz_admin_caurosel() {
                     'name' => $_POST['name'],
                     'description' => $_POST['description'],
                     'published' => isset( $_POST['published'] ),
-                    'photo_id' => (int)$_POST['image']
+                    'photo_id' => (int)$_POST['image'],
+                    'link' => $_POST['link'],
                 ]
             );
             wmcz_admin_caurosel_added();
@@ -71,6 +72,9 @@ function wmcz_admin_caurosel() {
                 if ( $published !== $event->published ) {
                     $data['published'] = $published;
                 }
+                if ( $_POST["link-{$event->id}"] !== $event->link ) {
+                    $data['link'] = $_POST["link-{$event->id}"];
+                }
 
                 if ( count( $data ) > 0 ) {
                     $wpdb->update(
@@ -90,7 +94,7 @@ function wmcz_admin_caurosel() {
         }
     }
 
-    $events = $wpdb->get_results( "SELECT id, added, name, description, published, photo_id FROM {$wpdb->prefix}wmcz_caurosel ORDER BY added DESC", OBJECT );
+    $events = $wpdb->get_results( "SELECT id, added, name, description, published, photo_id, link FROM {$wpdb->prefix}wmcz_caurosel ORDER BY added DESC", OBJECT );
     ?>
     <h1>WMCZ Events management</h1>
     <form method="post">
@@ -103,6 +107,7 @@ function wmcz_admin_caurosel() {
                     <th>Přidán</th>
                     <th>Publikován?</th>
                     <th>photo_id</th>
+                    <th>Odkaz</th>
                     <th>Smazat?</th>
                 </tr>
             </thead>
@@ -123,6 +128,9 @@ function wmcz_admin_caurosel() {
                     </td>
                     <td>
                         <?php echo $event->photo_id ?>
+                    </td>
+                    <td>
+                        <input type="text" name="link-<?php echo $event->id ?>" value="<?php echo $event->link ?>">
                     </td>
                     <td>
                         <input type="checkbox" name="delete[]" value="<?php echo $event->id ?>">
@@ -152,6 +160,12 @@ function wmcz_admin_caurosel() {
                 <td>
                     <button type="button" data-input-name="image" class="button wmcz-events-image-selector">Vybrat obrázek</button>
                     <input type="hidden" name="image">
+                </td>
+            </tr>
+            <tr>
+                <th>odkaz</th>
+                <td>
+                    <input type="text" name="link" placeholder="http://wikimedia.cz/udalost" />
                 </td>
             </tr>
             <tr>
