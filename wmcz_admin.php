@@ -1,8 +1,8 @@
 <?php
 
 function wmcz_admin_register() {
-    add_menu_page('WMCZ', 'WMCZ', 'manage_options', 'wmcz', 'wmcz_admin_index');
-    add_submenu_page('wmcz', 'WMCZ caurosel', 'WMCZ caurosel', 'manage_options', 'wmcz_caurosel', 'wmcz_admin_caurosel');
+    add_menu_page('WMCZ', 'WMCZ', 'edit_published_pages', 'wmcz', 'wmcz_admin_index');
+    add_submenu_page('wmcz', 'WMCZ caurosel', 'WMCZ caurosel', 'edit_published_pages', 'wmcz_caurosel', 'wmcz_admin_caurosel');
 }
 
 function wmcz_admin_index() {
