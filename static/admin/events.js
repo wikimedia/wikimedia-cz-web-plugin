@@ -27,14 +27,14 @@ jQuery(document).ready( function($) {
                 my_index++;
             });
             var ids = gallery_ids.join(",");
-            jQuery(`input[name="${e.srcElement.getAttribute('data-input-name')}"]`).val(ids);
+            jQuery(`input[name="${e.currentTarget.getAttribute('data-input-name')}"]`).val(ids);
         });
 
         image_frame.on('open',function() {
             // On open, get the id from the hidden input
             // and select the appropiate images in the media manager
             var selection =  image_frame.state().get('selection');
-            var ids = jQuery(`input[name="${e.srcElement.getAttribute('data-input-name')}"]`).val().split(',');
+            var ids = jQuery(`input[name="${e.currentTarget.getAttribute('data-input-name')}"]`).val().split(',');
             ids.forEach(function(id) {
                 var attachment = wp.media.attachment(id);
                 attachment.fetch();
