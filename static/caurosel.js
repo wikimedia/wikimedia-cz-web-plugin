@@ -31,7 +31,6 @@ function setCauroselText( cauroselId, index ) {
     } else {
         imageEl.setAttribute('src', 'https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg');
     }
-    
 }
 
 document.addEventListener("DOMContentLoaded", () => {
