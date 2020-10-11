@@ -80,13 +80,9 @@ class ZipCache {
 
     /**
      * @param string|int $zip
-     * @param string|bool $city
+     * @param string $city
      */
     private function setZipCode($zip, $city) {
-        if ($city === false) {
-            return;
-        }
-
         if (is_string($zip)) {
             $zip = str_replace( ' ', '', $zip );
         }
