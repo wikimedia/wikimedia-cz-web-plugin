@@ -21,14 +21,20 @@ class Address {
         return $this->city;
     }
 
-    /**
-     * Returns average place for this address
-     */
-    public function getPlace() {
+    public function getAveragePlace() {
         $city = $this->getCity();
         if ( !$city ) {
             return null;
         }
         return $this->addressPlaceCache->getPlace( $city );
+    }
+
+    /**
+     * Returns average place for this address
+     *
+     * @deprecated use getAveragePlace instead
+     */
+    public function getPlace() {
+        return $this->getAveragePlace();
     }
 }
