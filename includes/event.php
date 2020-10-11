@@ -44,21 +44,31 @@ class Event {
         return $this->endDatetime;
     }
 
+    /**
+     * Returns raw location
+     *
+     * @see Event::getAddress if you want to have machine-readable form of an address
+     */
     public function getLocation() {
         return $this->location;
+    }
+
+    /**
+     * Return an instance of Address from location
+     *
+     * @return Address
+     */
+    public function getAddress() {
+        return new Address( $this->getLocation() );
     }
 
     public function getCity() {
         if ( $this->city !== null ) {
             return $this->city;
         }
-        $matches = null;
-        preg_match_all( '/[0-9 ]+ ([a-zA-ZáčďéěíňóřšťůúýžÁČĎÉĚÍŇÓŘŠŤŮÚÝŽ ]+)/',  $this->getLocation(), $matches);
-        $this->city = trim( end( end( $matches ) ) );
-        if ( $this->city == "" ) {
-            preg_match_all( '/[0-9 \/]+, ([0-9 ]* ?([a-zA-ZáčďéěíňóřšťůúýžÁČĎÉĚÍŇÓŘŠŤŮÚÝŽ ]+))/', $this->getLocation(), $matches );
-            $this->city = trim( end( end( $matches ) ) );
-        }
+
+        $this->city = $this->getAddress()->getCity();
+
         return $this->city;
     }
 

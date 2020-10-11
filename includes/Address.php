@@ -16,8 +16,12 @@ class Address {
         }
 
         $matches = null;
-        preg_match( '/, [0-9 ]+ ([^0-9,-]+)/',  $this->address, $matches);
-        $this->city = trim( $matches[1] );
+        preg_match_all( '/[0-9 ]+ ([a-zA-ZáčďéěíňóřšťůúýžÁČĎÉĚÍŇÓŘŠŤŮÚÝŽ ]+)/',  $this->address, $matches);
+        $this->city = trim( end( end( $matches ) ) );
+        if ( $this->city == "" ) {
+            preg_match_all( '/[0-9 \/]+, ([0-9 ]* ?([a-zA-ZáčďéěíňóřšťůúýžÁČĎÉĚÍŇÓŘŠŤŮÚÝŽ ]+))/', $this->address, $matches );
+            $this->city = trim( end( end( $matches ) ) );
+        }
         return $this->city;
     }
 
