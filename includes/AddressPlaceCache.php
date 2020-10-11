@@ -2,19 +2,18 @@
 
 use maxh\Nominatim\Nominatim;
 
-class AddressPlaceCache {
-    private $knownAddresses;
-
+class AddressPlaceCache extends FileCache {
     public function __construct() {
+        parent::__construct( 'known-addresses', 0 );
     }
 
     public function getPlace( $address ) {
-        $cachedAddreses = $this->getKnownAddresses();
-        if ( array_key_exists( $address, $cachedAddreses ) ) {
-            return $cachedAddreses[$address];
+        $cachedVal = $this->get($address);
+        if ( $cachedVal ) {
+            return $cachedVal;
         }
         $res = $this->getPlaceInternal( $address );
-        $this->setKnownAddress( $address, $res );
+        $this->set( $address, $res );
         return $res;
     }
 
@@ -24,47 +23,5 @@ class AddressPlaceCache {
         $search->query( $address );
         $result = $nominatim->find($search);
         return new Place( $result[0]["lat"], $result[0]["lon"] );
-    }
-
-    /**
-     * Helper function for caching known addresses
-     *
-     * @return string
-     */
-    private function getKnownAddressesFile() {
-        return dirname( __FILE__ ) .  '/../data/known-addresses.json';
-    }
-
-    /**
-     * Helper function for caching known addresses
-     *
-     * Returns directory of already known addresses,
-     * so we don't contact Nominatim uselessly, when we already
-     * have that information.
-     *
-     * @return array
-     */
-    private function getKnownAddresses() {
-        if ( $this->knownAddresses ) {
-            return $this->knownAddresses;
-        }
-        $file = $this->getKnownAddressesFile();
-        if ( !file_exists( $file ) ) {
-            file_put_contents( $file, '[]' );
-            return [];
-        }
-        return json_decode( file_get_contents( $file ), true );
-    }
-
-    /**
-     * Helper function for caching known addresses
-     *
-     * Adds known address to the cache
-     */
-    private function setKnownAddress( $address, $point ) {
-        $knownAddresses = $this->getKnownAddresses();
-        $knownAddresses[$address] = $point;
-        $this->knownAddresses = $knownAddresses;
-        file_put_contents( $this->getKnownAddressesFile(), json_encode( $knownAddresses ) );
     }
 }
