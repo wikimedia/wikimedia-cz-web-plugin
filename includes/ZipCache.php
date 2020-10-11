@@ -27,7 +27,7 @@ class ZipCache extends FileCache {
         $zip = $this->standardizeZip($zip);
 
         $cachedVal = $this->get($zip);
-        if ($cachedVal) {
+        if ($cachedVal !== null) {
             return $cachedVal;
         }
 
