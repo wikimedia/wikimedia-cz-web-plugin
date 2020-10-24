@@ -59,7 +59,6 @@
 
 /** WMCZ Caurosel CSS */
 .wmcz-caurosel-container {
-    display: flex;
     height: 350pt;
 }
 
@@ -69,11 +68,12 @@
     }
 }
 
-.wmcz-caurosel-controls {
+.wmcz-caurosel-container .gallery-entry {
+    width: 100%;
+    height: 350pt;
     display: flex;
-    height: 40px;
-    border: 1px solid black;
 }
+
 .wmcz-caurosel-left {
     width: 50%;
 }
@@ -90,35 +90,6 @@
     background-color: #F3F3F3;
     padding: 40px;
 }
-
-.wmcz-caurosel-menu {
-    position: relative;
-    left: 25px;
-}
-.wmcz-caurosel-menu > ul {
-    position: absolute;
-    top: 100px;
-    right: 0;
-    margin: 0;
-    list-style: none;
-}
-.wmcz-caurosel-menu > ul > li {
-    padding-bottom: 10px;
-}
-.wmcz-caurosel-menu-dot {
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    background-color: white;
-}
-
-.wmcz-caurosel-menu-dot:hover {
-    cursor: pointer;
-}
-.wmcz-caurosel-menu-dot-active {
-    background-color: black;
-}
-
 
 /** WMCZ map */
 .wmcz-map {

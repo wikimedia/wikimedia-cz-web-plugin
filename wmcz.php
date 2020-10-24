@@ -131,6 +131,39 @@ function wmcz_block_events_caurosel_render_callback( $attributes ) {
 
     $id = uniqid();
     $events = $wpdb->get_results( "SELECT id, name, description, photo_id, link FROM {$wpdb->prefix}wmcz_caurosel WHERE published=1 ORDER BY added DESC", OBJECT );
+
+    $html = '<div class="wmcz-caurosel-container" id="wmcz-caurosel-container-' . $id . '">' . "\n";
+    foreach ( $events as $event ) {
+        $headlineInnerHtml = $event->headline;
+        if ( $event->link != '' ) {
+            $headlineInnerHtml = '<a href="' . $event->link . '">' . $event->headline . '</a>';
+        }
+        $html .= '
+            <div class="gallery-entry">
+                <div class="wmcz-caurosel-left">
+                    <a href="' . $event->link . '">
+                        <img src="' .  wp_get_attachment_url( $event->photo_id ) . '" alt="">
+                    </a>
+                </div>
+                <div class="wmcz-caurosel-right-colored">
+                    <h2>' . $headlineInnerHtml . '</h2>' .'
+                    <p>
+                        ' . esc_html( $event->description ) . '
+                    </p>
+                </div>
+            </div>
+        ';
+    }
+    $html .= '</div>
+    <script>
+        var flkty = new Flickity( "#wmcz-caurosel-container-' . $id . '", {
+            // options
+            cellAlign: "left",
+            contain: true
+        });
+    </script>';
+    return $html;
+
     $numOfEvents = $wpdb->num_rows;
     $headline = esc_html( $events[0]->name );
     $description = esc_html( $events[0]->description );
@@ -537,5 +570,7 @@ if (!is_admin()) {
     wp_enqueue_style('wmcz-plugin', plugins_url( 'static/stylesheet.css', __FILE__ ) );
     wp_enqueue_script('wmcz-plugin-map', plugins_url( 'static/map.js', __FILE__ ) );
     wp_enqueue_script('wmcz-plugin-calendar', plugins_url( 'static/calendar.js', __FILE__ ) );
-    wp_enqueue_script('wmcz-plugin-caurosel', plugins_url( 'static/caurosel.js', __FILE__ ) );
+    wp_enqueue_style( 'wmcz-plugin-caurosel-flickity', plugins_url( 'static/vendor/flickity/flickity.css', __FILE__ ) );
+    wp_enqueue_script( 'wmcz-plugin-caurosel-flickity', plugins_url( 'static/vendor/flickity/flickity.pkgd.min.js', __FILE__ ) );
+    //wp_enqueue_script('wmcz-plugin-caurosel', plugins_url( 'static/caurosel.js', __FILE__ ) );
 }
