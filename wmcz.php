@@ -159,6 +159,7 @@ function wmcz_block_events_caurosel_render_callback( $attributes ) {
         var flkty = new Flickity( "#wmcz-caurosel-container-' . $id . '", {
             // options
             cellAlign: "left",
+            autoPlay: true,
             contain: true
         });
     </script>';
