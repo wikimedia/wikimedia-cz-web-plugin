@@ -66,27 +66,27 @@
     .wmcz-caurosel-container {
         margin: 0 30pt;
     }
+    .wmcz-caurosel-container .gallery-entry {
+        display: flex;
+    }
+    .wmcz-caurosel-left,
+    .wmcz-caurosel-right,
+    .wmcz-caurosel-right-colored {
+        width: 50%;
+    }
 }
 
 .wmcz-caurosel-container .gallery-entry {
     width: 100%;
     height: 350pt;
-    display: flex;
 }
 
-.wmcz-caurosel-left {
-    width: 50%;
-}
 .wmcz-caurosel-left img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.wmcz-caurosel-right {
-    width: 50%;
-}
 .wmcz-caurosel-right-colored {
-    width: 50%;
     background-color: #F3F3F3;
     padding: 40px;
 }
