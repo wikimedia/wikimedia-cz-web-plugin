@@ -276,7 +276,15 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
             $tagsHtml .= '<span><input class="' . $class . '" type="checkbox" ' . $selected . ' name="tags[]" value="' . $tags[$i] . '" id="wmcz-events-tag-' . $i . '">';
             $tagsHtml .= '<label for="wmcz-events-tag-' . $i . '">' .$tags[$i] . '</label></span>';
         }
+        $i = count($tags);
+        $selected = '';
+        if ( is_array( $selectedTags ) && in_array( 'other', $selectedTags, true ) ) {
+            $selected = 'checked';
+        }
+        $tagsHtml .= '<span><input type="checkbox" ' . $selected . ' name="tags[]" value="other" id="wmcz-events-tag-' . $i . '">';
+        $tagsHtml .= '<label for="wmcz-events-tag-' . $i . '">ostatní</label></span>';
     }
+
 
     // Construct cities
     $placesHtml = '';

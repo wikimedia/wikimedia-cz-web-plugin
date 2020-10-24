@@ -24,6 +24,13 @@ class Events {
                 return $res;
             }
             foreach ( $tags as $tag ) {
+                if ( $tag === "other" ) {
+                    if ( count( $event->getTags() ) === 0 ) {
+                        $res[] = $event;
+                    }
+                    continue;
+                }
+
                 if ( in_array( $tag, $event->getTags() ) ) {
                     $res[] = $event;
                 }
