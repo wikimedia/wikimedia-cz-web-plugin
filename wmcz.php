@@ -8,26 +8,7 @@
 * Author URI: https://meta.wikimedia.org/wiki/User:Martin_Urbanec
 **/
 
-spl_autoload_register(function ($class) {
-    $filename = str_replace( 'wmcz', '', str_replace( 'Wmcz', '', $class ) );
-    $path = dirname( __FILE__ ) . '/includes/' . $filename . '.php';
-
-    if ( file_exists( $path ) ) {
-        include $path;
-        return true;
-    } else {
-        $filename = str_replace( 'wmcz', '', strtolower($class) );
-        $path = dirname( __FILE__ ) . '/includes/' . $filename . '.php';
-
-        if ( file_exists( $path ) ) {
-            include $path;
-            return true;
-        }
-    }
-
-    return false;
-});
-require_once 'vendor/autoload.php';
+require_once 'autoload.php';
 
 function wmcz_block_render_calendar( $cols, $rows, $events, $class ) {
     $html = '<div id="wmcz-calendar-' . $class . '" class="wmcz-calendar-set wp-block-columns has-' . $cols . '-columns">';
