@@ -90,8 +90,14 @@ function wmcz_block_map_render_callback( $attributes ) {
         ]
     ];
     return '<div class="wmcz-map-container" data-id="' . $id . '">
-    <div class="wmcz-map-data" data-id="' . $id . '">' . json_encode( $data ) . '</div>
-    <div class="wmcz-map" data-id="' . $id . '" id="map-' . $id . '"></div>';
+    <div class="wmcz-map" data-id="' . $id . '" id="map-' . $id . '"></div><script type="text/javascript">
+        console.log("map id: ' . $id . '");
+        wmczInitMap("' . $id . '", "' . $attributes['ical'] . '", {
+            lat: ' . (float)$attributes['lat'] . ',
+            lon: ' . (float)$attributes['lon'] . ',
+            zoom: ' . (int)$attributes['zoom'] . '
+        });
+    </script>';
 }
 
 function wmcz_block_map_register() {
@@ -559,6 +565,9 @@ if (!is_admin()) {
     wp_enqueue_style('leaflet', plugins_url( 'static/leaflet/dist/leaflet.css', __FILE__ ) );
     wp_enqueue_style('wmcz-plugin', plugins_url( 'static/stylesheet.css', __FILE__ ) );
     wp_enqueue_script('wmcz-plugin-map', plugins_url( 'static/map.js', __FILE__ ) );
+    wp_localize_script( 'wmcz-plugin-map', 'jsVars', [
+        'api' => plugins_url( 'api.php', __FILE__ )
+    ] );
     wp_enqueue_script('wmcz-plugin-calendar', plugins_url( 'static/calendar.js', __FILE__ ) );
     wp_enqueue_style( 'wmcz-plugin-caurosel-flickity', plugins_url( 'static/vendor/flickity/flickity.css', __FILE__ ) );
     wp_enqueue_script( 'wmcz-plugin-caurosel-flickity', plugins_url( 'static/vendor/flickity/flickity.pkgd.min.js', __FILE__ ) );
