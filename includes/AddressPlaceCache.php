@@ -7,6 +7,9 @@ class AddressPlaceCache extends FileCache {
         parent::__construct( 'known-addresses', 0 );
     }
 
+    /**
+     * @return Place
+     */
     public function getPlace( $address ) {
         $cachedVal = $this->get($address);
         if ( $cachedVal ) {
@@ -17,6 +20,9 @@ class AddressPlaceCache extends FileCache {
         return $res;
     }
 
+    /**
+     * @return Place
+     */
     private function getPlaceInternal( $address ) {
         $nominatim = new Nominatim( "https://nominatim.openstreetmap.org" );
         $search = $nominatim->newSearch();

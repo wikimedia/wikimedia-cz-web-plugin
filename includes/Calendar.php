@@ -68,15 +68,25 @@ class WmczCalendar {
 
     /**
      * Gets all places used in events in this calendar
+     *
+     * @param string|null $linkPrefix Link prefix if the places should have one; average location
+     *                                name will be appended.
      */
-    public function getPlaces() {
+    public function getPlaces($linkPrefix = null) {
         $places = [];
         $events = $this->getAllEventsInternal();
         foreach ( $events as $event ) {
             if ( !is_null( $event->location ) ) {
                 $address = new Address( $event->location );
-                if ( $address->getPlace() ) {
-                    $places[] = $address->getPlace();
+                $place = $address->getAveragePlace();
+                if ( $place ) {
+                    if ( $linkPrefix !== null ) {
+                        $place->setLink( $linkPrefix . $place->address );
+                    }
+
+                    if (!in_array( $place, $places )) {
+                        $places[] = $place;
+                    }
                 }
             }
         }
