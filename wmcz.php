@@ -562,5 +562,4 @@ if (!is_admin()) {
     wp_enqueue_script('wmcz-plugin-calendar', plugins_url( 'static/calendar.js', __FILE__ ) );
     wp_enqueue_style( 'wmcz-plugin-caurosel-flickity', plugins_url( 'static/vendor/flickity/flickity.css', __FILE__ ) );
     wp_enqueue_script( 'wmcz-plugin-caurosel-flickity', plugins_url( 'static/vendor/flickity/flickity.pkgd.min.js', __FILE__ ) );
-    //wp_enqueue_script('wmcz-plugin-caurosel', plugins_url( 'static/caurosel.js', __FILE__ ) );
 }
