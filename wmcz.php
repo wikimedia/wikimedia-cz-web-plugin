@@ -109,7 +109,7 @@ function wmcz_block_map_render_callback( $attributes ) {
         ]
     ];
     return '<div class="wmcz-map-container" data-id="' . $id . '">
-    <div class="wmcz-map-data" data-id="' . $id . '">' . esc_html( json_encode( $data ) ) . '</div>
+    <div class="wmcz-map-data" data-id="' . $id . '">' . json_encode( $data ) . '</div>
     <div class="wmcz-map" data-id="' . $id . '" id="map-' . $id . '"></div>';
 }
 
