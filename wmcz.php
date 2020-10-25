@@ -324,7 +324,7 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
     return '<div class="wmcz-events-list">
         <div class="wmcz-events-list-controls">
             <form>
-                <strong>' . __('Search', 'wmcz-plugin') . '</strong>
+                <strong>' . __('Search for events', 'wmcz-plugin') . '</strong>
                 <label for="from">' . __('from', 'wmcz-plugin') . '</label>
                 <input type="date" name="from" id="from" value="' . $from . '">
                 <label for="to">' . __('to', 'wmcz-plugin') . '</label>

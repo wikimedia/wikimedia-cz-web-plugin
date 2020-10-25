@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wikimedia Czech Republic 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/web-plugin\n"
-"POT-Creation-Date: 2020-10-25T20:07:48+01:00\n"
+"POT-Creation-Date: 2020-10-25T20:09:30+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -60,8 +60,8 @@ msgid "Location"
 msgstr "Místo akce"
 
 #: wmcz.php:327
-msgid "Search"
-msgstr "Vyhledávání"
+msgid "Search for events"
+msgstr "Vyhledávání událostí"
 
 #: wmcz.php:328
 msgid "from"
@@ -86,3 +86,6 @@ msgstr "Filtrovat"
 #: wmcz.php:415
 msgid "Archive"
 msgstr "Archiv"
+
+#~ msgid "Search"
+#~ msgstr "Vyhledávání"
