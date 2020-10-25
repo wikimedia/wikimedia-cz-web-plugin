@@ -80,15 +80,6 @@ function wmcz_block_calendar_register() {
 
 function wmcz_block_map_render_callback( $attributes ) {
     $id = uniqid();
-    $calendar = new WmczCalendar( $attributes['ical'] );
-    $data = [
-        'points' => $calendar->getPlaces(),
-        'defaults' => [
-            'lat' => (float)$attributes['lat'],
-            'lon' => (float)$attributes['lon'],
-            'zoom' => (int)$attributes['zoom'],
-        ]
-    ];
     return '<div class="wmcz-map-container" data-id="' . $id . '">
     <div class="wmcz-map" data-id="' . $id . '" id="map-' . $id . '"></div><script type="text/javascript">
         console.log("map id: ' . $id . '");
