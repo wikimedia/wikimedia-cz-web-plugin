@@ -2,6 +2,7 @@
 /**
 * Plugin Name: Wikimedia Czech Republic
 * Plugin URI: https://wikimedia.cz
+* Text Domain: wmcz-plugin
 * Description: Customizations for WMCZ
 * Version: 0.1
 * Author: Martin Urbanec
@@ -59,8 +60,8 @@ function wmcz_block_calendar_render_callback( $attributes ) {
     return '<div class="block-wmcz-calendar">
     <h2>kalendář akcí</h2>
     <div class="wmcz-calendar-controls">
-        <button id="wmcz-calendar-control-this-month" class="wmcz-calendar-control active">tento měsíc</button>
-        <button id="wmcz-calendar-control-next-month" class="wmcz-calendar-control">příští měsíc</button>
+        <button id="wmcz-calendar-control-this-month" class="wmcz-calendar-control active">' . __('this month', 'wmcz-plugin') . '</button>
+        <button id="wmcz-calendar-control-next-month" class="wmcz-calendar-control">' . __('next month', 'wmcz-plugin') . '</button>
     </div>
     ' . $html . '</div>';
 }
@@ -260,7 +261,7 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
             $selected = 'checked';
         }
         $tagsHtml .= '<span><input type="checkbox" ' . $selected . ' name="tags[]" value="other" id="wmcz-events-tag-' . $i . '">';
-        $tagsHtml .= '<label for="wmcz-events-tag-' . $i . '">ostatní</label></span>';
+        $tagsHtml .= '<label for="wmcz-events-tag-' . $i . '">' . __( 'other', 'wmcz-plugin' ). '</label></span>';
     }
 
 
@@ -298,9 +299,9 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
                 <div class="wmcz-events-list-event-description">
                     <div class="wmcz-events-list-event-summary">
                         <ul>
-                            <li>Začátek: %s</li>
-                            <li>Konec: %s</li>
-                            <li>Místo konání: %s</li>
+                            <li>' . __('Start', 'wmcz-plugin') . ': %s</li>
+                            <li>' . __('End', 'wmcz-plugin') . ': %s</li>
+                            <li>' . __('Location', 'wmcz-plugin') . ': %s</li>
                         </ul>
                     </div>
                     <div class="wmcz-events-event-description-raw">
@@ -323,15 +324,15 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
     return '<div class="wmcz-events-list">
         <div class="wmcz-events-list-controls">
             <form>
-                <b>Filtr</b>
-                <label for="from">od</label>
+                <b>' . __('Filter', 'wmcz-plugin') . '</b>
+                <label for="from">' . __('from', 'wmcz-plugin') . '</label>
                 <input type="date" name="from" id="from" value="' . $from . '">
-                <label for="to">do</label>
+                <label for="to">' . __('to', 'wmcz-plugin') . '</label>
                 <input type="date" name="to" id="to" value="' . $to . '">
-                <div><label for="cities">dle programů</label>' . $tagsHtml . '
-                </div><div><label for="cities">dle místa</label>' . $placesHtml . '
+                <div><label for="cities">' . __('by program', 'wmcz-plugin') . '</label>' . $tagsHtml . '
+                </div><div><label for="cities">' . __('by location', 'wmcz-plugin') . '</label>' . $placesHtml . '
                 </div><div>
-                <input type="submit" value="Filtrovat" /></div>
+                <input type="submit" value="' . __('Filter', 'wmcz-plugin') . '" /></div>
             </form>
         </div>
         ' . $eventsHtml . '
@@ -411,7 +412,7 @@ function wmcz_block_latest_news_render_callback( $attributes ) {
     if ( $maxNews == 0 ) {
         $result .= '<div class="wmcz-posts-head">' . get_search_form( false ) .
         '<div class="wmcz-archive">
-        <h3>Archive</h3>' .
+        <h3>' . __('Archive', 'wmcz-plugin') .  '</h3>' .
         wp_custom_archive( '', false ) .
         '</div></div>';
     }
@@ -541,12 +542,19 @@ function wp_custom_archive($args = '', $echo = true) {
         return $output;
 }
 
+function wmcz_register_i18n() {
+    $rel_path = basename( dirname( __FILE__ ) ) . '/i18n';
+    load_plugin_textdomain( 'wmcz-plugin', false, $rel_path );
+
+}
+
 add_action( 'init', 'wmcz_block_calendar_register' );
 add_action( 'init', 'wmcz_block_map_register' );
 add_action( 'init', 'wmcz_block_events_caurosel_register' );
 add_action( 'init', 'wmcz_block_calendar_list_register' );
 add_action( 'init', 'wmcz_block_donate_register' );
 add_action( 'init', 'wmcz_block_latest_news_register' );
+add_action( 'plugins_loaded', 'wmcz_register_i18n' );
 add_filter('excerpt_more', 'wmcz_excerpt_more');
 add_filter('excerpt_length', 'wmcz_custom_excerpt_length');
 register_activation_hook( __FILE__, 'wmcz_install' );

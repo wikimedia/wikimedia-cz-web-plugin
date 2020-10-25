@@ -1,0 +1,84 @@
+# Copyright (C) 2020 Martin Urbanec
+# This file is distributed under the same license as the Wikimedia Czech Republic plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Wikimedia Czech Republic 0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/web-plugin\n"
+"POT-Creation-Date: 2020-10-25T20:01:05+01:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: wmcz-plugin\n"
+
+#. Plugin Name of the plugin
+msgid "Wikimedia Czech Republic"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://wikimedia.cz"
+msgstr ""
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr ""
+
+#. Author of the plugin
+msgid "Martin Urbanec"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://meta.wikimedia.org/wiki/User:Martin_Urbanec"
+msgstr ""
+
+#: wmcz.php:63
+msgid "this month"
+msgstr "tento měsíc"
+
+#: wmcz.php:64
+msgid "next month"
+msgstr "příští měsíc"
+
+#: wmcz.php:264
+msgid "other"
+msgstr "ostatní"
+
+#: wmcz.php:302
+msgid "Start"
+msgstr "Začátek"
+
+#: wmcz.php:303
+msgid "End"
+msgstr "Konec"
+
+#: wmcz.php:304
+msgid "Location"
+msgstr "Místo akce"
+
+#: wmcz.php:327 wmcz.php:335
+msgid "Filter"
+msgstr "Filtrovat"
+
+#: wmcz.php:328
+msgid "from"
+msgstr "od"
+
+#: wmcz.php:330
+msgid "to"
+msgstr "do"
+
+#: wmcz.php:332
+msgid "by program"
+msgstr "podle programu"
+
+#: wmcz.php:333
+msgid "by location"
+msgstr "podle místa"
+
+#: wmcz.php:415
+msgid "Archive"
+msgstr "Archiv"

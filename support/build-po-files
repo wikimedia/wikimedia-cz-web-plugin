@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+supported_languages="cs_CZ"
+root="`dirname \"$0\"`/.."
+cd $root
+wp i18n make-pot . i18n/wmcz-plugin.pot --skip-js
+
+cd i18n
+for lang in $supported_languages; do
+	msgmerge --backup=off --update wmcz-plugin-$lang.po wmcz-plugin.pot
+done
