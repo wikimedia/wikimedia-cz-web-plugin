@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cd /var/www/test.wikimedia.cz
+cd wp-content/plugins/wmcz-plugin
+git pull
+git submodule update
+cd ../../themes/wmcz-theme
+git pull
