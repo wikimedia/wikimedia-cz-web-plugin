@@ -22,6 +22,6 @@ class AddressPlaceCache extends FileCache {
         $search = $nominatim->newSearch();
         $search->query( $address );
         $result = $nominatim->find($search);
-        return new Place( $result[0]["lat"], $result[0]["lon"] );
+        return new Place( $result[0]["lat"], $result[0]["lon"], $address );
     }
 }
