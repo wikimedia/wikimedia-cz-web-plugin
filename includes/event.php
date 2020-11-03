@@ -25,8 +25,8 @@ class Event {
         $this->title = $matches[3];
 
         $this->displayDatetime = $startDate->format('d. m. Y');
-        $this->startDatetime = $startDate->format('d. m. Y h:i');
-        $this->endDatetime = $endDate->format('d. m. Y h:i');
+        $this->startDatetime = $startDate->format('d. m. Y H:i');
+        $this->endDatetime = $endDate->format('d. m. Y H:i');
         $this->location = $event->location;
         $this->description = $event->description;
         $this->id = hash('md5', $event->title . $event->dtstart . $event->dtend);
