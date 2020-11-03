@@ -1,5 +1,6 @@
 # Copyright (C) 2020 Martin Urbanec
 # This file is distributed under the same license as the Wikimedia Czech Republic plugin.
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Wikimedia Czech Republic 0.1\n"
