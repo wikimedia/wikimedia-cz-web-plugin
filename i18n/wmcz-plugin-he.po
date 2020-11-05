@@ -1,91 +1,84 @@
-# Translation of Plugin to Czech (čeština)
+# Translation of Plugin to Hebrew (עברית)
 # Exported from translatewiki.net
 #
-# Author: Martin Urbanec
+# Author: YaronSh
 msgid ""
 msgstr ""
 ""
-"Project-Id-Version: Wikimedia Czech Republic 0.1\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/web-plugin\n"
-"POT-Creation-Date: 2020-10-25T20:09:30+01:00\n"
 "PO-Revision-Date: 2020-11-05 12:37:24+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: cs_cz\n"
-"MIME-Version: 1.0\n"
+"X-POT-Import-Date: 2020-11-03 15:10:45+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: he\n"
 "X-Generator: MediaWiki 1.36.0-alpha; Translate 2020-10-28\n"
-"X-Domain: wmcz-plugin\n"
-"X-POT-Import-Date: 2020-11-03 15:10:45+0000\n"
-"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ( (n >= 2 && n <= 4) ? 1 : 2 );\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Plugin Name of the plugin
 msgid "Wikimedia Czech Republic"
-msgstr "Wikimedia Česká republika"
+msgstr ""
 
 #. Description of the plugin
 msgid "Customizations for WMCZ"
-msgstr "Přizpůsobení pro WMCZ"
+msgstr ""
 
 #. Author of the plugin
 #, optional
 msgid "Martin Urbanec"
-msgstr "Martin Urbanec"
+msgstr ""
 
 #. Author URI of the plugin
 msgid "https://meta.wikimedia.org/wiki/User:Martin_Urbanec"
-msgstr "https://meta.wikimedia.org/wiki/User:Martin_Urbanec"
+msgstr ""
 
 #: wmcz.php:63
 msgid "this month"
-msgstr "tento měsíc"
+msgstr "החודש"
 
 #: wmcz.php:64
 msgid "next month"
-msgstr "příští měsíc"
+msgstr "חודש הבא"
 
 #: wmcz.php:264
 msgid "other"
-msgstr "ostatní"
+msgstr "אחר"
 
 #: wmcz.php:302
 msgid "Start"
-msgstr "Začátek"
+msgstr "התחלה"
 
 #: wmcz.php:303
 msgid "End"
-msgstr "Konec"
+msgstr "סיום"
 
 #: wmcz.php:304
 msgid "Location"
-msgstr "Místo akce"
+msgstr "מיקום"
 
 #: wmcz.php:327
 msgid "Search for events"
-msgstr "Vyhledávání událostí"
+msgstr "חיפוש אחר אירועים"
 
 #: wmcz.php:328
 msgid "from"
-msgstr "od"
+msgstr ""
 
 #: wmcz.php:330
 msgid "to"
-msgstr "do"
+msgstr ""
 
 #: wmcz.php:332
 msgid "by program"
-msgstr "podle programu"
+msgstr "לפי תכנית"
 
 #: wmcz.php:333
 msgid "by location"
-msgstr "podle místa"
+msgstr "לפי מיקום"
 
 #: wmcz.php:335
 msgid "Filter"
-msgstr "Filtrovat"
+msgstr "מסנן"
 
 #: wmcz.php:415
 msgid "Archive"
-msgstr "Archiv"
+msgstr "ארכיון"
 
