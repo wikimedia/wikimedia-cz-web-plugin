@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2020-11-05 12:37:24+0000\n"
+"PO-Revision-Date: 2020-11-05 15:17:29+0000\n"
 "X-POT-Import-Date: 2020-11-03 15:10:45+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,10 +25,6 @@ msgstr "Personnalisations pour WMCZ"
 #, optional
 msgid "Martin Urbanec"
 msgstr "Martin Urbanec"
-
-#. Author URI of the plugin
-msgid "https://meta.wikimedia.org/wiki/User:Martin_Urbanec"
-msgstr "https://meta.wikimedia.org/wiki/User:Martin_Urbanec"
 
 #: wmcz.php:63
 msgid "this month"

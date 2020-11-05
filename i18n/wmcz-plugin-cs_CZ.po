@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Wikimedia Czech Republic 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/web-plugin\n"
 "POT-Creation-Date: 2020-10-25T20:09:30+01:00\n"
-"PO-Revision-Date: 2020-11-05 12:37:24+0000\n"
+"PO-Revision-Date: 2020-11-05 15:17:29+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: cs_cz\n"
@@ -32,10 +32,6 @@ msgstr "Přizpůsobení pro WMCZ"
 #, optional
 msgid "Martin Urbanec"
 msgstr "Martin Urbanec"
-
-#. Author URI of the plugin
-msgid "https://meta.wikimedia.org/wiki/User:Martin_Urbanec"
-msgstr "https://meta.wikimedia.org/wiki/User:Martin_Urbanec"
 
 #: wmcz.php:63
 msgid "this month"
