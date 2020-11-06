@@ -7,3 +7,4 @@ git submodule update
 bash support/build-mo-files
 cd ../../themes/wmcz-theme
 git pull
+bash support/build-mo-files
