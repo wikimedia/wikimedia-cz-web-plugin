@@ -1,6 +1,6 @@
 <?php
 /**
-* Plugin Name: Wikimedia Czech Republic
+* Plugin Name: WMCZ website addon
 * Plugin URI: https://wikimedia.cz
 * Text Domain: wmcz-plugin
 * Description: Customizations for WMCZ
