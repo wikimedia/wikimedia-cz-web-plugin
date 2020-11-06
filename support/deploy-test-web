@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /var/www/test.wikimedia.cz
+cd /var/www/wordpress.wikimedia.cz
 cd wp-content/plugins/wmcz-plugin
 git pull
 git submodule update
