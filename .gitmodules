@@ -1,6 +1,6 @@
-[submodule "static/leaflet"]
-	path = static/leaflet
-	url = https://github.com/Leaflet/Leaflet.git
-[submodule "static/leaflet.gesturehandling"]
-	path = static/leaflet.gesturehandling
+[submodule "static/vendor/leaflet.gesturehandling"]
+	path = static/vendor/leaflet.gesturehandling
 	url = https://github.com/elmarquis/Leaflet.GestureHandling.git
+[submodule "static/vendor/leaflet"]
+	path = static/vendor/leaflet
+	url = https://github.com/Leaflet/Leaflet.git

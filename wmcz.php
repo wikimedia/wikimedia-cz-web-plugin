@@ -560,10 +560,10 @@ add_filter('excerpt_length', 'wmcz_custom_excerpt_length');
 register_activation_hook( __FILE__, 'wmcz_install' );
 
 if (!is_admin()) {
-    wp_enqueue_script('leaflet', plugins_url( 'static/leaflet/dist/leaflet.js', __FILE__ ) );
-    wp_enqueue_style('leaflet', plugins_url( 'static/leaflet/dist/leaflet.css', __FILE__ ) );
-    wp_enqueue_script( 'leaflet.gesturehandling', plugins_url( 'static/leaflet.gesturehandling/dist/leaflet-gesture-handling.min.js', __FILE__ ) );
-    wp_enqueue_style( 'leaflet.gesturehandling', plugins_url( 'static/leaflet.gesturehandling/dist/leaflet-gesture-handling.min.css', __FILE__ ) );
+    wp_enqueue_script('leaflet', plugins_url( 'static/vendor/leaflet/dist/leaflet.js', __FILE__ ) );
+    wp_enqueue_style('leaflet', plugins_url( 'static/vendor/leaflet/dist/leaflet.css', __FILE__ ) );
+    wp_enqueue_script( 'leaflet.gesturehandling', plugins_url( 'static/vendor/leaflet.gesturehandling/dist/leaflet-gesture-handling.min.js', __FILE__ ) );
+    wp_enqueue_style( 'leaflet.gesturehandling', plugins_url( 'static/vendor/leaflet.gesturehandling/dist/leaflet-gesture-handling.min.css', __FILE__ ) );
     wp_enqueue_style('wmcz-plugin', plugins_url( 'static/stylesheet.css', __FILE__ ) );
     wp_enqueue_script('wmcz-plugin-map', plugins_url( 'static/map.js', __FILE__ ) );
     wp_localize_script( 'wmcz-plugin-map', 'jsVars', [
