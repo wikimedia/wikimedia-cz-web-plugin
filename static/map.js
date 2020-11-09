@@ -1,8 +1,12 @@
-function wmczInitMap(id, ical, defaults) {
+function wmczInitMap(id, ical, gestureHandling, defaults) {
 	const containerEl = document.querySelector(`.wmcz-map-container[data-id="${id}"]`);
 	const mapEl = document.querySelector('.wmcz-map[data-id="' + containerEl.getAttribute('data-id') + '"]');
-	const map = L.map(mapEl.id);
-	map.setView( [ defaults.lat, defaults.lon ], defaults.zoom );
+	console.log(gestureHandling);
+	const map = L.map( mapEl.id, {
+		center: [ defaults.lat, defaults.lon ],
+		zoom: defaults.zoom,
+		gestureHandling: gestureHandling,
+	});
 	L.tileLayer( 'https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png', {
 				maxZoom: 18,
 				id: 'wikipedia-map-01',

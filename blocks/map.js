@@ -7,6 +7,7 @@ wp.blocks.registerBlockType('wmcz/map', {
     lat: { type: 'string' },
     lon: { type: 'string' },
     zoom: { type: 'string' },
+    gesturehandling: { type: 'gesturehandling' },
   },
   save: function () {
     return null
@@ -30,6 +31,11 @@ wp.blocks.registerBlockType('wmcz/map', {
     function updateDefaultZoom( event ) {
       props.setAttributes({
         zoom: event.target.value
+      });
+    }
+    function updateGestureHandling ( event ) {
+      props.setAttributes({
+        gesturehandling: event.target.value == 1 ? true : false
       });
     }
 
@@ -103,6 +109,22 @@ wp.blocks.registerBlockType('wmcz/map', {
           type: 'number',
           value: props.attributes.zoom,
           onChange: updateDefaultZoom
+        }
+      ),
+      React.createElement(
+        'label',
+        {
+          for: 'wmcz-map-def-gesture'
+        },
+        'Gesture handling'
+      ),
+      React.createElement(
+        'input',
+        {
+          id: 'wmcz-map-def-gesture',
+          type: 'number',
+          value: props.attributes.gesturehandling ? 1 : 0,
+          onChange: updateGestureHandling
         }
       )
     );

@@ -84,10 +84,10 @@ function wmcz_block_map_render_callback( $attributes ) {
     return '<div class="wmcz-map-container" data-id="' . $id . '">
     <div class="wmcz-map" data-id="' . $id . '" id="map-' . $id . '"></div><script type="text/javascript">
         console.log("map id: ' . $id . '");
-        wmczInitMap("' . $id . '", "' . $attributes['ical'] . '", {
+        wmczInitMap("' . $id . '", "' . $attributes['ical'] . '", ' . var_export( (bool)$attributes['gesturehandling'], true ) . ', {
             lat: ' . (float)$attributes['lat'] . ',
             lon: ' . (float)$attributes['lon'] . ',
-            zoom: ' . (int)$attributes['zoom'] . '
+            zoom: ' . (int)$attributes['zoom'] . ',
         });
     </script>';
 }
@@ -562,6 +562,8 @@ register_activation_hook( __FILE__, 'wmcz_install' );
 if (!is_admin()) {
     wp_enqueue_script('leaflet', plugins_url( 'static/leaflet/dist/leaflet.js', __FILE__ ) );
     wp_enqueue_style('leaflet', plugins_url( 'static/leaflet/dist/leaflet.css', __FILE__ ) );
+    wp_enqueue_script( 'leaflet.gesturehandling', plugins_url( 'static/leaflet.gesturehandling/dist/leaflet-gesture-handling.min.js', __FILE__ ) );
+    wp_enqueue_style( 'leaflet.gesturehandling', plugins_url( 'static/leaflet.gesturehandling/dist/leaflet-gesture-handling.min.css', __FILE__ ) );
     wp_enqueue_style('wmcz-plugin', plugins_url( 'static/stylesheet.css', __FILE__ ) );
     wp_enqueue_script('wmcz-plugin-map', plugins_url( 'static/map.js', __FILE__ ) );
     wp_localize_script( 'wmcz-plugin-map', 'jsVars', [
