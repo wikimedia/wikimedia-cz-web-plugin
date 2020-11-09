@@ -3,7 +3,7 @@
 cd /var/www/wordpress.wikimedia.cz
 cd wp-content/plugins/wmcz-web
 git pull
-git submodule update
+git submodule update --init
 bash support/build-mo-files
 cd ../../themes/wmcz-theme
 git pull
