@@ -1,0 +1,80 @@
+# Translation of Plugin to Zazaki (Zazaki)
+# Exported from translatewiki.net
+#
+# Author: 1917 Ekim Devrimi
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2020-11-09 04:02:47+0000\n"
+"X-POT-Import-Date: 2020-11-03 15:10:45+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: diq\n"
+"X-Generator: MediaWiki 1.36.0-alpha; Translate 2020-10-28\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+msgid "Wikimedia Czech Republic"
+msgstr "Wikimedia Çekya"
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr "Seba WMCZ xısusi kerdış"
+
+#. Author of the plugin
+#, optional
+msgid "Martin Urbanec"
+msgstr ""
+
+#: wmcz.php:63
+msgid "this month"
+msgstr "Ena aşmi"
+
+#: wmcz.php:64
+msgid "next month"
+msgstr "Aşmiya bahdoyên"
+
+#: wmcz.php:264
+msgid "other"
+msgstr "yewbina"
+
+#: wmcz.php:302
+msgid "Start"
+msgstr "Start"
+
+#: wmcz.php:303
+msgid "End"
+msgstr "Qedyayış"
+
+#: wmcz.php:304
+msgid "Location"
+msgstr "Lokasyon"
+
+#: wmcz.php:327
+msgid "Search for events"
+msgstr "Aktivite cıgeyrayış"
+
+#: wmcz.php:328
+msgid "from"
+msgstr "Kêra"
+
+#: wmcz.php:330
+msgid "to"
+msgstr "Kêrê"
+
+#: wmcz.php:332
+msgid "by program"
+msgstr "Gorey programi"
+
+#: wmcz.php:333
+msgid "by location"
+msgstr "Gorey lokasyoni"
+
+#: wmcz.php:335
+msgid "Filter"
+msgstr "Parzûn"
+
+#: wmcz.php:415
+msgid "Archive"
+msgstr "Arşiv"
+

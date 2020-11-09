@@ -1,0 +1,80 @@
+# Translation of Plugin to Portuguese (português)
+# Exported from translatewiki.net
+#
+# Author: Hamilton Abreu
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2020-11-09 04:02:47+0000\n"
+"X-POT-Import-Date: 2020-11-03 15:10:45+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_pt\n"
+"X-Generator: MediaWiki 1.36.0-alpha; Translate 2020-10-28\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+msgid "Wikimedia Czech Republic"
+msgstr "Wikimedia República Checa"
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr "Personalizações para WMCZ"
+
+#. Author of the plugin
+#, optional
+msgid "Martin Urbanec"
+msgstr ""
+
+#: wmcz.php:63
+msgid "this month"
+msgstr "este mês"
+
+#: wmcz.php:64
+msgid "next month"
+msgstr "próximo mês"
+
+#: wmcz.php:264
+msgid "other"
+msgstr "outro"
+
+#: wmcz.php:302
+msgid "Start"
+msgstr "Início"
+
+#: wmcz.php:303
+msgid "End"
+msgstr "Fim"
+
+#: wmcz.php:304
+msgid "Location"
+msgstr "Localização"
+
+#: wmcz.php:327
+msgid "Search for events"
+msgstr "Pesquisar eventos"
+
+#: wmcz.php:328
+msgid "from"
+msgstr "de"
+
+#: wmcz.php:330
+msgid "to"
+msgstr "até"
+
+#: wmcz.php:332
+msgid "by program"
+msgstr "por programa"
+
+#: wmcz.php:333
+msgid "by location"
+msgstr "por localização"
+
+#: wmcz.php:335
+msgid "Filter"
+msgstr "Filtrar"
+
+#: wmcz.php:415
+msgid "Archive"
+msgstr "Arquivar"
+
