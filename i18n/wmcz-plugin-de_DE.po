@@ -1,26 +1,25 @@
-# Translation of Plugin to Swedish (svenska)
+# Translation of Plugin to German (Deutsch)
 # Exported from translatewiki.net
 #
-# Author: Sabelöga
-# Author: WikiPhoenix
+# Author: DraconicDark
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2020-11-23 14:38:30+0000\n"
+"PO-Revision-Date: 2020-11-23 14:38:29+0000\n"
 "X-POT-Import-Date: 2020-11-03 15:10:45+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: sv_se\n"
+"Language: de_de\n"
 "X-Generator: MediaWiki 1.36.0-alpha; Translate 2020-10-28\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Plugin Name of the plugin
 msgid "Wikimedia Czech Republic"
-msgstr "Wikimedia Tjeckien"
+msgstr "Wikimedia Tschechien"
 
 #. Description of the plugin
 msgid "Customizations for WMCZ"
-msgstr "Anpassningar för WMCZ"
+msgstr "Anpassungen für WMCZ"
 
 #. Author of the plugin
 #, optional
@@ -29,15 +28,15 @@ msgstr ""
 
 #: wmcz.php:63
 msgid "this month"
-msgstr "denna månad"
+msgstr "dieser Monat"
 
 #: wmcz.php:64
 msgid "next month"
-msgstr "nästa månad"
+msgstr "nächster Monat"
 
 #: wmcz.php:264
 msgid "other"
-msgstr "övrigt"
+msgstr "andere"
 
 #: wmcz.php:302
 msgid "Start"
@@ -45,37 +44,37 @@ msgstr "Start"
 
 #: wmcz.php:303
 msgid "End"
-msgstr "Slut"
+msgstr "Ende"
 
 #: wmcz.php:304
 msgid "Location"
-msgstr "Plats"
+msgstr "Standort"
 
 #: wmcz.php:327
 msgid "Search for events"
-msgstr "Sök efter händelser"
+msgstr "Veranstaltungen suchen"
 
 #: wmcz.php:328
 msgid "from"
-msgstr "från"
+msgstr "von"
 
 #: wmcz.php:330
 msgid "to"
-msgstr "till"
+msgstr "zu"
 
 #: wmcz.php:332
 msgid "by program"
-msgstr "efter program"
+msgstr "nach Programm"
 
 #: wmcz.php:333
 msgid "by location"
-msgstr "efter plats"
+msgstr "nach Standort"
 
 #: wmcz.php:335
 msgid "Filter"
-msgstr "Filter"
+msgstr "Filtern"
 
 #: wmcz.php:415
 msgid "Archive"
-msgstr "Arkiv"
+msgstr "Archiv"
 
