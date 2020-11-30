@@ -1,0 +1,80 @@
+# Translation of Plugin to Kurdish (Latin script) (kurdî (latînî)‎)
+# Exported from translatewiki.net
+#
+# Author: Bikarhêner
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2020-11-30 16:20:56+0000\n"
+"X-POT-Import-Date: 2020-11-03 15:10:45+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ku-Latn\n"
+"X-Generator: MediaWiki 1.36.0-alpha; Translate 2020-10-28\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+msgid "Wikimedia Czech Republic"
+msgstr "Wîkîmedya Komara Çekê"
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr "Taybetîkirinên ji bo WMCZê"
+
+#. Author of the plugin
+#, optional
+msgid "Martin Urbanec"
+msgstr ""
+
+#: wmcz.php:63
+msgid "this month"
+msgstr "vê mehê"
+
+#: wmcz.php:64
+msgid "next month"
+msgstr "meha piştre"
+
+#: wmcz.php:264
+msgid "other"
+msgstr "yên din"
+
+#: wmcz.php:302
+msgid "Start"
+msgstr "Dest pê bike"
+
+#: wmcz.php:303
+msgid "End"
+msgstr "Bi dawî bîne"
+
+#: wmcz.php:304
+msgid "Location"
+msgstr "Lokasyon"
+
+#: wmcz.php:327
+msgid "Search for events"
+msgstr "Li çalakiyan bigere"
+
+#: wmcz.php:328
+msgid "from"
+msgstr "ji"
+
+#: wmcz.php:330
+msgid "to"
+msgstr "ji bo"
+
+#: wmcz.php:332
+msgid "by program"
+msgstr "bi bernameyê"
+
+#: wmcz.php:333
+msgid "by location"
+msgstr "bi lokasyonê"
+
+#: wmcz.php:335
+msgid "Filter"
+msgstr "Parzûn"
+
+#: wmcz.php:415
+msgid "Archive"
+msgstr "Arşîv"
+

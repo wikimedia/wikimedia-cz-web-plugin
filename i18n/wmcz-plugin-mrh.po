@@ -1,0 +1,80 @@
+# Translation of Plugin to Mara (Mara)
+# Exported from translatewiki.net
+#
+# Author: Teitei Para
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2020-11-30 16:20:56+0000\n"
+"X-POT-Import-Date: 2020-11-03 15:10:45+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: mrh\n"
+"X-Generator: MediaWiki 1.36.0-alpha; Translate 2020-10-28\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+msgid "Wikimedia Czech Republic"
+msgstr "Wikimedia Czech Sawhkhâ"
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr "WMCZ châta khodâhhawh"
+
+#. Author of the plugin
+#, optional
+msgid "Martin Urbanec"
+msgstr ""
+
+#: wmcz.php:63
+msgid "this month"
+msgstr "he thla"
+
+#: wmcz.php:64
+msgid "next month"
+msgstr "hmâlâ thla"
+
+#: wmcz.php:264
+msgid "other"
+msgstr "a hropazy"
+
+#: wmcz.php:302
+msgid "Start"
+msgstr "Pathao"
+
+#: wmcz.php:303
+msgid "End"
+msgstr "Pachhâ"
+
+#: wmcz.php:304
+msgid "Location"
+msgstr "Ynasu"
+
+#: wmcz.php:327
+msgid "Search for events"
+msgstr "event zy tlua"
+
+#: wmcz.php:328
+msgid "from"
+msgstr "tawhta"
+
+#: wmcz.php:330
+msgid "to"
+msgstr "lâta"
+
+#: wmcz.php:332
+msgid "by program"
+msgstr "parôkarâ ta"
+
+#: wmcz.php:333
+msgid "by location"
+msgstr "ynasu ta"
+
+#: wmcz.php:335
+msgid "Filter"
+msgstr "Athlina"
+
+#: wmcz.php:415
+msgid "Archive"
+msgstr "Tlôpa"
+
