@@ -93,6 +93,17 @@ class WmczCalendar {
         return $places;
     }
 
+    public function getEventsBatch(DateTime $from, DateTime $to, $tags = null) {
+        return new Events(
+            $this->ical->eventsFromRange(
+                $from->format('Y-m-d'),
+                $to->format('Y-m-d')
+            ),
+            $this->ical,
+            $this->maxEvents
+        );
+    }
+
     /**
      * Returns events happening in certain time period
      *
@@ -101,15 +112,7 @@ class WmczCalendar {
      * @return array
      */
     public function getEvents(DateTime $from, DateTime $to, $tags = null) {
-        $events = new Events(
-            $this->ical->eventsFromRange(
-                $from->format('Y-m-d'),
-                $to->format('Y-m-d')
-            ),
-            $this->ical,
-            $this->maxEvents
-        );
-        return $events->getEvents( $tags );
+        return $this->getEventsBatch( $from, $to, $tags )->getEvents( $tags );
     }
 
     /**

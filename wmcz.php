@@ -241,6 +241,7 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
 
     // Construct calendar
     $calendar = new WmczCalendar( $ical );
+    $eventsBatch = $calendar->getEventsBatch( new DateTime($from), new DateTime($to), $selectedTags );
     $tags = $calendar->getTags();
 
     // Construct tags
@@ -281,11 +282,29 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
         }
     }
 
+    // Hack for online events
+    if ( $eventsBatch->hasOnline() ) {
+        $cities[] = 'online';
+        $selected = '';
+        if ( in_array( 'online', $selectedCities ) ) {
+            $selected = 'checked';
+        }
+        $placesHtml .= '<span><input type="checkbox" name="cities[]" id="wmcz-city-online" value="online" ' . $selected . '>';
+        $placesHtml .= '<label for="wmcz-city-online">' . __( 'Online', 'wmcz-plugin' ) . '</label></span>';
+    }
 
-    $events = $calendar->getEvents( new DateTime($from), new DateTime($to), $selectedTags );
+
+    $events = $eventsBatch->getEvents();
     $eventsHtml = '<div class="wmcz-events-list-events">';
     foreach ( $events as $event ) {
-        if ( count( $selectedCities ) > 0 && !in_array( $event->getCity(), $selectedCities ) ) {
+        if (
+            count( $selectedCities ) > 0 &&
+            !in_array( $event->getCity(), $selectedCities ) &&
+            (
+                in_array( 'online', $selectedCities ) &&
+                !$event->isOnline()
+            )
+        ) {
             continue;
         }
         $tagClasses = [];

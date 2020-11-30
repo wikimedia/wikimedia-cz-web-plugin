@@ -54,6 +54,15 @@ class Event {
     }
 
     /**
+     * Is this event online?
+     *
+     * @return bool
+     */
+    public function isOnline() {
+        return strtolower( $this->getLocation() ) === "online";
+    }
+
+    /**
      * Return an instance of Address from location
      *
      * @return Address

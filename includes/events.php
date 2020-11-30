@@ -3,6 +3,7 @@
 class Events {
     private $events;
     private $maxEvents;
+    private $hasOnlineInternal = null;
 
     public function __construct( array $events, $ical, $maxEvents = null ) {
         $this->maxEvents = $maxEvents;
@@ -37,5 +38,21 @@ class Events {
             }
         }
         return $res;
+    }
+
+    public function hasOnline() {
+        if ($this->hasOnlineInternal !== null) {
+            return $this->hasOnlineInternal;
+        }
+
+        foreach ( $this->events as $event ) {
+            if ( $event->isOnline() ) {
+                $this->hasOnlineInternal = true;
+                return true;
+            }
+        }
+
+        $this->hasOnlineInternal = false;
+        return false;
     }
 }
