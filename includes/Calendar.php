@@ -44,6 +44,12 @@ class WmczCalendar {
         foreach ( $events as $event ) {
             $tags = array_merge( $tags, $event->getTags() );
         }
+
+        $config = json_decode(file_get_contents( dirname( __FILE__ ) . '/../configuration.json' ));
+        foreach ( $config->mandatoryTags as $tag ) {
+            $tags[] = $tag;
+        }
+
         return array_values( array_unique( $tags ) );
     }
 
