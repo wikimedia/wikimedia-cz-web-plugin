@@ -296,13 +296,15 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
 
     $events = $eventsBatch->getEvents();
     $eventsHtml = '<div class="wmcz-events-list-events">';
+    $letOnline = in_array( 'online', $selectedCities );
     foreach ( $events as $event ) {
         if (
             count( $selectedCities ) > 0 &&
-            !in_array( $event->getCity(), $selectedCities ) &&
-            (
-                in_array( 'online', $selectedCities ) &&
-                !$event->isOnline()
+            !(
+                in_array( $event->getCity(), $selectedCities ) ||
+                (
+                    $letOnline && $event->isOnline()
+                )
             )
         ) {
             continue;
