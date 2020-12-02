@@ -41,7 +41,7 @@ class ApistorePscClient {
         $url = str_replace( '//', '/', 'https://api.apitalks.store/' . $path);
         if ( is_array( $filterQuery ) ) {
             $url .= '?filter=' . urlencode( json_encode( $filterQuery ) );
-        }        
+        }
 
         return $this->requestUrl($url);
     }
