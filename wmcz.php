@@ -113,9 +113,9 @@ function wmcz_block_events_caurosel_render_callback( $attributes ) {
 
     $html = '<div class="wmcz-caurosel-container" id="wmcz-caurosel-container-' . $id . '">' . "\n";
     foreach ( $events as $event ) {
-        $headlineInnerHtml = $event->headline;
+        $headlineInnerHtml = $event->name;
         if ( $event->link != '' ) {
-            $headlineInnerHtml = '<a href="' . $event->link . '">' . $event->headline . '</a>';
+            $headlineInnerHtml = '<a href="' . $event->link . '">' . $event->name . '</a>';
         }
         $html .= '
             <div class="gallery-entry">
