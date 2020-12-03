@@ -4,10 +4,9 @@
 # Author: Martin Urbanec
 msgid ""
 msgstr ""
-""
 "Project-Id-Version: Wikimedia Czech Republic 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/web-plugin\n"
-"POT-Creation-Date: 2020-10-25T20:09:30+01:00\n"
+"POT-Creation-Date: 2020-12-03T23:53:34+01:00\n"
 "PO-Revision-Date: 2020-11-05 15:17:29+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,20 +17,28 @@ msgstr ""
 "X-Generator: MediaWiki 1.36.0-alpha; Translate 2020-10-28\n"
 "X-Domain: wmcz-plugin\n"
 "X-POT-Import-Date: 2020-11-03 15:10:45+0000\n"
-"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ( (n >= 2 && n <= 4) ? 1 : 2 );\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ( (n >= 2 && n <= 4) ? 1 : "
+"2 );\n"
 
 #. Plugin Name of the plugin
-msgid "Wikimedia Czech Republic"
-msgstr "Wikimedia Česká republika"
+msgid "WMCZ website addon"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://wikimedia.cz"
+msgstr ""
 
 #. Description of the plugin
 msgid "Customizations for WMCZ"
 msgstr "Přizpůsobení pro WMCZ"
 
 #. Author of the plugin
-#, optional
 msgid "Martin Urbanec"
 msgstr "Martin Urbanec"
+
+#. Author URI of the plugin
+msgid "https://meta.wikimedia.org/wiki/User:Martin_Urbanec"
+msgstr ""
 
 #: wmcz.php:63
 msgid "this month"
@@ -41,47 +48,57 @@ msgstr "tento měsíc"
 msgid "next month"
 msgstr "příští měsíc"
 
-#: wmcz.php:264
+#: wmcz.php:130
+msgid "Read more..."
+msgstr "Více..."
+
+#: wmcz.php:265
 msgid "other"
 msgstr "ostatní"
 
-#: wmcz.php:302
+#: wmcz.php:293
+msgid "Online"
+msgstr ""
+
+#: wmcz.php:323
 msgid "Start"
 msgstr "Začátek"
 
-#: wmcz.php:303
+#: wmcz.php:324
 msgid "End"
 msgstr "Konec"
 
-#: wmcz.php:304
+#: wmcz.php:325
 msgid "Location"
 msgstr "Místo akce"
 
-#: wmcz.php:327
+#: wmcz.php:348
 msgid "Search for events"
 msgstr "Vyhledávání událostí"
 
-#: wmcz.php:328
+#: wmcz.php:349
 msgid "from"
 msgstr "od"
 
-#: wmcz.php:330
+#: wmcz.php:351
 msgid "to"
 msgstr "do"
 
-#: wmcz.php:332
+#: wmcz.php:353
 msgid "by program"
 msgstr "podle programu"
 
-#: wmcz.php:333
+#: wmcz.php:354
 msgid "by location"
 msgstr "podle místa"
 
-#: wmcz.php:335
+#: wmcz.php:356
 msgid "Filter"
 msgstr "Filtrovat"
 
-#: wmcz.php:415
+#: wmcz.php:436
 msgid "Archive"
 msgstr "Archiv"
 
+#~ msgid "Wikimedia Czech Republic"
+#~ msgstr "Wikimedia Česká republika"
