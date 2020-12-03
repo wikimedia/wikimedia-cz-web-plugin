@@ -40,6 +40,7 @@ function wmcz_admin_caurosel() {
                     'published' => isset( $_POST['published'] ),
                     'photo_id' => (int)$_POST['image'],
                     'link' => $_POST['link'],
+                    'ordering_key' => (int)$_POST['orderingKey']
                 ]
             );
             wmcz_admin_caurosel_added();
@@ -75,6 +76,9 @@ function wmcz_admin_caurosel() {
                 if ( $_POST["link-{$event->id}"] !== $event->link ) {
                     $data['link'] = $_POST["link-{$event->id}"];
                 }
+                if ( $_POST["orderingKey-{$event->id}"] !== $event->ordering_key ) {
+                    $data['ordering_key'] = $_POST["orderingKey-{$event->id}"];
+                }
 
                 if ( count( $data ) > 0 ) {
                     $wpdb->update(
@@ -94,7 +98,7 @@ function wmcz_admin_caurosel() {
         }
     }
 
-    $events = $wpdb->get_results( "SELECT id, added, name, description, published, photo_id, link FROM {$wpdb->prefix}wmcz_caurosel ORDER BY added DESC", OBJECT );
+    $events = $wpdb->get_results( "SELECT id, added, name, description, published, photo_id, link, ordering_key FROM {$wpdb->prefix}wmcz_caurosel ORDER BY ordering_key DESC, added DESC", OBJECT );
     ?>
     <h1>WMCZ Events management</h1>
     <form method="post">
@@ -108,6 +112,7 @@ function wmcz_admin_caurosel() {
                     <th>Publikován?</th>
                     <th>photo_id</th>
                     <th>Odkaz</th>
+                    <th>Pořadí?</th>
                     <th>Smazat?</th>
                 </tr>
             </thead>
@@ -131,6 +136,9 @@ function wmcz_admin_caurosel() {
                     </td>
                     <td>
                         <input type="text" name="link-<?php echo $event->id ?>" value="<?php echo $event->link ?>">
+                    </td>
+                    <td>
+                        <input type="number" name="orderingKey-<?php echo $event->id; ?>" value="<?php echo $event->ordering_key?>">
                     </td>
                     <td>
                         <input type="checkbox" name="delete[]" value="<?php echo $event->id ?>">
@@ -166,6 +174,12 @@ function wmcz_admin_caurosel() {
                 <th>odkaz</th>
                 <td>
                     <input type="text" name="link" placeholder="http://wikimedia.cz/udalost" />
+                </td>
+            </tr>
+            <tr>
+                <th>Pořadí</th>
+                <td>
+                    <input type="number" name="orderingKey" value="0">
                 </td>
             </tr>
             <tr>

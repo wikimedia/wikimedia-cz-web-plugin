@@ -109,7 +109,7 @@ function wmcz_block_events_caurosel_render_callback( $attributes ) {
     global $wpdb;
 
     $id = uniqid();
-    $events = $wpdb->get_results( "SELECT id, name, description, photo_id, link FROM {$wpdb->prefix}wmcz_caurosel WHERE published=1 ORDER BY added DESC", OBJECT );
+    $events = $wpdb->get_results( "SELECT id, name, description, photo_id, link FROM {$wpdb->prefix}wmcz_caurosel WHERE published=1 ORDER BY ordering_key DESC, added DESC", OBJECT );
 
     $html = '<div class="wmcz-caurosel-container" id="wmcz-caurosel-container-' . $id . '">' . "\n";
     foreach ( $events as $event ) {
@@ -468,6 +468,7 @@ function wmcz_install() {
         photo_id mediumint(9) NOT NULL,
         link tinytext NOT NULL DEFAULT '',
         published boolean DEFAULT 0 NOT NULL,
+        ordering_key mediumint(9) NOT NULL DEFAULT 0,
         PRIMARY KEY  (id)
       ) $charset_collate;";
     dbDelta( $sql );
