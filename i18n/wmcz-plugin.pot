@@ -1,22 +1,22 @@
 # Copyright (C) 2020 Martin Urbanec
-# This file is distributed under the same license as the Wikimedia Czech Republic plugin.
+# This file is distributed under the same license as the WMCZ website addon plugin.
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Wikimedia Czech Republic 0.1\n"
+"Project-Id-Version: WMCZ website addon 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/web-plugin\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-10-25T20:09:30+01:00\n"
+"POT-Creation-Date: 2020-12-03T23:22:58+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: wmcz-plugin\n"
 
 #. Plugin Name of the plugin
-msgid "Wikimedia Czech Republic"
+msgid "WMCZ website addon"
 msgstr ""
 
 #. Plugin URI of the plugin
@@ -43,46 +43,54 @@ msgstr ""
 msgid "next month"
 msgstr ""
 
-#: wmcz.php:264
+#: wmcz.php:130
+msgid "Read more..."
+msgstr ""
+
+#: wmcz.php:265
 msgid "other"
 msgstr ""
 
-#: wmcz.php:302
+#: wmcz.php:293
+msgid "Online"
+msgstr ""
+
+#: wmcz.php:323
 msgid "Start"
 msgstr ""
 
-#: wmcz.php:303
+#: wmcz.php:324
 msgid "End"
 msgstr ""
 
-#: wmcz.php:304
+#: wmcz.php:325
 msgid "Location"
 msgstr ""
 
-#: wmcz.php:327
+#: wmcz.php:348
 msgid "Search for events"
 msgstr ""
 
-#: wmcz.php:328
+#: wmcz.php:349
 msgid "from"
 msgstr ""
 
-#: wmcz.php:330
+#: wmcz.php:351
 msgid "to"
 msgstr ""
 
-#: wmcz.php:332
+#: wmcz.php:353
 msgid "by program"
 msgstr ""
 
-#: wmcz.php:333
+#: wmcz.php:354
 msgid "by location"
 msgstr ""
 
-#: wmcz.php:335
+#: wmcz.php:356
 msgid "Filter"
 msgstr ""
 
-#: wmcz.php:415
+#: wmcz.php:436
 msgid "Archive"
 msgstr ""

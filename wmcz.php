@@ -127,7 +127,7 @@ function wmcz_block_events_caurosel_render_callback( $attributes ) {
                 <div class="wmcz-caurosel-right-colored">
                     <h2>' . $headlineInnerHtml . '</h2>' .'
                     <p>
-                        ' . esc_html( $event->description ) . '
+                        ' . esc_html( $event->description ) . ' <a href="' . $event->link . '">' . __( 'Read more...', 'wmcz-plugin' ) . '</a>' .'
                     </p>
                 </div>
             </div>
