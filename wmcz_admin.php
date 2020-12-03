@@ -123,7 +123,7 @@ function wmcz_admin_caurosel() {
                         <input type="text" name="name-<?php echo $event->id ?>" value="<?php echo $event->name ?>">
                     </td>
                     <td>
-                        <textarea name="description-<?php echo $event->id ?>" cols="50" rows="3"><?php echo $event->description ?></textarea>
+                        <?php wp_editor( $event->description, "description-{$event->id}", [ 'textarea_rows' => 3 ] ); ?>
                     </td>
                     <td>
                         <?php echo $event->added ?>
@@ -160,7 +160,7 @@ function wmcz_admin_caurosel() {
             <tr>
                 <th>popisek</th>
                 <td>
-                    <textarea name="description" cols="50" rows="3"></textarea>
+                <?php wp_editor( "", "description", [ 'textarea_rows' => 3 ] ); ?>
                 </td>
             </tr>
             <tr>
