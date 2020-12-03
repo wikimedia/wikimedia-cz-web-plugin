@@ -117,6 +117,10 @@ function wmcz_block_events_caurosel_render_callback( $attributes ) {
         if ( $event->link != '' ) {
             $headlineInnerHtml = '<a href="' . $event->link . '">' . $event->name . '</a>';
         }
+        $readMore = '';
+        if ( $event->link !== '' ) {
+            $readMore = ' <a href="' . $event->link . '">' . __( 'Read more...', 'wmcz-plugin' ) . '</a>';
+        }
         $html .= '
             <div class="gallery-entry">
                 <div class="wmcz-caurosel-left">
@@ -127,7 +131,7 @@ function wmcz_block_events_caurosel_render_callback( $attributes ) {
                 <div class="wmcz-caurosel-right-colored">
                     <h2>' . $headlineInnerHtml . '</h2>' .'
                     <p>
-                        ' . $event->description . ' <a href="' . $event->link . '">' . __( 'Read more...', 'wmcz-plugin' ) . '</a>' .'
+                        ' . $event->description . $readMore .'
                     </p>
                 </div>
             </div>
