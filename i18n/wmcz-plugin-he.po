@@ -2,11 +2,12 @@
 # Exported from translatewiki.net
 #
 # Author: YaronSh
+# Author: ישראל קלר
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2020-11-23 14:38:29+0000\n"
-"X-POT-Import-Date: 2020-11-03 15:10:45+0000\n"
+"PO-Revision-Date: 2020-12-07 15:09:08+0000\n"
+"X-POT-Import-Date: 2020-12-04 07:33:07+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: he\n"
@@ -14,8 +15,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Plugin Name of the plugin
-msgid "Wikimedia Czech Republic"
-msgstr "ויקימדיה צ׳כיה"
+msgid "WMCZ website addon"
+msgstr ""
 
 #. Description of the plugin
 msgid "Customizations for WMCZ"
@@ -34,47 +35,55 @@ msgstr "החודש"
 msgid "next month"
 msgstr "חודש הבא"
 
-#: wmcz.php:264
+#: wmcz.php:130
+msgid "Read more..."
+msgstr "קרא עוד..."
+
+#: wmcz.php:265
 msgid "other"
 msgstr "אחר"
 
-#: wmcz.php:302
+#: wmcz.php:293
+msgid "Online"
+msgstr "מקוון"
+
+#: wmcz.php:323
 msgid "Start"
 msgstr "התחלה"
 
-#: wmcz.php:303
+#: wmcz.php:324
 msgid "End"
 msgstr "סיום"
 
-#: wmcz.php:304
+#: wmcz.php:325
 msgid "Location"
 msgstr "מיקום"
 
-#: wmcz.php:327
+#: wmcz.php:348
 msgid "Search for events"
 msgstr "חיפוש אחר אירועים"
 
-#: wmcz.php:328
+#: wmcz.php:349
 msgid "from"
 msgstr ""
 
-#: wmcz.php:330
+#: wmcz.php:351
 msgid "to"
 msgstr ""
 
-#: wmcz.php:332
+#: wmcz.php:353
 msgid "by program"
 msgstr "לפי תכנית"
 
-#: wmcz.php:333
+#: wmcz.php:354
 msgid "by location"
 msgstr "לפי מיקום"
 
-#: wmcz.php:335
+#: wmcz.php:356
 msgid "Filter"
 msgstr "מסנן"
 
-#: wmcz.php:415
+#: wmcz.php:436
 msgid "Archive"
 msgstr "ארכיון"
 

@@ -4,10 +4,11 @@
 # Author: Martin Urbanec
 msgid ""
 msgstr ""
+""
 "Project-Id-Version: Wikimedia Czech Republic 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/web-plugin\n"
 "POT-Creation-Date: 2020-12-03T23:53:34+01:00\n"
-"PO-Revision-Date: 2020-11-05 15:17:29+0000\n"
+"PO-Revision-Date: 2020-12-07 15:09:08+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: cs_cz\n"
@@ -16,16 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: MediaWiki 1.36.0-alpha; Translate 2020-10-28\n"
 "X-Domain: wmcz-plugin\n"
-"X-POT-Import-Date: 2020-11-03 15:10:45+0000\n"
-"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ( (n >= 2 && n <= 4) ? 1 : "
-"2 );\n"
+"X-POT-Import-Date: 2020-12-04 07:33:07+0000\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ( (n >= 2 && n <= 4) ? 1 : 2 );\n"
 
 #. Plugin Name of the plugin
 msgid "WMCZ website addon"
-msgstr ""
-
-#. Plugin URI of the plugin
-msgid "https://wikimedia.cz"
 msgstr ""
 
 #. Description of the plugin
@@ -33,12 +29,9 @@ msgid "Customizations for WMCZ"
 msgstr "Přizpůsobení pro WMCZ"
 
 #. Author of the plugin
+#, optional
 msgid "Martin Urbanec"
 msgstr "Martin Urbanec"
-
-#. Author URI of the plugin
-msgid "https://meta.wikimedia.org/wiki/User:Martin_Urbanec"
-msgstr ""
 
 #: wmcz.php:63
 msgid "this month"
@@ -100,5 +93,3 @@ msgstr "Filtrovat"
 msgid "Archive"
 msgstr "Archiv"
 
-#~ msgid "Wikimedia Czech Republic"
-#~ msgstr "Wikimedia Česká republika"

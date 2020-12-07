@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2020-11-23 14:38:30+0000\n"
-"X-POT-Import-Date: 2020-11-03 15:10:45+0000\n"
+"PO-Revision-Date: 2020-12-07 15:09:08+0000\n"
+"X-POT-Import-Date: 2020-12-04 07:33:07+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sv_se\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Plugin Name of the plugin
-msgid "Wikimedia Czech Republic"
-msgstr "Wikimedia Tjeckien"
+msgid "WMCZ website addon"
+msgstr "WMCZ:s webbplatstillägg"
 
 #. Description of the plugin
 msgid "Customizations for WMCZ"
@@ -35,47 +35,55 @@ msgstr "denna månad"
 msgid "next month"
 msgstr "nästa månad"
 
-#: wmcz.php:264
+#: wmcz.php:130
+msgid "Read more..."
+msgstr "Läs mer..."
+
+#: wmcz.php:265
 msgid "other"
 msgstr "övrigt"
 
-#: wmcz.php:302
+#: wmcz.php:293
+msgid "Online"
+msgstr "Online"
+
+#: wmcz.php:323
 msgid "Start"
 msgstr "Start"
 
-#: wmcz.php:303
+#: wmcz.php:324
 msgid "End"
 msgstr "Slut"
 
-#: wmcz.php:304
+#: wmcz.php:325
 msgid "Location"
 msgstr "Plats"
 
-#: wmcz.php:327
+#: wmcz.php:348
 msgid "Search for events"
 msgstr "Sök efter händelser"
 
-#: wmcz.php:328
+#: wmcz.php:349
 msgid "from"
 msgstr "från"
 
-#: wmcz.php:330
+#: wmcz.php:351
 msgid "to"
 msgstr "till"
 
-#: wmcz.php:332
+#: wmcz.php:353
 msgid "by program"
 msgstr "efter program"
 
-#: wmcz.php:333
+#: wmcz.php:354
 msgid "by location"
 msgstr "efter plats"
 
-#: wmcz.php:335
+#: wmcz.php:356
 msgid "Filter"
 msgstr "Filter"
 
-#: wmcz.php:415
+#: wmcz.php:436
 msgid "Archive"
 msgstr "Arkiv"
 

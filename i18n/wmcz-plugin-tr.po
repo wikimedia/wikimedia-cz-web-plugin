@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2020-11-05 15:17:29+0000\n"
-"X-POT-Import-Date: 2020-11-03 15:10:45+0000\n"
+"PO-Revision-Date: 2020-12-07 15:09:08+0000\n"
+"X-POT-Import-Date: 2020-12-04 07:33:07+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: tr\n"
@@ -14,8 +14,8 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. Plugin Name of the plugin
-msgid "Wikimedia Czech Republic"
-msgstr "Wikimedia Çek Cumhuriyeti"
+msgid "WMCZ website addon"
+msgstr "WMCZ web sitesi eklentisi"
 
 #. Description of the plugin
 msgid "Customizations for WMCZ"
@@ -34,47 +34,55 @@ msgstr "bu ay"
 msgid "next month"
 msgstr "sonraki ay"
 
-#: wmcz.php:264
+#: wmcz.php:130
+msgid "Read more..."
+msgstr "Devamını oku..."
+
+#: wmcz.php:265
 msgid "other"
 msgstr "diğer"
 
-#: wmcz.php:302
+#: wmcz.php:293
+msgid "Online"
+msgstr "Çevrimiçi"
+
+#: wmcz.php:323
 msgid "Start"
 msgstr "Başla"
 
-#: wmcz.php:303
+#: wmcz.php:324
 msgid "End"
 msgstr "Bitiş"
 
-#: wmcz.php:304
+#: wmcz.php:325
 msgid "Location"
 msgstr "Konum"
 
-#: wmcz.php:327
+#: wmcz.php:348
 msgid "Search for events"
 msgstr "Etkinlikler için arayın"
 
-#: wmcz.php:328
+#: wmcz.php:349
 msgid "from"
 msgstr "kimden"
 
-#: wmcz.php:330
+#: wmcz.php:351
 msgid "to"
 msgstr "kime"
 
-#: wmcz.php:332
+#: wmcz.php:353
 msgid "by program"
 msgstr "programa göre"
 
-#: wmcz.php:333
+#: wmcz.php:354
 msgid "by location"
 msgstr "konuma göre"
 
-#: wmcz.php:335
+#: wmcz.php:356
 msgid "Filter"
 msgstr "Filtre"
 
-#: wmcz.php:415
+#: wmcz.php:436
 msgid "Archive"
 msgstr "Arşiv"
 
