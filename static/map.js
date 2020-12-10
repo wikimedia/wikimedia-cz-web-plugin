@@ -19,7 +19,7 @@ function wmczInitMap(id, ical, gestureHandling, defaults) {
 			if ( point.lat !== null && point.lon !== null ) {
 				let marker = L.marker( [ point.lat, point.lon ] ).addTo( map );
 				if ( point.link !== null ) {
-					marker.bindPopup('<a href="' + point.link + '">Zobrazit všechny akce v tomto městě</a>');
+					marker.bindPopup('<a href="' + point.link + '">Zobrazit všechny akce v tomto městě</a>: ' + point.address);
 				}
 			}
 		}
