@@ -17,7 +17,10 @@ function wmczInitMap(id, ical, gestureHandling, defaults) {
 		for (let i = 0; i < data.data.points.length; i++) {
 			const point = data.data.points[i];
 			if ( point.lat !== null && point.lon !== null ) {
-				L.marker( [ point.lat, point.lon ] ).addTo( map );
+				let marker = L.marker( [ point.lat, point.lon ] ).addTo( map );
+				if ( point.link !== null ) {
+					marker.bindPopup('<a href="' + point.link + '">Zobrazit všechny akce v tomto městě</a>');
+				}
 			}
 		}
 	});

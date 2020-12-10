@@ -12,7 +12,7 @@ switch ($_GET['action']) {
             'status' => 'ok',
             'ical' => $ical,
             'data' => [
-                'points' => $calendar->getPlaces(),
+                'points' => $calendar->getPlaces('/akce/?cities[]='),
             ]
         ]);
         break;
