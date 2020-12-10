@@ -13,7 +13,7 @@ class AddressPlaceCache extends FileCache {
     public function getPlace( $address ) {
         $cachedVal = $this->get($address);
         if ( $cachedVal ) {
-            return $cachedVal;
+            return new Place( $cachedVal["lat"], $cachedVal["lon"], $cachedVal["address"] );
         }
         $res = $this->getPlaceInternal( $address );
         $this->set( $address, $res );
