@@ -2,10 +2,11 @@
 # Exported from translatewiki.net
 #
 # Author: DraconicDark
+# Author: Pittigrilli
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2020-12-07 15:09:08+0000\n"
+"PO-Revision-Date: 2020-12-10 13:06:32+0000\n"
 "X-POT-Import-Date: 2020-12-04 07:33:07+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,7 +16,7 @@ msgstr ""
 
 #. Plugin Name of the plugin
 msgid "WMCZ website addon"
-msgstr ""
+msgstr "WMCZ Webseiten-Addon"
 
 #. Description of the plugin
 msgid "Customizations for WMCZ"
@@ -36,7 +37,7 @@ msgstr "nächster Monat"
 
 #: wmcz.php:130
 msgid "Read more..."
-msgstr ""
+msgstr "Mehr dazu..."
 
 #: wmcz.php:265
 msgid "other"
@@ -44,7 +45,7 @@ msgstr "andere"
 
 #: wmcz.php:293
 msgid "Online"
-msgstr ""
+msgstr "Online"
 
 #: wmcz.php:323
 msgid "Start"

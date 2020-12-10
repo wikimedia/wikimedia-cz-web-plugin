@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Wikimedia Czech Republic 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/web-plugin\n"
 "POT-Creation-Date: 2020-12-03T23:53:34+01:00\n"
-"PO-Revision-Date: 2020-12-07 15:09:08+0000\n"
+"PO-Revision-Date: 2020-12-10 13:06:31+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: cs_cz\n"
@@ -51,7 +51,7 @@ msgstr "ostatní"
 
 #: wmcz.php:293
 msgid "Online"
-msgstr ""
+msgstr "Online"
 
 #: wmcz.php:323
 msgid "Start"

@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2020-12-07 15:09:08+0000\n"
+"PO-Revision-Date: 2020-12-10 13:06:32+0000\n"
 "X-POT-Import-Date: 2020-12-04 07:33:07+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,7 +15,7 @@ msgstr ""
 
 #. Plugin Name of the plugin
 msgid "WMCZ website addon"
-msgstr ""
+msgstr "WMCZ 웹사이트 추가 기능"
 
 #. Description of the plugin
 msgid "Customizations for WMCZ"
@@ -36,7 +36,7 @@ msgstr "다음 달"
 
 #: wmcz.php:130
 msgid "Read more..."
-msgstr ""
+msgstr "더 읽기..."
 
 #: wmcz.php:265
 msgid "other"
@@ -44,7 +44,7 @@ msgstr ""
 
 #: wmcz.php:293
 msgid "Online"
-msgstr ""
+msgstr "온라인"
 
 #: wmcz.php:323
 msgid "Start"
