@@ -125,7 +125,7 @@ function wmcz_block_events_caurosel_render_callback( $attributes ) {
             <div class="gallery-entry">
                 <div class="wmcz-caurosel-left">
                     <a href="' . $event->link . '">
-                        <img src="' .  wp_get_attachment_url( $event->photo_id ) . '" alt="">
+                        ' .  wp_get_attachment_image( $event->photo_id ) . '
                     </a>
                 </div>
                 <div class="wmcz-caurosel-right-colored">
