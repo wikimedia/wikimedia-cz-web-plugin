@@ -34,7 +34,7 @@ function wmcz_block_render_calendar( $cols, $rows, $events, $class ) {
                 esc_html( $event->getEndDatetime() ),
                 esc_html( $event->getDisplayDatetime() ),
                 esc_html( $event->getLocation() ),
-                esc_html( $event->getCity() ),
+                esc_html( $event->isOnline() ? __('Online', 'wmcz-plugin') : $event->getCity() ),
                 esc_html( $event->getDescription() ),
                 esc_html( $event->getTitle() )
             );
