@@ -17,6 +17,10 @@
     margin: 0;
 }
 
+.wmcz-calendar-controls > button {
+    cursor: pointer;
+}
+
 .wmcz-calendar-set {
     margin-top: 20pt;
 }
