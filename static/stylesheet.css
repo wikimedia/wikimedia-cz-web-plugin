@@ -51,7 +51,7 @@
 }
 
 .event-datetime {
-    background-color: var(--wiki-blue);
+    background-color: var(--wiki-grey);
     color: white;
     text-align: center;
     min-width: 90pt;
