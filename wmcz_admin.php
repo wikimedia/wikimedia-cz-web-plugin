@@ -3,10 +3,44 @@
 function wmcz_admin_register() {
     add_menu_page('WMCZ', 'WMCZ', 'edit_published_pages', 'wmcz', 'wmcz_admin_index');
     add_submenu_page('wmcz', 'WMCZ caurosel', 'WMCZ caurosel', 'edit_published_pages', 'wmcz_caurosel', 'wmcz_admin_caurosel');
+    add_submenu_page('wmcz', 'Manage cache', 'Manage cache', 'edit_published_pages', 'wmcz_cache_manage', 'wmcz_admin_cache_manage');
 }
 
 function wmcz_admin_index() {
     echo "<h1>Hello world</h1>";
+}
+
+function wmcz_admin_cache_manage() {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        wmcz_admin_cache_manage_purged();
+
+        $dataDir = dirname( __FILE__ ) .  '/data/';
+        foreach ( scandir($dataDir) as $fileName ) {
+            if (in_array( $fileName, [ '.', '..', '.gitkeep' ] )) {
+                continue;
+            }
+
+            unlink( $dataDir . $fileName );
+        }
+    }
+
+    ?>
+    <form method="post">
+        <h1><?php _e('Manage cache', 'wmcz-plugin'); ?></h1>
+        <p>
+            <?php _e('This will purge cache managed by the WMCZ plugin. This includes mainly calendar data.', 'wmcz-plugin'); ?>
+        </p>
+        <button type="submit"><?php _e('Purge cache', 'wmcz-plugin'); ?></button>
+    </form>
+    <?php
+}
+
+function wmcz_admin_cache_manage_purged() {
+    ?>
+    <div class="updated notice">
+        <p><?php _e('Cache has been purged.', 'wmcz-plugin'); ?></p>
+    </div>
+    <?php
 }
 
 function wmcz_admin_caurosel_added() {
