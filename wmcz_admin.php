@@ -30,6 +30,9 @@ function wmcz_admin_cache_manage() {
         <p>
             <?php _e('This will purge cache managed by the WMCZ plugin. This includes mainly calendar data.', 'wmcz-plugin'); ?>
         </p>
+        <p>
+            <?php _e('Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds.', 'wmcz-plugin') ?>
+        </p>
         <button type="submit"><?php _e('Purge cache', 'wmcz-plugin'); ?></button>
     </form>
     <?php
