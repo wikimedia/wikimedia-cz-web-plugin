@@ -305,48 +305,52 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
     $events = $eventsBatch->getEvents( $selectedTags );
     $eventsHtml = '<div class="wmcz-events-list-events">';
     $letOnline = in_array( 'online', $selectedCities );
-    foreach ( $events as $event ) {
-        if (
-            count( $selectedCities ) > 0 &&
-            !(
-                in_array( $event->getCity(), $selectedCities ) ||
-                (
-                    $letOnline && $event->isOnline()
+    if (count( $events ) == 0) {
+        $eventsHtml .= '<p>' . __('No events found', 'wmcz-plugin') . '.</p></div>';
+    } else {
+        foreach ( $events as $event ) {
+            if (
+                count( $selectedCities ) > 0 &&
+                !(
+                    in_array( $event->getCity(), $selectedCities ) ||
+                    (
+                        $letOnline && $event->isOnline()
+                    )
                 )
-            )
-        ) {
-            continue;
-        }
-        $tagClasses = [];
-        foreach ( $event->getTags() as $tag ) {
-            $tagClasses[] = "wmcz-tag-$tag";
-        }
-        $eventsHtml .= sprintf(
-            '<div class="wmcz-events-list-event">
-                <div class="wmcz-events-list-event-name %s">%s</div>
-                <div class="wmcz-events-list-event-time">%s, %s</div>
-                <div class="wmcz-events-list-event-description">
-                    <div class="wmcz-events-list-event-summary">
-                        <ul>
-                            <li>' . __('Start', 'wmcz-plugin') . ': %s</li>
-                            <li>' . __('End', 'wmcz-plugin') . ': %s</li>
-                            <li>' . __('Location', 'wmcz-plugin') . ': %s</li>
-                        </ul>
+            ) {
+                continue;
+            }
+            $tagClasses = [];
+            foreach ( $event->getTags() as $tag ) {
+                $tagClasses[] = "wmcz-tag-$tag";
+            }
+            $eventsHtml .= sprintf(
+                '<div class="wmcz-events-list-event">
+                    <div class="wmcz-events-list-event-name %s">%s</div>
+                    <div class="wmcz-events-list-event-time">%s, %s</div>
+                    <div class="wmcz-events-list-event-description">
+                        <div class="wmcz-events-list-event-summary">
+                            <ul>
+                                <li>' . __('Start', 'wmcz-plugin') . ': %s</li>
+                                <li>' . __('End', 'wmcz-plugin') . ': %s</li>
+                                <li>' . __('Location', 'wmcz-plugin') . ': %s</li>
+                            </ul>
+                        </div>
+                        <div class="wmcz-events-event-description-raw">
+                            %s
+                        </div>
                     </div>
-                    <div class="wmcz-events-event-description-raw">
-                        %s
-                    </div>
-                </div>
-            </div>',
-            esc_attr( implode( ' ', $tagClasses ) ),
-            esc_html( $event->getTitle() ),
-            esc_html($event->getStartDatetime()),
-            esc_html($event->getCity()),
-            esc_html( $event->getStartDatetime() ),
-            esc_html( $event->getEndDatetime() ),
-            esc_html( $event->getLocation() ),
-            html_entity_decode( $event->getDescription() )
-        );
+                </div>',
+                esc_attr( implode( ' ', $tagClasses ) ),
+                esc_html( $event->getTitle() ),
+                esc_html($event->getStartDatetime()),
+                esc_html($event->getCity()),
+                esc_html( $event->getStartDatetime() ),
+                esc_html( $event->getEndDatetime() ),
+                esc_html( $event->getLocation() ),
+                html_entity_decode( $event->getDescription() )
+            );
+        }
     }
     $eventsHtml .= '</div>';
 
