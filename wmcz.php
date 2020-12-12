@@ -13,6 +13,11 @@ require_once 'autoload.php';
 
 function wmcz_block_render_calendar( $cols, $rows, $events, $class ) {
     $html = '<div id="wmcz-calendar-' . $class . '" class="wmcz-calendar-set wp-block-columns has-' . $cols . '-columns">';
+    if (count( $events ) == 0) {
+        $html .= '<p>' . __('No events found', 'wmcz-plugin') . '.</p></div>';
+        var_dump($html);
+        return $html;
+    }
     for ($i=0; $i < $cols; $i++) { 
         $html .= '<div class="wp-block-column">';
         $sliced = array_slice($events, $i*$rows, $rows);
