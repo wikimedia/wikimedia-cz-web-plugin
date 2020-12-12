@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-12-03T23:53:34+01:00\n"
+"POT-Creation-Date: 2020-12-12T17:36:54+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: wmcz-plugin\n"
@@ -35,6 +35,11 @@ msgstr ""
 msgid "https://meta.wikimedia.org/wiki/User:Martin_Urbanec"
 msgstr ""
 
+#: wmcz.php:37
+#: wmcz.php:297
+msgid "Online"
+msgstr ""
+
 #: wmcz.php:63
 msgid "this month"
 msgstr ""
@@ -43,54 +48,70 @@ msgstr ""
 msgid "next month"
 msgstr ""
 
-#: wmcz.php:130
+#: wmcz.php:122
 msgid "Read more..."
 msgstr ""
 
-#: wmcz.php:265
+#: wmcz.php:269
 msgid "other"
 msgstr ""
 
-#: wmcz.php:293
-msgid "Online"
-msgstr ""
-
-#: wmcz.php:323
+#: wmcz.php:327
 msgid "Start"
 msgstr ""
 
-#: wmcz.php:324
+#: wmcz.php:328
 msgid "End"
 msgstr ""
 
-#: wmcz.php:325
+#: wmcz.php:329
 msgid "Location"
 msgstr ""
 
-#: wmcz.php:348
+#: wmcz.php:352
 msgid "Search for events"
 msgstr ""
 
-#: wmcz.php:349
+#: wmcz.php:353
 msgid "from"
 msgstr ""
 
-#: wmcz.php:351
+#: wmcz.php:355
 msgid "to"
 msgstr ""
 
-#: wmcz.php:353
+#: wmcz.php:357
 msgid "by program"
 msgstr ""
 
-#: wmcz.php:354
+#: wmcz.php:358
 msgid "by location"
 msgstr ""
 
-#: wmcz.php:356
+#: wmcz.php:360
 msgid "Filter"
 msgstr ""
 
-#: wmcz.php:436
+#: wmcz.php:440
 msgid "Archive"
+msgstr ""
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr ""
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr ""
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr ""
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr ""
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
 msgstr ""
