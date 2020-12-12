@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-12-12T17:36:54+01:00\n"
+"POT-Creation-Date: 2020-12-12T23:16:02+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: wmcz-plugin\n"
@@ -35,64 +35,69 @@ msgstr ""
 msgid "https://meta.wikimedia.org/wiki/User:Martin_Urbanec"
 msgstr ""
 
-#: wmcz.php:37
-#: wmcz.php:297
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr ""
+
+#: wmcz.php:41
+#: wmcz.php:301
 msgid "Online"
 msgstr ""
 
-#: wmcz.php:63
+#: wmcz.php:67
 msgid "this month"
 msgstr ""
 
-#: wmcz.php:64
+#: wmcz.php:68
 msgid "next month"
 msgstr ""
 
-#: wmcz.php:122
+#: wmcz.php:126
 msgid "Read more..."
 msgstr ""
 
-#: wmcz.php:269
+#: wmcz.php:273
 msgid "other"
 msgstr ""
 
-#: wmcz.php:327
+#: wmcz.php:334
 msgid "Start"
 msgstr ""
 
-#: wmcz.php:328
+#: wmcz.php:335
 msgid "End"
 msgstr ""
 
-#: wmcz.php:329
+#: wmcz.php:336
 msgid "Location"
 msgstr ""
 
-#: wmcz.php:352
+#: wmcz.php:360
 msgid "Search for events"
 msgstr ""
 
-#: wmcz.php:353
+#: wmcz.php:361
 msgid "from"
 msgstr ""
 
-#: wmcz.php:355
+#: wmcz.php:363
 msgid "to"
 msgstr ""
 
-#: wmcz.php:357
+#: wmcz.php:365
 msgid "by program"
 msgstr ""
 
-#: wmcz.php:358
+#: wmcz.php:366
 msgid "by location"
 msgstr ""
 
-#: wmcz.php:360
+#: wmcz.php:368
 msgid "Filter"
 msgstr ""
 
-#: wmcz.php:440
+#: wmcz.php:448
 msgid "Archive"
 msgstr ""
 
