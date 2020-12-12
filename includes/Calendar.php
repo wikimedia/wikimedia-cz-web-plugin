@@ -99,7 +99,7 @@ class WmczCalendar {
         return $places;
     }
 
-    public function getEventsBatch(DateTime $from, DateTime $to, $tags = null) {
+    public function getEventsBatch(DateTime $from, DateTime $to) {
         return new Events(
             $this->ical->eventsFromRange(
                 $from->format('Y-m-d'),

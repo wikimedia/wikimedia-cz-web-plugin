@@ -250,7 +250,7 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
 
     // Construct calendar
     $calendar = new WmczCalendar( $ical );
-    $eventsBatch = $calendar->getEventsBatch( new DateTime($from), new DateTime($to), $selectedTags );
+    $eventsBatch = $calendar->getEventsBatch( new DateTime($from), new DateTime($to) );
     $tags = $calendar->getTags();
 
     // Construct tags
@@ -303,7 +303,7 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
     }
 
 
-    $events = $eventsBatch->getEvents();
+    $events = $eventsBatch->getEvents( $selectedTags );
     $eventsHtml = '<div class="wmcz-events-list-events">';
     $letOnline = in_array( 'online', $selectedCities );
     foreach ( $events as $event ) {
