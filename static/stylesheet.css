@@ -31,8 +31,6 @@
 
 .event-container {
     background-color: #fcfcfc;
-    display: flex;
-    height: 40px;
     margin: 0pt 10pt 10pt 0;
     transition: 100ms ease-in;
 }
@@ -40,6 +38,13 @@
 .event-container:hover {
     background-color: #F3F3F3;
     cursor: pointer;
+}
+
+@media (min-width: 760px) {
+    .event-container {
+        display: flex;
+        height: 40px;
+    }
 }
 
 .event-datetime, .event-location, .event-title {
