@@ -154,9 +154,10 @@
 }
 .wmcz-modal-content {
     background-color: #fefefe;
-    margin: 10% auto; /* 15% from the top and centered */
+    margin: auto;
     padding: 20px;
     width: 80%; /* Could be more or less, depending on screen size */
+    max-height: 70%;
     overflow: auto;
     box-shadow: 0pt 0pt 20pt rgba(0,0,0,0.2);
 }
