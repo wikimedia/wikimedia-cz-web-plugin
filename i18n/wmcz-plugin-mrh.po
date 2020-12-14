@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2020-12-07 15:09:08+0000\n"
-"X-POT-Import-Date: 2020-12-04 07:33:07+0000\n"
+"PO-Revision-Date: 2020-12-14 14:23:29+0000\n"
+"X-POT-Import-Date: 2020-12-12 23:31:48+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: mrh\n"
@@ -26,63 +26,89 @@ msgstr "WMCZ châta khodâhhawh"
 msgid "Martin Urbanec"
 msgstr ""
 
-#: wmcz.php:63
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr "Events y tlâ vei"
+
+#: wmcz.php:41
+#: wmcz.php:301
+msgid "Online"
+msgstr "Online"
+
+#: wmcz.php:67
 msgid "this month"
 msgstr "he thla"
 
-#: wmcz.php:64
+#: wmcz.php:68
 msgid "next month"
 msgstr "hmâlâ thla"
 
-#: wmcz.php:130
+#: wmcz.php:126
 msgid "Read more..."
-msgstr ""
+msgstr "Reih via..."
 
-#: wmcz.php:265
+#: wmcz.php:273
 msgid "other"
 msgstr "a hropazy"
 
-#: wmcz.php:293
-msgid "Online"
-msgstr ""
-
-#: wmcz.php:323
+#: wmcz.php:334
 msgid "Start"
 msgstr "Pathao"
 
-#: wmcz.php:324
+#: wmcz.php:335
 msgid "End"
 msgstr "Pachhâ"
 
-#: wmcz.php:325
+#: wmcz.php:336
 msgid "Location"
 msgstr "Ynasu"
 
-#: wmcz.php:348
+#: wmcz.php:360
 msgid "Search for events"
 msgstr "event zy tlua"
 
-#: wmcz.php:349
+#: wmcz.php:361
 msgid "from"
 msgstr "tawhta"
 
-#: wmcz.php:351
+#: wmcz.php:363
 msgid "to"
 msgstr "lâta"
 
-#: wmcz.php:353
+#: wmcz.php:365
 msgid "by program"
 msgstr "parôkarâ ta"
 
-#: wmcz.php:354
+#: wmcz.php:366
 msgid "by location"
 msgstr "ynasu ta"
 
-#: wmcz.php:356
+#: wmcz.php:368
 msgid "Filter"
 msgstr "Athlina"
 
-#: wmcz.php:436
+#: wmcz.php:448
 msgid "Archive"
 msgstr "Tlôpa"
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr "A puapazy mopado"
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr ""
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr ""
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr "A pua pathai"
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr "A puapa cha a pathai khai haw."
 

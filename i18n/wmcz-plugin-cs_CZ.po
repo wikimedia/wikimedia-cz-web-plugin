@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Wikimedia Czech Republic 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/web-plugin\n"
 "POT-Creation-Date: 2020-12-03T23:53:34+01:00\n"
-"PO-Revision-Date: 2020-12-10 13:06:31+0000\n"
+"PO-Revision-Date: 2020-12-14 14:23:28+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: cs_cz\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: MediaWiki 1.36.0-alpha; Translate 2020-10-28\n"
 "X-Domain: wmcz-plugin\n"
-"X-POT-Import-Date: 2020-12-04 07:33:07+0000\n"
+"X-POT-Import-Date: 2020-12-12 23:31:48+0000\n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ( (n >= 2 && n <= 4) ? 1 : 2 );\n"
 
 #. Plugin Name of the plugin
@@ -33,63 +33,89 @@ msgstr "Přizpůsobení pro WMCZ"
 msgid "Martin Urbanec"
 msgstr "Martin Urbanec"
 
-#: wmcz.php:63
-msgid "this month"
-msgstr "tento měsíc"
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr ""
 
-#: wmcz.php:64
-msgid "next month"
-msgstr "příští měsíc"
-
-#: wmcz.php:130
-msgid "Read more..."
-msgstr "Více..."
-
-#: wmcz.php:265
-msgid "other"
-msgstr "ostatní"
-
-#: wmcz.php:293
+#: wmcz.php:41
+#: wmcz.php:301
 msgid "Online"
 msgstr "Online"
 
-#: wmcz.php:323
+#: wmcz.php:67
+msgid "this month"
+msgstr "tento měsíc"
+
+#: wmcz.php:68
+msgid "next month"
+msgstr "příští měsíc"
+
+#: wmcz.php:126
+msgid "Read more..."
+msgstr "Více..."
+
+#: wmcz.php:273
+msgid "other"
+msgstr "ostatní"
+
+#: wmcz.php:334
 msgid "Start"
 msgstr "Začátek"
 
-#: wmcz.php:324
+#: wmcz.php:335
 msgid "End"
 msgstr "Konec"
 
-#: wmcz.php:325
+#: wmcz.php:336
 msgid "Location"
 msgstr "Místo akce"
 
-#: wmcz.php:348
+#: wmcz.php:360
 msgid "Search for events"
 msgstr "Vyhledávání událostí"
 
-#: wmcz.php:349
+#: wmcz.php:361
 msgid "from"
 msgstr "od"
 
-#: wmcz.php:351
+#: wmcz.php:363
 msgid "to"
 msgstr "do"
 
-#: wmcz.php:353
+#: wmcz.php:365
 msgid "by program"
 msgstr "podle programu"
 
-#: wmcz.php:354
+#: wmcz.php:366
 msgid "by location"
 msgstr "podle místa"
 
-#: wmcz.php:356
+#: wmcz.php:368
 msgid "Filter"
 msgstr "Filtrovat"
 
-#: wmcz.php:436
+#: wmcz.php:448
 msgid "Archive"
 msgstr "Archiv"
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr ""
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr ""
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr ""
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr ""
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr ""
 

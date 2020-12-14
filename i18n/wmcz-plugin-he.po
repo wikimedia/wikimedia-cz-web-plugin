@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2020-12-07 15:09:08+0000\n"
-"X-POT-Import-Date: 2020-12-04 07:33:07+0000\n"
+"PO-Revision-Date: 2020-12-14 14:23:28+0000\n"
+"X-POT-Import-Date: 2020-12-12 23:31:48+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: he\n"
@@ -27,63 +27,89 @@ msgstr "התאמות לויקימדיה צ׳כיה (WMCZ)"
 msgid "Martin Urbanec"
 msgstr ""
 
-#: wmcz.php:63
-msgid "this month"
-msgstr "החודש"
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr ""
 
-#: wmcz.php:64
-msgid "next month"
-msgstr "חודש הבא"
-
-#: wmcz.php:130
-msgid "Read more..."
-msgstr "קרא עוד..."
-
-#: wmcz.php:265
-msgid "other"
-msgstr "אחר"
-
-#: wmcz.php:293
+#: wmcz.php:41
+#: wmcz.php:301
 msgid "Online"
 msgstr "מקוון"
 
-#: wmcz.php:323
+#: wmcz.php:67
+msgid "this month"
+msgstr "החודש"
+
+#: wmcz.php:68
+msgid "next month"
+msgstr "חודש הבא"
+
+#: wmcz.php:126
+msgid "Read more..."
+msgstr "קרא עוד..."
+
+#: wmcz.php:273
+msgid "other"
+msgstr "אחר"
+
+#: wmcz.php:334
 msgid "Start"
 msgstr "התחלה"
 
-#: wmcz.php:324
+#: wmcz.php:335
 msgid "End"
 msgstr "סיום"
 
-#: wmcz.php:325
+#: wmcz.php:336
 msgid "Location"
 msgstr "מיקום"
 
-#: wmcz.php:348
+#: wmcz.php:360
 msgid "Search for events"
 msgstr "חיפוש אחר אירועים"
 
-#: wmcz.php:349
+#: wmcz.php:361
 msgid "from"
 msgstr ""
 
-#: wmcz.php:351
+#: wmcz.php:363
 msgid "to"
 msgstr ""
 
-#: wmcz.php:353
+#: wmcz.php:365
 msgid "by program"
 msgstr "לפי תכנית"
 
-#: wmcz.php:354
+#: wmcz.php:366
 msgid "by location"
 msgstr "לפי מיקום"
 
-#: wmcz.php:356
+#: wmcz.php:368
 msgid "Filter"
 msgstr "מסנן"
 
-#: wmcz.php:436
+#: wmcz.php:448
 msgid "Archive"
 msgstr "ארכיון"
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr ""
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr ""
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr ""
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr ""
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr ""
 

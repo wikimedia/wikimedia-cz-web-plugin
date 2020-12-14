@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2020-12-07 15:09:08+0000\n"
-"X-POT-Import-Date: 2020-12-04 07:33:07+0000\n"
+"PO-Revision-Date: 2020-12-14 14:23:29+0000\n"
+"X-POT-Import-Date: 2020-12-12 23:31:48+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_br\n"
@@ -26,63 +26,89 @@ msgstr "Customizações para WMCZ"
 msgid "Martin Urbanec"
 msgstr "Martin Urbanec"
 
-#: wmcz.php:63
-msgid "this month"
-msgstr "este mês"
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr "Nenhum evento encontrado"
 
-#: wmcz.php:64
-msgid "next month"
-msgstr "próximo mês"
-
-#: wmcz.php:130
-msgid "Read more..."
-msgstr "Leia mais..."
-
-#: wmcz.php:265
-msgid "other"
-msgstr "outros"
-
-#: wmcz.php:293
+#: wmcz.php:41
+#: wmcz.php:301
 msgid "Online"
 msgstr "Online"
 
-#: wmcz.php:323
+#: wmcz.php:67
+msgid "this month"
+msgstr "este mês"
+
+#: wmcz.php:68
+msgid "next month"
+msgstr "próximo mês"
+
+#: wmcz.php:126
+msgid "Read more..."
+msgstr "Leia mais..."
+
+#: wmcz.php:273
+msgid "other"
+msgstr "outros"
+
+#: wmcz.php:334
 msgid "Start"
 msgstr "Iniciar"
 
-#: wmcz.php:324
+#: wmcz.php:335
 msgid "End"
 msgstr "Fim"
 
-#: wmcz.php:325
+#: wmcz.php:336
 msgid "Location"
 msgstr "Localização"
 
-#: wmcz.php:348
+#: wmcz.php:360
 msgid "Search for events"
 msgstr "Buscar eventos"
 
-#: wmcz.php:349
+#: wmcz.php:361
 msgid "from"
 msgstr "de"
 
-#: wmcz.php:351
+#: wmcz.php:363
 msgid "to"
 msgstr "para"
 
-#: wmcz.php:353
+#: wmcz.php:365
 msgid "by program"
 msgstr "por programa"
 
-#: wmcz.php:354
+#: wmcz.php:366
 msgid "by location"
 msgstr "Por localização"
 
-#: wmcz.php:356
+#: wmcz.php:368
 msgid "Filter"
 msgstr "Filtro"
 
-#: wmcz.php:436
+#: wmcz.php:448
 msgid "Archive"
 msgstr "Arquivo"
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr "Gerenciar cache"
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr "Isso limpará o cache gerenciado pelo plug-in WMCZ. Isso inclui principalmente dados de calendário."
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr "Visite a lista de eventos após limpar o cache. A primeira solicitação (que recria o cache) pode levar vários segundos."
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr "Limpar cache"
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr "O cache foi removido."
 

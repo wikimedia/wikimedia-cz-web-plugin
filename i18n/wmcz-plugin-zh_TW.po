@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2020-12-07 15:09:08+0000\n"
-"X-POT-Import-Date: 2020-12-04 07:33:07+0000\n"
+"PO-Revision-Date: 2020-12-14 14:23:29+0000\n"
+"X-POT-Import-Date: 2020-12-12 23:31:48+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: zh_tw\n"
@@ -26,63 +26,89 @@ msgstr "用於 WMCZ 的客製化"
 msgid "Martin Urbanec"
 msgstr ""
 
-#: wmcz.php:63
-msgid "this month"
-msgstr "本月"
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr "找不到事件"
 
-#: wmcz.php:64
-msgid "next month"
-msgstr "下個月"
-
-#: wmcz.php:130
-msgid "Read more..."
-msgstr "閱讀更多…"
-
-#: wmcz.php:265
-msgid "other"
-msgstr "其它"
-
-#: wmcz.php:293
+#: wmcz.php:41
+#: wmcz.php:301
 msgid "Online"
 msgstr "線上"
 
-#: wmcz.php:323
+#: wmcz.php:67
+msgid "this month"
+msgstr "本月"
+
+#: wmcz.php:68
+msgid "next month"
+msgstr "下個月"
+
+#: wmcz.php:126
+msgid "Read more..."
+msgstr "閱讀更多…"
+
+#: wmcz.php:273
+msgid "other"
+msgstr "其它"
+
+#: wmcz.php:334
 msgid "Start"
 msgstr "開始"
 
-#: wmcz.php:324
+#: wmcz.php:335
 msgid "End"
 msgstr "結束"
 
-#: wmcz.php:325
+#: wmcz.php:336
 msgid "Location"
 msgstr "位置"
 
-#: wmcz.php:348
+#: wmcz.php:360
 msgid "Search for events"
 msgstr "搜尋事件"
 
-#: wmcz.php:349
+#: wmcz.php:361
 msgid "from"
 msgstr "從"
 
-#: wmcz.php:351
+#: wmcz.php:363
 msgid "to"
 msgstr "至"
 
-#: wmcz.php:353
+#: wmcz.php:365
 msgid "by program"
 msgstr "按照方案"
 
-#: wmcz.php:354
+#: wmcz.php:366
 msgid "by location"
 msgstr "按照位置"
 
-#: wmcz.php:356
+#: wmcz.php:368
 msgid "Filter"
 msgstr "篩選"
 
-#: wmcz.php:436
+#: wmcz.php:448
 msgid "Archive"
 msgstr "封存"
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr "管理快取"
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr "這將會清除由 WMCZ 套件管理的快取。包含主要的日曆資料。"
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr "請參訪清除快取後的事件清單。第一個請求（重新產生快取）會花費幾秒鐘時間。"
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr "清除快取"
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr "快取已清除。"
 
