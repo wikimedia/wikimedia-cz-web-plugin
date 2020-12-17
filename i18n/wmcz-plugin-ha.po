@@ -1,8 +1,7 @@
-# Translation of Plugin to Spanish (español)
+# Translation of Plugin to Hausa (Hausa)
 # Exported from translatewiki.net
 #
-# Author: Fitoschido
-# Author: MarcoAurelio
+# Author: Em-em
 msgid ""
 msgstr ""
 ""
@@ -10,7 +9,7 @@ msgstr ""
 "X-POT-Import-Date: 2020-12-12 23:31:48+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es_es\n"
+"Language: ha\n"
 "X-Generator: MediaWiki 1.36.0-alpha; Translate 2020-10-28\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -30,24 +29,24 @@ msgstr ""
 #: wmcz.php:17
 #: wmcz.php:309
 msgid "No events found"
-msgstr ""
+msgstr "Ba sha'anonin da aka samu"
 
 #: wmcz.php:41
 #: wmcz.php:301
 msgid "Online"
-msgstr "En línea"
+msgstr ""
 
 #: wmcz.php:67
 msgid "this month"
-msgstr "este mes"
+msgstr ""
 
 #: wmcz.php:68
 msgid "next month"
-msgstr "mes próximo"
+msgstr ""
 
 #: wmcz.php:126
 msgid "Read more..."
-msgstr "Más información…"
+msgstr ""
 
 #: wmcz.php:273
 msgid "other"
@@ -63,7 +62,7 @@ msgstr ""
 
 #: wmcz.php:336
 msgid "Location"
-msgstr "Ubicación"
+msgstr ""
 
 #: wmcz.php:360
 msgid "Search for events"
@@ -79,7 +78,7 @@ msgstr ""
 
 #: wmcz.php:365
 msgid "by program"
-msgstr "por programa"
+msgstr ""
 
 #: wmcz.php:366
 msgid "by location"
@@ -95,21 +94,21 @@ msgstr ""
 
 #: wmcz_admin.php:29
 msgid "Manage cache"
-msgstr ""
+msgstr "Kula da cache"
 
 #: wmcz_admin.php:31
 msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
-msgstr ""
+msgstr "Wannan zai iya sabunta cache wanda plugin na WMCZ ke kula da. Wannan ya haɗa da yawancin data na Kalanda."
 
 #: wmcz_admin.php:34
 msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
-msgstr ""
+msgstr "Yi hakuri a ziyarci jerin sha'anoni bayan sabunta cache. Buƙatar farko da aka nema (wanda ke sake maido cache) na iya ɗaukan daƙiƙoƙi."
 
 #: wmcz_admin.php:36
 msgid "Purge cache"
-msgstr "Vaciar antememoria"
+msgstr "Sabunta cache"
 
 #: wmcz_admin.php:44
 msgid "Cache has been purged."
-msgstr ""
+msgstr "An sabunta cache."
 
