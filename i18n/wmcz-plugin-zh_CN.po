@@ -1,7 +1,7 @@
-# Translation of Plugin to Korean (한국어)
+# Translation of Plugin to Simplified Chinese (中文（简体）‎)
 # Exported from translatewiki.net
 #
-# Author: Ykhwong
+# Author: 水獭很懒
 msgid ""
 msgstr ""
 ""
@@ -9,13 +9,13 @@ msgstr ""
 "X-POT-Import-Date: 2020-12-12 23:31:48+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ko\n"
+"Language: zh_cn\n"
 "X-Generator: MediaWiki 1.36.0-alpha; Translate 2020-10-28\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. Plugin Name of the plugin
 msgid "WMCZ website addon"
-msgstr "WMCZ 웹사이트 추가 기능"
+msgstr "WMCZ网页加载项"
 
 #. Description of the plugin
 msgid "Customizations for WMCZ"
@@ -29,40 +29,40 @@ msgstr ""
 #: wmcz.php:17
 #: wmcz.php:309
 msgid "No events found"
-msgstr ""
+msgstr "无搜索结果"
 
 #: wmcz.php:41
 #: wmcz.php:301
 msgid "Online"
-msgstr "온라인"
+msgstr "在线"
 
 #: wmcz.php:67
 msgid "this month"
-msgstr "이번 달"
+msgstr "本月"
 
 #: wmcz.php:68
 msgid "next month"
-msgstr "다음 달"
+msgstr "下月"
 
 #: wmcz.php:126
 msgid "Read more..."
-msgstr "더 읽기..."
+msgstr "更多内容……"
 
 #: wmcz.php:273
 msgid "other"
-msgstr ""
+msgstr "其他"
 
 #: wmcz.php:334
 msgid "Start"
-msgstr "시작"
+msgstr "开始"
 
 #: wmcz.php:335
 msgid "End"
-msgstr ""
+msgstr "结束"
 
 #: wmcz.php:336
 msgid "Location"
-msgstr "위치"
+msgstr "位置"
 
 #: wmcz.php:360
 msgid "Search for events"
@@ -74,41 +74,41 @@ msgstr ""
 
 #: wmcz.php:363
 msgid "to"
-msgstr ""
+msgstr "至"
 
 #: wmcz.php:365
 msgid "by program"
-msgstr ""
+msgstr "基于项目"
 
 #: wmcz.php:366
 msgid "by location"
-msgstr ""
+msgstr "基于位置"
 
 #: wmcz.php:368
 msgid "Filter"
-msgstr "필터"
+msgstr "过滤器"
 
 #: wmcz.php:448
 msgid "Archive"
-msgstr ""
+msgstr "已存档"
 
 #: wmcz_admin.php:29
 msgid "Manage cache"
-msgstr "캐시 관리"
+msgstr "管理缓存"
 
 #: wmcz_admin.php:31
 msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
-msgstr ""
+msgstr "这将清除WMCZ插件的缓存，包括主要日历数据。"
 
 #: wmcz_admin.php:34
 msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
-msgstr ""
+msgstr "请在清除缓存后再次查看事件列表。首个请求（这会重新生成缓存文件）可能需要耗时数秒钟。"
 
 #: wmcz_admin.php:36
 msgid "Purge cache"
-msgstr "캐시 새로 고침"
+msgstr "清除缓存"
 
 #: wmcz_admin.php:44
 msgid "Cache has been purged."
-msgstr "캐시를 새로 고쳤습니다."
+msgstr "缓存已清理。"
 

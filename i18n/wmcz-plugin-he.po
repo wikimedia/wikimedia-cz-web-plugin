@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2020-12-14 14:23:28+0000\n"
+"PO-Revision-Date: 2020-12-22 13:14:53+0000\n"
 "X-POT-Import-Date: 2020-12-12 23:31:48+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,11 +16,11 @@ msgstr ""
 
 #. Plugin Name of the plugin
 msgid "WMCZ website addon"
-msgstr ""
+msgstr "תוספת אתר WMCZ"
 
 #. Description of the plugin
 msgid "Customizations for WMCZ"
-msgstr "התאמות לויקימדיה צ׳כיה (WMCZ)"
+msgstr "התאמות לוויקימדיה צ׳כיה (WMCZ)"
 
 #. Author of the plugin
 #, optional
@@ -30,7 +30,7 @@ msgstr ""
 #: wmcz.php:17
 #: wmcz.php:309
 msgid "No events found"
-msgstr ""
+msgstr "לא נמצאו אירועים"
 
 #: wmcz.php:41
 #: wmcz.php:301
@@ -71,11 +71,11 @@ msgstr "חיפוש אחר אירועים"
 
 #: wmcz.php:361
 msgid "from"
-msgstr ""
+msgstr "מ־"
 
 #: wmcz.php:363
 msgid "to"
-msgstr ""
+msgstr "עד"
 
 #: wmcz.php:365
 msgid "by program"
@@ -95,21 +95,21 @@ msgstr "ארכיון"
 
 #: wmcz_admin.php:29
 msgid "Manage cache"
-msgstr ""
+msgstr "ניהול מטמון"
 
 #: wmcz_admin.php:31
 msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
-msgstr ""
+msgstr "פעולה זו תפנה את המטמון שמנוהל על ידי תוסף WMCZ. זה כולל בעיקר נתוני לוח שנה."
 
 #: wmcz_admin.php:34
 msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
-msgstr ""
+msgstr "נא לבקר ברשימת האירועים לאחר פינוי המטמון. הבקשה הראשונה (שמייצרת את המטמון מחדש) עשויה לארוך מספר שניות."
 
 #: wmcz_admin.php:36
 msgid "Purge cache"
-msgstr ""
+msgstr "פינוי המטמון"
 
 #: wmcz_admin.php:44
 msgid "Cache has been purged."
-msgstr ""
+msgstr "המטמון התפנה."
 

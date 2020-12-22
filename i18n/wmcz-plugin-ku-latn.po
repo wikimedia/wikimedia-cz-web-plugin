@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2020-12-14 14:23:29+0000\n"
+"PO-Revision-Date: 2020-12-22 13:14:53+0000\n"
 "X-POT-Import-Date: 2020-12-12 23:31:48+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,7 +29,7 @@ msgstr ""
 #: wmcz.php:17
 #: wmcz.php:309
 msgid "No events found"
-msgstr ""
+msgstr "Ti çalakî nehate dîtin"
 
 #: wmcz.php:41
 #: wmcz.php:301
