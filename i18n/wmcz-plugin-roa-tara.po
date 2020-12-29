@@ -1,7 +1,7 @@
-# Translation of Plugin to Korean (한국어)
+# Translation of Plugin to Tarantino (tarandíne)
 # Exported from translatewiki.net
 #
-# Author: Ykhwong
+# Author: Joetaras
 msgid ""
 msgstr ""
 ""
@@ -9,17 +9,17 @@ msgstr ""
 "X-POT-Import-Date: 2020-12-12 23:31:48+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ko\n"
+"Language: nap-x-tara\n"
 "X-Generator: MediaWiki 1.36.0-alpha; Translate 2020-10-28\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Plugin Name of the plugin
 msgid "WMCZ website addon"
-msgstr "WMCZ 웹사이트 추가 기능"
+msgstr "Aggiunde d'u site web WMCZ"
 
 #. Description of the plugin
 msgid "Customizations for WMCZ"
-msgstr ""
+msgstr "Personalizzaziune pe WMCZ"
 
 #. Author of the plugin
 #, optional
@@ -29,86 +29,86 @@ msgstr ""
 #: wmcz.php:17
 #: wmcz.php:309
 msgid "No events found"
-msgstr "이벤트가 없습니다"
+msgstr "Nisciune avveneminde acchiate"
 
 #: wmcz.php:41
 #: wmcz.php:301
 msgid "Online"
-msgstr "온라인"
+msgstr "In linèe"
 
 #: wmcz.php:67
 msgid "this month"
-msgstr "이번 달"
+msgstr "stu mese"
 
 #: wmcz.php:68
 msgid "next month"
-msgstr "다음 달"
+msgstr "mese successive"
 
 #: wmcz.php:126
 msgid "Read more..."
-msgstr "더 읽기..."
+msgstr "Ligge de cchiù..."
 
 #: wmcz.php:273
 msgid "other"
-msgstr ""
+msgstr "otre"
 
 #: wmcz.php:334
 msgid "Start"
-msgstr "시작"
+msgstr "Accumenze"
 
 #: wmcz.php:335
 msgid "End"
-msgstr ""
+msgstr "Spicce"
 
 #: wmcz.php:336
 msgid "Location"
-msgstr "위치"
+msgstr "Luèche"
 
 #: wmcz.php:360
 msgid "Search for events"
-msgstr ""
+msgstr "Cirche pe le avveneminde"
 
 #: wmcz.php:361
 msgid "from"
-msgstr ""
+msgstr "da"
 
 #: wmcz.php:363
 msgid "to"
-msgstr ""
+msgstr "a"
 
 #: wmcz.php:365
 msgid "by program"
-msgstr ""
+msgstr "pe programme"
 
 #: wmcz.php:366
 msgid "by location"
-msgstr ""
+msgstr "pe luèche"
 
 #: wmcz.php:368
 msgid "Filter"
-msgstr "필터"
+msgstr "Filtre"
 
 #: wmcz.php:448
 msgid "Archive"
-msgstr ""
+msgstr "Archivije"
 
 #: wmcz_admin.php:29
 msgid "Manage cache"
-msgstr "캐시 관리"
+msgstr "Gestisce 'a cache"
 
 #: wmcz_admin.php:31
 msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
-msgstr ""
+msgstr "Quiste sdevache 'a cache gestite da 'u plugin WMCZ. Quiste 'nglude le date d'u calendarije prengepàle."
 
 #: wmcz_admin.php:34
 msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
-msgstr ""
+msgstr "Pe piacere ìndruche l'elenghe de le avveneminde aprrisse 'u sdevacamende d'a cache. 'A prima richieste (ca re-genere 'a cache) pò purtà cchiù de quacche seconde."
 
 #: wmcz_admin.php:36
 msgid "Purge cache"
-msgstr "캐시 새로 고침"
+msgstr "Sdevache 'a cache"
 
 #: wmcz_admin.php:44
 msgid "Cache has been purged."
-msgstr "캐시를 새로 고쳤습니다."
+msgstr "'A cache ha state sdevacate."
 
