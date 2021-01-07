@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Wikimedia Czech Republic 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/web-plugin\n"
 "POT-Creation-Date: 2020-12-03T23:53:34+01:00\n"
-"PO-Revision-Date: 2020-12-14 14:23:28+0000\n"
+"PO-Revision-Date: 2021-01-07 14:36:05+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: cs_cz\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #. Plugin Name of the plugin
 msgid "WMCZ website addon"
-msgstr ""
+msgstr "Plugin pro web WMCZ"
 
 #. Description of the plugin
 msgid "Customizations for WMCZ"
@@ -36,7 +36,7 @@ msgstr "Martin Urbanec"
 #: wmcz.php:17
 #: wmcz.php:309
 msgid "No events found"
-msgstr ""
+msgstr "Nenalezeny žádné události"
 
 #: wmcz.php:41
 #: wmcz.php:301
@@ -101,11 +101,11 @@ msgstr "Archiv"
 
 #: wmcz_admin.php:29
 msgid "Manage cache"
-msgstr ""
+msgstr "Spravovat cache"
 
 #: wmcz_admin.php:31
 msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
-msgstr ""
+msgstr "Toto vyprázdní keš spravovanou pluginem WMCZ, tj. především data z kalendáře."
 
 #: wmcz_admin.php:34
 msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
@@ -113,9 +113,9 @@ msgstr ""
 
 #: wmcz_admin.php:36
 msgid "Purge cache"
-msgstr ""
+msgstr "Vyprázdnit keš"
 
 #: wmcz_admin.php:44
 msgid "Cache has been purged."
-msgstr ""
+msgstr "Keš byla vyprázdněna."
 
