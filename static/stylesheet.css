@@ -212,9 +212,12 @@ label[for=cities] {
 }
 
 .wmcz-events-list-event {
-    border-bottom: 1px solid #ccc;
-    /* margin-bottom: 20pt; */
-    padding: 20pt 0;
+    margin: auto;
+    margin-top: 10px;
+    width: 80%;
+    background-color: #d3d3d345;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 
 .wmcz-events-list-event-name {
