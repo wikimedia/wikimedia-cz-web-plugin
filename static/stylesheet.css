@@ -215,7 +215,7 @@ label[for=cities] {
     margin: auto;
     margin-top: 10px;
     width: 80%;
-    background-color: #d3d3d345;
+    background-color: var(--wiki-light-grey);
     padding-top: 10px;
     padding-left: 10px;
 }
