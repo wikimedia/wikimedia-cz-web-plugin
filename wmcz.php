@@ -542,7 +542,7 @@ function wp_custom_archive($args = '', $echo = true) {
  
     $output = '<ul>';
  
-        $query = "SELECT YEAR(post_date) AS `year`, MONTH(post_date) AS `month`, count(ID) as posts FROM $wpdb->posts $join $where GROUP BY YEAR(post_date), MONTH(post_date) ORDER BY post_date DESC $limit";
+        $query = "SELECT YEAR(post_date) AS `year`, MONTH(post_date) AS `month`, count(ID) as posts FROM $wpdb->posts $join $where GROUP BY YEAR(post_date), MONTH(post_date) ORDER BY post_date ASC $limit";
         $key = md5($query);
         $cache = wp_cache_get( 'wp_custom_archive' , 'general');
         if ( !isset( $cache[ $key ] ) ) {
