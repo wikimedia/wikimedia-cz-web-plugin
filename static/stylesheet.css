@@ -216,8 +216,8 @@ label[for=cities] {
     margin-top: 10px;
     width: 80%;
     background-color: var(--wiki-lightgrey);
-    padding-top: 10px;
-    padding-left: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
 }
 
 .wmcz-events-list-event-name {
