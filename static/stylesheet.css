@@ -93,6 +93,10 @@
     .wmcz-caurosel-right-colored {
         height: 100%;
     }
+
+    .wmcz-caurosel-left {
+	    height: 40%;
+    }
 }
 
 @media (min-width: 760px) {
