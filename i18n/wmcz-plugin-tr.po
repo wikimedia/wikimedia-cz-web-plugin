@@ -1,11 +1,12 @@
 # Translation of Plugin to Turkish (Türkçe)
 # Exported from translatewiki.net
 #
+# Author: Hedda
 # Author: MuratTheTurkish
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2020-12-14 14:23:29+0000\n"
+"PO-Revision-Date: 2021-01-18 16:07:39+0000\n"
 "X-POT-Import-Date: 2020-12-12 23:31:48+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -58,7 +59,7 @@ msgstr "Başla"
 
 #: wmcz.php:335
 msgid "End"
-msgstr "Bitiş"
+msgstr "Son"
 
 #: wmcz.php:336
 msgid "Location"
@@ -66,15 +67,15 @@ msgstr "Konum"
 
 #: wmcz.php:360
 msgid "Search for events"
-msgstr "Etkinlikler için arayın"
+msgstr "Etkinlik arayın"
 
 #: wmcz.php:361
 msgid "from"
-msgstr "kimden"
+msgstr "gönderen"
 
 #: wmcz.php:363
 msgid "to"
-msgstr "kime"
+msgstr "alıcı"
 
 #: wmcz.php:365
 msgid "by program"
@@ -102,7 +103,7 @@ msgstr "Bu, WMCZ eklentisi tarafından yönetilen önbelleği temizleyecektir. B
 
 #: wmcz_admin.php:34
 msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
-msgstr "Lütfen önbelleği temizledikten sonra olaylar listesini ziyaret edin. İlk istek (önbelleği yeniden oluşturan) birkaç saniye sürebilir."
+msgstr "Lütfen önbelleği temizledikten sonra etkinlikler listesini ziyaret edin. İlk istek (önbelleği yeniden oluşturan) birkaç saniye sürebilir."
 
 #: wmcz_admin.php:36
 msgid "Purge cache"
