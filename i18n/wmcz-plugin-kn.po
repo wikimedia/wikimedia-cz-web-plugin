@@ -1,0 +1,114 @@
+# Translation of Plugin to Kannada (ಕನ್ನಡ)
+# Exported from translatewiki.net
+#
+# Author: AVSmalnad77
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2021-02-22 16:00:46+0000\n"
+"X-POT-Import-Date: 2020-12-12 23:31:48+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: kn\n"
+"X-Generator: MediaWiki 1.36.0-alpha; Translate 2021-01-21\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+msgid "WMCZ website addon"
+msgstr ""
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr ""
+
+#. Author of the plugin
+#, optional
+msgid "Martin Urbanec"
+msgstr ""
+
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr ""
+
+#: wmcz.php:41
+#: wmcz.php:301
+msgid "Online"
+msgstr ""
+
+#: wmcz.php:67
+msgid "this month"
+msgstr "ಈ ತಿಂಗಳು"
+
+#: wmcz.php:68
+msgid "next month"
+msgstr "ಮುಂದಿನ ತಿಂಗಳು"
+
+#: wmcz.php:126
+msgid "Read more..."
+msgstr "ಇನ್ನೂ ಓದಿ..."
+
+#: wmcz.php:273
+msgid "other"
+msgstr "ಇತರ"
+
+#: wmcz.php:334
+msgid "Start"
+msgstr "ಆರಂಭ"
+
+#: wmcz.php:335
+msgid "End"
+msgstr "ಕೊನೆ"
+
+#: wmcz.php:336
+msgid "Location"
+msgstr "ಸ್ಥಳ"
+
+#: wmcz.php:360
+msgid "Search for events"
+msgstr ""
+
+#: wmcz.php:361
+msgid "from"
+msgstr "ಇಂದ"
+
+#: wmcz.php:363
+msgid "to"
+msgstr "ಗೆ"
+
+#: wmcz.php:365
+msgid "by program"
+msgstr ""
+
+#: wmcz.php:366
+msgid "by location"
+msgstr ""
+
+#: wmcz.php:368
+msgid "Filter"
+msgstr ""
+
+#: wmcz.php:448
+msgid "Archive"
+msgstr ""
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr ""
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr ""
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr ""
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr ""
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr ""
+
