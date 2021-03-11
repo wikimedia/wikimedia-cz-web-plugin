@@ -62,7 +62,7 @@ function wmcz_block_calendar_render_callback( $attributes ) {
     $html .= wmcz_block_render_calendar( $cols, $rows, $now, "this-month" );
     $html .= wmcz_block_render_calendar( $cols, $rows, $next, "next-month" );
     return '<div class="block-wmcz-calendar">
-    <h2>Kalendář akcí</h2>
+    <h2>' . __( 'Event calendar', 'wmcz-plugin' ) . '</h2>
     <div class="wmcz-calendar-controls">
         <button id="wmcz-calendar-control-this-month" class="wmcz-calendar-control active">' . __('this month', 'wmcz-plugin') . '</button>
         <button id="wmcz-calendar-control-next-month" class="wmcz-calendar-control">' . __('next month', 'wmcz-plugin') . '</button>
