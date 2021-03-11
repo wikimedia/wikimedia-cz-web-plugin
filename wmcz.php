@@ -412,7 +412,7 @@ function wmcz_block_donate_register() {
 
 function wmcz_excerpt_more() {
     global $post;
-    return '… <a href="'. get_permalink($post->ID) . '">' . 'Číst více&nbsp;&raquo;' . '</a>';
+    return '… <a href="'. get_permalink($post->ID) . '">' . __('Read more', 'wmcz-plugin') . '&nbsp;&raquo;' . '</a>';
 }
 
 function wmcz_block_latest_news_register() {
