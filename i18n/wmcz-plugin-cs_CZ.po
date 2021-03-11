@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wikimedia Czech Republic 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/web-plugin\n"
-"POT-Creation-Date: 2021-03-11T09:40:51+01:00\n"
+"POT-Creation-Date: 2021-03-11T15:00:15+01:00\n"
 "PO-Revision-Date: 2021-01-28 18:05:51+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,6 +47,10 @@ msgstr "Nenalezeny žádné události"
 #: wmcz.php:41 wmcz.php:301
 msgid "Online"
 msgstr "Online"
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr ""
 
 #: wmcz.php:67
 msgid "this month"
@@ -108,6 +112,10 @@ msgstr "Více..."
 #: wmcz.php:448
 msgid "Archive"
 msgstr "Archiv"
+
+#: wmcz.php:461
+msgid "All news"
+msgstr ""
 
 #: wmcz_admin.php:29
 msgid "Manage cache"
