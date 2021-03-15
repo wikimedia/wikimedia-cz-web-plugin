@@ -1,13 +1,15 @@
 # Translation of Plugin to Czech (čeština)
 # Exported from translatewiki.net
 #
+# Author: Janbery
 # Author: Martin Urbanec
 msgid ""
 msgstr ""
+""
 "Project-Id-Version: Wikimedia Czech Republic 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/web-plugin\n"
 "POT-Creation-Date: 2021-03-11T15:00:15+01:00\n"
-"PO-Revision-Date: 2021-01-28 18:05:51+0000\n"
+"PO-Revision-Date: 2021-03-15 18:13:11+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: cs_cz\n"
@@ -16,35 +18,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: MediaWiki 1.36.0-alpha; Translate 2021-01-21\n"
 "X-Domain: wmcz-plugin\n"
-"X-POT-Import-Date: 2020-12-12 23:31:48+0000\n"
-"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ( (n >= 2 && n <= 4) ? 1 : "
-"2 );\n"
+"X-POT-Import-Date: 2021-03-11 17:31:49+0000\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ( (n >= 2 && n <= 4) ? 1 : 2 );\n"
 
 #. Plugin Name of the plugin
 msgid "WMCZ website addon"
 msgstr "Plugin pro web WMCZ"
-
-#. Plugin URI of the plugin
-msgid "https://wikimedia.cz"
-msgstr ""
 
 #. Description of the plugin
 msgid "Customizations for WMCZ"
 msgstr "Přizpůsobení pro WMCZ"
 
 #. Author of the plugin
+#, optional
 msgid "Martin Urbanec"
 msgstr "Martin Urbanec"
 
-#. Author URI of the plugin
-msgid "https://meta.wikimedia.org/wiki/User:Martin_Urbanec"
-msgstr ""
-
-#: wmcz.php:17 wmcz.php:309
+#: wmcz.php:17
+#: wmcz.php:309
 msgid "No events found"
 msgstr "Nenalezeny žádné události"
 
-#: wmcz.php:41 wmcz.php:301
+#: wmcz.php:41
+#: wmcz.php:301
 msgid "Online"
 msgstr "Online"
 
@@ -105,7 +101,6 @@ msgid "Filter"
 msgstr "Filtrovat"
 
 #: wmcz.php:415
-#, fuzzy
 msgid "Read more"
 msgstr "Více..."
 
@@ -122,16 +117,11 @@ msgid "Manage cache"
 msgstr "Spravovat cache"
 
 #: wmcz_admin.php:31
-msgid ""
-"This will purge cache managed by the WMCZ plugin. This includes mainly "
-"calendar data."
-msgstr ""
-"Toto vyprázdní keš spravovanou pluginem WMCZ, tj. především data z kalendáře."
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr "Toto vyprázdní keš spravovanou pluginem WMCZ, tj. především data z kalendáře."
 
 #: wmcz_admin.php:34
-msgid ""
-"Please visit the list of events after purging the cache. The first request "
-"(which re-generates the cache) can take up to several seconds."
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
 msgstr ""
 
 #: wmcz_admin.php:36
@@ -141,3 +131,4 @@ msgstr "Vyprázdnit keš"
 #: wmcz_admin.php:44
 msgid "Cache has been purged."
 msgstr "Keš byla vyprázdněna."
+

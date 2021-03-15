@@ -1,14 +1,15 @@
 # Translation of Plugin to French (français)
 # Exported from translatewiki.net
 #
+# Author: Florian COLLIN
 # Author: Gomoko
 # Author: Thibaut120094
 # Author: Verdy p
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2021-01-28 18:05:52+0000\n"
-"X-POT-Import-Date: 2020-12-12 23:31:48+0000\n"
+"PO-Revision-Date: 2021-03-15 18:13:11+0000\n"
+"X-POT-Import-Date: 2021-03-11 17:31:49+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr_fr\n"
@@ -37,6 +38,10 @@ msgstr "Aucun événement trouvé"
 #: wmcz.php:301
 msgid "Online"
 msgstr "En ligne"
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr "Calendrier d’événements"
 
 #: wmcz.php:67
 msgid "this month"
@@ -90,9 +95,17 @@ msgstr "par lieu"
 msgid "Filter"
 msgstr "Filtrer"
 
+#: wmcz.php:415
+msgid "Read more"
+msgstr "Lire plus"
+
 #: wmcz.php:448
 msgid "Archive"
 msgstr "Archiver"
+
+#: wmcz.php:461
+msgid "All news"
+msgstr "Toutes les actualités"
 
 #: wmcz_admin.php:29
 msgid "Manage cache"

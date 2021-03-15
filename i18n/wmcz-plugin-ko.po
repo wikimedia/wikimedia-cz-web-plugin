@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2021-01-28 18:05:52+0000\n"
-"X-POT-Import-Date: 2020-12-12 23:31:48+0000\n"
+"PO-Revision-Date: 2021-03-15 18:13:11+0000\n"
+"X-POT-Import-Date: 2021-03-11 17:31:49+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ko\n"
@@ -35,6 +35,10 @@ msgstr "이벤트가 없습니다"
 #: wmcz.php:301
 msgid "Online"
 msgstr "온라인"
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr "이벤트 캘린더"
 
 #: wmcz.php:67
 msgid "this month"
@@ -88,9 +92,17 @@ msgstr ""
 msgid "Filter"
 msgstr "필터"
 
+#: wmcz.php:415
+msgid "Read more"
+msgstr "더 읽어보기"
+
 #: wmcz.php:448
 msgid "Archive"
 msgstr ""
+
+#: wmcz.php:461
+msgid "All news"
+msgstr "모든 뉴스"
 
 #: wmcz_admin.php:29
 msgid "Manage cache"

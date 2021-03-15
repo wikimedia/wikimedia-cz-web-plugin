@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2021-03-08 15:05:25+0000\n"
-"X-POT-Import-Date: 2020-12-12 23:31:48+0000\n"
+"PO-Revision-Date: 2021-03-15 18:13:11+0000\n"
+"X-POT-Import-Date: 2021-03-11 17:31:49+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sk\n"
@@ -35,6 +35,10 @@ msgstr "Nenájdené žiadne udalosti"
 #: wmcz.php:301
 msgid "Online"
 msgstr "Online"
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr ""
 
 #: wmcz.php:67
 msgid "this month"
@@ -88,9 +92,17 @@ msgstr "podľa polohy"
 msgid "Filter"
 msgstr "Filter"
 
+#: wmcz.php:415
+msgid "Read more"
+msgstr ""
+
 #: wmcz.php:448
 msgid "Archive"
 msgstr "Archivovať"
+
+#: wmcz.php:461
+msgid "All news"
+msgstr ""
 
 #: wmcz_admin.php:29
 msgid "Manage cache"

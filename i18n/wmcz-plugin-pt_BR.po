@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2021-02-11 18:09:18+0000\n"
-"X-POT-Import-Date: 2020-12-12 23:31:48+0000\n"
+"PO-Revision-Date: 2021-03-15 18:13:11+0000\n"
+"X-POT-Import-Date: 2021-03-11 17:31:49+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_br\n"
@@ -36,6 +36,10 @@ msgstr "Nenhum evento encontrado"
 #: wmcz.php:301
 msgid "Online"
 msgstr "Online"
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr "Calendário de eventos"
 
 #: wmcz.php:67
 msgid "this month"
@@ -89,9 +93,17 @@ msgstr "Por localização"
 msgid "Filter"
 msgstr "Filtro"
 
+#: wmcz.php:415
+msgid "Read more"
+msgstr "Leia mais"
+
 #: wmcz.php:448
 msgid "Archive"
 msgstr "Arquivo"
+
+#: wmcz.php:461
+msgid "All news"
+msgstr "Todas as notícias"
 
 #: wmcz_admin.php:29
 msgid "Manage cache"

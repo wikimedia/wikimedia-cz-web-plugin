@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2021-01-28 18:05:52+0000\n"
-"X-POT-Import-Date: 2020-12-12 23:31:48+0000\n"
+"PO-Revision-Date: 2021-03-15 18:13:11+0000\n"
+"X-POT-Import-Date: 2021-03-11 17:31:49+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: mk\n"
@@ -35,6 +35,10 @@ msgstr "Не пронајдов ниеден настан"
 #: wmcz.php:301
 msgid "Online"
 msgstr "На линија"
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr "Календар на настани"
 
 #: wmcz.php:67
 msgid "this month"
@@ -88,9 +92,17 @@ msgstr "по место"
 msgid "Filter"
 msgstr "Филтер"
 
+#: wmcz.php:415
+msgid "Read more"
+msgstr "Прочитајте повеќе"
+
 #: wmcz.php:448
 msgid "Archive"
 msgstr "Архива"
+
+#: wmcz.php:461
+msgid "All news"
+msgstr "Сите новости"
 
 #: wmcz_admin.php:29
 msgid "Manage cache"
