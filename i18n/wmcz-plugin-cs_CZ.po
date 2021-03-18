@@ -3,13 +3,14 @@
 #
 # Author: Janbery
 # Author: Martin Urbanec
+# Author: YjM
 msgid ""
 msgstr ""
 ""
 "Project-Id-Version: Wikimedia Czech Republic 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/web-plugin\n"
 "POT-Creation-Date: 2021-03-11T15:00:15+01:00\n"
-"PO-Revision-Date: 2021-03-15 18:13:11+0000\n"
+"PO-Revision-Date: 2021-03-18 12:56:03+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: cs_cz\n"
@@ -46,7 +47,7 @@ msgstr "Online"
 
 #: wmcz.php:65
 msgid "Event calendar"
-msgstr ""
+msgstr "Kalendář událostí"
 
 #: wmcz.php:67
 msgid "this month"
