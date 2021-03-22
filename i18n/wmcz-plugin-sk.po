@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2021-03-15 18:13:11+0000\n"
+"PO-Revision-Date: 2021-03-22 14:50:46+0000\n"
 "X-POT-Import-Date: 2021-03-11 17:31:49+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -38,7 +38,7 @@ msgstr "Online"
 
 #: wmcz.php:65
 msgid "Event calendar"
-msgstr ""
+msgstr "Kalendár udalostí"
 
 #: wmcz.php:67
 msgid "this month"
@@ -94,7 +94,7 @@ msgstr "Filter"
 
 #: wmcz.php:415
 msgid "Read more"
-msgstr ""
+msgstr "Čítať viac"
 
 #: wmcz.php:448
 msgid "Archive"
@@ -102,7 +102,7 @@ msgstr "Archivovať"
 
 #: wmcz.php:461
 msgid "All news"
-msgstr ""
+msgstr "Všetky novinky"
 
 #: wmcz_admin.php:29
 msgid "Manage cache"
