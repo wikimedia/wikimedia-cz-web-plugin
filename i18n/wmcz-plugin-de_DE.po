@@ -2,12 +2,13 @@
 # Exported from translatewiki.net
 #
 # Author: DraconicDark
+# Author: FF-11
 # Author: Pittigrilli
 # Author: Wolfdietmann
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2021-03-15 18:13:11+0000\n"
+"PO-Revision-Date: 2021-03-29 16:10:16+0000\n"
 "X-POT-Import-Date: 2021-03-11 17:31:49+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -96,7 +97,7 @@ msgstr "Filtern"
 
 #: wmcz.php:415
 msgid "Read more"
-msgstr ""
+msgstr "Mehr lesen"
 
 #: wmcz.php:448
 msgid "Archive"
