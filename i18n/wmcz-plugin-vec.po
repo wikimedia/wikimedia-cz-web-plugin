@@ -1,8 +1,7 @@
-# Translation of Plugin to Simplified Chinese (中文（简体）‎)
+# Translation of Plugin to Venetian (vèneto)
 # Exported from translatewiki.net
 #
-# Author: Si109
-# Author: 水獭很懒
+# Author: Fierodelveneto
 msgid ""
 msgstr ""
 ""
@@ -10,13 +9,13 @@ msgstr ""
 "X-POT-Import-Date: 2021-03-11 17:31:49+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_cn\n"
+"Language: vec\n"
 "X-Generator: MediaWiki 1.36.0-alpha; Translate 2021-01-21\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Plugin Name of the plugin
 msgid "WMCZ website addon"
-msgstr "WMCZ网页加载项"
+msgstr ""
 
 #. Description of the plugin
 msgid "Customizations for WMCZ"
@@ -30,98 +29,98 @@ msgstr ""
 #: wmcz.php:17
 #: wmcz.php:309
 msgid "No events found"
-msgstr "无搜索结果"
+msgstr ""
 
 #: wmcz.php:41
 #: wmcz.php:301
 msgid "Online"
-msgstr "在线"
+msgstr ""
 
 #: wmcz.php:65
 msgid "Event calendar"
-msgstr "事件日历"
+msgstr ""
 
 #: wmcz.php:67
 msgid "this month"
-msgstr "本月"
+msgstr ""
 
 #: wmcz.php:68
 msgid "next month"
-msgstr "下月"
+msgstr ""
 
 #: wmcz.php:126
 msgid "Read more..."
-msgstr "更多内容……"
+msgstr ""
 
 #: wmcz.php:273
 msgid "other"
-msgstr "其他"
+msgstr "altro"
 
 #: wmcz.php:334
 msgid "Start"
-msgstr "开始"
+msgstr "Scumisia"
 
 #: wmcz.php:335
 msgid "End"
-msgstr "结束"
+msgstr "Fine"
 
 #: wmcz.php:336
 msgid "Location"
-msgstr "位置"
+msgstr "Locałixasion"
 
 #: wmcz.php:360
 msgid "Search for events"
-msgstr ""
+msgstr "Serca par eventi"
 
 #: wmcz.php:361
 msgid "from"
-msgstr ""
+msgstr "Da"
 
 #: wmcz.php:363
 msgid "to"
-msgstr "至"
+msgstr "a"
 
 #: wmcz.php:365
 msgid "by program"
-msgstr "基于项目"
+msgstr "par programa"
 
 #: wmcz.php:366
 msgid "by location"
-msgstr "基于位置"
+msgstr "par pozision"
 
 #: wmcz.php:368
 msgid "Filter"
-msgstr "过滤器"
+msgstr "Filtri"
 
 #: wmcz.php:415
 msgid "Read more"
-msgstr "阅读更多"
+msgstr "Lèxi de pi"
 
 #: wmcz.php:448
 msgid "Archive"
-msgstr "已存档"
+msgstr "Archivia"
 
 #: wmcz.php:461
 msgid "All news"
-msgstr ""
+msgstr "Tute łe novità"
 
 #: wmcz_admin.php:29
 msgid "Manage cache"
-msgstr "管理缓存"
+msgstr "Manage cache"
 
 #: wmcz_admin.php:31
 msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
-msgstr "这将清除WMCZ插件的缓存，包括主要日历数据。"
+msgstr ""
 
 #: wmcz_admin.php:34
 msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
-msgstr "请在清除缓存后再次查看事件列表。首个请求（这会重新生成缓存文件）可能需要耗时数秒钟。"
+msgstr ""
 
 #: wmcz_admin.php:36
 msgid "Purge cache"
-msgstr "清除缓存"
+msgstr "Purga cache"
 
 #: wmcz_admin.php:44
 msgid "Cache has been purged."
-msgstr "缓存已清理。"
+msgstr ""
 
