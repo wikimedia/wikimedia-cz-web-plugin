@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Wikimedia Czech Republic 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/web-plugin\n"
 "POT-Creation-Date: 2021-03-11T15:00:15+01:00\n"
-"PO-Revision-Date: 2021-04-08 13:08:24+0000\n"
+"PO-Revision-Date: 2021-04-19 11:02:56+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: cs_cz\n"
@@ -124,7 +124,7 @@ msgstr "Toto vyprázdní keš spravovanou pluginem WMCZ, tj. především data z
 
 #: wmcz_admin.php:34
 msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
-msgstr ""
+msgstr "Po vyčištění mezipaměti navštivte seznam událostí. První požadavek (který regeneruje mezipaměť) může trvat až několik sekund."
 
 #: wmcz_admin.php:36
 msgid "Purge cache"
