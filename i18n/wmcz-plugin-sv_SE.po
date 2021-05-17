@@ -1,12 +1,13 @@
 # Translation of Plugin to Swedish (svenska)
 # Exported from translatewiki.net
 #
+# Author: Jopparn
 # Author: Sabelöga
 # Author: WikiPhoenix
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2021-05-07 09:14:20+0000\n"
+"PO-Revision-Date: 2021-05-17 11:28:06+0000\n"
 "X-POT-Import-Date: 2021-03-11 17:31:49+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -39,7 +40,7 @@ msgstr "Online"
 
 #: wmcz.php:65
 msgid "Event calendar"
-msgstr ""
+msgstr "Eventkalender"
 
 #: wmcz.php:67
 msgid "this month"
@@ -95,7 +96,7 @@ msgstr "Filter"
 
 #: wmcz.php:415
 msgid "Read more"
-msgstr ""
+msgstr "Läs mer"
 
 #: wmcz.php:448
 msgid "Archive"
@@ -103,7 +104,7 @@ msgstr "Arkiv"
 
 #: wmcz.php:461
 msgid "All news"
-msgstr ""
+msgstr "Alla nyheter"
 
 #: wmcz_admin.php:29
 msgid "Manage cache"
@@ -111,11 +112,11 @@ msgstr "Hantera cache"
 
 #: wmcz_admin.php:31
 msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
-msgstr ""
+msgstr "Detta kommer att rensa cachen som hanteras av WMCZ:s plugin. Detta innefattar huvudsakligen kalenderdata."
 
 #: wmcz_admin.php:34
 msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
-msgstr ""
+msgstr "Vänligen besök listan av event efter att ha rensat cachen. Den första begäran (som återskapar cachen) kan ta upp till flera sekunder."
 
 #: wmcz_admin.php:36
 msgid "Purge cache"
