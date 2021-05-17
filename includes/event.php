@@ -12,8 +12,10 @@ class Event {
     private $tags;
 
     public function __construct( $event, $ical ) {
-        $startDate = $ical->iCalDateToDateTime($event->dtstart_array[3]);
-        $endDate = $ical->iCalDateToDateTime($event->dtend_array[3]);
+        $startDate = (new DateTime())->setTimestamp( $ical->iCalDateToUnixTimestamp($event->dtstart_array[3]) );
+        $startDate->setTimezone( new DateTimeZone( "Europe/Prague" ) );
+        $endDate = (new DateTime())->setTimestamp( $ical->iCalDateToUnixTimestamp($event->dtend_array[3]) );
+        $endDate->setTimezone( new DateTimeZone( "Europe/Prague" ) );
 
         $matches = null;
         preg_match('/^(\[([^]]+)\])?\s*(.*)$/', $event->summary, $matches);
