@@ -68,25 +68,26 @@ function wmcz_admin_caurosel() {
     wp_enqueue_script('wmcz-plugin-events', plugins_url( 'static/admin/events.js', __FILE__ ) );
 
     if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
-        if ( $_POST['type'] === 'new' ) {
+        $myPost = wp_unslash( $_POST );
+        if ( $myPost['type'] === 'new' ) {
             $wpdb->insert(
                 $wpdb->prefix . "wmcz_caurosel",
                 [
-                    'name' => $_POST['name'],
-                    'description' => $_POST['description'],
-                    'published' => isset( $_POST['published'] ),
-                    'photo_id' => (int)$_POST['image'],
-                    'link' => $_POST['link'],
-                    'ordering_key' => (int)$_POST['orderingKey']
+                    'name' => $myPost['name'],
+                    'description' => $myPost['description'],
+                    'published' => isset( $myPost['published'] ),
+                    'photo_id' => (int)$myPost['image'],
+                    'link' => $myPost['link'],
+                    'ordering_key' => (int)$myPost['orderingKey']
                 ]
             );
             wmcz_admin_caurosel_added();
-        } elseif ( $_POST['type'] === 'update' ) {
+        } elseif ( $myPost['type'] === 'update' ) {
             $updated = false;
             $events = $wpdb->get_results( "SELECT id, name, description, published, photo_id FROM {$wpdb->prefix}wmcz_caurosel", OBJECT );
 
-            if ( isset($_POST['delete']) ) {
-                foreach ( $_POST['delete'] as $toDelete ) {
+            if ( isset($myPost['delete']) ) {
+                foreach ( $myPost['delete'] as $toDelete ) {
                     $wpdb->delete(
                         "{$wpdb->prefix}wmcz_caurosel",
                         [
@@ -99,22 +100,22 @@ function wmcz_admin_caurosel() {
 
             foreach ( $events as $event ) {
                 $data = [];
-                $published = isset( $_POST["published-{$event->id}"] );
+                $published = isset( $myPost["published-{$event->id}"] );
 
-                if ( $_POST["name-{$event->id}"] !== $event->name ) {
-                    $data['name'] = $_POST["name-{$event->id}"];
+                if ( $myPost["name-{$event->id}"] !== $event->name ) {
+                    $data['name'] = $myPost["name-{$event->id}"];
                 }
-                if ( $_POST["description-{$event->id}"] !== $event->description ) {
-                    $data['description'] = $_POST["description-{$event->id}"];
+                if ( $myPost["description-{$event->id}"] !== $event->description ) {
+                    $data['description'] = $myPost["description-{$event->id}"];
                 }
                 if ( $published !== $event->published ) {
                     $data['published'] = $published;
                 }
-                if ( $_POST["link-{$event->id}"] !== $event->link ) {
-                    $data['link'] = $_POST["link-{$event->id}"];
+                if ( $myPost["link-{$event->id}"] !== $event->link ) {
+                    $data['link'] = $myPost["link-{$event->id}"];
                 }
-                if ( $_POST["orderingKey-{$event->id}"] !== $event->ordering_key ) {
-                    $data['ordering_key'] = $_POST["orderingKey-{$event->id}"];
+                if ( $myPost["orderingKey-{$event->id}"] !== $event->ordering_key ) {
+                    $data['ordering_key'] = $myPost["orderingKey-{$event->id}"];
                 }
 
                 if ( count( $data ) > 0 ) {
