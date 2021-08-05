@@ -1,0 +1,126 @@
+# Translation of Plugin to Ukrainian (українська)
+# Exported from translatewiki.net
+#
+# Author: DDPAT
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2021-08-05 11:15:21+0000\n"
+"X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"X-Generator: MediaWiki 1.36.1; Translate 2021-07-26\n"
+"Plural-Forms: nplurals=3; plural=(n%10 == 1 && n%100 != 11) ? 0 : ( (n%10 >= 2 && n%10 <= 4 && (n%100 < 10 || n%100 >= 20)) ? 1 : 2 );\n"
+
+#. Plugin Name of the plugin
+msgid "WMCZ website addon"
+msgstr "Доповнення до веб-сайту WMCZ"
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr "Налаштування для WMCZ"
+
+#. Author of the plugin
+#, optional
+msgid "Martin Urbanec"
+msgstr ""
+
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr "Подій не знайдено"
+
+#: wmcz.php:41
+#: wmcz.php:301
+msgid "Online"
+msgstr "Онлайн"
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr "Календар подій"
+
+#: wmcz.php:67
+msgid "this month"
+msgstr "цього місяця"
+
+#: wmcz.php:68
+msgid "next month"
+msgstr "наступний місяць"
+
+#: wmcz.php:126
+msgid "Read more..."
+msgstr "Читати більше..."
+
+#: wmcz.php:273
+msgid "other"
+msgstr "інші"
+
+#: wmcz.php:334
+msgid "Start"
+msgstr "Початок"
+
+#: wmcz.php:335
+msgid "End"
+msgstr "Кінець"
+
+#: wmcz.php:336
+msgid "Location"
+msgstr "Розташування"
+
+#: wmcz.php:360
+msgid "Search for events"
+msgstr "Пошук подій"
+
+#: wmcz.php:361
+msgid "from"
+msgstr "з"
+
+#: wmcz.php:363
+msgid "to"
+msgstr "до"
+
+#: wmcz.php:365
+msgid "by program"
+msgstr "за програмою"
+
+#: wmcz.php:366
+msgid "by location"
+msgstr "за розташуванням"
+
+#: wmcz.php:368
+msgid "Filter"
+msgstr "Фільтр"
+
+#: wmcz.php:415
+msgid "Read more"
+msgstr "Читати далі"
+
+#: wmcz.php:448
+msgid "Archive"
+msgstr "Архів"
+
+#: wmcz.php:461
+msgid "All news"
+msgstr "Усі новини"
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr "Керування кешем"
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr "Це очистить кеш, керований плагіном WMCZ. В основному це дані календаря."
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr "Будь ласка, відвідайте список подій після очищення кешу. Перший запит (який повторно генерує кеш) може зайняти кілька секунд."
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr "Очистити кеш"
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr "Кеш очищено."
+
