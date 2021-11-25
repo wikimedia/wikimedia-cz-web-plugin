@@ -1,10 +1,11 @@
 # Translation of Plugin to Message documentation (Message documentation)
 # Exported from translatewiki.net
 #
+# Author: Ajeje Brazorf
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2021-10-28 11:21:49+0000\n"
+"PO-Revision-Date: 2021-11-25 12:20:36+0000\n"
 "X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -63,7 +64,7 @@ msgstr ""
 
 #: wmcz.php:273
 msgid "other"
-msgstr ""
+msgstr "{{Identical|Other}}"
 
 #: wmcz.php:334
 msgid "Start"
