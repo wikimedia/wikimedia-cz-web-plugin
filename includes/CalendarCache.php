@@ -26,6 +26,7 @@ class WmczCalendarCache {
         ) {
             $this->ical = new ICal( $this->url );
             file_put_contents( $this->filename, serialize( $this->ical ) );
+            file_put_contents( $this->filename . '.url', $this->url );
         } else {
             $this->ical = unserialize(file_get_contents( $this->filename ));
         }
