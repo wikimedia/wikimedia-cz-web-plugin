@@ -1,0 +1,126 @@
+# Translation of Plugin to Urdu (اردو)
+# Exported from translatewiki.net
+#
+# Author: Obaid Raza
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2022-03-07 12:19:56+0000\n"
+"X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ur\n"
+"X-Generator: MediaWiki 1.38.0-alpha; Translate 2022-01-19\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+msgid "WMCZ website addon"
+msgstr ""
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr ""
+
+#. Author of the plugin
+#, optional
+msgid "Martin Urbanec"
+msgstr ""
+
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr "کوئی نتیجہ نہیں"
+
+#: wmcz.php:41
+#: wmcz.php:301
+msgid "Online"
+msgstr "آن لائن"
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr ""
+
+#: wmcz.php:67
+msgid "this month"
+msgstr "اس مہینے"
+
+#: wmcz.php:68
+msgid "next month"
+msgstr "اگلے مہینے"
+
+#: wmcz.php:126
+msgid "Read more..."
+msgstr "مزید پڑھیں۔ ۔ ۔"
+
+#: wmcz.php:273
+msgid "other"
+msgstr "دیگر"
+
+#: wmcz.php:334
+msgid "Start"
+msgstr "ابتدا"
+
+#: wmcz.php:335
+msgid "End"
+msgstr "اختتام"
+
+#: wmcz.php:336
+msgid "Location"
+msgstr "مقام"
+
+#: wmcz.php:360
+msgid "Search for events"
+msgstr ""
+
+#: wmcz.php:361
+msgid "from"
+msgstr "از"
+
+#: wmcz.php:363
+msgid "to"
+msgstr "تا"
+
+#: wmcz.php:365
+msgid "by program"
+msgstr ""
+
+#: wmcz.php:366
+msgid "by location"
+msgstr "بلحاظ مقام"
+
+#: wmcz.php:368
+msgid "Filter"
+msgstr "فلٹر"
+
+#: wmcz.php:415
+msgid "Read more"
+msgstr "مزید پڑھیں"
+
+#: wmcz.php:448
+msgid "Archive"
+msgstr "دستاویزات"
+
+#: wmcz.php:461
+msgid "All news"
+msgstr "تمام خبریں"
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr ""
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr ""
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr ""
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr ""
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr ""
+
