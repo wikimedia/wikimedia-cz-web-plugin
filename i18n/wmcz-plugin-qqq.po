@@ -2,10 +2,11 @@
 # Exported from translatewiki.net
 #
 # Author: Ajeje Brazorf
+# Author: Verdy p
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-03-17 12:21:04+0000\n"
+"PO-Revision-Date: 2022-04-11 11:20:23+0000\n"
 "X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -68,7 +69,7 @@ msgstr "{{Identical|Other}}"
 
 #: wmcz.php:334
 msgid "Start"
-msgstr ""
+msgstr "{{Identical|Start}}"
 
 #: wmcz.php:335
 msgid "End"
