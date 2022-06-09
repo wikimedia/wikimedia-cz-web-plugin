@@ -5,11 +5,12 @@
 # Author: DraconicDark
 # Author: FF-11
 # Author: Pittigrilli
+# Author: ThisCarthing
 # Author: Wolfdietmann
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-04-28 11:20:52+0000\n"
+"PO-Revision-Date: 2022-06-09 11:25:04+0000\n"
 "X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -110,7 +111,7 @@ msgstr ""
 
 #: wmcz_admin.php:29
 msgid "Manage cache"
-msgstr ""
+msgstr "Cache verwalten"
 
 #: wmcz_admin.php:31
 msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
@@ -122,9 +123,9 @@ msgstr ""
 
 #: wmcz_admin.php:36
 msgid "Purge cache"
-msgstr ""
+msgstr "Cache leeren"
 
 #: wmcz_admin.php:44
 msgid "Cache has been purged."
-msgstr ""
+msgstr "Der Cache wurde geleert."
 
