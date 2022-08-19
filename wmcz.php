@@ -324,16 +324,23 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
             foreach ( $event->getTags() as $tag ) {
                 $tagClasses[] = "wmcz-tag-$tag";
             }
+
+            $eventDetails = [
+                sprintf( '<li>' . __('Start', 'wmcz-plugin') . ': %s</li>', esc_html( $event->getStartDatetime() ) ),
+                sprintf( '<li>' . __('End', 'wmcz-plugin') . ': %s</li>', esc_html( $event->getEndDatetime() ) ),
+            ];
+            if ( $event->getLocation() ) {
+                $eventDetails[] = sprintf( '<li>' . __('Location', 'wmcz-plugin') . ': %s</li>', esc_html( $event->getLocation() ) );
+            }
+
             $eventsHtml .= sprintf(
                 '<div class="wmcz-events-list-event">
                     <div class="wmcz-events-list-event-name %s">%s</div>
-                    <div class="wmcz-events-list-event-time">%s, %s</div>
+                    <div class="wmcz-events-list-event-time">%s%s</div>
                     <div class="wmcz-events-list-event-description">
                         <div class="wmcz-events-list-event-summary">
                             <ul>
-                                <li>' . __('Start', 'wmcz-plugin') . ': %s</li>
-                                <li>' . __('End', 'wmcz-plugin') . ': %s</li>
-                                <li>' . __('Location', 'wmcz-plugin') . ': %s</li>
+                                %s
                             </ul>
                         </div>
                         <div class="wmcz-events-event-description-raw">
@@ -343,11 +350,9 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
                 </div>',
                 esc_attr( implode( ' ', $tagClasses ) ),
                 esc_html( $event->getTitle() ),
-                esc_html($event->getStartDatetime()),
-                esc_html($event->getCity()),
                 esc_html( $event->getStartDatetime() ),
-                esc_html( $event->getEndDatetime() ),
-                esc_html( $event->getLocation() ),
+                esc_html( $event->getCity() ? ', ' . $event->getCity() : '' ),
+                implode( PHP_EOL, $eventDetails ),
                 html_entity_decode( $event->getDescription() )
             );
         }
