@@ -1,0 +1,126 @@
+# Translation of Plugin to Tatar (Cyrillic script) (татарча)
+# Exported from translatewiki.net
+#
+# Author: Ерней
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2022-08-22 11:20:51+0000\n"
+"X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tt-Cyrl\n"
+"X-Generator: MediaWiki 1.39.0-alpha; Translate 2022-07-28\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+msgid "WMCZ website addon"
+msgstr ""
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr ""
+
+#. Author of the plugin
+#, optional
+msgid "Martin Urbanec"
+msgstr ""
+
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr "Вакыйгалар табылмаган"
+
+#: wmcz.php:41
+#: wmcz.php:301
+msgid "Online"
+msgstr "Онлайн"
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr "Вакыйгалар календаре"
+
+#: wmcz.php:67
+msgid "this month"
+msgstr "бу ай"
+
+#: wmcz.php:68
+msgid "next month"
+msgstr "киләсе ай"
+
+#: wmcz.php:126
+msgid "Read more..."
+msgstr "Күбрәк уку…"
+
+#: wmcz.php:273
+msgid "other"
+msgstr "башка"
+
+#: wmcz.php:334
+msgid "Start"
+msgstr "Башлау"
+
+#: wmcz.php:335
+msgid "End"
+msgstr "Азак"
+
+#: wmcz.php:336
+msgid "Location"
+msgstr "Урын"
+
+#: wmcz.php:360
+msgid "Search for events"
+msgstr ""
+
+#: wmcz.php:361
+msgid "from"
+msgstr ""
+
+#: wmcz.php:363
+msgid "to"
+msgstr ""
+
+#: wmcz.php:365
+msgid "by program"
+msgstr "программа буенча"
+
+#: wmcz.php:366
+msgid "by location"
+msgstr "урын буенча"
+
+#: wmcz.php:368
+msgid "Filter"
+msgstr "Сөзгеч"
+
+#: wmcz.php:415
+msgid "Read more"
+msgstr "Тулырак"
+
+#: wmcz.php:448
+msgid "Archive"
+msgstr "Архивлау"
+
+#: wmcz.php:461
+msgid "All news"
+msgstr "Барлык яңалыклар"
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr ""
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr ""
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr ""
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr "Кэш бушату"
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr "Кэш бушатылган."
+
