@@ -129,7 +129,7 @@ class Event {
 
         // turn <br> into paragraphs
         if ( $description !== '' ) {
-            $description = '<p>' . preg_replace( '/(<br ?\/?>){2}/', '<p/><p>', $description ) . '</p>';
+            $description = '<p> ' . preg_replace( '/(<br ?\/?>){2}/', ' <p/> <p> ', $description ) . ' </p>';
         }
 
         // if there is any videocall, mention how to connect
