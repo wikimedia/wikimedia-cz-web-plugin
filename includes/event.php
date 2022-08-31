@@ -87,10 +87,40 @@ class Event {
         return $this->title;
     }
 
+    /**
+     * Return a link to the videocall, if any
+     *
+     * @return string|null
+     */
+    public function getVideocallLink() {
+        $matches = null;
+        preg_match_all( '/https:\/\/meet.google.com\/[a-z-]*/', $this->description, $matches );
+        return $matches[0][0] ?? null;
+    }
+
+    /**
+     * Get event description
+     *
+     * This comes from the event description set in
+     * iCal. Google's addition about Google Meet link is removed,
+     * and replaced with custom description.
+     *
+     * @return string
+     */
     public function getDescription() {
         $matches = null;
-        preg_match_all( '/(^|\s+)(https?:\/\/[a-zA-Z.0-9\/%:_?&#=-]+)/', $this->description, $matches );
-        $description = $this->description;
+
+        // remove Google-added stuff about Google Meet
+        $description = preg_replace( '/Tato událost má videohovor..Připojit se:.*/s', '', $this->description );
+
+        // if there is any videocall, mention how to connect
+        $videoCallLink = $this->getVideocallLink();
+        if ( $videoCallLink ) {
+            $description .= 'Tato událost má videohovor. Připojit se: ' . $videoCallLink;
+        }
+
+        // wrap all links in <a>, to make them clickable
+        preg_match_all( '/(^|\s+)(https?:\/\/[a-zA-Z.0-9\/%:_?&#=-]+)/', $description, $matches );
         foreach ( $matches[0] as $match ) {
             $description = str_replace( $match, "<a href=\"$match\">$match</a>", $description );
         }
