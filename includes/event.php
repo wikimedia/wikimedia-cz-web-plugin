@@ -120,13 +120,22 @@ class Event {
     public function getDescription() {
         $matches = null;
 
+        // decode HTML and reove <html-blob> wrapper
+        $description = html_entity_decode( $this->description );
+        $description = preg_replace( '/<html-blob ?\/?>/', '', $description );
+
         // remove Google-added stuff about Google Meet
-        $description = preg_replace( '/Tato událost má videohovor..Připojit se:.*/s', '', $this->description );
+        $description = preg_replace( '/Tato událost má videohovor..Připojit se:.*/s', '', $description );
+
+        // turn <br> into paragraphs
+        if ( $description !== '' ) {
+            $description = '<p>' . preg_replace( '/(<br ?\/?>){2}/', '<p/><p>', $description ) . '</p>';
+        }
 
         // if there is any videocall, mention how to connect
         $videoCallLink = $this->getVideocallLink();
         if ( $videoCallLink ) {
-            $description .= 'Tato událost má videohovor. Připojit se: ' . $videoCallLink;
+            $description .= '<p>Tato událost má videohovor. Připojit se: ' . $videoCallLink . '</p>';
         }
 
         // wrap all links in <a>, to make them clickable
