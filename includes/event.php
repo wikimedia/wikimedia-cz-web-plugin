@@ -73,6 +73,11 @@ class Event {
         return new Address( $this->getLocation() );
     }
 
+    /**
+     * Get city the event is in
+     *
+     * @return string
+     */
     public function getCity() {
         if ( $this->city !== null ) {
             return $this->city;
@@ -83,6 +88,11 @@ class Event {
         return $this->city;
     }
 
+    /**
+     * Get event title
+     *
+     * @return string
+     */
     public function getTitle() {
         return $this->title;
     }
@@ -131,6 +141,11 @@ class Event {
         return $this->id;
     }
 
+    /**
+     * Tags added to the event
+     *
+     * @return string[]
+     */
     public function getTags() {
         return $this->tags;
     }
