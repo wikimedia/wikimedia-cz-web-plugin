@@ -125,7 +125,7 @@ class Event {
         $description = preg_replace( '/<html-blob ?\/?>/', '', $description );
 
         // remove Google-added stuff about Google Meet
-        $description = preg_replace( '/Tato událost má videohovor..Připojit se:.*/s', '', $description );
+        $description = preg_replace( '/(Tato událost má videohovor..)?Připojit se: https:\/\/meet.google.com.*/s', '', $description );
 
         // turn <br> into paragraphs
         if ( $description !== '' ) {
