@@ -3,5 +3,11 @@
         "edu",
         "multimedia",
         "wikidata"
-    ]
+    ],
+    "tagAliases": {
+        "tech": "wikidata"
+    },
+    "tagDisplayNames": {
+        "edu": "vzdělávání"
+    }
 }

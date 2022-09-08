@@ -45,10 +45,14 @@ class WmczCalendar {
             $tags = array_merge( $tags, $event->getTags() );
         }
 
+        // add all mandatory tags
         $mandatoryTags = WmczConfiguration::singleton()->get( 'mandatoryTags' );
         foreach ( $mandatoryTags as $tag ) {
-            $tags[] = $tag;
+            $tags[] = WmczTag::newFromCode( $tag );
         }
+
+        // add the special "other" tag
+        $tags[] = new WmczTag( 'other', __( 'other', 'wmcz-plugin' ) );
 
         return array_values( array_unique( $tags ) );
     }

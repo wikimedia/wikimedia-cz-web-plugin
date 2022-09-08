@@ -9,7 +9,7 @@ class Event {
     private $title;
     private $description;
     private $id;
-    private $tags;
+    private $tags = [];
 
     public function __construct( $event, $ical ) {
         $startDate = (new DateTime())->setTimestamp( $ical->iCalDateToUnixTimestamp($event->dtstart_array[3]) );
@@ -19,11 +19,13 @@ class Event {
 
         $matches = null;
         preg_match('/^(\[([^]]+)\])?\s*(.*)$/', $event->summary, $matches);
-        if ( $matches[2] === "" ) {
-            $this->tags = [];
-        } else {
-            $this->tags = explode( ', ', $matches[2] );
+
+        if ( $matches[2] !== '' ) {
+            $this->tags = array_map( static function( $tagCode ) {
+                return WmczTag::newFromCode( $tagCode );
+            }, explode( ', ', $matches[2] ) );
         }
+
         $this->title = $matches[3];
 
         $this->displayDatetime = $startDate->format('d. m. Y');
@@ -153,7 +155,7 @@ class Event {
     /**
      * Tags added to the event
      *
-     * @return string[]
+     * @return WmczTag[]
      */
     public function getTags() {
         return $this->tags;

@@ -222,9 +222,8 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
     $from = filter_input( INPUT_GET, 'from', FILTER_SANITIZE_SPECIAL_CHARS );
     $to = filter_input( INPUT_GET, 'to', FILTER_SANITIZE_SPECIAL_CHARS );
     // TODO: Rewrite to something...more PHPy?
-    $selectedTags = null;
+    $selectedTags = [];
     if ( isset( $_GET['tags'] ) ) {
-        $selectedTags = [];
         foreach ( $_GET['tags'] as $tag ) {
             $selectedTags[] = $tag;
         }
@@ -255,24 +254,10 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
     // Construct tags
     if ( count( $tags ) > 0 ) {
         $tagsHtml = '';
-        for ($i=0; $i < count($tags); $i++) {
-            $class = strtolower( $tags[$i] );
-            $selected = '';
-            if ( is_array( $selectedTags ) && in_array( $tags[$i], $selectedTags, true ) ) {
-                $selected = 'checked';
-            }
-            $tagsHtml .= '<span><input class="' . $class . '" type="checkbox" ' . $selected . ' name="tags[]" value="' . $tags[$i] . '" id="wmcz-events-tag-' . $i . '">';
-            $tagsHtml .= '<label for="wmcz-events-tag-' . $i . '">' .$tags[$i] . '</label></span>';
+        foreach ($tags as $tag) {
+            $tagsHtml .= $tag->getHTMLCheckbox( in_array( $tag->getCode(), $selectedTags, true ) );
         }
-        $i = count($tags);
-        $selected = '';
-        if ( is_array( $selectedTags ) && in_array( 'other', $selectedTags, true ) ) {
-            $selected = 'checked';
-        }
-        $tagsHtml .= '<span><input type="checkbox" ' . $selected . ' name="tags[]" value="other" id="wmcz-events-tag-' . $i . '">';
-        $tagsHtml .= '<label for="wmcz-events-tag-' . $i . '">' . __( 'other', 'wmcz-plugin' ). '</label></span>';
     }
-
 
     // Construct cities
     $placesHtml = '';
