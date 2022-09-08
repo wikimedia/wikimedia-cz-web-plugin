@@ -25,7 +25,7 @@ class Address {
 
         $matches = null;
         preg_match( '/[0-9]{3} ?[0-9]{2}/', $this->address, $matches );
-        $this->zipCode = $matches[0];
+        $this->zipCode = $matches[0] ?? '';
         return $this->zipCode;
     }
 
