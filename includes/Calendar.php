@@ -45,8 +45,8 @@ class WmczCalendar {
             $tags = array_merge( $tags, $event->getTags() );
         }
 
-        $config = json_decode(file_get_contents( dirname( __FILE__ ) . '/../configuration.json' ));
-        foreach ( $config->mandatoryTags as $tag ) {
+        $mandatoryTags = WmczConfiguration::singleton()->get( 'mandatoryTags' );
+        foreach ( $mandatoryTags as $tag ) {
             $tags[] = $tag;
         }
 
