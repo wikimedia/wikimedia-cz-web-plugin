@@ -8,6 +8,9 @@ class WmczConfiguration {
     /** @var self|null */
     private static $instance = null;
 
+    /** @var array|null */
+    private $configCache = null;
+
     private function __construct() {
     }
 
@@ -33,22 +36,22 @@ class WmczConfiguration {
     /**
      * Read configuration from disk, with no caching
      *
-     * @param bool $assoc
-     * @return stdClass|array
+     * @return array
      */
-    private function readConfigUncached( bool $assoc ) {
-        return json_decode( file_get_contents( $this->getPath() ), $assoc );
+    private function readConfigUncached() {
+        return json_decode( file_get_contents( $this->getPath() ), true );
     }
 
     /**
      * Read configuration from disk
      *
-     * @param bool $assoc
-     * @return stdClass|array
+     * @return array
      */
-    public function readConfig( bool $assoc = false ) {
-        // TODO: Implement caching
-        return $this->readConfigUncached( $assoc );
+    public function readConfig() {
+        if ( $this->configCache === null ) {
+            $this->configCache = $this->readConfigUncached();
+        }
+        return $this->configCache;
     }
 
     /**
@@ -58,7 +61,7 @@ class WmczConfiguration {
      * @return mixed
      */
     public function get( $variable ) {
-        $config = $this->readConfig( true );
+        $config = $this->readConfig();
         if ( !array_key_exists( $variable, $config ) ) {
             return null;
         }
