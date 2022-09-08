@@ -8,6 +8,7 @@
         "tech": "wikidata"
     },
     "tagDisplayNames": {
-        "edu": "vzdělávání"
+        "edu": "vzdělávání",
+        "wikidata": "partnerství/wikidata"
     }
 }
