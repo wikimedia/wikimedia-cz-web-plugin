@@ -375,16 +375,16 @@ function wmcz_block_calendar_list_register() {
 }
 
 function wmcz_block_donate_render_callback() {
-    return '<div class="wmcz-donate" data-darujme-widget-token="whwzii6mzx8ks66t">&nbsp;</div>
+    return '<div data-darujme-widget-token="kndwaffrxdz1haue">&nbsp;</div>
     <script type="text/javascript">
-    +function(w, d, s, u, a, b) {
-    w["DarujmeObject"] = u;
-    w[u] = w[u] || function () { (w[u].q = w[u].q || []).push(arguments) };
-    a = d.createElement(s); b = d.getElementsByTagName(s)[0];
-    a.async = 1; a.src = "https:\/\/www.darujme.cz\/assets\/scripts\/widget.js";
-    b.parentNode.insertBefore(a, b);
-    }(window, document, "script", "Darujme");
-    Darujme(1, "whwzii6mzx8ks66t", "render", "https:\/\/www.darujme.cz\/widget?token=whwzii6mzx8ks66t", "270px");
+        +function(w, d, s, u, a, b) {
+            w["DarujmeObject"] = u;
+            w[u] = w[u] || function () { (w[u].q = w[u].q || []).push(arguments) };
+            a = d.createElement(s); b = d.getElementsByTagName(s)[0];
+            a.async = 1; a.src = "https:\/\/www.darujme.cz\/assets\/scripts\/widget.js";
+            b.parentNode.insertBefore(a, b);
+        }(window, document, "script", "Darujme");
+        Darujme(1, "kndwaffrxdz1haue", "render", "https:\/\/www.darujme.cz\/widget?token=kndwaffrxdz1haue", "100%");
     </script>';
 }
 
