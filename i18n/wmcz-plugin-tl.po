@@ -1,0 +1,126 @@
+# Translation of Plugin to Tagalog (Tagalog)
+# Exported from translatewiki.net
+#
+# Author: GinawaSaHapon
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2022-09-22 11:23:48+0000\n"
+"X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tl\n"
+"X-Generator: MediaWiki 1.40.0-alpha; Translate 2022-07-28\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+msgid "WMCZ website addon"
+msgstr "WMCZ website addon"
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr "Mga pagsasaayos para sa WMCZ"
+
+#. Author of the plugin
+#, optional
+msgid "Martin Urbanec"
+msgstr ""
+
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr "Walang nakitang kaganapan"
+
+#: wmcz.php:41
+#: wmcz.php:301
+msgid "Online"
+msgstr "Online"
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr "Kalendaryo ng mga kaganapan"
+
+#: wmcz.php:67
+msgid "this month"
+msgstr "ngayong buwan"
+
+#: wmcz.php:68
+msgid "next month"
+msgstr "susunod na buwan"
+
+#: wmcz.php:126
+msgid "Read more..."
+msgstr "Basahin pa..."
+
+#: wmcz.php:273
+msgid "other"
+msgstr "iba pa"
+
+#: wmcz.php:334
+msgid "Start"
+msgstr "Simula"
+
+#: wmcz.php:335
+msgid "End"
+msgstr "Hanggang"
+
+#: wmcz.php:336
+msgid "Location"
+msgstr "Lugar"
+
+#: wmcz.php:360
+msgid "Search for events"
+msgstr "Maghanap ng mga kaganapan"
+
+#: wmcz.php:361
+msgid "from"
+msgstr "mula"
+
+#: wmcz.php:363
+msgid "to"
+msgstr "hanggang"
+
+#: wmcz.php:365
+msgid "by program"
+msgstr "programa"
+
+#: wmcz.php:366
+msgid "by location"
+msgstr "lugar"
+
+#: wmcz.php:368
+msgid "Filter"
+msgstr "I-filter"
+
+#: wmcz.php:415
+msgid "Read more"
+msgstr "Basahin pa"
+
+#: wmcz.php:448
+msgid "Archive"
+msgstr "Nakaraan"
+
+#: wmcz.php:461
+msgid "All news"
+msgstr "Lahat ng balita"
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr "Pamahalaan ang cache"
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr "Pupurgahin nito ang lahat ng mga cache na pinamamahalaan ng WMCZ plugin. Kasama rito ang data ng kalendaryo."
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr "Pakibisita ang listahan ng mga kaganapan pagkatapos purgahin ang cache. Posibleng magtagal nang ilang segundo ang unang hiling (na gumagawa sa cache muli)."
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr "Purgahin ang cache"
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr "Napurga na ang cache."
+
