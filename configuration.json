@@ -5,7 +5,8 @@
         "wikidata"
     ],
     "tagAliases": {
-        "tech": "wikidata"
+        "tech": "wikidata",
+        "vzdělávání": "edu"
     },
     "tagDisplayNames": {
         "edu": "vzdělávání",
