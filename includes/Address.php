@@ -34,11 +34,13 @@ class Address {
             return $this->city;
         }
 
-        $this->city = $this->zipCache->getCity( $this->getZip() );
+        $this->city = $this->parseCity();
+
+        /*$this->city = $this->zipCache->getCity( $this->getZip() );
         if (!$this->city) {
             // Use legacy parsing
             $this->city = $this->parseCity();
-        }
+        }*/
         return $this->city;
     }
 
