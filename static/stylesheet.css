@@ -6,10 +6,13 @@
 
 /** WMCZ Calendar CSS */
 
+.block-wmcz-calendar {
+    white-space: nowrap;
+}
+
 .block-wmcz-calendar h2 {
     display: inline;
     margin-right: 20pt;
-    white-space: nowrap;
 }
 
 .wmcz-calendar-controls {
