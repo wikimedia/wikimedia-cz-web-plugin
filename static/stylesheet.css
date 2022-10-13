@@ -9,6 +9,7 @@
 .block-wmcz-calendar h2 {
     display: inline;
     margin-right: 20pt;
+    white-space: nowrap;
 }
 
 .wmcz-calendar-controls {
@@ -64,7 +65,7 @@
 }
 .event-location {
     margin-left: 10pt;
-    min-width: 75pt;
+    width: 75pt;
     font-weight: bold;
 }
 
