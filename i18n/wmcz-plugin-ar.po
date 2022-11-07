@@ -1,0 +1,127 @@
+# Translation of Plugin to Arabic (العربية)
+# Exported from translatewiki.net
+#
+# Author: Meno25
+# Author: محمد أحمد عبد الفتاح
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2022-11-07 12:30:52+0000\n"
+"X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+"X-Generator: MediaWiki 1.40.0-alpha; Translate 2022-10-21\n"
+"Plural-Forms: nplurals=6; plural=(n == 0) ? 0 : ( (n == 1) ? 1 : ( (n == 2) ? 2 : ( (n%100 >= 3 && n%100 <= 10) ? 3 : ( (n%100 >= 11 && n%100 <= 99) ? 4 : 5 ) ) ) );\n"
+
+#. Plugin Name of the plugin
+msgid "WMCZ website addon"
+msgstr "الملحق موقع WMCZ"
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr "تخصيصات WMCZ"
+
+#. Author of the plugin
+#, optional
+msgid "Martin Urbanec"
+msgstr ""
+
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr "لم يتم العثور على أحداث"
+
+#: wmcz.php:41
+#: wmcz.php:301
+msgid "Online"
+msgstr "متصل"
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr "تقويم الحدث"
+
+#: wmcz.php:67
+msgid "this month"
+msgstr "هذا الشهر"
+
+#: wmcz.php:68
+msgid "next month"
+msgstr "الشهر القادم"
+
+#: wmcz.php:126
+msgid "Read more..."
+msgstr "اقرأ أكثر..."
+
+#: wmcz.php:273
+msgid "other"
+msgstr "آخر"
+
+#: wmcz.php:334
+msgid "Start"
+msgstr "بداية"
+
+#: wmcz.php:335
+msgid "End"
+msgstr "النهاية"
+
+#: wmcz.php:336
+msgid "Location"
+msgstr "الموقع"
+
+#: wmcz.php:360
+msgid "Search for events"
+msgstr "ابحث عن الأحداث"
+
+#: wmcz.php:361
+msgid "from"
+msgstr "من"
+
+#: wmcz.php:363
+msgid "to"
+msgstr "إلى"
+
+#: wmcz.php:365
+msgid "by program"
+msgstr "حسب البرنامج"
+
+#: wmcz.php:366
+msgid "by location"
+msgstr "حسب الموقع"
+
+#: wmcz.php:368
+msgid "Filter"
+msgstr "مرشح"
+
+#: wmcz.php:415
+msgid "Read more"
+msgstr "اقرأ المزيد"
+
+#: wmcz.php:448
+msgid "Archive"
+msgstr "أرشيف"
+
+#: wmcz.php:461
+msgid "All news"
+msgstr "كل الأخبار"
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr "إدارة ذاكرة التخزين المؤقت"
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr "سيؤدي هذا إلى مسح ذاكرة التخزين المؤقت التي يديرها البرنامج المساعد WMCZ. يتضمن هذا بشكل أساسي بيانات التقويم."
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr "الرجاء زيارة قائمة الأحداث بعد مسح ذاكرة التخزين المؤقت. يمكن أن يستغرق الطلب الأول (الذي يعيد إنشاء ذاكرة التخزين المؤقت) ما يصل إلى عدة ثوانٍ."
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr "محو الاختزان"
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr "تم تطهير ذاكرة التخزين المؤقت."
+
