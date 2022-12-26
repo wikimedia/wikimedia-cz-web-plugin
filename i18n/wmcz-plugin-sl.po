@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-10-31 12:34:59+0000\n"
+"PO-Revision-Date: 2022-12-26 12:26:28+0000\n"
 "X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -110,7 +110,7 @@ msgstr "Upravljanje predpomnjenja"
 
 #: wmcz_admin.php:31
 msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
-msgstr "S tem boste izbrisali predpomnjenje, ki ga upravlja vtičnik WMCZ. To vključuje predvsem koledarske podatke."
+msgstr "S tem boste počistili predpomnjenje, ki ga upravlja vtičnik WMCZ. To vključuje predvsem koledarske podatke."
 
 #: wmcz_admin.php:34
 msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
