@@ -1,0 +1,126 @@
+# Translation of Plugin to Indonesian (Bahasa Indonesia)
+# Exported from translatewiki.net
+#
+# Author: Veracious
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2023-01-09 12:42:25+0000\n"
+"X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: id\n"
+"X-Generator: MediaWiki 1.40.0-alpha; Translate 2022-10-21\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Plugin Name of the plugin
+msgid "WMCZ website addon"
+msgstr ""
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr ""
+
+#. Author of the plugin
+#, optional
+msgid "Martin Urbanec"
+msgstr ""
+
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr ""
+
+#: wmcz.php:41
+#: wmcz.php:301
+msgid "Online"
+msgstr ""
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr ""
+
+#: wmcz.php:67
+msgid "this month"
+msgstr ""
+
+#: wmcz.php:68
+msgid "next month"
+msgstr ""
+
+#: wmcz.php:126
+msgid "Read more..."
+msgstr ""
+
+#: wmcz.php:273
+msgid "other"
+msgstr ""
+
+#: wmcz.php:334
+msgid "Start"
+msgstr "Mulai"
+
+#: wmcz.php:335
+msgid "End"
+msgstr "Akhir"
+
+#: wmcz.php:336
+msgid "Location"
+msgstr "Lokasi"
+
+#: wmcz.php:360
+msgid "Search for events"
+msgstr ""
+
+#: wmcz.php:361
+msgid "from"
+msgstr "dari"
+
+#: wmcz.php:363
+msgid "to"
+msgstr "sampai"
+
+#: wmcz.php:365
+msgid "by program"
+msgstr ""
+
+#: wmcz.php:366
+msgid "by location"
+msgstr ""
+
+#: wmcz.php:368
+msgid "Filter"
+msgstr "Filter"
+
+#: wmcz.php:415
+msgid "Read more"
+msgstr ""
+
+#: wmcz.php:448
+msgid "Archive"
+msgstr "Arsip"
+
+#: wmcz.php:461
+msgid "All news"
+msgstr ""
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr ""
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr ""
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr ""
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr ""
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr ""
+
