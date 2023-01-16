@@ -4,13 +4,14 @@
 # Author: Brettchenweber
 # Author: DraconicDark
 # Author: FF-11
+# Author: Justman10000
 # Author: Pittigrilli
 # Author: ThisCarthing
 # Author: Wolfdietmann
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2022-10-27 11:30:32+0000\n"
+"PO-Revision-Date: 2023-01-16 12:22:17+0000\n"
 "X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,7 +35,7 @@ msgstr ""
 #: wmcz.php:17
 #: wmcz.php:309
 msgid "No events found"
-msgstr ""
+msgstr "Keine Ereignisse gefunden"
 
 #: wmcz.php:41
 #: wmcz.php:301
@@ -107,7 +108,7 @@ msgstr "Archiv"
 
 #: wmcz.php:461
 msgid "All news"
-msgstr ""
+msgstr "Alle Neuigkeiten"
 
 #: wmcz_admin.php:29
 msgid "Manage cache"
@@ -115,11 +116,11 @@ msgstr "Cache verwalten"
 
 #: wmcz_admin.php:31
 msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
-msgstr ""
+msgstr "Dadurch wird der vom WMCZ-Plugin verwaltete Cache gelöscht. Dazu gehören vor allem Kalenderdaten."
 
 #: wmcz_admin.php:34
 msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
-msgstr ""
+msgstr "Bitte sieh dir die Liste der Ereignisse nach dem Löschen des Caches an. Die erste Anfrage (die den Cache neu generiert) kann bis zu mehreren Sekunden dauern."
 
 #: wmcz_admin.php:36
 msgid "Purge cache"
