@@ -348,10 +348,12 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
         <div class="wmcz-events-list-controls">
             <form>
                 <strong>' . __('Search for events', 'wmcz-plugin') . '</strong>
-                <label for="from">' . __('from', 'wmcz-plugin') . '</label>
-                <input type="date" name="from" id="from" value="' . $from . '">
-                <label for="to">' . __('to', 'wmcz-plugin') . '</label>
-                <input type="date" name="to" id="to" value="' . $to . '">
+                <div class="wmcz-events-list-dates">
+                    <label for="from">' . __('from', 'wmcz-plugin') . '</label>
+                    <input type="date" name="from" id="from" value="' . $from . '">
+                    <label for="to">' . __('to', 'wmcz-plugin') . '</label>
+                    <input type="date" name="to" id="to" value="' . $to . '">
+                </div>
                 <div><label for="cities">' . __('by program', 'wmcz-plugin') . '</label>' . $tagsHtml . '
                 </div><div><label for="cities">' . __('by location', 'wmcz-plugin') . '</label>' . $placesHtml . '
                 </div><div>
