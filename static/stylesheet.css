@@ -188,19 +188,23 @@
 }
 
 /** WMCZ Events List **/
-.wmcz-events-list-controls {
-    display: flex;
+
+.wmcz-events-list-controls label[for="cities"], .wmcz-events-list-controls label[for="programs"] {
+    font-weight: bold;
+    padding-right: 10px;
 }
 
-.wmcz-events-list-controls > form {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+.wmcz-events-list-controls .wmcz-events-headline {
+    display: block;
+    padding-bottom: 20px;
 }
 
-.wmcz-events-list-controls > form label,
-.wmcz-events-list-controls > form input {
-    margin: 5pt;
+.wmcz-events-filtering {
+    padding-bottom: 15px;
+}
+
+.wmcz-events-by-program {
+    margin: 10pt 0;
 }
 
 .wmcz-events-tag-span {
@@ -210,10 +214,6 @@
 
 .wmcz-events-tag-span label {
     padding-right: 10pt;
-}
-
-label[for=cities] {
-    font-weight: bold;
 }
 
 @media (min-width: 760px) {

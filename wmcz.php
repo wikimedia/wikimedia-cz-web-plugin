@@ -347,17 +347,22 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
     return '<div class="wmcz-events-list">
         <div class="wmcz-events-list-controls">
             <form>
-                <strong>' . __('Search for events', 'wmcz-plugin') . '</strong>
-                <div class="wmcz-events-list-dates">
+                <strong class="wmcz-events-headline">' . __('Search for events', 'wmcz-plugin') . '</strong>
+                <div class="wmcz-events-filtering wmcz-events-by-date">
                     <label for="from">' . __('from', 'wmcz-plugin') . '</label>
                     <input type="date" name="from" id="from" value="' . $from . '">
                     <label for="to">' . __('to', 'wmcz-plugin') . '</label>
                     <input type="date" name="to" id="to" value="' . $to . '">
                 </div>
-                <div><label for="cities">' . __('by program', 'wmcz-plugin') . '</label>' . $tagsHtml . '
-                </div><div><label for="cities">' . __('by location', 'wmcz-plugin') . '</label>' . $placesHtml . '
-                </div><div>
-                <input type="submit" value="' . __('Filter', 'wmcz-plugin') . '" /></div>
+                <div class="wmcz-events-filtering wmcz-events-by-location">
+                    <label for="cities">' . __('by location', 'wmcz-plugin') . '</label>' . $placesHtml . '
+                </div>
+                <div class="wmcz-events-filtering wmcz-events-by-program">
+                    <label for="programs">' . __('by program', 'wmcz-plugin') . '</label>' . $tagsHtml . '
+                </div>
+                <div class="wmcz-events-filtering wmcz-events-submit">
+                    <input type="submit" value="' . __('Filter', 'wmcz-plugin') . '" />
+                </div>
             </form>
         </div>
         ' . $eventsHtml . '
