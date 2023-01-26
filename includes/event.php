@@ -122,29 +122,22 @@ class Event {
     public function getDescription() {
         $matches = null;
 
-        // decode HTML and reove <html-blob> wrapper
+        // decode HTML
         $description = html_entity_decode( $this->description );
-        $description = preg_replace( '/<html-blob ?\/?>/', '', $description );
 
-        // remove Google-added stuff about Google Meet
-        $description = preg_replace( '/(Tato událost má videohovor..)?Připojit se: https:\/\/meet.google.com.*/s', '', $description );
-
-        // turn <br> into paragraphs
-        if ( $description !== '' ) {
-            $description = '<p> ' . preg_replace( '/(<br ?\/?>){2}/', ' <p/> <p> ', $description ) . ' </p>';
-        }
-
-        // if there is any videocall, mention how to connect
+        // remove google-provided google meet info and put in ours
+        $description = preg_replace( '/Připojte se přes Google Meet.*/s', '', $description );
         $videoCallLink = $this->getVideocallLink();
         if ( $videoCallLink ) {
-            $description .= '<p>Tato událost má videohovor. Připojit se: ' . $videoCallLink . '</p>';
+            $description .= '<p>Tato událost má videohovor. Připojte se: ' . $videoCallLink . '</p>';
         }
 
-        // wrap all links in <a>, to make them clickable
+        // make all plain links clickable
         preg_match_all( '/(^|\s+)(https?:\/\/[a-zA-Z.0-9\/%:_?&#=-]+)/', $description, $matches );
         foreach ( $matches[0] as $match ) {
             $description = str_replace( $match, "<a href=\"$match\">$match</a>", $description );
         }
+
         return $description;
     }
 
