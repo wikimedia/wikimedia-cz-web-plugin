@@ -189,7 +189,7 @@
 
 /** WMCZ Events List **/
 
-.wmcz-events-list-controls label[for="cities"], .wmcz-events-list-controls label[for="programs"] {
+.wmcz-events-list-controls label[for="cities"], .wmcz-events-list-controls label[for="programs"], .wmcz-events-by-date label {
     font-weight: bold;
     padding-right: 10px;
 }
