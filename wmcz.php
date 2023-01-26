@@ -582,7 +582,7 @@ add_action( 'init', 'wmcz_block_donate_register' );
 add_action( 'init', 'wmcz_block_latest_news_register' );
 add_action( 'plugins_loaded', 'wmcz_register_i18n' );
 add_filter('excerpt_more', 'wmcz_excerpt_more');
-add_filter('excerpt_length', 'wmcz_custom_excerpt_length');
+add_filter('excerpt_length', 'wmcz_custom_excerpt_length', 1);
 register_activation_hook( __FILE__, 'wmcz_install' );
 
 if (!is_admin()) {
