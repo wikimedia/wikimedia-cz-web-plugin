@@ -207,25 +207,22 @@ label[for=cities] {
     font-weight: bold;
 }
 
-/* .wmcz-events-list-events {
-    display: grid;
-    grid-template-columns: 3fr 2fr 5fr;
-    grid-gap: 1rem;
-} */
+@media (min-width: 760px) {
+    .wmcz-events-list-events {
+        display: grid;
+        grid-template-columns: 45% 45%;
+    }
+}
 
-.wmcz-events-list-events > div > div {
-    /* display: flex; */
-    align-items: center;
+.wmcz-events-list-event-name, .wmcz-events-list-event-time {
     padding: 5pt 10pt;
 }
 
 .wmcz-events-list-event {
-    margin: auto;
-    margin-top: 10px;
-    width: 80%;
+    margin-top: 15px;
+    margin-right: 15px;
+    padding: 45px 35px;
     background-color: var(--wiki-lightgrey);
-    padding-top: 20px;
-    padding-left: 20px;
 }
 
 .wmcz-events-list-event-name {
