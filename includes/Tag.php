@@ -54,7 +54,8 @@ class WmczTag {
      */
     public function getHTMLCheckbox( bool $selected ) {
         $selectedHTML = $selected ? ' checked' : '';
-        return '<span><input class="' . $this->getCode() . '" type="checkbox"' . $selectedHTML . ' name="tags[]" value="'
+        return '<span class="wmcz-events-tag-span wmcz-tag-' . $this->getCode() . '"><input class="' . $this->getCode()
+            . '" type="checkbox"' . $selectedHTML . ' name="tags[]" value="'
             . $this->getCode() . '" id="wmcz-events-tag-' . $this->getCode() . '">'
             . '<label for="wmcz-events-tag-' . $this->getCode() . '">' . $this->getDisplayName() . '</label></span>';
     }

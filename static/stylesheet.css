@@ -203,6 +203,15 @@
     margin: 5pt;
 }
 
+.wmcz-events-tag-span {
+    padding: 10pt 0;
+    margin-right: 16px;
+}
+
+.wmcz-events-tag-span label {
+    padding-right: 10pt;
+}
+
 label[for=cities] {
     font-weight: bold;
 }
@@ -241,4 +250,3 @@ label[for=cities] {
 .wmcz-events-list-events > div.wmcz-events-list-event-description {
     padding: 20px 0 40px 0;
 }
-
