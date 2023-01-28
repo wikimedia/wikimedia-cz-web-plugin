@@ -247,15 +247,13 @@
     background-color: var(--wiki-grey);
     color: white;
     font-weight: bold;
-    display: inline-block;
 }
 
 .wmcz-events-list-event-time {
-    display: inline-block;
     font-weight: bold;
     background-color: white;
 }
 
-.wmcz-events-list-events > div.wmcz-events-list-event-description {
-    padding: 20px 0 40px 0;
+.wmcz-events-list-event-description {
+    padding-top: 10px;
 }
