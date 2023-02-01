@@ -256,4 +256,5 @@
 
 .wmcz-events-list-event-description {
     padding-top: 10px;
+    overflow-wrap: anywhere;
 }
