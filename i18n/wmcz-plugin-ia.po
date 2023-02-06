@@ -1,0 +1,126 @@
+# Translation of Plugin to Interlingua (interlingua)
+# Exported from translatewiki.net
+#
+# Author: McDutchie
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2023-02-06 12:23:43+0000\n"
+"X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ia\n"
+"X-Generator: MediaWiki 1.40.0-alpha; Translate 2023-01-24\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+msgid "WMCZ website addon"
+msgstr "Additivo del sito web WMCZ"
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr "Personnalisationes pro WMCZ"
+
+#. Author of the plugin
+#, optional
+msgid "Martin Urbanec"
+msgstr ""
+
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr "Necun evento trovate"
+
+#: wmcz.php:41
+#: wmcz.php:301
+msgid "Online"
+msgstr "In linea"
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr "Calendario de eventos"
+
+#: wmcz.php:67
+msgid "this month"
+msgstr "iste mense"
+
+#: wmcz.php:68
+msgid "next month"
+msgstr "mense sequente"
+
+#: wmcz.php:126
+msgid "Read more..."
+msgstr "Leger plus…"
+
+#: wmcz.php:273
+msgid "other"
+msgstr "altere"
+
+#: wmcz.php:334
+msgid "Start"
+msgstr "Initio"
+
+#: wmcz.php:335
+msgid "End"
+msgstr "Fin"
+
+#: wmcz.php:336
+msgid "Location"
+msgstr "Loco"
+
+#: wmcz.php:360
+msgid "Search for events"
+msgstr "Cercar eventos"
+
+#: wmcz.php:361
+msgid "from"
+msgstr "de"
+
+#: wmcz.php:363
+msgid "to"
+msgstr "a"
+
+#: wmcz.php:365
+msgid "by program"
+msgstr "per programma"
+
+#: wmcz.php:366
+msgid "by location"
+msgstr "per loco"
+
+#: wmcz.php:368
+msgid "Filter"
+msgstr "Filtrar"
+
+#: wmcz.php:415
+msgid "Read more"
+msgstr "Leger plus"
+
+#: wmcz.php:448
+msgid "Archive"
+msgstr "Archivo"
+
+#: wmcz.php:461
+msgid "All news"
+msgstr "Tote le novas"
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr "Gerer cache"
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr "Isto purgara le cache gerite per le plug-in WMCZ. Isto include principalmente le datos del calendario."
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr "Per favor visita le lista de eventos post purgar le cache. Le prime requesta (le qual re-genera le cache) pote prender plure secundas."
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr "Purgar cache"
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr "Le cache ha essite purgate."
+
