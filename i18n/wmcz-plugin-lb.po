@@ -2,10 +2,11 @@
 # Exported from translatewiki.net
 #
 # Author: Robby
+# Author: Volvox
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2023-01-26 12:30:40+0000\n"
+"PO-Revision-Date: 2023-02-27 12:21:13+0000\n"
 "X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,7 +35,7 @@ msgstr ""
 #: wmcz.php:41
 #: wmcz.php:301
 msgid "Online"
-msgstr ""
+msgstr "Online"
 
 #: wmcz.php:65
 msgid "Event calendar"
@@ -62,7 +63,7 @@ msgstr "Ufank"
 
 #: wmcz.php:335
 msgid "End"
-msgstr ""
+msgstr "Schluss"
 
 #: wmcz.php:336
 msgid "Location"
@@ -82,11 +83,11 @@ msgstr ""
 
 #: wmcz.php:365
 msgid "by program"
-msgstr ""
+msgstr "no Programm"
 
 #: wmcz.php:366
 msgid "by location"
-msgstr ""
+msgstr "no Plaz"
 
 #: wmcz.php:368
 msgid "Filter"
