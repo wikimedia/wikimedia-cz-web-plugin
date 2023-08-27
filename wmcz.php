@@ -338,7 +338,7 @@ function wmcz_block_calendar_list_render_callback( $attributes ) {
                 esc_html( $event->getStartDatetime() ),
                 esc_html( $event->getCity() ? ', ' . $event->getCity() : '' ),
                 implode( PHP_EOL, $eventDetails ),
-                html_entity_decode( $event->getDescription() )
+                $event->getDescription()
             );
         }
     }
