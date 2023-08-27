@@ -138,6 +138,9 @@ class Event {
             $description = str_replace( $match, "<a href=\"$match\">$match</a>", $description );
         }
 
+	// HACK: ocasionally, there is no space before the bold element. re-add it.
+	$description = str_replace( '<b>', ' <b>', $description );
+
         return $description;
     }
 
