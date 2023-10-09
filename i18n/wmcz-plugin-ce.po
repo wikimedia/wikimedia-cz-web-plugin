@@ -1,0 +1,126 @@
+# Translation of Plugin to Chechen (нохчийн)
+# Exported from translatewiki.net
+#
+# Author: Умар
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2023-10-09 11:39:03+0000\n"
+"X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ce\n"
+"X-Generator: MediaWiki 1.41.0-alpha; Translate 2023-07-10\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+msgid "WMCZ website addon"
+msgstr "WMCZ сайтан тӀетохар"
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr "WMCZ сайтан нисдаран гӀирс"
+
+#. Author of the plugin
+#, optional
+msgid "Martin Urbanec"
+msgstr ""
+
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr ""
+
+#: wmcz.php:41
+#: wmcz.php:301
+msgid "Online"
+msgstr "Онлайн"
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr "Хиламийн рузма"
+
+#: wmcz.php:67
+msgid "this month"
+msgstr "хӀара бутт"
+
+#: wmcz.php:68
+msgid "next month"
+msgstr "рогӀера бутт"
+
+#: wmcz.php:126
+msgid "Read more..."
+msgstr "Кхин дӀа йеша..."
+
+#: wmcz.php:273
+msgid "other"
+msgstr "кхийерш"
+
+#: wmcz.php:334
+msgid "Start"
+msgstr "Долор"
+
+#: wmcz.php:335
+msgid "End"
+msgstr "Чаккхе"
+
+#: wmcz.php:336
+msgid "Location"
+msgstr "Лаьтта меттиг"
+
+#: wmcz.php:360
+msgid "Search for events"
+msgstr "Лаха хиламаш"
+
+#: wmcz.php:361
+msgid "from"
+msgstr "чуьра"
+
+#: wmcz.php:363
+msgid "to"
+msgstr "тӀе"
+
+#: wmcz.php:365
+msgid "by program"
+msgstr "программица"
+
+#: wmcz.php:366
+msgid "by location"
+msgstr "йолу меттигаца"
+
+#: wmcz.php:368
+msgid "Filter"
+msgstr "Луьттург"
+
+#: wmcz.php:415
+msgid "Read more"
+msgstr "Ма-дарра"
+
+#: wmcz.php:448
+msgid "Archive"
+msgstr "Архивйе"
+
+#: wmcz.php:461
+msgid "All news"
+msgstr "Массо керланаш"
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr "Кешан урхалладар"
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr ""
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr ""
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr "ДӀацӀанйе кэш"
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr "Кэш дӀацӀанйина."
+
