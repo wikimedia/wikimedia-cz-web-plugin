@@ -1,0 +1,127 @@
+# Translation of Plugin to Serbian (Cyrillic script) (српски (ћирилица))
+# Exported from translatewiki.net
+#
+# Author: Kizule
+# Author: Milicevic01
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2023-10-26 11:33:45+0000\n"
+"X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sr-Cyrl\n"
+"X-Generator: MediaWiki 1.42.0-alpha; Translate 2023-07-10\n"
+"Plural-Forms: nplurals=3; plural=(n%10 == 1 && n%100 != 11) ? 0 : ( (n%10 >= 2 && n%10 <= 4 && (n%100 < 10 || n%100 >= 20)) ? 1 : 2 );\n"
+
+#. Plugin Name of the plugin
+msgid "WMCZ website addon"
+msgstr ""
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr "Прилагођавања за WMCZ"
+
+#. Author of the plugin
+#, optional
+msgid "Martin Urbanec"
+msgstr ""
+
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr "Нема пронађених догађаја"
+
+#: wmcz.php:41
+#: wmcz.php:301
+msgid "Online"
+msgstr "Онлајн"
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr "Календар догађаја"
+
+#: wmcz.php:67
+msgid "this month"
+msgstr "овог месеца"
+
+#: wmcz.php:68
+msgid "next month"
+msgstr "следећег месеца"
+
+#: wmcz.php:126
+msgid "Read more..."
+msgstr ""
+
+#: wmcz.php:273
+msgid "other"
+msgstr ""
+
+#: wmcz.php:334
+msgid "Start"
+msgstr ""
+
+#: wmcz.php:335
+msgid "End"
+msgstr ""
+
+#: wmcz.php:336
+msgid "Location"
+msgstr "Локација"
+
+#: wmcz.php:360
+msgid "Search for events"
+msgstr ""
+
+#: wmcz.php:361
+msgid "from"
+msgstr "од"
+
+#: wmcz.php:363
+msgid "to"
+msgstr "до"
+
+#: wmcz.php:365
+msgid "by program"
+msgstr "по програму"
+
+#: wmcz.php:366
+msgid "by location"
+msgstr "по локацији"
+
+#: wmcz.php:368
+msgid "Filter"
+msgstr "Филтер"
+
+#: wmcz.php:415
+msgid "Read more"
+msgstr ""
+
+#: wmcz.php:448
+msgid "Archive"
+msgstr "Архива"
+
+#: wmcz.php:461
+msgid "All news"
+msgstr "Све вести"
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr "Управљање кеширањем"
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr ""
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr ""
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr "Очисти кеш"
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr "Кеш очишћен"
+
