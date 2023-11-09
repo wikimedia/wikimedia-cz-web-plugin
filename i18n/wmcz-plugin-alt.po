@@ -1,0 +1,126 @@
+# Translation of Plugin to Southern Altai (алтай тил)
+# Exported from translatewiki.net
+#
+# Author: Bakpay
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2023-11-09 12:36:20+0000\n"
+"X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: alt\n"
+"X-Generator: MediaWiki 1.42.0-alpha; Translate 2023-10-26\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+msgid "WMCZ website addon"
+msgstr "Сайтка кошконы WMCZ"
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr "Настройкалар WMCZ"
+
+#. Author of the plugin
+#, optional
+msgid "Martin Urbanec"
+msgstr ""
+
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr "Мероприятиелер табылбаган"
+
+#: wmcz.php:41
+#: wmcz.php:301
+msgid "Online"
+msgstr "Чийӱленген"
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr "Керектердиҥ кӱнтизӱзи"
+
+#: wmcz.php:67
+msgid "this month"
+msgstr "Бу ай"
+
+#: wmcz.php:68
+msgid "next month"
+msgstr "Келер ай"
+
+#: wmcz.php:126
+msgid "Read more..."
+msgstr "База кожор.."
+
+#: wmcz.php:273
+msgid "other"
+msgstr "ӧскӧзи\nӧскӧлӧри\nӦскӧ"
+
+#: wmcz.php:334
+msgid "Start"
+msgstr "Башталганы"
+
+#: wmcz.php:335
+msgid "End"
+msgstr "Учы"
+
+#: wmcz.php:336
+msgid "Location"
+msgstr "Турган јери"
+
+#: wmcz.php:360
+msgid "Search for events"
+msgstr "Керектерди бедреер"
+
+#: wmcz.php:361
+msgid "from"
+msgstr "оноҥ"
+
+#: wmcz.php:363
+msgid "to"
+msgstr ""
+
+#: wmcz.php:365
+msgid "by program"
+msgstr "программа аайынча"
+
+#: wmcz.php:366
+msgid "by location"
+msgstr "турган јери аайынча"
+
+#: wmcz.php:368
+msgid "Filter"
+msgstr "Ылгаштыру\nЫлгаштырулар\nЫлгаштырулар:"
+
+#: wmcz.php:415
+msgid "Read more"
+msgstr "База кожор.."
+
+#: wmcz.php:448
+msgid "Archive"
+msgstr "Кӧмзӧлӧӧр"
+
+#: wmcz.php:461
+msgid "All news"
+msgstr "Бастыра солундар"
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr "Кешти башкарар"
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr "Бу кешти арчыыр, управляемый плагинг WMCZ башкартар. Бу кӧп јаны кӱнтизӱ бергени."
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr "Кеш арчылган кийнинде керектердиҥ тизӱзине кирер. Баштапкы сурадыш (кешти ойто генерировать эдип турган) бир канча секунд ӧдӧр аргалу"
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr "Кешти арчыыр"
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr "Кеш арчылган"
+
