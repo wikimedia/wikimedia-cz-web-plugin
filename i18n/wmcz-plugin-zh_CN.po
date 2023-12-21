@@ -1,13 +1,14 @@
 # Translation of Plugin to Simplified Chinese (中文（简体）)
 # Exported from translatewiki.net
 #
+# Author: GuoPC
 # Author: Si109
 # Author: StarrySky
 # Author: 水獭很懒
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2023-12-07 12:53:21+0000\n"
+"PO-Revision-Date: 2023-12-21 12:29:14+0000\n"
 "X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,7 +22,7 @@ msgstr "WMCZ网页加载项"
 
 #. Description of the plugin
 msgid "Customizations for WMCZ"
-msgstr ""
+msgstr "WMCZ定制化"
 
 #. Author of the plugin
 #, optional
@@ -31,7 +32,7 @@ msgstr ""
 #: wmcz.php:17
 #: wmcz.php:309
 msgid "No events found"
-msgstr "无搜索结果"
+msgstr "找不到事件"
 
 #: wmcz.php:41
 #: wmcz.php:301
@@ -52,7 +53,7 @@ msgstr "下月"
 
 #: wmcz.php:126
 msgid "Read more..."
-msgstr "更多内容……"
+msgstr "阅读更多…"
 
 #: wmcz.php:273
 msgid "other"
@@ -72,7 +73,7 @@ msgstr "位置"
 
 #: wmcz.php:360
 msgid "Search for events"
-msgstr ""
+msgstr "搜索事件"
 
 #: wmcz.php:361
 msgid "from"
@@ -100,7 +101,7 @@ msgstr "阅读更多"
 
 #: wmcz.php:448
 msgid "Archive"
-msgstr "已存档"
+msgstr "存档"
 
 #: wmcz.php:461
 msgid "All news"
@@ -112,11 +113,11 @@ msgstr "管理缓存"
 
 #: wmcz_admin.php:31
 msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
-msgstr "这将清除WMCZ插件的缓存，包括主要日历数据。"
+msgstr "这将清除WMCZ插件的缓存。主要包括日历数据。"
 
 #: wmcz_admin.php:34
 msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
-msgstr "请在清除缓存后再次查看事件列表。首个请求（这会重新生成缓存文件）可能需要耗时数秒钟。"
+msgstr "请在清除缓存后访问事件列表。首个请求（会重新生成缓存）会花费几秒钟时间。"
 
 #: wmcz_admin.php:36
 msgid "Purge cache"
@@ -124,5 +125,5 @@ msgstr "清除缓存"
 
 #: wmcz_admin.php:44
 msgid "Cache has been purged."
-msgstr "缓存已清理。"
+msgstr "缓存已清除。"
 
