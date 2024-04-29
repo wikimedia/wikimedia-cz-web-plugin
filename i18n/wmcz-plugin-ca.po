@@ -1,0 +1,129 @@
+# Translation of Plugin to Catalan (català)
+# Exported from translatewiki.net
+#
+# Author: VerusPhoebusApollo
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2024-04-29 12:26:35+0000\n"
+"X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ca\n"
+"Project-Id-Version: Plugin\n"
+"Report-Msgid-Bugs-To: translatewiki.net\n"
+"X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
+"X-Generator: MediaWiki 1.43.0-alpha; Translate 2024-04-24\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+msgid "WMCZ website addon"
+msgstr "Complement web WMCZ"
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr "Personalitzacions per a WMCZ"
+
+#. Author of the plugin
+#, optional
+msgid "Martin Urbanec"
+msgstr ""
+
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr "No hi ha esdeveniments."
+
+#: wmcz.php:41
+#: wmcz.php:301
+msgid "Online"
+msgstr "En línia"
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr "Calendari d’esdeveniments"
+
+#: wmcz.php:67
+msgid "this month"
+msgstr "Aquest mes"
+
+#: wmcz.php:68
+msgid "next month"
+msgstr "el mes que ve"
+
+#: wmcz.php:126
+msgid "Read more..."
+msgstr "Més informació"
+
+#: wmcz.php:273
+msgid "other"
+msgstr "altres"
+
+#: wmcz.php:334
+msgid "Start"
+msgstr "Inici"
+
+#: wmcz.php:335
+msgid "End"
+msgstr "Final"
+
+#: wmcz.php:336
+msgid "Location"
+msgstr "Ubicació"
+
+#: wmcz.php:360
+msgid "Search for events"
+msgstr "Cerca esdeveniments"
+
+#: wmcz.php:361
+msgid "from"
+msgstr "de"
+
+#: wmcz.php:363
+msgid "to"
+msgstr "a"
+
+#: wmcz.php:365
+msgid "by program"
+msgstr "per programa"
+
+#: wmcz.php:366
+msgid "by location"
+msgstr "per ubicació"
+
+#: wmcz.php:368
+msgid "Filter"
+msgstr "Filtre"
+
+#: wmcz.php:415
+msgid "Read more"
+msgstr "Més informació"
+
+#: wmcz.php:448
+msgid "Archive"
+msgstr "Arxiu"
+
+#: wmcz.php:461
+msgid "All news"
+msgstr "Totes les notícies"
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr "Gestiona la memòria cau"
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr "Això purgarà la memòria cau gestionada pel connector WMCZ. Això inclou principalment dades del calendari."
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr "Visiteu la llista d'esdeveniments després de purgar la memòria cau. La primera sol·licitud (que torna a generar la memòria cau) pot trigar fins a uns quants segons."
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr "Purga la memòria cau"
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr "La memòria cau s'ha purgat."
+
