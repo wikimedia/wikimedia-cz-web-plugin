@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2024-07-11 12:31:47+0000\n"
+"PO-Revision-Date: 2024-07-15 12:30:40+0000\n"
 "X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -32,7 +32,7 @@ msgstr ""
 #: wmcz.php:17
 #: wmcz.php:309
 msgid "No events found"
-msgstr ""
+msgstr "Цхьа а хилам ца карийна"
 
 #: wmcz.php:41
 #: wmcz.php:301
@@ -113,11 +113,11 @@ msgstr "Кешан урхалладар"
 
 #: wmcz_admin.php:31
 msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
-msgstr ""
+msgstr "Оцо дӀацӀанйийр йу WMCZ плагино урхалла деш йолу кэш. Иза коьртачу декъана календаран хаамаш бу."
 
 #: wmcz_admin.php:34
 msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
-msgstr ""
+msgstr "Дехар до, кэш дӀацӀанйинчул тӀаьхьа хиламийн могӀаме хьажа. Хьалхара дехар (кэш-ан йуха генераци йеш йолу) масех секунде кхаччалц хан йаккха тарло."
 
 #: wmcz_admin.php:36
 msgid "Purge cache"
