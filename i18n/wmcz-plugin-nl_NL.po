@@ -1,0 +1,129 @@
+# Translation of Plugin to Dutch (Nederlands)
+# Exported from translatewiki.net
+#
+# Author: Siebrand
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2024-08-12 12:26:56+0000\n"
+"X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl_nl\n"
+"Project-Id-Version: Plugin\n"
+"Report-Msgid-Bugs-To: translatewiki.net\n"
+"X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
+"X-Generator: MediaWiki 1.43.0-alpha; Translate 2024-07-16\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+msgid "WMCZ website addon"
+msgstr "WMCZ-website-add-on"
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr "Aanpassingen voor WMCZ"
+
+#. Author of the plugin
+#, optional
+msgid "Martin Urbanec"
+msgstr ""
+
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr "Geen evenementen gevonden"
+
+#: wmcz.php:41
+#: wmcz.php:301
+msgid "Online"
+msgstr "Online"
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr "Evenementenkalender"
+
+#: wmcz.php:67
+msgid "this month"
+msgstr "deze maand"
+
+#: wmcz.php:68
+msgid "next month"
+msgstr "volgende maand"
+
+#: wmcz.php:126
+msgid "Read more..."
+msgstr "Meer lezen..."
+
+#: wmcz.php:273
+msgid "other"
+msgstr "overige"
+
+#: wmcz.php:334
+msgid "Start"
+msgstr "Start"
+
+#: wmcz.php:335
+msgid "End"
+msgstr "Einde"
+
+#: wmcz.php:336
+msgid "Location"
+msgstr "Locatie"
+
+#: wmcz.php:360
+msgid "Search for events"
+msgstr "Zoeken in evenementen"
+
+#: wmcz.php:361
+msgid "from"
+msgstr "van"
+
+#: wmcz.php:363
+msgid "to"
+msgstr "tot"
+
+#: wmcz.php:365
+msgid "by program"
+msgstr "per programma"
+
+#: wmcz.php:366
+msgid "by location"
+msgstr "per locatie"
+
+#: wmcz.php:368
+msgid "Filter"
+msgstr "Filteren"
+
+#: wmcz.php:415
+msgid "Read more"
+msgstr "Meer lezen"
+
+#: wmcz.php:448
+msgid "Archive"
+msgstr "Archief"
+
+#: wmcz.php:461
+msgid "All news"
+msgstr "Alle nieuwsberichten"
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr "Cache beheren"
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr "Dit schoont de cache op die wordt beheerd door de WMCZ-plugin. Dit omvat voornamelijk kalendergegevens."
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr "Bekijk de lijst van evenementen na het verwijderen van de cache. Het eerste verzoek (dat de cache opnieuw genereert) kan tot enkele seconden duren."
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr "Cache opschonen"
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr "De cache is opgeschoond."
+
