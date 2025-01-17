@@ -579,6 +579,16 @@ function wmcz_register_i18n() {
 
 }
 
+// comes from https://stackoverflow.com/a/51604643
+function so_51604149_add_cap(){
+    $role = get_role( 'administrator' );
+
+    if( $role ){
+        $role->add_cap( 'unfiltered_html' );
+    }
+}
+add_action( 'init', 'so_51604149_add_cap' );
+
 add_action( 'init', 'wmcz_block_calendar_register' );
 add_action( 'init', 'wmcz_block_map_register' );
 add_action( 'init', 'wmcz_block_events_caurosel_register' );
