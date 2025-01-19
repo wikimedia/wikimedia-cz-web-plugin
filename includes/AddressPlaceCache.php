@@ -24,7 +24,9 @@ class AddressPlaceCache extends FileCache {
      * @return Place
      */
     private function getPlaceInternal( $address ) {
-        $nominatim = new Nominatim( "https://nominatim.openstreetmap.org" );
+        $nominatim = new Nominatim( "https://nominatim.openstreetmap.org", [
+            'User-Agent' => 'Wikimedia Czech Republic website/1.0 (https://wikimedia.cz; root@wikimedia.cz) via maxh/php-nominatim'
+        ] );
         $search = $nominatim->newSearch();
         $search->query( $address );
         $result = $nominatim->find($search);
