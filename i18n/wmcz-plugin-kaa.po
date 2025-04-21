@@ -1,0 +1,129 @@
+# Translation of Plugin to Kara-Kalpak (Qaraqalpaqsha)
+# Exported from translatewiki.net
+#
+# Author: Inabat Allanova
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2025-04-21 12:31:55+0000\n"
+"X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: kaa\n"
+"Project-Id-Version: Plugin\n"
+"Report-Msgid-Bugs-To: translatewiki.net\n"
+"X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
+"X-Generator: MediaWiki 1.44.0-alpha; Translate 2025-03-15\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+msgid "WMCZ website addon"
+msgstr "WMCZ web-sayt qosımshası"
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr "WMCZ ushın sazlamalar"
+
+#. Author of the plugin
+#, optional
+msgid "Martin Urbanec"
+msgstr ""
+
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr "Hesh qanday ilaj tabılmadı"
+
+#: wmcz.php:41
+#: wmcz.php:301
+msgid "Online"
+msgstr "Onlayn"
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr "Ilajlar kalendarı"
+
+#: wmcz.php:67
+msgid "this month"
+msgstr "usı ay"
+
+#: wmcz.php:68
+msgid "next month"
+msgstr "kelesi ay"
+
+#: wmcz.php:126
+msgid "Read more..."
+msgstr "Kóbirek oqıw..."
+
+#: wmcz.php:273
+msgid "other"
+msgstr "basqa"
+
+#: wmcz.php:334
+msgid "Start"
+msgstr "Baslaw"
+
+#: wmcz.php:335
+msgid "End"
+msgstr "Juwmaqlaw"
+
+#: wmcz.php:336
+msgid "Location"
+msgstr "Jaylasqan ornı"
+
+#: wmcz.php:360
+msgid "Search for events"
+msgstr "Ilajlardı izlew"
+
+#: wmcz.php:361
+msgid "from"
+msgstr "Usı sáneden:"
+
+#: wmcz.php:363
+msgid "to"
+msgstr "Usı sánege shekem:"
+
+#: wmcz.php:365
+msgid "by program"
+msgstr "baǵdarlama boyınsha"
+
+#: wmcz.php:366
+msgid "by location"
+msgstr "jaylasqan ornı boyınsha"
+
+#: wmcz.php:368
+msgid "Filter"
+msgstr "Filtrlew"
+
+#: wmcz.php:415
+msgid "Read more"
+msgstr "Kóbirek oqıw"
+
+#: wmcz.php:448
+msgid "Archive"
+msgstr "Arxiv"
+
+#: wmcz.php:461
+msgid "All news"
+msgstr "Barlıq jańalıqlar"
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr "Keshti basqarıw"
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr "Bul WMCZ plagini tárepinen basqarılatuǵın keshti tazalaydı. Buǵan, tiykarınan, kalendar maǵlıwmatları kiredi."
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr "Keshti tazalaǵannan keyin ilajlar dizimine kiriń. Birinshi soraw (keshti qayta jaratatuǵın) bir neshe sekund waqıt alıwı múmkin."
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr "Keshti tazalaw"
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr "Kesh tazalandı."
+
