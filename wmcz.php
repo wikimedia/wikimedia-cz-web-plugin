@@ -382,17 +382,7 @@ function wmcz_block_calendar_list_register() {
 }
 
 function wmcz_block_donate_render_callback() {
-    return '<div data-darujme-widget-token="3ejtytl6de90cyh7">&nbsp;</div>
-    <script type="text/javascript">
-        +function(w, d, s, u, a, b) {
-            w["DarujmeObject"] = u;
-            w[u] = w[u] || function () { (w[u].q = w[u].q || []).push(arguments) };
-            a = d.createElement(s); b = d.getElementsByTagName(s)[0];
-            a.async = 1; a.src = "https:\/\/www.darujme.cz\/assets\/scripts\/widget.js";
-            b.parentNode.insertBefore(a, b);
-        }(window, document, "script", "Darujme");
-        Darujme(1, "3ejtytl6de90cyh7", "render", "https:\/\/www.darujme.cz\/widget?token=3ejtytl6de90cyh7", "100%");
-    </script>';
+    return file_get_contents( dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'donate_block.html' );
 }
 
 function wmcz_block_donate_register() {

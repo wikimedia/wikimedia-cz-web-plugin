@@ -1,0 +1,73 @@
+<style>
+    body {
+      font-family: sans-serif;
+      color: #32373c;
+      padding: 1em;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+      padding: 1em;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background: #f9f9f9;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    label, input, select {
+      font-size: 1em;
+    }
+
+    input[type="text"], select {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.25em;
+      border: 1px solid #ccc;
+      border-radius: 0;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      display: inline-block;
+      width: 100%;
+      padding: calc(.667em + 2px) calc(1.333em + 2px);
+      background-color: #339966;
+      color: #fff;
+      border: none;
+      border-radius: 0px;
+      font-size: 1.125em;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #2d8659;
+    }
+  </style>
+
+<form action="https://kontakty.wikimedia.cz/donate/podporte-ceskou-wikipedii?f=1">
+    <input type='hidden' name='f' value='1' />
+    <input type='hidden' name='locked' value='1' />
+
+    <p>
+        <label for="amount">Částka:</label>
+        <input type='text' id="amount" name='amount' value='' />
+    </p>
+
+    <p>
+        <label for="periodicity">Periodicita:</label>
+        <select id="periodicity" name='periodicity'>
+        <option value='99999'>Jednorázově</option>
+        <option value='730'>Měsíčně</option>
+        <option value='8760'>Ročně</option>
+        </select>
+    </p>
+
+    <input type='submit' value="Pokračovat" />
+</form>
