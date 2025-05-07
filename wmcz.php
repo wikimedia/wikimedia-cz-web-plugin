@@ -579,15 +579,14 @@ function wmcz_register_i18n() {
 
 }
 
-// comes from https://stackoverflow.com/a/51604643
-function so_51604149_add_cap(){
-    $role = get_role( 'administrator' );
-
-    if( $role ){
-        $role->add_cap( 'unfiltered_html' );
+// comes from https://publishpress.com/blog/capabilities/unfiltered-html-multisite-networks/
+function multisite_restore_unfiltered_html($caps, $cap, $user_id, $args ) {
+    if ( 'unfiltered_html' === $cap && user_can( $user_id, 'administrator' ) )  {
+	    $caps[] = 'unfiltered_html';
     }
+    return $caps;
 }
-add_action( 'init', 'so_51604149_add_cap' );
+add_filter( 'map_meta_cap', 'multisite_restore_unfiltered_html', 1, 4 );
 
 add_action( 'init', 'wmcz_block_calendar_register' );
 add_action( 'init', 'wmcz_block_map_register' );
