@@ -1,0 +1,129 @@
+# Translation of Plugin to Pashto (پښتو)
+# Exported from translatewiki.net
+#
+# Author: شاه زمان پټان
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2025-07-31 12:38:08+0000\n"
+"X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ps\n"
+"Project-Id-Version: Plugin\n"
+"Report-Msgid-Bugs-To: translatewiki.net\n"
+"X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
+"X-Generator: MediaWiki 1.45.0-alpha; Translate 2025-03-15\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+msgid "WMCZ website addon"
+msgstr ""
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr ""
+
+#. Author of the plugin
+#, optional
+msgid "Martin Urbanec"
+msgstr ""
+
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr "هېڅ پېښه ونه موندل شوه"
+
+#: wmcz.php:41
+#: wmcz.php:301
+msgid "Online"
+msgstr "پر ليکه"
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr "د پېښو کليز"
+
+#: wmcz.php:67
+msgid "this month"
+msgstr "دا مياشت"
+
+#: wmcz.php:68
+msgid "next month"
+msgstr "راتلونکې مياشت"
+
+#: wmcz.php:126
+msgid "Read more..."
+msgstr "نور لوستل..."
+
+#: wmcz.php:273
+msgid "other"
+msgstr "نور"
+
+#: wmcz.php:334
+msgid "Start"
+msgstr "پيلول"
+
+#: wmcz.php:335
+msgid "End"
+msgstr "پای"
+
+#: wmcz.php:336
+msgid "Location"
+msgstr "ځای"
+
+#: wmcz.php:360
+msgid "Search for events"
+msgstr "پېښې پلټل"
+
+#: wmcz.php:361
+msgid "from"
+msgstr "له"
+
+#: wmcz.php:363
+msgid "to"
+msgstr "ته"
+
+#: wmcz.php:365
+msgid "by program"
+msgstr "د پروگرام له مخې"
+
+#: wmcz.php:366
+msgid "by location"
+msgstr "ځای له مخې"
+
+#: wmcz.php:368
+msgid "Filter"
+msgstr "چاڼگر"
+
+#: wmcz.php:415
+msgid "Read more"
+msgstr "نور لوستل"
+
+#: wmcz.php:448
+msgid "Archive"
+msgstr "خونديځ"
+
+#: wmcz.php:461
+msgid "All news"
+msgstr "ټول خبرونه"
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr "نيونگې مهارول"
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr ""
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr ""
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr "نيونگه سپينول"
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr "نيونگه پاکه شوې ده."
+
