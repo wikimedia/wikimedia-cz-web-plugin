@@ -1,0 +1,129 @@
+# Translation of Plugin to Tamil (தமிழ்)
+# Exported from translatewiki.net
+#
+# Author: Siddhan
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2025-08-07 12:31:11+0000\n"
+"X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ta\n"
+"Project-Id-Version: Plugin\n"
+"Report-Msgid-Bugs-To: translatewiki.net\n"
+"X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
+"X-Generator: MediaWiki 1.45.0-alpha; Translate 2025-07-31\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+msgid "WMCZ website addon"
+msgstr "WMCZ வலைத்தள துணை நிரல்"
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr "WMCZ க்கான தனிப்பயனாக்கங்கள்"
+
+#. Author of the plugin
+#, optional
+msgid "Martin Urbanec"
+msgstr ""
+
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr "நிகழ்வுகள் எதுவும் இல்லை."
+
+#: wmcz.php:41
+#: wmcz.php:301
+msgid "Online"
+msgstr "நிகழ்நிலை"
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr "நிகழ்வு நாட்காட்டி"
+
+#: wmcz.php:67
+msgid "this month"
+msgstr "இந்த மாதம்"
+
+#: wmcz.php:68
+msgid "next month"
+msgstr "அடுத்த மாதம்"
+
+#: wmcz.php:126
+msgid "Read more..."
+msgstr "மேலும் படிக்க..."
+
+#: wmcz.php:273
+msgid "other"
+msgstr "மற்றவை"
+
+#: wmcz.php:334
+msgid "Start"
+msgstr "தொடங்கு"
+
+#: wmcz.php:335
+msgid "End"
+msgstr "முடிவு"
+
+#: wmcz.php:336
+msgid "Location"
+msgstr "இடம்"
+
+#: wmcz.php:360
+msgid "Search for events"
+msgstr "நிகழ்வுகளைத் தேடு"
+
+#: wmcz.php:361
+msgid "from"
+msgstr "இருந்து"
+
+#: wmcz.php:363
+msgid "to"
+msgstr "செய்ய"
+
+#: wmcz.php:365
+msgid "by program"
+msgstr "நிரல் மூலம்"
+
+#: wmcz.php:366
+msgid "by location"
+msgstr "இருப்பிடத்தின் அடிப்படையில்"
+
+#: wmcz.php:368
+msgid "Filter"
+msgstr "வடிகட்டி"
+
+#: wmcz.php:415
+msgid "Read more"
+msgstr "மேலும் படிக்கவும்"
+
+#: wmcz.php:448
+msgid "Archive"
+msgstr "காப்பகம்"
+
+#: wmcz.php:461
+msgid "All news"
+msgstr "அனைத்து செய்திகளும்"
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr "சேமிப்பை நிர்வகிக்கவும்"
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr "இது WMCZ சொருகி மூலம் நிர்வகிக்கப்படும் தற்காலிக சேமிப்பை சுத்தப்படுத்தும். இதில் முக்கியமாக காலண்டர் தரவு அடங்கும்."
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr "தற்காலிக சேமிப்பை நீக்கிய பிறகு நிகழ்வுகளின் பட்டியலைப் பார்வையிடவும். முதல் கோரிக்கை (தற்காலிக சேமிப்பை மீண்டும் உருவாக்கும்) பல வினாடிகள் வரை ஆகலாம்."
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr "தற்காலிக சேமிப்பை அழிக்கவும்"
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr "தற்காலிக சேமிப்பு அழிக்கப்பட்டது."
+
