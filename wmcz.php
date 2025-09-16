@@ -580,13 +580,13 @@ function wmcz_register_i18n() {
 }
 
 // comes from https://publishpress.com/blog/capabilities/unfiltered-html-multisite-networks/
-function multisite_restore_unfiltered_html($caps, $cap, $user_id, $args ) {
-    if ( 'unfiltered_html' === $cap && user_can( $user_id, 'administrator' ) )  {
-	    $caps[] = 'unfiltered_html';
+function umc_custom_kses_init() {
+    $user = wp_get_current_user();
+    if ( $user && in_array( 'administrator', $user->roles ) ) {
+		kses_remove_filters();
     }
-    return $caps;
 }
-add_filter( 'map_meta_cap', 'multisite_restore_unfiltered_html', 1, 4 );
+add_action( 'init', 'umc_custom_kses_init', 11 );
 
 // Newsletter form
 add_shortcode('wmcz_newsletter', function() {
