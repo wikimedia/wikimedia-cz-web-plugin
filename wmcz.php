@@ -588,6 +588,38 @@ function multisite_restore_unfiltered_html($caps, $cap, $user_id, $args ) {
 }
 add_filter( 'map_meta_cap', 'multisite_restore_unfiltered_html', 1, 4 );
 
+// Newsletter form
+add_shortcode('wmcz_newsletter', function() {
+  ob_start(); ?>
+  <form action="https://kontakty.wikimedia.cz/api/form!send" method="post">
+    Jméno <br><input name="firstname" type="text"><br><br>
+    Příjmení <br><input name="surname" type="text"><br><br>
+    E-mail <br><input name="email" type="email"><br><br>
+    <input checked="checked" name="newsletter" type="checkbox"> Přihlašte se k odběru newsletteru<br><br>
+    Jaká vás zajímají témata?<br><br>
+    <?php
+      $topics = [
+        14 => 'Wiki Loves Earth', 13 => 'Přidej citaci', 12 => 'Czech Wiki Photo',
+        11 => 'Česloslovensko', 10 => 'Měsíc vědy', 9 => 'Měsíc žen na Wikipedii',
+        8 => 'Wikidata', 7 => 'Spolupráce s knihovnami', 6 => 'Senioři píší Wikipedii',
+        5 => 'Blog Wikimedia ČR (shrnutí 1x měsíčně)',
+        4 => 'Spolupráce s učiteli (Studenti píší Wikipedii, Uč (s) Wiki)',
+      ];
+      foreach ($topics as $id => $label) {
+        echo '<label><input name="topic_' . intval($id) . '" type="checkbox"> ' . esc_html($label) . "</label><br>\n";
+      }
+    ?>
+    <br>
+    <input type="hidden" name="source" value="odber_newsletteru">
+    <input type="hidden" name="locale" value="cs">
+    <input type="hidden" name="confirm" value="1">
+    <input type="hidden" name="redirect" value="https://www.wikimedia.cz/cs/dekujeme-za-odber-newsletteru/">
+    <input type="submit" value="Odeslat" class="btn primary button">
+  </form>
+  <?php
+  return ob_get_clean();
+});
+
 add_action( 'init', 'wmcz_block_calendar_register' );
 add_action( 'init', 'wmcz_block_map_register' );
 add_action( 'init', 'wmcz_block_events_caurosel_register' );
