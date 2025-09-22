@@ -1,18 +1,15 @@
-# Translation of Plugin to Italian (italiano)
+# Translation of Plugin to Okinawan (うちなーぐち)
 # Exported from translatewiki.net
 #
-# Author: Beta16
-# Author: Emabarto01
-# Author: Giorgx12
-# Author: Sofia Stecchi
+# Author: さきじょーぐー
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2025-09-22 12:36:25+0000\n"
+"PO-Revision-Date: 2025-09-22 12:36:26+0000\n"
 "X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: it_it\n"
+"Language: ryu\n"
 "Project-Id-Version: Plugin\n"
 "Report-Msgid-Bugs-To: translatewiki.net\n"
 "X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
@@ -21,11 +18,11 @@ msgstr ""
 
 #. Plugin Name of the plugin
 msgid "WMCZ website addon"
-msgstr "Addon al sito web WMCZ"
+msgstr ""
 
 #. Description of the plugin
 msgid "Customizations for WMCZ"
-msgstr "Personalizzazioni per WMCZ"
+msgstr ""
 
 #. Author of the plugin
 #, optional
@@ -35,98 +32,98 @@ msgstr ""
 #: wmcz.php:17
 #: wmcz.php:309
 msgid "No events found"
-msgstr "Nessun evento trovato"
+msgstr ""
 
 #: wmcz.php:41
 #: wmcz.php:301
 msgid "Online"
-msgstr "Connesso"
+msgstr "オンライン"
 
 #: wmcz.php:65
 msgid "Event calendar"
-msgstr "Calendario eventi"
+msgstr "イベントカレンダー"
 
 #: wmcz.php:67
 msgid "this month"
-msgstr "questo mese"
+msgstr "今月"
 
 #: wmcz.php:68
 msgid "next month"
-msgstr "prossimo mese"
+msgstr "たちち"
 
 #: wmcz.php:126
 msgid "Read more..."
-msgstr "Per saperne di più"
+msgstr ""
 
 #: wmcz.php:273
 msgid "other"
-msgstr "altro"
+msgstr "他"
 
 #: wmcz.php:334
 msgid "Start"
-msgstr "Inizio"
+msgstr "スタート"
 
 #: wmcz.php:335
 msgid "End"
-msgstr "Fine"
+msgstr "エンド"
 
 #: wmcz.php:336
 msgid "Location"
-msgstr "Località"
+msgstr "所"
 
 #: wmcz.php:360
 msgid "Search for events"
-msgstr "Cerca eventi"
+msgstr ""
 
 #: wmcz.php:361
 msgid "from"
-msgstr "da"
+msgstr "から"
 
 #: wmcz.php:363
 msgid "to"
-msgstr "a"
+msgstr "んかい"
 
 #: wmcz.php:365
 msgid "by program"
-msgstr "per programma"
+msgstr ""
 
 #: wmcz.php:366
 msgid "by location"
-msgstr "per località"
+msgstr ""
 
 #: wmcz.php:368
 msgid "Filter"
-msgstr "Filtra"
+msgstr "フィルター"
 
 #: wmcz.php:415
 msgid "Read more"
-msgstr "Per saperne di più"
+msgstr ""
 
 #: wmcz.php:448
 msgid "Archive"
-msgstr "Archivia"
+msgstr "アーカイブ"
 
 #: wmcz.php:461
 msgid "All news"
-msgstr "Tutte le novità"
+msgstr "むるニュース"
 
 #: wmcz_admin.php:29
 msgid "Manage cache"
-msgstr "Gestisci cache"
+msgstr ""
 
 #: wmcz_admin.php:31
 msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
-msgstr "Questo eliminerà la cache gestita dal plugin di WMCZ. Questa include principalmente i dati del calendario."
+msgstr ""
 
 #: wmcz_admin.php:34
 msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
-msgstr "Si prega di consultare l'elenco di eventi dopo aver svuotato la cache. La prima richiesta (che rigenera la cache) può richiedere fino a diversi secondi."
+msgstr ""
 
 #: wmcz_admin.php:36
 msgid "Purge cache"
-msgstr "Svuota la cache"
+msgstr ""
 
 #: wmcz_admin.php:44
 msgid "Cache has been purged."
-msgstr "La cache è stata svuotata."
+msgstr ""
 
