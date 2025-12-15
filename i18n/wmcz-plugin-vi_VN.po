@@ -1,0 +1,129 @@
+# Translation of Plugin to Vietnamese (Tiếng Việt)
+# Exported from translatewiki.net
+#
+# Author: Duongvu
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2025-12-15 12:36:12+0000\n"
+"X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: vi_vn\n"
+"Project-Id-Version: Plugin\n"
+"Report-Msgid-Bugs-To: translatewiki.net\n"
+"X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
+"X-Generator: MediaWiki 1.46.0-alpha; Translate 2025-07-31\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Plugin Name of the plugin
+msgid "WMCZ website addon"
+msgstr "Tiện ích bổ sung trang web WMCZ"
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr "Các tùy chỉnh cho WMCZ"
+
+#. Author of the plugin
+#, optional
+msgid "Martin Urbanec"
+msgstr ""
+
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr "Không tìm thấy kết quả"
+
+#: wmcz.php:41
+#: wmcz.php:301
+msgid "Online"
+msgstr "Trực tuyến"
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr "Lịch sự kiện"
+
+#: wmcz.php:67
+msgid "this month"
+msgstr "Tháng này"
+
+#: wmcz.php:68
+msgid "next month"
+msgstr "Tháng sau"
+
+#: wmcz.php:126
+msgid "Read more..."
+msgstr "Đọc thêm"
+
+#: wmcz.php:273
+msgid "other"
+msgstr "Khác"
+
+#: wmcz.php:334
+msgid "Start"
+msgstr "Bắt đầu"
+
+#: wmcz.php:335
+msgid "End"
+msgstr "Kết thúc"
+
+#: wmcz.php:336
+msgid "Location"
+msgstr "Vị trí"
+
+#: wmcz.php:360
+msgid "Search for events"
+msgstr "Tìm kiếm sự kiện"
+
+#: wmcz.php:361
+msgid "from"
+msgstr "Từ"
+
+#: wmcz.php:363
+msgid "to"
+msgstr "Thành"
+
+#: wmcz.php:365
+msgid "by program"
+msgstr "Theo chương trình"
+
+#: wmcz.php:366
+msgid "by location"
+msgstr "Sao chép vị trí"
+
+#: wmcz.php:368
+msgid "Filter"
+msgstr "Bộ lọc"
+
+#: wmcz.php:415
+msgid "Read more"
+msgstr "đọc thêm"
+
+#: wmcz.php:448
+msgid "Archive"
+msgstr "Lưu trữ"
+
+#: wmcz.php:461
+msgid "All news"
+msgstr "Tất cả tin tức"
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr "Bộ đệm hình ảnh"
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr "Thao tác này sẽ xóa bộ nhớ đệm cho WMCZ quản lý. Điều này chủ yếu bao gồm dữ liệu lịch"
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr "Vui lòng xem lại danh sách sự kiện sau khi xóa bộ nhớ đệm. Yêu cầu đầu tiên ( tạo lại bố nhớ đệm ) có thể mất đến vài giây."
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr "Tẩy sạch vùng nhớ đệm"
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr "Bộ nhớ đệm đã được xóa"
+
