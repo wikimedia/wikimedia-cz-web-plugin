@@ -1,0 +1,129 @@
+# Translation of Plugin to Irish (Gaeilge)
+# Exported from translatewiki.net
+#
+# Author: Aindriu80
+msgid ""
+msgstr ""
+""
+"PO-Revision-Date: 2026-02-09 12:32:49+0000\n"
+"X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ga\n"
+"Project-Id-Version: Plugin\n"
+"Report-Msgid-Bugs-To: translatewiki.net\n"
+"X-Translation-Project: translatewiki.net <https://translatewiki.net>\n"
+"X-Generator: MediaWiki 1.46.0-alpha; Translate 2025-07-31\n"
+"Plural-Forms: nplurals=5; plural=(n == 1) ? 0 : ( (n == 2) ? 1 : ( (n < 7) ? 2 : ( (n < 11) ? 3 : 4 ) ) );\n"
+
+#. Plugin Name of the plugin
+msgid "WMCZ website addon"
+msgstr "Breiseán gréasáin WMCZ"
+
+#. Description of the plugin
+msgid "Customizations for WMCZ"
+msgstr "Saincheaptha le haghaidh WMCZ"
+
+#. Author of the plugin
+#, optional
+msgid "Martin Urbanec"
+msgstr ""
+
+#: wmcz.php:17
+#: wmcz.php:309
+msgid "No events found"
+msgstr "Níor aimsíodh aon imeachtaí"
+
+#: wmcz.php:41
+#: wmcz.php:301
+msgid "Online"
+msgstr "Ar Líne"
+
+#: wmcz.php:65
+msgid "Event calendar"
+msgstr "Féilire imeachtaí"
+
+#: wmcz.php:67
+msgid "this month"
+msgstr "an mhí seo"
+
+#: wmcz.php:68
+msgid "next month"
+msgstr "an mhí seo chugainn"
+
+#: wmcz.php:126
+msgid "Read more..."
+msgstr "Léigh tuilleadh..."
+
+#: wmcz.php:273
+msgid "other"
+msgstr "eile"
+
+#: wmcz.php:334
+msgid "Start"
+msgstr "Tosaigh"
+
+#: wmcz.php:335
+msgid "End"
+msgstr "Deireadh"
+
+#: wmcz.php:336
+msgid "Location"
+msgstr "Suíomh"
+
+#: wmcz.php:360
+msgid "Search for events"
+msgstr "Cuardaigh imeachtaí"
+
+#: wmcz.php:361
+msgid "from"
+msgstr "ó"
+
+#: wmcz.php:363
+msgid "to"
+msgstr "go"
+
+#: wmcz.php:365
+msgid "by program"
+msgstr "de réir cláir"
+
+#: wmcz.php:366
+msgid "by location"
+msgstr "de réir suímh"
+
+#: wmcz.php:368
+msgid "Filter"
+msgstr "Scagaire"
+
+#: wmcz.php:415
+msgid "Read more"
+msgstr "Léigh tuilleadh"
+
+#: wmcz.php:448
+msgid "Archive"
+msgstr "Cartlann"
+
+#: wmcz.php:461
+msgid "All news"
+msgstr "An nuacht go léir"
+
+#: wmcz_admin.php:29
+msgid "Manage cache"
+msgstr "Bainistigh an taisce"
+
+#: wmcz_admin.php:31
+msgid "This will purge cache managed by the WMCZ plugin. This includes mainly calendar data."
+msgstr "Glanfaidh sé seo an taisce atá á bhainistiú ag an mbreiseán WMCZ. Áirítear leis seo sonraí féilire den chuid is mó."
+
+#: wmcz_admin.php:34
+msgid "Please visit the list of events after purging the cache. The first request (which re-generates the cache) can take up to several seconds."
+msgstr "Tabhair cuairt ar an liosta imeachtaí tar éis an taisce a ghlanadh. Féadfaidh an chéad iarratas (a athghineann an taisce) suas le roinnt soicindí a thógáil."
+
+#: wmcz_admin.php:36
+msgid "Purge cache"
+msgstr "Glan an taisce"
+
+#: wmcz_admin.php:44
+msgid "Cache has been purged."
+msgstr "Tá an taisce glanta."
+
