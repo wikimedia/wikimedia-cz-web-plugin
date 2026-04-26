@@ -430,7 +430,7 @@ function wmcz_block_latest_news_render_callback( $attributes ) {
     }
 
     $args = [];
-    if ( $attributes['tag'] != '' && $attributes['tag'] != null ) {
+    if ( array_key_exists( 'tag', $attributes ) && $attributes['tag'] != '' && $attributes['tag'] != null ) {
         $args['tag'] = $attributes['tag'];
     }
     $maxNews = (int)$attributes['maxNews'];
