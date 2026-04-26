@@ -33,7 +33,7 @@ class Event {
         $this->endDatetime = $endDate->format('d. m. Y H:i');
         $this->location = $event->location;
         $this->description = $event->description;
-        $this->id = hash('md5', $event->title . $event->dtstart . $event->dtend);
+        $this->id = hash('md5', $this->title . $event->dtstart . $event->dtend);
     }
 
     public function getDisplayDatetime() {
