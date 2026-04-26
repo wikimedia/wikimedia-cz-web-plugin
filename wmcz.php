@@ -53,7 +53,7 @@ function wmcz_block_calendar_render_callback( $attributes ) {
     $rows = (int)$attributes['rows'];
     $calendar = new WmczCalendar($attributes['ical'], $cols*$rows);
     $tags = null;
-    if ( $attributes['tag'] != null ) {
+    if ( array_key_exists( 'tag', $attributes ) && $attributes['tag'] != null ) {
         $tags = [ $attributes['tag'] ];
     }
     $now = $calendar->getEventsNow( $tags );
