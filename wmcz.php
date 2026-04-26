@@ -453,7 +453,7 @@ function wmcz_block_latest_news_render_callback( $attributes ) {
     }
     $result .= get_the_posts_navigation();
     $result .= '</div>';
-    if ($q->found_posts > $maxNews && $maxNews != 0 && $attributes['tag'] != null && $attributes['tag'] != '') {
+    if ($q->found_posts > $maxNews && $maxNews != 0 && array_key_exists( 'tag', $attributes ) && $attributes['tag'] != null && $attributes['tag'] != '') {
         $tag = get_term_by( 'slug', $attributes['tag'], 'post_tag' );
         $result .= '<a href="' . get_tag_link( $tag->term_id ) . '">' . __( 'All news', 'wmcz-plugin' ) . '</a>';
     }
