@@ -52,10 +52,12 @@ class Address {
     private function parseCity() {
         $matches = null;
         preg_match_all( '/[0-9 ]+ ([a-zA-ZáčďéěíňóřšťůúýžÁČĎÉĚÍŇÓŘŠŤŮÚÝŽ ]+)/',  $this->address, $matches);
-        $city = trim( end( end( $matches ) ) );
+	$tmp = end( $matches );
+	$city = end( $tmp );
         if ( $city == "" ) {
             preg_match_all( '/[0-9 \/]+, ([0-9 ]* ?([a-zA-ZáčďéěíňóřšťůúýžÁČĎÉĚÍŇÓŘŠŤŮÚÝŽ ]+))/', $this->address, $matches );
-            $city = trim( end( end( $matches ) ) );
+		$tmp = end( $matches );
+		$city = end( $tmp );
         }
         return $city;
     }
