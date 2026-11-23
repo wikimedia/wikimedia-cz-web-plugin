@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 ""
-"PO-Revision-Date: 2026-11-12 12:07:36+0000\n"
+"PO-Revision-Date: 2026-11-23 12:07:08+0000\n"
 "X-POT-Import-Date: 2021-05-26 12:33:57+0000\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -57,11 +57,11 @@ msgstr "ⵖⵔ ⵓⴳⴳⴰⵔ"
 
 #: wmcz.php:273
 msgid "other"
-msgstr ""
+msgstr "ⵡⴰⵢⴹ"
 
 #: wmcz.php:334
 msgid "Start"
-msgstr ""
+msgstr "ⵙⵙⵏⵜⵉ"
 
 #: wmcz.php:335
 msgid "End"
@@ -97,7 +97,7 @@ msgstr ""
 
 #: wmcz.php:415
 msgid "Read more"
-msgstr ""
+msgstr "ⵖⵔ ⵓⴳⴳⴰⵔ"
 
 #: wmcz.php:448
 msgid "Archive"
